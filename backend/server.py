@@ -223,11 +223,14 @@ async def seed_db():
             logger.info(f"Seeded {len(LESSONS)} lessons")
         # Blog
         if await db.blog.count_documents({}) == 0:
+            posts_to_insert = []
             for i, post in enumerate(BLOG_POSTS):
-                post["id"] = str(uuid.uuid4())
-                post["created_at"] = (datetime.now(timezone.utc) - timedelta(days=i * 2)).isoformat()
-            await db.blog.insert_many(BLOG_POSTS)
-            logger.info(f"Seeded {len(BLOG_POSTS)} blog posts")
+                new_post = post.copy()
+                new_post["id"] = str(uuid.uuid4())
+                new_post["created_at"] = (datetime.now(timezone.utc) - timedelta(days=i * 2)).isoformat()
+                posts_to_insert.append(new_post)
+            await db.blog.insert_many(posts_to_insert)
+            logger.info(f"Seeded {len(posts_to_insert)} blog posts")
         # Glossary
         if await db.glossary.count_documents({}) == 0:
             await db.glossary.insert_many(GLOSSARY)
