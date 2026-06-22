@@ -6,7 +6,7 @@ import { useSEO } from "../lib/seo";
 export default function Contact() {
   useSEO({
     title: "Contact Us",
-    description: "Get in touch with the CryptoBeginnersHub team — feedback, content suggestions, partnerships.",
+    description: "Get in touch with the Crypto Beginner team — feedback, content suggestions, partnerships.",
     canonical: typeof window !== "undefined" ? window.location.href : undefined,
   });
 
@@ -43,7 +43,7 @@ export default function Contact() {
           </p>
           <div className="mt-8 flex items-center gap-3 text-sm text-zinc-300">
             <Mail size={16} className="text-[#FFBF00]" />
-            hello@cryptobeginnershub.com
+            hello@cryptobeginner.in
           </div>
           <p className="mt-6 text-xs text-zinc-500">
             We never reply with investment advice and we will never ask for your seed phrase.

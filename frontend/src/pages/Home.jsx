@@ -7,12 +7,12 @@ import { useSEO } from "../lib/seo";
 export default function Home() {
   useSEO({
     title: "Learn Crypto From Zero",
-    description: "CryptoBeginnersHub is a beginner-friendly crypto education platform. Learn Bitcoin, blockchain, wallets, DeFi and security — without hype or financial advice.",
+    description: "Crypto Beginner is a beginner-friendly crypto education platform. Learn Bitcoin, blockchain, wallets, DeFi and security — without hype or financial advice.",
     canonical: typeof window !== "undefined" ? window.location.href : undefined,
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      name: "CryptoBeginnersHub",
+      name: "Crypto Beginner",
       description: "Beginner-friendly crypto education platform.",
       url: typeof window !== "undefined" ? window.location.origin : "",
     },

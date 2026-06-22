@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 export function useSEO({ title, description, canonical, image, type = "website", jsonLd }) {
   useEffect(() => {
-    const fullTitle = title ? `${title} — CryptoBeginnersHub` : "CryptoBeginnersHub";
+    const fullTitle = title ? `${title} — Crypto Beginner` : "Crypto Beginner — Learn Crypto From Zero";
     document.title = fullTitle;
 
     const setMeta = (name, content, attr = "name") => {

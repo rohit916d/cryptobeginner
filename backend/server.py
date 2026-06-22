@@ -22,7 +22,7 @@ mongo_url = os.environ['MONGO_URL']
 client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
-app = FastAPI(title="CryptoBeginnersHub API")
+app = FastAPI(title="Crypto Beginner API")
 api_router = APIRouter(prefix="/api")
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -54,7 +54,7 @@ class ContactCreate(BaseModel):
 # -------- Health --------
 @api_router.get("/")
 async def root():
-    return {"service": "CryptoBeginnersHub API", "status": "ok"}
+    return {"service": "Crypto Beginner API", "status": "ok"}
 
 
 # -------- Market: CoinGecko proxy with caching --------
@@ -189,20 +189,20 @@ async def submit_contact(payload: ContactCreate):
 # -------- SEO files served from backend (also re-routed to frontend) --------
 @app.get("/robots.txt", response_class=PlainTextResponse)
 async def robots():
-    base = os.environ.get("PUBLIC_SITE_URL", "https://cryptobeginnershub.com")
+    base = os.environ.get("PUBLIC_SITE_URL", "https://cryptobeginner.in")
     return f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n"
 
 
 @app.get("/sitemap.xml")
 async def sitemap():
-    base = os.environ.get("PUBLIC_SITE_URL", "https://cryptobeginnershub.com")
+    base = os.environ.get("PUBLIC_SITE_URL", "https://cryptobeginner.in")
     urls = [
         "/", "/learn", "/dictionary", "/blog",
-        "/about", "/contact", "/privacy", "/terms", "/disclaimer",
+        "/about", "/contact", "/privacy", "/terms", "/disclaimer", "/cookie-policy",
     ]
     lessons = await db.lessons.find({}, {"_id": 0, "slug": 1}).to_list(500)
     blogs = await db.blog.find({}, {"_id": 0, "slug": 1}).to_list(500)
-    urls += [f"/learn/{l['slug']}" for l in lessons]
+    urls += [f"/learn/{lesson['slug']}" for lesson in lessons]
     urls += [f"/blog/{b['slug']}" for b in blogs]
 
     items = "\n".join([f"  <url><loc>{base}{u}</loc></url>" for u in urls])
@@ -223,7 +223,6 @@ async def seed_db():
             logger.info(f"Seeded {len(LESSONS)} lessons")
         # Blog
         if await db.blog.count_documents({}) == 0:
-            now_iso = datetime.now(timezone.utc).isoformat()
             for i, post in enumerate(BLOG_POSTS):
                 post["id"] = str(uuid.uuid4())
                 post["created_at"] = (datetime.now(timezone.utc) - timedelta(days=i * 2)).isoformat()

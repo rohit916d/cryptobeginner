@@ -10,13 +10,13 @@ export default function Footer() {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#FFE08A] via-[#FFBF00] to-[#D4AF37] flex items-center justify-center">
                 <span className="text-[#0A0A0B] font-black text-sm">C</span>
               </div>
-              <span className="font-bold text-white">CryptoBeginnersHub</span>
+              <span className="font-bold text-white">Crypto Beginner</span>
             </Link>
             <p className="text-sm text-zinc-400 max-w-sm leading-relaxed">
               Beginner-friendly crypto education. Learn the basics safely, without hype, predictions, or financial advice.
             </p>
             <p className="mt-4 text-xs text-zinc-600">
-              © {new Date().getFullYear()} CryptoBeginnersHub. Educational content only — not financial advice.
+              © {new Date().getFullYear()} Crypto Beginner · cryptobeginner.in · Educational content only — not financial advice.
             </p>
           </div>
 
@@ -36,6 +36,7 @@ export default function Footer() {
               <li><Link to="/contact" className="hover:text-[#FFBF00]">Contact</Link></li>
               <li><Link to="/privacy" className="hover:text-[#FFBF00]">Privacy Policy</Link></li>
               <li><Link to="/terms" className="hover:text-[#FFBF00]">Terms & Conditions</Link></li>
+              <li><Link to="/cookie-policy" className="hover:text-[#FFBF00]">Cookie Policy</Link></li>
               <li><Link to="/disclaimer" className="hover:text-[#FFBF00]">Disclaimer</Link></li>
             </ul>
           </div>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A0A0B"/>
+      <stop offset="100%" stop-color="#121214"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFE08A"/>
+      <stop offset="55%" stop-color="#FFBF00"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.15" cy="0.2" r="0.6">
+      <stop offset="0%" stop-color="#FFBF00" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FFBF00" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.95" cy="0.85" r="0.55">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <!-- Brand mark -->
+  <g transform="translate(80, 80)">
+    <rect width="64" height="64" rx="14" fill="url(#gold)"/>
+    <text x="32" y="46" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="900" fill="#0A0A0B">C</text>
+  </g>
+  <text x="164" y="125" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#F8F9FA" letter-spacing="-0.5">Crypto Beginner</text>
+
+  <!-- Headline -->
+  <text x="80" y="340" font-family="Helvetica, Arial, sans-serif" font-size="108" font-weight="900" fill="#F8F9FA" letter-spacing="-3">Learn Crypto</text>
+  <text x="80" y="460" font-family="Helvetica, Arial, sans-serif" font-size="108" font-weight="900" fill="url(#gold)" letter-spacing="-3">From Zero.</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="525" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="500" fill="#A1A1AA">Simple crypto education for complete beginners.</text>
+
+  <!-- Footer line -->
+  <line x1="80" y1="565" x2="1120" y2="565" stroke="#FFBF00" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="80" y="595" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#FFBF00" letter-spacing="2">CRYPTOBEGINNER.IN</text>
+  <text x="1120" y="595" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="500" fill="#71717A">Educational only · Not financial advice</text>
+</svg>

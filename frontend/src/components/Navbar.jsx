@@ -36,7 +36,7 @@ export default function Navbar() {
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#FFE08A] via-[#FFBF00] to-[#D4AF37] flex items-center justify-center shadow-[0_0_18px_rgba(255,191,0,0.35)]">
             <span className="text-[#0A0A0B] font-black text-sm">C</span>
           </div>
-          <span className="font-bold text-white tracking-tight">CryptoBeginnersHub</span>
+          <span className="font-bold text-white tracking-tight">Crypto Beginner</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">

@@ -1,4 +1,4 @@
-"""Seed data for CryptoBeginnersHub: lessons, blog posts, and glossary terms."""
+"""Seed data for Crypto Beginner: lessons, blog posts, and glossary terms."""
 
 LESSONS = [
     # ============== BEGINNER ==============
@@ -524,7 +524,7 @@ BLOG_POSTS = [
         "excerpt": "Confused by Bitcoin? Read this 5-minute beginner-friendly guide that explains it without any jargon.",
         "cover_image": "https://images.unsplash.com/photo-1694219782948-afcab5c095d3",
         "read_time": 6,
-        "author": "CryptoBeginnersHub Team",
+    "author": "Crypto Beginner Team",
         "content": """If you've ever felt lost trying to understand Bitcoin, you're not alone. Most beginner content jumps straight into mining, hashing, and Merkle trees. Forget all of that for now.
 
 ## Bitcoin in one sentence
@@ -557,7 +557,7 @@ Now that you have the big picture, dive into our [Learning Center](/learn) to go
         "excerpt": "Blockchain is the engine behind crypto. Here's a clear, beginner-friendly explanation of how it works.",
         "cover_image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0",
         "read_time": 7,
-        "author": "CryptoBeginnersHub Team",
+    "author": "Crypto Beginner Team",
         "content": """Blockchain is one of those words people use confidently without really understanding it. Let's fix that.
 
 ## Imagine a Google Doc
@@ -594,7 +594,7 @@ Blockchain is not a magic solution to every problem. For most everyday tasks, a 
         "excerpt": "Crypto scams are everywhere. Here's the playbook to spot and avoid the most common ones in 2026.",
         "cover_image": "https://images.unsplash.com/photo-1614064642639-e398cf05badb",
         "read_time": 7,
-        "author": "CryptoBeginnersHub Team",
+    "author": "Crypto Beginner Team",
         "content": """Scams in crypto don't slow down. If anything, they evolve every year. Here's our 2026 watchlist.
 
 ## 1. Pig-butchering scams
@@ -627,7 +627,7 @@ Stay paranoid. In crypto, healthy paranoia is a feature.""",
         "excerpt": "Stablecoins are crypto's quiet workhorses. Here's what they are, how they work, and why they matter.",
         "cover_image": "https://images.unsplash.com/photo-1621761191319-c6fb62004040",
         "read_time": 6,
-        "author": "CryptoBeginnersHub Team",
+    "author": "Crypto Beginner Team",
         "content": """While Bitcoin gets the headlines, **stablecoins** are quietly becoming the most-used part of crypto.
 
 ## What is a stablecoin?
@@ -662,7 +662,7 @@ Stablecoins are arguably crypto's most useful current innovation — but they ar
         "excerpt": "A safe, beginner-friendly walkthrough of setting up your very first crypto wallet — without losing your funds.",
         "cover_image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0",
         "read_time": 8,
-        "author": "CryptoBeginnersHub Team",
+    "author": "Crypto Beginner Team",
         "content": """Setting up your first wallet is exciting — but rushed setups are how people lose their savings. Take it slow.
 
 ## Step 1: Choose the right wallet for you
@@ -711,7 +711,7 @@ Welcome to self-custody.""",
         "excerpt": "Even if you never invest, understanding crypto is becoming a basic digital literacy skill.",
         "cover_image": "https://images.unsplash.com/photo-1518544801976-3e159e50e5bb",
         "read_time": 5,
-        "author": "CryptoBeginnersHub Team",
+    "author": "Crypto Beginner Team",
         "content": """You don't need to "be into crypto" to learn about it. Here's why basic crypto literacy is becoming as important as basic internet literacy.
 
 ## Reason 1: It's not going away
@@ -749,7 +749,7 @@ No need to invest. Just learn.""",
         "excerpt": "DeFi promises to replace banks with code. Here's an honest look at where it shines — and where it doesn't.",
         "cover_image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0",
         "read_time": 7,
-        "author": "CryptoBeginnersHub Team",
+    "author": "Crypto Beginner Team",
         "content": """DeFi and traditional finance (TradFi) often get pitched as enemies. The truth is more interesting.
 
 ## Where DeFi wins
@@ -781,7 +781,7 @@ Don't go all-in on DeFi. Don't ignore it either. Learn enough to participate whe
         "excerpt": "Candles, volume, market cap — here's how to make sense of what you see on any crypto chart.",
         "cover_image": "https://images.unsplash.com/photo-1640340434855-6084b1f4901c",
         "read_time": 6,
-        "author": "CryptoBeginnersHub Team",
+    "author": "Crypto Beginner Team",
         "content": """Crypto charts can look intimidating. Let's break them down.
 
 ## The basics

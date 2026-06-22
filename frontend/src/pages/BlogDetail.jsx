@@ -52,7 +52,7 @@ export default function BlogDetail() {
       headline: post.title,
       description: post.excerpt,
       image: post.cover_image,
-      author: { "@type": "Organization", name: post.author || "CryptoBeginnersHub" },
+      author: { "@type": "Organization", name: post.author || "Crypto Beginner" },
       datePublished: post.created_at,
     } : null,
   });

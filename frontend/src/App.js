@@ -10,6 +10,8 @@ import BlogDetail from "@/pages/BlogDetail";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import LegalPage from "@/pages/Legal";
+import CookiePolicy from "@/pages/CookiePolicy";
+import NotFound from "@/pages/NotFound";
 import { Toaster } from "sonner";
 
 function App() {
@@ -29,7 +31,8 @@ function App() {
             <Route path="/privacy" element={<LegalPage slug="privacy" />} />
             <Route path="/terms" element={<LegalPage slug="terms" />} />
             <Route path="/disclaimer" element={<LegalPage slug="disclaimer" />} />
-            <Route path="*" element={<Home />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
         <Toaster theme="dark" position="bottom-right" />

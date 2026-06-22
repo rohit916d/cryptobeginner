@@ -4,7 +4,7 @@ import { ShieldCheck, BookOpen, HeartHandshake } from "lucide-react";
 export default function About() {
   useSEO({
     title: "About Us",
-    description: "CryptoBeginnersHub is a free education platform helping beginners learn crypto safely — without hype or financial advice.",
+    description: "Crypto Beginner is a free education platform helping beginners learn crypto safely — without hype or financial advice.",
     canonical: typeof window !== "undefined" ? window.location.href : undefined,
   });
 
@@ -15,7 +15,7 @@ export default function About() {
         We make crypto <span className="brand-grad-text">approachable.</span>
       </h1>
       <p className="mt-6 text-lg text-zinc-400 leading-relaxed">
-        CryptoBeginnersHub is a free, ad-free education platform built for people who know nothing about crypto — and would like to change that, safely. We don't sell tokens. We don't run trading signals. We just teach.
+        Crypto Beginner is a free, ad-free education platform built for people who know nothing about crypto — and would like to change that, safely. We don't sell tokens. We don't run trading signals. We just teach.
       </p>
 
       <div className="mt-12 grid md:grid-cols-3 gap-5">
