@@ -1,53 +1,38 @@
-import { useEffect } from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
-import { HOME } from "@/constants/testIds";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
-  return (
-    <div>
-      <header className="App-header">
-        <a
-          data-testid={HOME.emergentLink}
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+import Layout from "@/components/Layout";
+import Home from "@/pages/Home";
+import Learn from "@/pages/Learn";
+import LearnDetail from "@/pages/LearnDetail";
+import Dictionary from "@/pages/Dictionary";
+import Blog from "@/pages/Blog";
+import BlogDetail from "@/pages/BlogDetail";
+import About from "@/pages/About";
+import Contact from "@/pages/Contact";
+import LegalPage from "@/pages/Legal";
+import { Toaster } from "sonner";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/learn" element={<Learn />} />
+            <Route path="/learn/:slug" element={<LearnDetail />} />
+            <Route path="/dictionary" element={<Dictionary />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogDetail />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<LegalPage slug="privacy" />} />
+            <Route path="/terms" element={<LegalPage slug="terms" />} />
+            <Route path="/disclaimer" element={<LegalPage slug="disclaimer" />} />
+            <Route path="*" element={<Home />} />
+          </Routes>
+        </Layout>
+        <Toaster theme="dark" position="bottom-right" />
       </BrowserRouter>
     </div>
   );

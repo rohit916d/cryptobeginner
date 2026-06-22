@@ -1,72 +1,247 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, HTTPException, Response
+from fastapi.responses import PlainTextResponse
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
-from pathlib import Path
-from pydantic import BaseModel, Field, ConfigDict
-from typing import List
 import uuid
-from datetime import datetime, timezone
+import asyncio
+from pathlib import Path
+from pydantic import BaseModel, Field, EmailStr
+from typing import List, Optional
+from datetime import datetime, timezone, timedelta
+import requests
 
+from seed_data import LESSONS, BLOG_POSTS, GLOSSARY
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
-# MongoDB connection
 mongo_url = os.environ['MONGO_URL']
 client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
-# Create the main app without a prefix
-app = FastAPI()
-
-# Create a router with the /api prefix
+app = FastAPI(title="CryptoBeginnersHub API")
 api_router = APIRouter(prefix="/api")
 
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
 
-# Define Models
-class StatusCheck(BaseModel):
-    model_config = ConfigDict(extra="ignore")  # Ignore MongoDB's _id field
-    
+# -------- In-memory cache for CoinGecko (avoid rate limits) --------
+_market_cache = {"data": None, "ts": None}
+_global_cache = {"data": None, "ts": None}
+CACHE_TTL = timedelta(seconds=55)
+
+
+# -------- Models --------
+class ContactSubmission(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    client_name: str
-    timestamp: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    name: str
+    email: EmailStr
+    subject: Optional[str] = None
+    message: str
+    created_at: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
 
-class StatusCheckCreate(BaseModel):
-    client_name: str
 
-# Add your routes to the router instead of directly to app
+class ContactCreate(BaseModel):
+    name: str = Field(min_length=1, max_length=120)
+    email: EmailStr
+    subject: Optional[str] = Field(default=None, max_length=200)
+    message: str = Field(min_length=5, max_length=4000)
+
+
+# -------- Health --------
 @api_router.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"service": "CryptoBeginnersHub API", "status": "ok"}
 
-@api_router.post("/status", response_model=StatusCheck)
-async def create_status_check(input: StatusCheckCreate):
-    status_dict = input.model_dump()
-    status_obj = StatusCheck(**status_dict)
-    
-    # Convert to dict and serialize datetime to ISO string for MongoDB
-    doc = status_obj.model_dump()
-    doc['timestamp'] = doc['timestamp'].isoformat()
-    
-    _ = await db.status_checks.insert_one(doc)
-    return status_obj
 
-@api_router.get("/status", response_model=List[StatusCheck])
-async def get_status_checks():
-    # Exclude MongoDB's _id field from the query results
-    status_checks = await db.status_checks.find({}, {"_id": 0}).to_list(1000)
-    
-    # Convert ISO string timestamps back to datetime objects
-    for check in status_checks:
-        if isinstance(check['timestamp'], str):
-            check['timestamp'] = datetime.fromisoformat(check['timestamp'])
-    
-    return status_checks
+# -------- Market: CoinGecko proxy with caching --------
+@api_router.get("/market/top")
+async def get_top_coins():
+    now = datetime.now(timezone.utc)
+    if _market_cache["data"] and _market_cache["ts"] and (now - _market_cache["ts"]) < CACHE_TTL:
+        return {"data": _market_cache["data"], "cached": True}
+    try:
+        resp = await asyncio.to_thread(
+            requests.get,
+            "https://api.coingecko.com/api/v3/coins/markets",
+            params={
+                "vs_currency": "usd",
+                "order": "market_cap_desc",
+                "per_page": 10,
+                "page": 1,
+                "sparkline": "false",
+                "price_change_percentage": "24h",
+            },
+            timeout=10,
+        )
+        resp.raise_for_status()
+        data = resp.json()
+        slim = [
+            {
+                "id": c.get("id"),
+                "name": c.get("name"),
+                "symbol": (c.get("symbol") or "").upper(),
+                "image": c.get("image"),
+                "current_price": c.get("current_price"),
+                "price_change_percentage_24h": c.get("price_change_percentage_24h"),
+                "market_cap": c.get("market_cap"),
+                "total_volume": c.get("total_volume"),
+                "market_cap_rank": c.get("market_cap_rank"),
+            }
+            for c in data
+        ]
+        _market_cache["data"] = slim
+        _market_cache["ts"] = now
+        return {"data": slim, "cached": False}
+    except Exception as e:
+        logger.error(f"CoinGecko top fetch failed: {e}")
+        if _market_cache["data"]:
+            return {"data": _market_cache["data"], "cached": True, "stale": True}
+        raise HTTPException(status_code=503, detail="Market data temporarily unavailable")
 
-# Include the router in the main app
+
+@api_router.get("/market/global")
+async def get_global_stats():
+    now = datetime.now(timezone.utc)
+    if _global_cache["data"] and _global_cache["ts"] and (now - _global_cache["ts"]) < CACHE_TTL:
+        return {"data": _global_cache["data"], "cached": True}
+    try:
+        resp = await asyncio.to_thread(
+            requests.get, "https://api.coingecko.com/api/v3/global", timeout=10
+        )
+        resp.raise_for_status()
+        raw = resp.json().get("data", {})
+        slim = {
+            "total_market_cap_usd": raw.get("total_market_cap", {}).get("usd"),
+            "total_volume_usd": raw.get("total_volume", {}).get("usd"),
+            "btc_dominance": raw.get("market_cap_percentage", {}).get("btc"),
+            "eth_dominance": raw.get("market_cap_percentage", {}).get("eth"),
+            "active_cryptocurrencies": raw.get("active_cryptocurrencies"),
+            "markets": raw.get("markets"),
+            "market_cap_change_percentage_24h_usd": raw.get("market_cap_change_percentage_24h_usd"),
+        }
+        _global_cache["data"] = slim
+        _global_cache["ts"] = now
+        return {"data": slim, "cached": False}
+    except Exception as e:
+        logger.error(f"CoinGecko global fetch failed: {e}")
+        if _global_cache["data"]:
+            return {"data": _global_cache["data"], "cached": True, "stale": True}
+        raise HTTPException(status_code=503, detail="Global stats temporarily unavailable")
+
+
+# -------- Lessons --------
+@api_router.get("/lessons")
+async def list_lessons(level: Optional[str] = None):
+    query = {"level": level} if level else {}
+    cur = db.lessons.find(query, {"_id": 0, "content": 0}).sort([("level", 1), ("order", 1)])
+    return await cur.to_list(200)
+
+
+@api_router.get("/lessons/{slug}")
+async def get_lesson(slug: str):
+    doc = await db.lessons.find_one({"slug": slug}, {"_id": 0})
+    if not doc:
+        raise HTTPException(status_code=404, detail="Lesson not found")
+    return doc
+
+
+# -------- Glossary --------
+@api_router.get("/glossary")
+async def list_glossary():
+    cur = db.glossary.find({}, {"_id": 0}).sort("term", 1)
+    return await cur.to_list(1000)
+
+
+# -------- Blog --------
+@api_router.get("/blog")
+async def list_blog(category: Optional[str] = None):
+    query = {"category": category} if category else {}
+    cur = db.blog.find(query, {"_id": 0, "content": 0}).sort("created_at", -1)
+    return await cur.to_list(500)
+
+
+@api_router.get("/blog/categories")
+async def list_blog_categories():
+    cats = await db.blog.distinct("category")
+    return sorted(cats)
+
+
+@api_router.get("/blog/{slug}")
+async def get_blog(slug: str):
+    doc = await db.blog.find_one({"slug": slug}, {"_id": 0})
+    if not doc:
+        raise HTTPException(status_code=404, detail="Article not found")
+    return doc
+
+
+# -------- Contact --------
+@api_router.post("/contact", response_model=ContactSubmission)
+async def submit_contact(payload: ContactCreate):
+    submission = ContactSubmission(**payload.model_dump())
+    await db.contact_submissions.insert_one(submission.model_dump())
+    return submission
+
+
+# -------- SEO files served from backend (also re-routed to frontend) --------
+@app.get("/robots.txt", response_class=PlainTextResponse)
+async def robots():
+    base = os.environ.get("PUBLIC_SITE_URL", "https://cryptobeginnershub.com")
+    return f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n"
+
+
+@app.get("/sitemap.xml")
+async def sitemap():
+    base = os.environ.get("PUBLIC_SITE_URL", "https://cryptobeginnershub.com")
+    urls = [
+        "/", "/learn", "/dictionary", "/blog",
+        "/about", "/contact", "/privacy", "/terms", "/disclaimer",
+    ]
+    lessons = await db.lessons.find({}, {"_id": 0, "slug": 1}).to_list(500)
+    blogs = await db.blog.find({}, {"_id": 0, "slug": 1}).to_list(500)
+    urls += [f"/learn/{l['slug']}" for l in lessons]
+    urls += [f"/blog/{b['slug']}" for b in blogs]
+
+    items = "\n".join([f"  <url><loc>{base}{u}</loc></url>" for u in urls])
+    xml = f"""<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">
+{items}
+</urlset>"""
+    return Response(content=xml, media_type="application/xml")
+
+
+# -------- Startup: seed DB --------
+@app.on_event("startup")
+async def seed_db():
+    try:
+        # Lessons
+        if await db.lessons.count_documents({}) == 0:
+            await db.lessons.insert_many(LESSONS)
+            logger.info(f"Seeded {len(LESSONS)} lessons")
+        # Blog
+        if await db.blog.count_documents({}) == 0:
+            now_iso = datetime.now(timezone.utc).isoformat()
+            for i, post in enumerate(BLOG_POSTS):
+                post["id"] = str(uuid.uuid4())
+                post["created_at"] = (datetime.now(timezone.utc) - timedelta(days=i * 2)).isoformat()
+            await db.blog.insert_many(BLOG_POSTS)
+            logger.info(f"Seeded {len(BLOG_POSTS)} blog posts")
+        # Glossary
+        if await db.glossary.count_documents({}) == 0:
+            await db.glossary.insert_many(GLOSSARY)
+            logger.info(f"Seeded {len(GLOSSARY)} glossary terms")
+    except Exception as e:
+        logger.error(f"Seeding failed: {e}")
+
+
+@app.on_event("shutdown")
+async def shutdown_db_client():
+    client.close()
+
+
 app.include_router(api_router)
 
 app.add_middleware(
@@ -76,14 +251,3 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger(__name__)
-
-@app.on_event("shutdown")
-async def shutdown_db_client():
-    client.close()
