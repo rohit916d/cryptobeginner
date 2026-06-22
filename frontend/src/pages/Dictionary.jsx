@@ -17,7 +17,11 @@ export default function Dictionary() {
   });
 
   useEffect(() => {
-    api.get("/glossary").then((r) => setTerms(r.data || []));
+    let mounted = true;
+    api.get("/glossary").then((r) => {
+      if (mounted) setTerms(r.data || []);
+    });
+    return () => { mounted = false; };
   }, []);
 
   const filtered = useMemo(() => {

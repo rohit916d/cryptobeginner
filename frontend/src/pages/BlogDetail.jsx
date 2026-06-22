@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import DOMPurify from "dompurify";
 import { api } from "../lib/api";
 import { ArrowLeft, Clock, User } from "lucide-react";
 import { useSEO } from "../lib/seo";
@@ -35,9 +36,13 @@ export default function BlogDetail() {
   const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
+    let mounted = true;
     setPost(null);
     setNotFound(false);
-    api.get(`/blog/${slug}`).then((r) => setPost(r.data)).catch(() => setNotFound(true));
+    api.get(`/blog/${slug}`)
+      .then((r) => { if (mounted) setPost(r.data); })
+      .catch(() => { if (mounted) setNotFound(true); });
+    return () => { mounted = false; };
   }, [slug]);
 
   useSEO({
@@ -87,7 +92,7 @@ export default function BlogDetail() {
         </div>
       )}
 
-      <div className="prose-amber mt-10" dangerouslySetInnerHTML={{ __html: renderMarkdown(post.content) }} />
+      <div className="prose-amber mt-10" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(renderMarkdown(post.content)) }} />
 
       <div className="mt-12 border-t border-white/5 pt-6 text-xs text-zinc-500">
         Educational content only — not financial advice. Always do your own research.

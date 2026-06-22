@@ -24,11 +24,14 @@ export default function Learn() {
   });
 
   useEffect(() => {
+    let mounted = true;
     setLoading(true);
     api.get("/lessons", { params: { level } }).then((r) => {
+      if (!mounted) return;
       setLessons(r.data || []);
       setLoading(false);
     });
+    return () => { mounted = false; };
   }, [level]);
 
   const onSelect = (k) => {
@@ -72,10 +75,9 @@ export default function Learn() {
       )}
 
       <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {loading &&
-          Array.from({ length: 6 }).map((_, i) => (
-            <div key={i} className="card-base p-6 h-44 animate-pulse" />
-          ))}
+        {loading && Array.from({ length: 6 }).map((_, i) => (
+          <div key={`skeleton-${i}`} className="card-base p-6 h-44 animate-pulse" />
+        ))}
         {!loading && lessons.map((l, idx) => (
           <Link
             key={l.slug}

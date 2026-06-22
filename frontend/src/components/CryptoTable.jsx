@@ -3,27 +3,33 @@ import { api } from "../lib/api";
 import { formatUSD, formatPct } from "../lib/format";
 import { ArrowUpRight, ArrowDownRight, RefreshCw } from "lucide-react";
 
+const SKELETON_KEYS = ["sk1", "sk2", "sk3", "sk4", "sk5", "sk6", "sk7", "sk8", "sk9", "sk10"];
+
 export default function CryptoTable() {
   const [coins, setCoins] = useState([]);
   const [loading, setLoading] = useState(true);
   const [lastUpdated, setLastUpdated] = useState(null);
-
-  const load = async () => {
-    try {
-      const { data } = await api.get("/market/top");
-      setCoins(data.data || []);
-      setLastUpdated(new Date());
-    } catch (e) {
-      // keep prior
-    } finally {
-      setLoading(false);
-    }
-  };
+  const [error, setError] = useState(null);
 
   useEffect(() => {
+    let mounted = true;
+    const load = async () => {
+      try {
+        const { data } = await api.get("/market/top");
+        if (mounted) {
+          setCoins(data.data || []);
+          setLastUpdated(new Date());
+          setError(null);
+        }
+      } catch (err) {
+        if (mounted) setError("Unable to refresh market data");
+      } finally {
+        if (mounted) setLoading(false);
+      }
+    };
     load();
-    const id = setInterval(load, 60000);
-    return () => clearInterval(id);
+    const intervalId = setInterval(load, 60000);
+    return () => { mounted = false; clearInterval(intervalId); };
   }, []);
 
   return (
@@ -52,14 +58,14 @@ export default function CryptoTable() {
           </thead>
           <tbody>
             {loading && coins.length === 0 &&
-              Array.from({ length: 10 }).map((_, i) => (
-                <tr key={i} className="border-b border-white/5">
+              SKELETON_KEYS.map((sk) => (
+                <tr key={sk} className="border-b border-white/5">
                   <td colSpan={5} className="py-4 px-5">
                     <div className="h-5 bg-white/5 rounded animate-pulse" />
                   </td>
                 </tr>
               ))}
-            {coins.map((c, idx) => {
+            {coins.map((c) => {
               const up = (c.price_change_percentage_24h ?? 0) >= 0;
               return (
                 <tr
@@ -67,7 +73,7 @@ export default function CryptoTable() {
                   data-testid={`coin-row-${c.symbol}`}
                   className="border-b border-white/5 hover:bg-white/[0.02] transition-colors"
                 >
-                  <td className="py-4 px-5 md:px-6 text-zinc-500 font-mono">{c.market_cap_rank || idx + 1}</td>
+                  <td className="py-4 px-5 md:px-6 text-zinc-500 font-mono">{c.market_cap_rank}</td>
                   <td className="py-4 px-2">
                     <div className="flex items-center gap-3">
                       <img src={c.image} alt={c.name} className="w-7 h-7 rounded-full" loading="lazy" />
@@ -96,6 +102,7 @@ export default function CryptoTable() {
       <div className="px-5 md:px-6 py-3 text-[11px] text-zinc-600 border-t border-white/5">
         Data via CoinGecko · auto-refresh every 60s · not investment advice
       </div>
+      {error && <div className="sr-only" role="status">{error}</div>}
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import DOMPurify from "dompurify";
 import { api } from "../lib/api";
 import { ArrowLeft, Clock, AlertTriangle } from "lucide-react";
 import { useSEO } from "../lib/seo";
@@ -53,11 +54,13 @@ export default function LearnDetail() {
   const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
+    let mounted = true;
     setLesson(null);
     setNotFound(false);
     api.get(`/lessons/${slug}`)
-      .then((r) => setLesson(r.data))
-      .catch(() => setNotFound(true));
+      .then((r) => { if (mounted) setLesson(r.data); })
+      .catch(() => { if (mounted) setNotFound(true); });
+    return () => { mounted = false; };
   }, [slug]);
 
   useSEO({
@@ -100,7 +103,7 @@ export default function LearnDetail() {
         <Clock size={12} /> {lesson.read_time} min read
       </div>
 
-      <div className="prose-amber mt-10" dangerouslySetInnerHTML={{ __html: renderMarkdown(lesson.content) }} />
+      <div className="prose-amber mt-10" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(renderMarkdown(lesson.content)) }} />
 
       <div className="mt-12 card-base p-5 border border-amber-400/20 bg-amber-400/[0.03]">
         <div className="flex items-start gap-3">

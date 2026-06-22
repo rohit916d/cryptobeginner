@@ -17,14 +17,17 @@ export default function Blog() {
   });
 
   useEffect(() => {
+    let mounted = true;
     Promise.all([
       api.get("/blog"),
       api.get("/blog/categories"),
     ]).then(([p, c]) => {
+      if (!mounted) return;
       setPosts(p.data || []);
       setCats(["All", ...(c.data || [])]);
       setLoading(false);
     });
+    return () => { mounted = false; };
   }, []);
 
   const filtered = active === "All" ? posts : posts.filter((p) => p.category === active);
@@ -58,7 +61,7 @@ export default function Blog() {
 
       <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {loading && Array.from({ length: 6 }).map((_, i) => (
-          <div key={i} className="card-base p-6 h-72 animate-pulse" />
+          <div key={`blog-skeleton-${i}`} className="card-base p-6 h-72 animate-pulse" />
         ))}
         {!loading && filtered.map((p, idx) => (
           <Link
