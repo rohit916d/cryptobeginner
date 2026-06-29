@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { api } from "../lib/api";
 import { formatUSD, formatPct } from "../lib/format";
 import { ArrowUpRight, ArrowDownRight, RefreshCw } from "lucide-react";
@@ -8,29 +8,40 @@ const SKELETON_KEYS = ["sk1", "sk2", "sk3", "sk4", "sk5", "sk6", "sk7", "sk8", "
 export default function CryptoTable() {
   const [coins, setCoins] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
-  const [error, setError] = useState(null);
+  const mountedRef = useRef(true);
+
+  const load = useCallback(async () => {
+    setRefreshing(true);
+    try {
+      const { data } = await api.get("/market/top");
+      if (mountedRef.current) {
+        setCoins(data.data || []);
+        setLastUpdated(new Date());
+      }
+    } catch (err) {
+      // keep previous data on failure; will retry next cycle
+    } finally {
+      if (mountedRef.current) {
+        setLoading(false);
+        setRefreshing(false);
+      }
+    }
+  }, []);
 
   useEffect(() => {
-    let mounted = true;
-    const load = async () => {
-      try {
-        const { data } = await api.get("/market/top");
-        if (mounted) {
-          setCoins(data.data || []);
-          setLastUpdated(new Date());
-          setError(null);
-        }
-      } catch (err) {
-        if (mounted) setError("Unable to refresh market data");
-      } finally {
-        if (mounted) setLoading(false);
-      }
-    };
+    mountedRef.current = true;
     load();
     const intervalId = setInterval(load, 60000);
-    return () => { mounted = false; clearInterval(intervalId); };
-  }, []);
+    const onVisible = () => { if (document.visibilityState === "visible") load(); };
+    document.addEventListener("visibilitychange", onVisible);
+    return () => {
+      mountedRef.current = false;
+      clearInterval(intervalId);
+      document.removeEventListener("visibilitychange", onVisible);
+    };
+  }, [load]);
 
   return (
     <div data-testid="crypto-table" className="card-base overflow-hidden">
@@ -39,10 +50,17 @@ export default function CryptoTable() {
           <div className="label-eyebrow">Live Market</div>
           <h3 className="text-xl font-bold text-white mt-1">Top 10 Cryptocurrencies</h3>
         </div>
-        <div className="flex items-center gap-2 text-xs text-zinc-500 font-mono">
-          <RefreshCw size={12} className="text-[#FFBF00]" />
+        <button
+          type="button"
+          onClick={load}
+          disabled={refreshing}
+          data-testid="market-refresh-btn"
+          aria-label="Refresh market data"
+          className="flex items-center gap-2 text-xs text-zinc-500 font-mono cursor-pointer hover:text-white transition-colors disabled:opacity-60 disabled:cursor-wait"
+        >
+          <RefreshCw size={12} className={`text-[#FFBF00] ${refreshing ? "animate-spin" : ""}`} />
           {lastUpdated ? `Updated ${lastUpdated.toLocaleTimeString()}` : "Loading…"}
-        </div>
+        </button>
       </div>
 
       <div className="overflow-x-auto no-scrollbar">
@@ -102,7 +120,6 @@ export default function CryptoTable() {
       <div className="px-5 md:px-6 py-3 text-[11px] text-zinc-600 border-t border-white/5">
         Data via CoinGecko · auto-refresh every 60s · not investment advice
       </div>
-      {error && <div className="sr-only" role="status">{error}</div>}
     </div>
   );
 }

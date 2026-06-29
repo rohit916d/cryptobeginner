@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { api } from "../lib/api";
 import { formatUSD, formatNumber, formatPct } from "../lib/format";
 import { Globe, Bitcoin, Users, Coins } from "lucide-react";
@@ -48,27 +48,31 @@ function buildItems(stats) {
 export default function MarketStats() {
   const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const mountedRef = useRef(true);
+
+  const load = useCallback(async () => {
+    try {
+      const { data } = await api.get("/market/global");
+      if (mountedRef.current) setStats(data.data);
+    } catch (err) {
+      // keep previous data on failure; will retry next cycle
+    } finally {
+      if (mountedRef.current) setLoading(false);
+    }
+  }, []);
 
   useEffect(() => {
-    let mounted = true;
-    const load = async () => {
-      try {
-        const { data } = await api.get("/market/global");
-        if (mounted) {
-          setStats(data.data);
-          setError(null);
-        }
-      } catch (err) {
-        if (mounted) setError("Unable to load market stats");
-      } finally {
-        if (mounted) setLoading(false);
-      }
-    };
+    mountedRef.current = true;
     load();
     const id = setInterval(load, 60000);
-    return () => { mounted = false; clearInterval(id); };
-  }, []);
+    const onVisible = () => { if (document.visibilityState === "visible") load(); };
+    document.addEventListener("visibilitychange", onVisible);
+    return () => {
+      mountedRef.current = false;
+      clearInterval(id);
+      document.removeEventListener("visibilitychange", onVisible);
+    };
+  }, [load]);
 
   const items = buildItems(stats);
 
@@ -93,7 +97,6 @@ export default function MarketStats() {
           {it.sub && <div className={`mt-1 text-xs font-mono ${it.subColor}`}>{it.sub}</div>}
         </div>
       ))}
-      {error && <div className="sr-only" role="status">{error}</div>}
     </div>
   );
 }
