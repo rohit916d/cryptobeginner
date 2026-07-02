@@ -10,8 +10,11 @@ export default function CryptoTable() {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
-  const mountedRef = useRef(true);
 
+  // Live clock
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  const mountedRef = useRef(true);
   const load = useCallback(async () => {
     setRefreshing(true);
     try {
@@ -31,17 +34,34 @@ export default function CryptoTable() {
   }, []);
 
   useEffect(() => {
-    mountedRef.current = true;
-    load();
-    const intervalId = setInterval(load, 60000);
-    const onVisible = () => { if (document.visibilityState === "visible") load(); };
-    document.addEventListener("visibilitychange", onVisible);
-    return () => {
-      mountedRef.current = false;
-      clearInterval(intervalId);
-      document.removeEventListener("visibilitychange", onVisible);
-    };
-  }, [load]);
+  mountedRef.current = true;
+  load();
+
+  const intervalId = setInterval(load, 60000);
+
+  const onVisible = () => {
+    if (document.visibilityState === "visible") {
+      load();
+    }
+  };
+
+  document.addEventListener("visibilitychange", onVisible);
+
+  return () => {
+    mountedRef.current = false;
+    clearInterval(intervalId);
+    document.removeEventListener("visibilitychange", onVisible);
+  };
+}, [load]);
+
+// Live clock - updates every second
+useEffect(() => {
+  const timer = setInterval(() => {
+    setCurrentTime(new Date());
+  }, 1000);
+
+  return () => clearInterval(timer);
+}, []);
 
   return (
     <div data-testid="crypto-table" className="card-base overflow-hidden">
@@ -59,7 +79,9 @@ export default function CryptoTable() {
           className="flex items-center gap-2 text-xs text-zinc-500 font-mono cursor-pointer hover:text-white transition-colors disabled:opacity-60 disabled:cursor-wait"
         >
           <RefreshCw size={12} className={`text-[#FFBF00] ${refreshing ? "animate-spin" : ""}`} />
-          {lastUpdated ? `Updated ${lastUpdated.toLocaleTimeString()}` : "Loading…"}
+          {lastUpdated
+  ? `Updated ${currentTime.toLocaleTimeString()}`
+  : "Loading..."}
         </button>
       </div>
 
