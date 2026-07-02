@@ -78,6 +78,7 @@ useEffect(() => {
   );
 
   ws.onmessage = (event) => {
+    console.log("WebSocket Data", JSON.parse(event.data));
     const data = JSON.parse(event.data);
 
     setCoins((prev) =>
@@ -165,7 +166,9 @@ useEffect(() => {
                       </div>
                     </div>
                   </td>
-                  <td className="py-4 px-2 text-right font-mono text-white">{formatUSD(c.current_price)}</td>
+                  <td className="py-4 px-2 text-right font-mono text-white">
+  {Number(c.current_price).toFixed(2)}
+</td>
                   <td className={`py-4 px-2 text-right font-mono ${up ? "text-emerald-400" : "text-rose-400"}`}>
                     <span className="inline-flex items-center gap-1 justify-end">
                       {up ? <ArrowUpRight size={13} /> : <ArrowDownRight size={13} />}
