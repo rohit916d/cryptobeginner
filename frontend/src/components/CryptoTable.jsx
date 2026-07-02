@@ -2,6 +2,13 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { api } from "../lib/api";
 import { formatUSD, formatPct } from "../lib/format";
 import { ArrowUpRight, ArrowDownRight, RefreshCw } from "lucide-react";
+const LIVE_SYMBOLS = {
+  BTC: "btcusdt",
+  ETH: "ethusdt",
+  BNB: "bnbusdt",
+  XRP: "xrpusdt",
+  SOL: "solusdt",
+};
 
 const SKELETON_KEYS = ["sk1", "sk2", "sk3", "sk4", "sk5", "sk6", "sk7", "sk8", "sk9", "sk10"];
 
@@ -62,6 +69,41 @@ useEffect(() => {
 
   return () => clearInterval(timer);
 }, []);
+
+useEffect(() => {
+  if (!coins.length) return;
+
+  const ws = new WebSocket(
+    "wss://stream.binance.com:9443/ws/!ticker@arr"
+  );
+
+  ws.onmessage = (event) => {
+    const data = JSON.parse(event.data);
+
+    setCoins((prev) =>
+      prev.map((coin) => {
+        const symbol = LIVE_SYMBOLS[coin.symbol];
+
+        if (!symbol) return coin;
+
+        const ticker = data.find(
+          (t) => t.s.toLowerCase() === symbol
+        );
+
+        if (!ticker) return coin;
+
+        return {
+          ...coin,
+          current_price: Number(ticker.c),
+        };
+      })
+    );
+
+    setCurrentTime(new Date());
+  };
+
+  return () => ws.close();
+}, [coins.length]);
 
   return (
     <div data-testid="crypto-table" className="card-base overflow-hidden">

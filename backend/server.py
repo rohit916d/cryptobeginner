@@ -12,6 +12,8 @@ from pydantic import BaseModel, Field, EmailStr
 from typing import List, Optional
 from datetime import datetime, timezone, timedelta
 import requests
+import json
+import websockets
 
 from seed_data import LESSONS, BLOG_POSTS, GLOSSARY
 
