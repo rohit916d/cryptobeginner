@@ -22,6 +22,8 @@ mongo_url = os.environ['MONGO_URL']
 client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
+COINGECKO_API_KEY = os.getenv("COINGECKO_API_KEY")
+
 app = FastAPI(title="Crypto Beginner API")
 api_router = APIRouter(prefix="/api")
 
@@ -108,10 +110,20 @@ async def get_global_stats():
     now = datetime.now(timezone.utc)
     if _global_cache["data"] and _global_cache["ts"] and (now - _global_cache["ts"]) < CACHE_TTL:
         return {"data": _global_cache["data"], "cached": True}
+
     try:
+        headers = {}
+
+        if COINGECKO_API_KEY:
+            headers["x-cg-demo-api-key"] = COINGECKO_API_KEY
+
         resp = await asyncio.to_thread(
-            requests.get, "https://api.coingecko.com/api/v3/global", timeout=10
+            requests.get,
+            "https://api.coingecko.com/api/v3/global",
+            headers=headers,
+            timeout=10
         )
+
         resp.raise_for_status()
         raw = resp.json().get("data", {})
         slim = {
