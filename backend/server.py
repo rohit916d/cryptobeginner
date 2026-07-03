@@ -141,14 +141,19 @@ async def get_global_stats():
         _global_cache["ts"] = now
         return {"data": slim, "cached": False}
     except Exception as e:
-    logger.exception("CoinGecko global fetch failed")
+        logger.exception("CoinGecko global fetch failed")
 
-    if _global_cache["data"]:
-        return {
+        if _global_cache["data"]:
+            return {
             "data": _global_cache["data"],
             "cached": True,
             "stale": True
         }
+
+        raise HTTPException(
+        status_code=503,
+        detail=f"CoinGecko error: {str(e)}"
+    )
 
     raise HTTPException(status_code=503, detail=str(e))
 
