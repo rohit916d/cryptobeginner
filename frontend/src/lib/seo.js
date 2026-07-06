@@ -1,6 +1,16 @@
 import { useEffect } from "react";
 
-export function useSEO({ title, description, canonical, image, type = "website", jsonLd }) {
+export function useSEO({
+  title,
+  description,
+  canonical,
+  image,
+  type = "website",
+  jsonLd,
+  keywords,
+  author = "Crypto Beginner",
+  robots = "index,follow"
+}) {
   useEffect(() => {
     const fullTitle = title ? `${title} — Crypto Beginner` : "Crypto Beginner — Learn Crypto From Zero";
     document.title = fullTitle;
@@ -25,6 +35,13 @@ export function useSEO({ title, description, canonical, image, type = "website",
     setMeta("twitter:title", fullTitle);
     setMeta("twitter:description", description);
 
+    setMeta("twitter:image", image);
+    setMeta("og:url", canonical, "property");
+    setMeta("robots", robots);
+    setMeta("keywords", keywords);
+    setMeta("author", author);
+    setMeta("theme-color", "#0A0A0B");
+
     if (canonical) {
       let link = document.querySelector('link[rel="canonical"]');
       if (!link) {
@@ -44,8 +61,18 @@ export function useSEO({ title, description, canonical, image, type = "website",
         document.head.appendChild(ldScript);
       }
       ldScript.textContent = JSON.stringify(jsonLd);
-    } else if (ldScript) {
+        } else if (ldScript) {
       ldScript.remove();
     }
-  }, [title, description, canonical, image, type, jsonLd]);
+  }, [
+    title,
+    description,
+    canonical,
+    image,
+    type,
+    jsonLd,
+    keywords,
+    author,
+    robots
+  ]);
 }

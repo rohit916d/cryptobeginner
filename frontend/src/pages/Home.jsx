@@ -3,12 +3,17 @@ import { ArrowRight, Sparkles, ShieldCheck, BookOpen, TrendingUp } from "lucide-
 import MarketStats from "../components/MarketStats";
 import CryptoTable from "../components/CryptoTable";
 import { useSEO } from "../lib/seo";
+import CryptoNews from "../components/CryptoNews";
 
 export default function Home() {
   useSEO({
-    title: "Learn Crypto From Zero",
-    description: "Crypto Beginner is a beginner-friendly crypto education platform. Learn Bitcoin, blockchain, wallets, DeFi and security — without hype or financial advice.",
+    title: "Learn Crypto, Bitcoin & Blockchain From Zero",
+    description:
+      "Learn Crypto, Bitcoin, Blockchain, Web3, Wallets, DeFi and Cryptocurrency from scratch with beginner-friendly guides, tutorials and live market data.",
+    keywords:
+      "crypto, cryptocurrency, bitcoin, blockchain, web3, defi, crypto for beginners, learn crypto, bitcoin guide, crypto education, wallets, ethereum",
     canonical: typeof window !== "undefined" ? window.location.href : undefined,
+    image: "https://cryptobeginner.in/cryptobeginner-icon.png",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "WebSite",
@@ -17,7 +22,6 @@ export default function Home() {
       url: typeof window !== "undefined" ? window.location.origin : "",
     },
   });
-
   return (
     <>
       {/* HERO */}
@@ -99,6 +103,10 @@ export default function Home() {
       {/* TOP 10 TABLE */}
       <section id="market" data-testid="market-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
         <CryptoTable />
+      </section>
+
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+        <CryptoNews />
       </section>
 
       {/* LEARNING PATH CTA */}
