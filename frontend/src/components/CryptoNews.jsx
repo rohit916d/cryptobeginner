@@ -33,13 +33,15 @@ export default function CryptoNews() {
             key={index}
             className="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:border-yellow-500 transition"
           >
-            {item.image && (
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-48 object-cover"
-              />
-            )}
+            <img
+  src={item.image || "/logo192.png"}
+  alt={item.title}
+  className="w-full h-48 object-cover"
+  onError={(e) => {
+    e.target.onerror = null;
+    e.target.src = "/logo192.png";
+  }}
+/>
 
             <div className="p-5">
               <p className="text-xs text-yellow-400 mb-2">
