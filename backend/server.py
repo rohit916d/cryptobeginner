@@ -314,11 +314,12 @@ async def crypto_news():
             "https://newsdata.io/api/1/latest",
 
             params={
-                "apikey": NEWSDATA_API_KEY,
-                "q": "crypto OR bitcoin OR ethereum",
-                "language": "en",
-                "size": 10
-            },
+    "apikey": NEWSDATA_API_KEY,
+    "q": "crypto",
+    "language": "en",
+    "category": "business,technology",
+    "size": 10
+},
 
             timeout=20
         )
@@ -329,23 +330,26 @@ async def crypto_news():
 
         news = []
 
-        for item in raw.get("results", []):
+        news = []
 
-            news.append({
+for item in raw.get("results", []):
 
-                "title": item.get("title"),
+    # Image na ho to skip
+    if not item.get("image_url"):
+        continue
 
-                "description": item.get("description"),
+    # Title na ho to skip
+    if not item.get("title"):
+        continue
 
-                "image": item.get("image_url"),
-
-                "link": item.get("link"),
-
-                "source": item.get("source_name"),
-
-                "date": item.get("pubDate")
-
-            })
+    news.append({
+        "title": item.get("title"),
+        "description": item.get("description"),
+        "image": item.get("image_url"),
+        "link": item.get("link"),
+        "source": item.get("source_name"),
+        "date": item.get("pubDate")
+    })
 
         _news_cache["data"] = news
         _news_cache["ts"] = now
