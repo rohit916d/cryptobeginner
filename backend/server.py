@@ -308,19 +308,15 @@ async def crypto_news():
     try:
 
         response = await asyncio.to_thread(
-
             requests.get,
-
             "https://newsdata.io/api/1/latest",
-
             params={
-    "apikey": NEWSDATA_API_KEY,
-    "q": "crypto",
-    "language": "en",
-    "category": "business,technology",
-    "size": 10
-},
-
+                "apikey": NEWSDATA_API_KEY,
+                "q": "crypto",
+                "language": "en",
+                "category": "business,technology",
+                "size": 10
+            },
             timeout=20
         )
 
@@ -330,51 +326,49 @@ async def crypto_news():
 
         news = []
 
-        news = []
+        keywords = [
+            "crypto",
+            "bitcoin",
+            "btc",
+            "ethereum",
+            "eth",
+            "blockchain",
+            "binance",
+            "solana",
+            "xrp",
+            "dogecoin",
+            "cardano",
+            "altcoin",
+            "web3",
+            "defi",
+            "nft",
+            "stablecoin"
+        ]
 
-for item in raw.get("results", []):
+        for item in raw.get("results", []):
 
-    title = (item.get("title") or "").lower()
-description = (item.get("description") or "").lower()
+            title = (item.get("title") or "").lower()
+            description = (item.get("description") or "").lower()
 
-text = title + " " + description
+            text = title + " " + description
 
-keywords = [
-    "crypto",
-    "bitcoin",
-    "btc",
-    "ethereum",
-    "eth",
-    "blockchain",
-    "binance",
-    "solana",
-    "xrp",
-    "dogecoin",
-    "cardano",
-    "altcoin",
-    "web3",
-    "defi",
-    "nft",
-    "stablecoin"
-]
+            if not any(keyword in text for keyword in keywords):
+                continue
 
-if not any(keyword in text for keyword in keywords):
-    continue
+            if not item.get("image_url"):
+                continue
 
-if not item.get("image_url"):
-    continue
+            if not item.get("title"):
+                continue
 
-if not item.get("title"):
-    continue
-
-news.append({
-    "title": item.get("title"),
-    "description": item.get("description"),
-    "image": item.get("image_url"),
-    "link": item.get("link"),
-    "source": item.get("source_name"),
-    "date": item.get("pubDate")
-})
+            news.append({
+                "title": item.get("title"),
+                "description": item.get("description"),
+                "image": item.get("image_url"),
+                "link": item.get("link"),
+                "source": item.get("source_name"),
+                "date": item.get("pubDate")
+            })
 
         _news_cache["data"] = news
         _news_cache["ts"] = now
@@ -389,7 +383,6 @@ news.append({
         logger.exception(e)
 
         if _news_cache["data"]:
-
             return {
                 "data": _news_cache["data"],
                 "cached": True,
