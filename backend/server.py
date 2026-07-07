@@ -334,22 +334,47 @@ async def crypto_news():
 
 for item in raw.get("results", []):
 
-    # Image na ho to skip
-    if not item.get("image_url"):
-        continue
+    title = (item.get("title") or "").lower()
+description = (item.get("description") or "").lower()
 
-    # Title na ho to skip
-    if not item.get("title"):
-        continue
+text = title + " " + description
 
-    news.append({
-        "title": item.get("title"),
-        "description": item.get("description"),
-        "image": item.get("image_url"),
-        "link": item.get("link"),
-        "source": item.get("source_name"),
-        "date": item.get("pubDate")
-    })
+keywords = [
+    "crypto",
+    "bitcoin",
+    "btc",
+    "ethereum",
+    "eth",
+    "blockchain",
+    "binance",
+    "solana",
+    "xrp",
+    "dogecoin",
+    "cardano",
+    "altcoin",
+    "web3",
+    "defi",
+    "nft",
+    "stablecoin"
+]
+
+if not any(keyword in text for keyword in keywords):
+    continue
+
+if not item.get("image_url"):
+    continue
+
+if not item.get("title"):
+    continue
+
+news.append({
+    "title": item.get("title"),
+    "description": item.get("description"),
+    "image": item.get("image_url"),
+    "link": item.get("link"),
+    "source": item.get("source_name"),
+    "date": item.get("pubDate")
+})
 
         _news_cache["data"] = news
         _news_cache["ts"] = now
