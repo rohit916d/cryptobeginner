@@ -5,7 +5,7 @@ export default function CryptoNews() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:8001/api/news")
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/news`)
       .then((res) => res.json())
       .then((data) => {
         setNews(data.data || []);
