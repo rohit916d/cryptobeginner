@@ -34,12 +34,13 @@ export default function CryptoNews() {
             className="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:border-yellow-500 transition"
           >
             <img
-  src={item.image || "/logo192.png"}
+  src={item.image || "/news-placeholder.jpg"}
   alt={item.title}
   className="w-full h-48 object-cover"
+  loading="lazy"
   onError={(e) => {
     e.target.onerror = null;
-    e.target.src = "/logo192.png";
+    e.target.src = "/news-placeholder.jpg";
   }}
 />
 
