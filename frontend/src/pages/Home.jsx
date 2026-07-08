@@ -26,7 +26,7 @@ export default function Home() {
   useEffect(() => {
   if ("requestIdleCallback" in window) {
     requestIdleCallback(() => {
-      fetch(`${process.env.REACT_APP_BACKEND_URL}/api/market/stats`).catch(() => {});
+      fetch(`${process.env.REACT_APP_BACKEND_URL}/api/market/global`)
       fetch(`${process.env.REACT_APP_BACKEND_URL}/api/news`).catch(() => {});
     });
   }
