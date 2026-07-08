@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import { ArrowRight, Sparkles, ShieldCheck, BookOpen, TrendingUp } from "lucide-react";
 import MarketStats from "../components/MarketStats";
 import CryptoTable from "../components/CryptoTable";
@@ -22,6 +23,14 @@ export default function Home() {
       url: typeof window !== "undefined" ? window.location.origin : "",
     },
   });
+  useEffect(() => {
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(() => {
+      fetch(`${process.env.REACT_APP_BACKEND_URL}/api/market/stats`).catch(() => {});
+      fetch(`${process.env.REACT_APP_BACKEND_URL}/api/news`).catch(() => {});
+    });
+  }
+}, []);
   return (
     <>
       {/* HERO */}
