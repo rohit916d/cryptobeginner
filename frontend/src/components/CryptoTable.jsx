@@ -74,34 +74,33 @@ useEffect(() => {
   if (!coins.length) return;
 
   const ws = new WebSocket(
-    "wss://stream.binance.com:9443/ws/!ticker@arr"
+  "wss://stream.binance.com:9443/stream?streams=btcusdt@ticker/ethusdt@ticker/bnbusdt@ticker/xrpusdt@ticker/solusdt@ticker"
+);
+
+ ws.onmessage = (event) => {
+  const message = JSON.parse(event.data);
+
+  if (!message.data) return;
+
+  const ticker = message.data;
+
+  setCoins((prev) =>
+    prev.map((coin) => {
+      const symbol = LIVE_SYMBOLS[coin.symbol];
+
+      if (!symbol) return coin;
+
+      if (symbol !== ticker.s.toLowerCase()) return coin;
+
+      return {
+        ...coin,
+        current_price: Number(ticker.c),
+      };
+    })
   );
 
-  ws.onmessage = (event) => {
-    console.log("WebSocket Data", JSON.parse(event.data));
-    const data = JSON.parse(event.data);
-
-    setCoins((prev) =>
-      prev.map((coin) => {
-        const symbol = LIVE_SYMBOLS[coin.symbol];
-
-        if (!symbol) return coin;
-
-        const ticker = data.find(
-          (t) => t.s.toLowerCase() === symbol
-        );
-
-        if (!ticker) return coin;
-
-        return {
-          ...coin,
-          current_price: Number(ticker.c),
-        };
-      })
-    );
-
-    setCurrentTime(new Date());
-  };
+  setCurrentTime(new Date());
+};
 
   return () => ws.close();
 }, [coins.length]);

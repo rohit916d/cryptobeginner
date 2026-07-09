@@ -1,24 +1,49 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 
-export default function CryptoNews() {
+function CryptoNews() {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/news`)
-      .then((res) => res.json())
-      .then((data) => {
+    const controller = new AbortController();
+
+    const loadNews = async () => {
+      try {
+        const res = await fetch(
+          `${process.env.REACT_APP_BACKEND_URL}/api/news`,
+          {
+            signal: controller.signal,
+            cache: "force-cache",
+          }
+        );
+
+        const data = await res.json();
+
         setNews(data.data || []);
+      } catch (err) {
+        if (err.name !== "AbortError") {
+          console.error(err);
+        }
+      } finally {
         setLoading(false);
-      })
-      .catch((err) => {
-        console.error(err);
-        setLoading(false);
-      });
+      }
+    };
+
+    if ("requestIdleCallback" in window) {
+      requestIdleCallback(loadNews);
+    } else {
+      setTimeout(loadNews, 500);
+    }
+
+    return () => controller.abort();
   }, []);
 
   if (loading) {
-    return <h2 className="text-white text-xl">Loading Crypto News...</h2>;
+    return (
+      <div className="h-60 flex items-center justify-center text-zinc-500">
+        Loading Crypto News...
+      </div>
+    );
   }
 
   return (
@@ -29,20 +54,23 @@ export default function CryptoNews() {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {news.map((item, index) => (
-          <div
-            key={index}
+          <article
+            key={item.link || index}
             className="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:border-yellow-500 transition"
           >
             <img
-  src={item.image || "/news-placeholder.jpg"}
-  alt={item.title}
-  className="w-full h-48 object-cover"
-  loading="lazy"
-  onError={(e) => {
-    e.target.onerror = null;
-    e.target.src = "/news-placeholder.jpg";
-  }}
-/>
+              src={item.image || "/news-placeholder.jpg"}
+              alt={item.title}
+              width="600"
+              height="350"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-48 object-cover"
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                e.currentTarget.src = "/news-placeholder.jpg";
+              }}
+            />
 
             <div className="p-5">
               <p className="text-xs text-yellow-400 mb-2">
@@ -60,15 +88,17 @@ export default function CryptoNews() {
               <a
                 href={item.link}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="inline-block mt-5 text-yellow-400 hover:underline"
               >
                 Read Full News →
               </a>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>
   );
 }
+
+export default memo(CryptoNews);
