@@ -25,7 +25,7 @@
         },
         {
           "key": "Strict-Transport-Security",
-          "value": "max-age=63072000; includeSubDomains; preload"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://api.fontshare.com; img-src 'self' data: https: blob:; connect-src 'self' https://cryptobeginner.onrender.com https://api.coingecko.com https://newsdata.io https://www.google-analytics.com https://analytics.google.com wss://stream.binance.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"
         },
        {
           "key": "Content-Security-Policy",
