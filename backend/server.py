@@ -37,7 +37,9 @@ DB_NAME = os.getenv("DB_NAME")
 
 COINGECKO_API_KEY = os.getenv("COINGECKO_API_KEY")
 NEWSDATA_API_KEY = os.getenv("NEWSDATA_API_KEY")
+import os
 
+print("MONGO_URL =", repr(os.getenv("MONGO_URL")))
 
 client = AsyncIOMotorClient(MONGO_URL)
 
@@ -108,6 +110,8 @@ class ContactCreate(BaseModel):
         max_length=200
     )
 
+class ChatRequest(BaseModel):
+    message: str
     message: str = Field(
         min_length=5,
         max_length=4000
@@ -508,6 +512,29 @@ async def contact(payload: ContactCreate):
     )
 
     return submission
+    message: str
+
+async def chat(req: ChatRequest):
+
+    msg = req.message.lower()
+
+    if "bitcoin" in msg or "btc" in msg:
+        return {"reply": "Bitcoin (BTC) is the world's first cryptocurrency launched in 2009."}
+
+    elif "ethereum" in msg or "eth" in msg:
+        return {"reply": "Ethereum is a blockchain platform that supports smart contracts and DApps."}
+
+    elif "xrp" in msg:
+        return {"reply": "XRP is Ripple's cryptocurrency designed for fast international payments."}
+
+    elif "solana" in msg:
+        return {"reply": "Solana is a high-speed blockchain known for low transaction fees."}
+
+    elif "hello" in msg or "hi" in msg:
+        return {"reply": "Hello 👋 How can I help you with Crypto today?"}
+
+    else:
+        return {"reply": "Sorry, I'm still learning Crypto."}
 
 
 # ----------------------------------------------------
@@ -649,6 +676,47 @@ async def shutdown():
 
     logger.info("MongoDB Closed")
 
+# ----------------------------------------------------
+# CHATBOT
+# ----------------------------------------------------
+
+@api_router.post("/chat")
+async def chatbot(payload: ChatRequest):
+
+    text = payload.message.lower()
+
+    if "bitcoin" in text:
+        reply = (
+            "Bitcoin is the world's first decentralized cryptocurrency. "
+            "It has a maximum supply of 21 million coins."
+        )
+
+    elif "ethereum" in text:
+        reply = (
+            "Ethereum is a blockchain platform that supports smart contracts and dApps."
+        )
+
+    elif "wallet" in text:
+        reply = (
+            "A crypto wallet stores your private keys. Never share your seed phrase with anyone."
+        )
+
+    elif "blockchain" in text:
+        reply = (
+            "Blockchain is a decentralized digital ledger that records transactions securely."
+        )
+
+    elif "hello" in text or "hi" in text:
+        reply = "Hello 👋 Welcome to Crypto Beginner. Ask me anything about crypto."
+
+    else:
+        reply = (
+            "Sorry, I don't know that yet. Try asking about Bitcoin, Ethereum, Wallet or Blockchain."
+        )
+
+    return {
+        "reply": reply
+    }
 
 # ----------------------------------------------------
 # ROUTER
