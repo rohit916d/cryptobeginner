@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { ArrowRight, Sparkles, ShieldCheck, BookOpen, TrendingUp } from "lucide-react";
-import MarketStats from "../components/MarketStats";
-import CryptoTable from "../components/CryptoTable";
 import { useSEO } from "../lib/seo";
-import CryptoNews from "../components/CryptoNews";
+
+const MarketStats = lazy(() => import("../components/MarketStats"));
+const CryptoTable = lazy(() => import("../components/CryptoTable"));
+const CryptoNews = lazy(() => import("../components/CryptoNews"));
 
 export default function Home() {
   useSEO({
@@ -23,14 +24,7 @@ export default function Home() {
       url: typeof window !== "undefined" ? window.location.origin : "",
     },
   });
-  useEffect(() => {
-  if ("requestIdleCallback" in window) {
-    requestIdleCallback(() => {
-      fetch(`${process.env.REACT_APP_BACKEND_URL}/api/market/global`)
-      fetch(`${process.env.REACT_APP_BACKEND_URL}/api/news`).catch(() => {});
-    });
-  }
-}, []);
+  
   return (
     <>
       {/* HERO */}
@@ -106,17 +100,27 @@ export default function Home() {
           <div className="label-eyebrow">Market Overview</div>
           <h2 className="text-2xl md:text-3xl font-bold text-white mt-1">Today in crypto</h2>
         </div>
-        <MarketStats />
+        <Suspense fallback={<div>Loading...</div>}>
+  <MarketStats />
+</Suspense>
       </section>
 
       {/* TOP 10 TABLE */}
-      <section id="market" data-testid="market-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
-        <CryptoTable />
-      </section>
+<section
+  id="market"
+  data-testid="market-section"
+  className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16"
+>
+  <Suspense fallback={<div className="text-center text-white py-10">Loading Market...</div>}>
+    <CryptoTable />
+  </Suspense>
+</section>
 
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
-        <CryptoNews />
-      </section>
+<section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+  <Suspense fallback={<div className="text-center text-white py-10">Loading News...</div>}>
+    <CryptoNews />
+  </Suspense>
+</section>
 
       {/* LEARNING PATH CTA */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">

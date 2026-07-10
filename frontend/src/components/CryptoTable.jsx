@@ -17,7 +17,7 @@ export default function CryptoTable() {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
-
+  
   // Live clock
   const [currentTime, setCurrentTime] = useState(new Date());
 
@@ -41,6 +41,7 @@ export default function CryptoTable() {
   }, []);
 
   useEffect(() => {
+
   mountedRef.current = true;
   load();
 

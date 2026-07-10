@@ -722,6 +722,22 @@ async def chatbot(payload: ChatRequest):
 # ROUTER
 # ----------------------------------------------------
 
+async def chatbot(req: ChatRequest):
+
+    text = req.message.lower()
+
+    if "bitcoin" in text:
+        return {"reply":"Bitcoin is the first cryptocurrency."}
+
+    elif "ethereum" in text:
+        return {"reply":"Ethereum supports smart contracts."}
+
+    elif "hello" in text or "hi" in text:
+        return {"reply":"Hello 👋 Welcome to Crypto Beginner."}
+
+    else:
+        return {"reply":"Sorry, I'm still learning."}
+
 app.include_router(api_router)
 
 
