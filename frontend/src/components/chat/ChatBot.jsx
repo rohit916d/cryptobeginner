@@ -1,16 +1,6 @@
 import { useState } from "react";
 import { MessageCircle, X, Send } from "lucide-react";
 import { api } from "../../lib/api";
-<input
-  aria-label="Type your crypto question"
-  type="text"
-  autoComplete="off"
-  className="flex-1 bg-[#111] p-3 outline-none text-white"
-  placeholder="Ask anything..."
-  value={message}
-  onChange={(e) => setMessage(e.target.value)}
-  onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-/>
 
 export default function ChatBot() {
   const [open, setOpen] = useState(false);
@@ -122,15 +112,16 @@ export default function ChatBot() {
           </div>
 
           <div className="flex border-t border-gray-700">
-            <input
+           <input
   aria-label="Type your crypto question"
-              className="flex-1 bg-[#111] p-3 outline-none text-white"
-              placeholder="Ask anything..."
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-            />
-
+  type="text"
+  autoComplete="off"
+  className="flex-1 bg-[#111] p-3 outline-none text-white"
+  placeholder="Ask anything..."
+  value={message}
+  onChange={(e) => setMessage(e.target.value)}
+  onKeyDown={(e) => e.key === "Enter" && sendMessage()}
+/>
             <button
   onClick={sendMessage}
   className="px-4 bg-yellow-500 text-black"
