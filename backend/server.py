@@ -115,7 +115,6 @@ class ContactCreate(BaseModel):
     )
 
 class ChatRequest(BaseModel):
-    message: str
     message: str = Field(
         min_length=1,
         max_length=4000
@@ -516,29 +515,6 @@ async def contact(payload: ContactCreate):
     )
 
     return submission
-    message: str
-
-async def chat(req: ChatRequest):
-
-    msg = req.message.lower()
-
-    if "bitcoin" in msg or "btc" in msg:
-        return {"reply": "Bitcoin (BTC) is the world's first cryptocurrency launched in 2009."}
-
-    elif "ethereum" in msg or "eth" in msg:
-        return {"reply": "Ethereum is a blockchain platform that supports smart contracts and DApps."}
-
-    elif "xrp" in msg:
-        return {"reply": "XRP is Ripple's cryptocurrency designed for fast international payments."}
-
-    elif "solana" in msg:
-        return {"reply": "Solana is a high-speed blockchain known for low transaction fees."}
-
-    elif "hello" in msg or "hi" in msg:
-        return {"reply": "Hello 👋 How can I help you with Crypto today?"}
-
-    else:
-        return {"reply": "Sorry, I'm still learning Crypto."}
 
 
 # ----------------------------------------------------
@@ -695,8 +671,7 @@ async def chat(req: ChatRequest):
 You are Crypto Beginner AI.
 
 Rules:
-
-- Answer ONLY about Cryptocurrency.
+- Answer ONLY about cryptocurrency.
 - Bitcoin
 - Blockchain
 - Web3
@@ -707,11 +682,9 @@ Rules:
 - Security
 
 If user asks unrelated question say:
-
 'I specialize in Cryptocurrency and Blockchain education.'
 
 Question:
-
 {req.message}
 """
         )
@@ -727,26 +700,9 @@ Question:
         return {
             "reply": "⚠️ AI is temporarily unavailable. Please try again."
         }
-
 # ----------------------------------------------------
 # ROUTER
 # ----------------------------------------------------
-
-async def chatbot(req: ChatRequest):
-
-    text = req.message.lower()
-
-    if "bitcoin" in text:
-        return {"reply":"Bitcoin is the first cryptocurrency."}
-
-    elif "ethereum" in text:
-        return {"reply":"Ethereum supports smart contracts."}
-
-    elif "hello" in text or "hi" in text:
-        return {"reply":"Hello 👋 Welcome to Crypto Beginner."}
-
-    else:
-        return {"reply":"Sorry, I'm still learning."}
 
 app.include_router(api_router)
 
