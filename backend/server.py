@@ -115,6 +115,7 @@ class ContactCreate(BaseModel):
     )
 
 class ChatRequest(BaseModel):
+    message: str
     message: str = Field(
         min_length=1,
         max_length=4000
@@ -666,7 +667,7 @@ async def chat(req: ChatRequest):
     try:
 
         response = client_ai.models.generate_content(
-            model="gemini-2.5-flash-lite"
+           model="gemini-2.5-flash-lite",
             contents=f"""
 You are Crypto Beginner AI.
 
