@@ -666,7 +666,7 @@ async def chat(req: ChatRequest):
     try:
 
         response = client_ai.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-2.5-flash-lite"
             contents=f"""
 You are Crypto Beginner AI.
 
