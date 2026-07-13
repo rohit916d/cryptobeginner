@@ -20,6 +20,7 @@ import os
 import requests
 import uuid
 
+from google import genai
 from seed_data import LESSONS, BLOG_POSTS, GLOSSARY
 
 
@@ -35,6 +36,9 @@ load_dotenv(ROOT_DIR / ".env")
 MONGO_URL = os.getenv("MONGO_URL")
 DB_NAME = os.getenv("DB_NAME")
 
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
+client_ai = genai.Client(api_key=GEMINI_API_KEY)
 COINGECKO_API_KEY = os.getenv("COINGECKO_API_KEY")
 NEWSDATA_API_KEY = os.getenv("NEWSDATA_API_KEY")
 import os
@@ -681,42 +685,48 @@ async def shutdown():
 # ----------------------------------------------------
 
 @api_router.post("/chat")
-async def chatbot(payload: ChatRequest):
+async def chat(req: ChatRequest):
 
-    text = payload.message.lower()
+    try:
 
-    if "bitcoin" in text:
-        reply = (
-            "Bitcoin is the world's first decentralized cryptocurrency. "
-            "It has a maximum supply of 21 million coins."
+        response = client_ai.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=f"""
+You are Crypto Beginner AI.
+
+Rules:
+
+- Answer ONLY about Cryptocurrency.
+- Bitcoin
+- Blockchain
+- Web3
+- Wallets
+- NFTs
+- DeFi
+- Trading
+- Security
+
+If user asks unrelated question say:
+
+'I specialize in Cryptocurrency and Blockchain education.'
+
+Question:
+
+{req.message}
+"""
         )
 
-    elif "ethereum" in text:
-        reply = (
-            "Ethereum is a blockchain platform that supports smart contracts and dApps."
-        )
+        return {
+            "reply": response.text
+        }
 
-    elif "wallet" in text:
-        reply = (
-            "A crypto wallet stores your private keys. Never share your seed phrase with anyone."
-        )
+    except Exception as e:
 
-    elif "blockchain" in text:
-        reply = (
-            "Blockchain is a decentralized digital ledger that records transactions securely."
-        )
+        print(e)
 
-    elif "hello" in text or "hi" in text:
-        reply = "Hello 👋 Welcome to Crypto Beginner. Ask me anything about crypto."
-
-    else:
-        reply = (
-            "Sorry, I don't know that yet. Try asking about Bitcoin, Ethereum, Wallet or Blockchain."
-        )
-
-    return {
-        "reply": reply
-    }
+        return {
+            "reply": "⚠️ AI is temporarily unavailable. Please try again."
+        }
 
 # ----------------------------------------------------
 # ROUTER
