@@ -130,13 +130,31 @@ useEffect(() => {
 
       <div className="overflow-x-auto no-scrollbar">
         <table className="w-full text-sm">
+  <caption className="sr-only">
+    Live top 10 cryptocurrency market prices including price, 24 hour change and market capitalization.
+  </caption>
           <thead>
             <tr className="text-left text-[10px] font-bold uppercase tracking-[0.15em] text-zinc-500 border-b border-white/5">
-              <th className="py-3 px-5 md:px-6">#</th>
-              <th className="py-3 px-2">Coin</th>
-              <th className="py-3 px-2 text-right">Price</th>
-              <th className="py-3 px-2 text-right">24h</th>
-              <th className="py-3 px-5 md:px-6 text-right hidden sm:table-cell">Market Cap</th>
+              <th scope="col" className="py-3 px-5 md:px-6">#</th>
+
+<th scope="col" className="py-3 px-2">
+  Coin
+</th>
+
+<th scope="col" className="py-3 px-2 text-right">
+  Price
+</th>
+
+<th scope="col" className="py-3 px-2 text-right">
+  24h
+</th>
+
+<th
+  scope="col"
+  className="py-3 px-5 md:px-6 text-right hidden sm:table-cell"
+>
+  Market Cap
+</th>
             </tr>
           </thead>
           <tbody>

@@ -58,12 +58,15 @@ export default function ChatBot() {
   return (
     <>
       {!open && (
-        <button
-          onClick={() => setOpen(true)}
-          className="fixed bottom-6 right-6 bg-yellow-500 text-black p-4 rounded-full shadow-xl z-50"
-        >
-          <MessageCircle />
-        </button>
+       <button
+  type="button"
+  aria-label="Open Crypto Assistant"
+  title="Open Crypto Assistant"
+  onClick={() => setOpen(true)}
+  className="fixed bottom-6 right-6 bg-yellow-500 text-black p-4 rounded-full shadow-xl z-50"
+>
+  <MessageCircle aria-hidden="true" />
+</button>
       )}
 
       {open && (
@@ -71,9 +74,14 @@ export default function ChatBot() {
 
           <div className="flex justify-between items-center bg-yellow-500 text-black px-4 py-3 font-bold">
             Crypto Assistant
-            <button onClick={() => setOpen(false)}>
-              <X size={18} />
-            </button>
+            <button
+    type="button"
+    aria-label="Close Chat"
+    title="Close Chat"
+    onClick={() => setOpen(false)}
+>
+    <X size={18} aria-hidden="true" />
+</button>
           </div>
 
           <div className="h-80 overflow-y-auto p-3 space-y-3">
@@ -107,6 +115,7 @@ export default function ChatBot() {
 
           <div className="flex border-t border-gray-700">
             <input
+  aria-label="Type your crypto question"
               className="flex-1 bg-[#111] p-3 outline-none text-white"
               placeholder="Ask anything..."
               value={message}
@@ -115,11 +124,14 @@ export default function ChatBot() {
             />
 
             <button
-              onClick={sendMessage}
-              className="px-4 bg-yellow-500 text-black"
-            >
-              <Send size={18} />
-            </button>
+  type="button"
+  aria-label="Send Message"
+  title="Send Message"
+  onClick={sendMessage}
+  className="px-4 bg-yellow-500 text-black"
+>
+  <Send size={18} aria-hidden="true" />
+</button>
           </div>
         </div>
       )}

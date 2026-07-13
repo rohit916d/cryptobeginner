@@ -64,12 +64,18 @@ export default function Navbar() {
         </div>
 
         <button
-          data-testid="mobile-menu-toggle"
-          onClick={() => setOpen(!open)}
-          className="md:hidden text-white p-2"
-          aria-label="Toggle menu"
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
+  type="button"
+  data-testid="mobile-menu-toggle"
+  onClick={() => setOpen(!open)}
+  className="md:hidden text-white p-2"
+  aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+  title={open ? "Close navigation menu" : "Open navigation menu"}
+>
+          {open ? (
+  <X size={22} aria-hidden="true" />
+) : (
+  <Menu size={22} aria-hidden="true" />
+)}
         </button>
       </div>
 
