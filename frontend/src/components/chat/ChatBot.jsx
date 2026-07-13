@@ -1,6 +1,16 @@
 import { useState } from "react";
 import { MessageCircle, X, Send } from "lucide-react";
 import { api } from "../../lib/api";
+<input
+  aria-label="Type your crypto question"
+  type="text"
+  autoComplete="off"
+  className="flex-1 bg-[#111] p-3 outline-none text-white"
+  placeholder="Ask anything..."
+  value={message}
+  onChange={(e) => setMessage(e.target.value)}
+  onKeyDown={(e) => e.key === "Enter" && sendMessage()}
+/>
 
 export default function ChatBot() {
   const [open, setOpen] = useState(false);
@@ -58,16 +68,15 @@ export default function ChatBot() {
   return (
     <>
       {!open && (
-       <button
-  type="button"
-  aria-label="Open Crypto Assistant"
-  title="Open Crypto Assistant"
-  onClick={() => setOpen(true)}
-  className="fixed bottom-6 right-6 bg-yellow-500 text-black p-4 rounded-full shadow-xl z-50"
->
-  <MessageCircle aria-hidden="true" />
-</button>
-      )}
+  <button
+    onClick={() => setOpen(true)}
+    className="fixed bottom-6 right-6 bg-yellow-500 text-black p-4 rounded-full shadow-xl z-50"
+    aria-label="Open Crypto Assistant"
+    title="Open Crypto Assistant"
+  >
+    <MessageCircle />
+  </button>
+)}
 
       {open && (
         <div className="fixed bottom-6 right-6 w-80 bg-[#111] border border-gray-700 rounded-xl overflow-hidden z-50 shadow-2xl">
@@ -75,12 +84,11 @@ export default function ChatBot() {
           <div className="flex justify-between items-center bg-yellow-500 text-black px-4 py-3 font-bold">
             Crypto Assistant
             <button
-    type="button"
-    aria-label="Close Chat"
-    title="Close Chat"
-    onClick={() => setOpen(false)}
+  onClick={() => setOpen(false)}
+  aria-label="Close Crypto Assistant"
+  title="Close Crypto Assistant"
 >
-    <X size={18} aria-hidden="true" />
+  <X size={18} />
 </button>
           </div>
 
@@ -124,13 +132,12 @@ export default function ChatBot() {
             />
 
             <button
-  type="button"
-  aria-label="Send Message"
-  title="Send Message"
   onClick={sendMessage}
   className="px-4 bg-yellow-500 text-black"
+  aria-label="Send Message"
+  title="Send Message"
 >
-  <Send size={18} aria-hidden="true" />
+  <Send size={18} />
 </button>
           </div>
         </div>
