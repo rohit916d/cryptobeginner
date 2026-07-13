@@ -1,0 +1,43 @@
+# Crypto Beginner
+
+Crypto Beginner is a free educational platform to learn Bitcoin, Cryptocurrency, Blockchain, Web3, Wallets, DeFi and Digital Assets.
+
+## Website
+
+- https://cryptobeginner.in/
+
+## Learn
+
+- https://cryptobeginner.in/learn
+
+## Blog
+
+- https://cryptobeginner.in/blog
+
+## Dictionary
+
+- https://cryptobeginner.in/dictionary
+
+## About
+
+- https://cryptobeginner.in/about
+
+## Contact
+
+- https://cryptobeginner.in/contact
+
+## Privacy
+
+- https://cryptobeginner.in/privacy
+
+## Terms
+
+- https://cryptobeginner.in/terms
+
+## Sitemap
+
+- https://cryptobeginner.in/sitemap.xml
+
+## Robots
+
+- https://cryptobeginner.in/robots.txt
