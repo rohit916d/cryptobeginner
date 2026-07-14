@@ -666,8 +666,15 @@ async def chat(req: ChatRequest):
 
     try:
 
+        print("===== AVAILABLE MODELS =====")
+
+        for model in client_ai.models.list():
+            print(model.name)
+
+        print("============================")
+
         response = client_ai.models.generate_content(
-           model="gemini-2.5-flash-lite",
+            model="gemini-2.5-flash-lite",
             contents=f"""
 You are Crypto Beginner AI.
 
@@ -689,6 +696,14 @@ Question:
 {req.message}
 """
         )
+
+        return {"reply": response.text}
+
+    except Exception as e:
+        print(e)
+        return {
+            "reply": "⚠️ AI is temporarily unavailable. Please try again."
+        }
 
         return {
             "reply": response.text
