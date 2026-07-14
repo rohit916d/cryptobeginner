@@ -673,25 +673,41 @@ async def chat(req: ChatRequest):
 
         print("============================")
 
-        return {"reply": "Models printed in Render logs"}
+        response = client_ai.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=f"""
+You are Crypto Beginner AI.
 
-    except Exception as e:
-        print(e)
-        return {
-            "reply": "⚠️ AI is temporarily unavailable. Please try again."
-        }
+Rules:
+- Answer ONLY about cryptocurrency.
+- Bitcoin
+- Blockchain
+- Web3
+- Wallets
+- NFTs
+- DeFi
+- Trading
+- Security.
+
+If user asks anything unrelated, reply:
+'I specialize in Cryptocurrency and Blockchain education.'
+
+Question:
+{req.message}
+"""
+        )
 
         return {
             "reply": response.text
         }
 
     except Exception as e:
-
-        print(e)
+        print("Gemini Error:", e)
 
         return {
-            "reply": "⚠️ AI is temporarily unavailable. Please try again."
+            "reply": f"⚠️ {str(e)}"
         }
+    
 # ----------------------------------------------------
 # ROUTER
 # ----------------------------------------------------
