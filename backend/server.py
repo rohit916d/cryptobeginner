@@ -673,31 +673,7 @@ async def chat(req: ChatRequest):
 
         print("============================")
 
-        response = client_ai.models.generate_content(
-            model="gemini-2.5-flash-lite",
-            contents=f"""
-You are Crypto Beginner AI.
-
-Rules:
-- Answer ONLY about cryptocurrency.
-- Bitcoin
-- Blockchain
-- Web3
-- Wallets
-- NFTs
-- DeFi
-- Trading
-- Security
-
-If user asks unrelated question say:
-'I specialize in Cryptocurrency and Blockchain education.'
-
-Question:
-{req.message}
-"""
-        )
-
-        return {"reply": response.text}
+        return {"reply": "Models printed in Render logs"}
 
     except Exception as e:
         print(e)
