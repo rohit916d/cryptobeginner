@@ -19,6 +19,9 @@ import logging
 import os
 import requests
 import uuid
+import google.genai
+
+print("Google GenAI Version:", google.genai.__version__)
 
 from google import genai
 from seed_data import LESSONS, BLOG_POSTS, GLOSSARY
@@ -115,7 +118,6 @@ class ContactCreate(BaseModel):
     )
 
 class ChatRequest(BaseModel):
-    message: str
     message: str = Field(
         min_length=1,
         max_length=4000
@@ -663,33 +665,16 @@ async def shutdown():
 
 @api_router.post("/chat")
 async def chat(req: ChatRequest):
-
     try:
 
-        print("===== AVAILABLE MODELS =====")
-
-        for model in client_ai.models.list():
-            print(model.name)
-
-        print("============================")
-
         response = client_ai.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3.5-flash",
             contents=f"""
 You are Crypto Beginner AI.
 
 Rules:
 - Answer ONLY about cryptocurrency.
-- Bitcoin
-- Blockchain
-- Web3
-- Wallets
-- NFTs
-- DeFi
-- Trading
-- Security.
-
-If user asks anything unrelated, reply:
+- If the question is unrelated, reply:
 'I specialize in Cryptocurrency and Blockchain education.'
 
 Question:
@@ -705,7 +690,7 @@ Question:
         print("Gemini Error:", e)
 
         return {
-            "reply": f"⚠️ {str(e)}"
+            "reply": str(e)
         }
     
 # ----------------------------------------------------
