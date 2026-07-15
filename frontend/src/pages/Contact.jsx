@@ -65,36 +65,73 @@ export default function Contact() {
           ) : (
             <>
               <div>
-                <label className="label-eyebrow block mb-1.5">Name</label>
-                <input
-                  data-testid="contact-name"
-                  required value={form.name} onChange={handle("name")}
-                  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5 text-white outline-none focus:border-[#FFBF00]/40"
-                />
+  <label
+    htmlFor="contact-name"
+    className="label-eyebrow block mb-1.5"
+  >
+    Name
+  </label>
+
+  <input
+    id="contact-name"
+    name="name"
+    data-testid="contact-name"
+    type="text"
+    autoComplete="name"
+    required
+    value={form.name}
+    onChange={handle("name")}
+    className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5 text-white outline-none focus:border-[#FFBF00]/40"
+  />
+</div>
+              <div>
+                <label htmlFor="contact-email" className="label-eyebrow block mb-1.5">
+  Email
+</label>
+
+<input
+  id="contact-email"
+  name="email"
+  data-testid="contact-email"
+  type="email"
+  autoComplete="name"
+  required
+  value={form.email}
+  onChange={handle("email")}
+  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5 text-white outline-none focus:border-[#FFBF00]/40"
+/>
               </div>
               <div>
-                <label className="label-eyebrow block mb-1.5">Email</label>
-                <input
-                  data-testid="contact-email"
-                  type="email" required value={form.email} onChange={handle("email")}
-                  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5 text-white outline-none focus:border-[#FFBF00]/40"
-                />
+                <label htmlFor="contact-subject" className="label-eyebrow block mb-1.5">
+  Subject
+</label>
+
+<input
+  id="contact-subject"
+  name="subject"
+  data-testid="contact-subject"
+  autoComplete="name"
+  value={form.subject}
+  onChange={handle("subject")}
+  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5 text-white outline-none focus:border-[#FFBF00]/40"
+/>
               </div>
               <div>
-                <label className="label-eyebrow block mb-1.5">Subject</label>
-                <input
-                  data-testid="contact-subject"
-                  value={form.subject} onChange={handle("subject")}
-                  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5 text-white outline-none focus:border-[#FFBF00]/40"
-                />
-              </div>
-              <div>
-                <label className="label-eyebrow block mb-1.5">Message</label>
-                <textarea
-                  data-testid="contact-message"
-                  required rows={5} value={form.message} onChange={handle("message")}
-                  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5 text-white outline-none focus:border-[#FFBF00]/40 resize-none"
-                />
+                <label htmlFor="contact-message" className="label-eyebrow block mb-1.5">
+  Message
+</label>
+
+<textarea
+  id="contact-message"
+  name="message"
+  data-testid="contact-message"
+  autoComplete="name"
+  required
+  rows={5}
+  value={form.message}
+  onChange={handle("message")}
+  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5 text-white outline-none focus:border-[#FFBF00]/40 resize-none"
+/>
               </div>
               {error && <p className="text-xs text-rose-400">{error}</p>}
               <button
