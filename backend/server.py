@@ -117,6 +117,11 @@ class ContactCreate(BaseModel):
         max_length=200
     )
 
+    message: str = Field(
+        min_length=1,
+        max_length=5000
+    )
+
 class ChatRequest(BaseModel):
     message: str = Field(
         min_length=1,
