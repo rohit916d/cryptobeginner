@@ -2,6 +2,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { api } from "../lib/api";
 import { formatUSD, formatPct } from "../lib/format";
 import { ArrowUpRight, ArrowDownRight, RefreshCw } from "lucide-react";
+import Sparkline from "./Sparkline";
+import CoinChartModal from "./CoinChartModal";
 const LIVE_SYMBOLS = {
   BTC: "btcusdt",
   ETH: "ethusdt",
@@ -17,6 +19,7 @@ export default function CryptoTable() {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
+  const [selectedCoin, setSelectedCoin] = useState(null);
   
   // Live clock
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -149,6 +152,10 @@ useEffect(() => {
   24h
 </th>
 
+<th scope="col" className="py-3 px-2 text-center hidden md:table-cell">
+  7D Chart
+</th>
+
 <th
   scope="col"
   className="py-3 px-5 md:px-6 text-right hidden sm:table-cell"
@@ -161,7 +168,7 @@ useEffect(() => {
             {loading && coins.length === 0 &&
               SKELETON_KEYS.map((sk) => (
                 <tr key={sk} className="border-b border-white/5">
-                  <td colSpan={5} className="py-4 px-5">
+                  <td colSpan={6} className="py-4 px-5">
                     <div className="h-5 bg-white/5 rounded animate-pulse" />
                   </td>
                 </tr>
@@ -172,7 +179,17 @@ useEffect(() => {
                 <tr
                   key={c.id}
                   data-testid={`coin-row-${c.symbol}`}
-                  className="border-b border-white/5 hover:bg-white/[0.02] transition-colors"
+                  onClick={() => setSelectedCoin(c)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      setSelectedCoin(c);
+                    }
+                  }}
+                  aria-label={`View live chart for ${c.name}`}
+                  className="border-b border-white/5 hover:bg-white/[0.02] transition-colors cursor-pointer"
                 >
                   <td className="py-4 px-5 md:px-6 text-zinc-500 font-mono">{c.market_cap_rank}</td>
                   <td className="py-4 px-2">
@@ -193,6 +210,11 @@ useEffect(() => {
                       {formatPct(c.price_change_percentage_24h)}
                     </span>
                   </td>
+                  <td className="py-4 px-2 hidden md:table-cell">
+                    <div className="flex justify-center">
+                      <Sparkline data={c.sparkline_7d} />
+                    </div>
+                  </td>
                   <td className="py-4 px-5 md:px-6 text-right font-mono text-zinc-300 hidden sm:table-cell">
                     {formatUSD(c.market_cap)}
                   </td>
@@ -203,8 +225,12 @@ useEffect(() => {
         </table>
       </div>
       <div className="px-5 md:px-6 py-3 text-[11px] text-zinc-600 border-t border-white/5">
-        Data via CoinGecko · auto-refresh every 60s · not investment advice
+        Data via CoinGecko · auto-refresh every 60s · not investment advice · tap a row for live chart
       </div>
+
+      {selectedCoin && (
+        <CoinChartModal coin={selectedCoin} onClose={() => setSelectedCoin(null)} />
+      )}
     </div>
   );
 }

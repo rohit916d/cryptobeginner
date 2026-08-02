@@ -175,7 +175,7 @@ async def get_top_coins():
                 "order": "market_cap_desc",
                 "per_page": 10,
                 "page": 1,
-                "sparkline": "false",
+                "sparkline": "true",
                 "price_change_percentage": "24h"
             },
             timeout=15
@@ -198,7 +198,8 @@ async def get_top_coins():
                 "price_change_percentage_24h": coin.get("price_change_percentage_24h"),
                 "market_cap": coin.get("market_cap"),
                 "market_cap_rank": coin.get("market_cap_rank"),
-                "total_volume": coin.get("total_volume")
+                "total_volume": coin.get("total_volume"),
+                "sparkline_7d": (coin.get("sparkline_in_7d") or {}).get("price", [])
             })
 
         _market_cache["data"] = data
