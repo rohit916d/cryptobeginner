@@ -86,10 +86,10 @@ export default function MarketStats() {
           style={{ animationDelay: `${idx * 80}ms` }}
         >
           <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full opacity-10"
-            style={{ background: "radial-gradient(closest-side, #FFBF00, transparent)" }} />
+            style={{ background: "radial-gradient(closest-side, #C8F169, transparent)" }} />
           <div className="flex items-start justify-between">
             <div className="label-eyebrow">{it.label}</div>
-            <it.icon size={16} className="text-[#FFBF00]" />
+            <it.icon size={16} className="text-[#C8F169]" />
           </div>
           <div className="mt-4 font-mono text-2xl md:text-3xl font-bold text-white tracking-tight">
             {loading && !it.value ? <span className="text-zinc-700">····</span> : it.value}

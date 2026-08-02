@@ -19,7 +19,7 @@ export default function CookiePolicy() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-14 md:py-20" data-testid="legal-cookie-policy">
       <div className="label-eyebrow">Legal</div>
-      <h1 className="mt-3 text-4xl md:text-5xl font-extrabold text-white tracking-tight">Cookie Policy</h1>
+      <h1 className="mt-3 text-4xl md:text-5xl font-normal text-white tracking-tight">Cookie Policy</h1>
       <p className="mt-4 text-zinc-400">How Crypto Beginner uses cookies and how you can control them.</p>
       <p className="mt-2 text-xs text-zinc-600 font-mono">Last updated: February 2026</p>
 

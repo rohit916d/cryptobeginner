@@ -60,7 +60,7 @@ export default function ChatBot() {
       {!open && (
   <button
     onClick={() => setOpen(true)}
-    className="fixed bottom-6 right-6 bg-yellow-500 text-black p-4 rounded-full shadow-xl z-50"
+    className="fixed bottom-6 right-6 bg-lime-400 text-black p-4 rounded-full shadow-xl z-50"
     aria-label="Open Crypto Assistant"
     title="Open Crypto Assistant"
   >
@@ -71,7 +71,7 @@ export default function ChatBot() {
       {open && (
         <div className="fixed bottom-6 right-6 w-80 bg-[#111] border border-gray-700 rounded-xl overflow-hidden z-50 shadow-2xl">
 
-          <div className="flex justify-between items-center bg-yellow-500 text-black px-4 py-3 font-bold">
+          <div className="flex justify-between items-center bg-lime-400 text-black px-4 py-3 font-bold">
             Crypto Assistant
             <button
   onClick={() => setOpen(false)}
@@ -95,7 +95,7 @@ export default function ChatBot() {
                 <div
                   className={
                     m.from === "user"
-                      ? "inline-block bg-yellow-500 text-black px-3 py-2 rounded-lg"
+                      ? "inline-block bg-lime-400 text-black px-3 py-2 rounded-lg"
                       : "inline-block bg-gray-700 text-white px-3 py-2 rounded-lg"
                   }
                 >
@@ -124,7 +124,7 @@ export default function ChatBot() {
 />
             <button
   onClick={sendMessage}
-  className="px-4 bg-yellow-500 text-black"
+  className="px-4 bg-lime-400 text-black"
   aria-label="Send Message"
   title="Send Message"
 >

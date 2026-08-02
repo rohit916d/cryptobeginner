@@ -92,11 +92,11 @@ export default function LearnDetail() {
 
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 py-14 md:py-20" data-testid="lesson-article">
-      <Link to="/learn" className="inline-flex items-center gap-1 text-sm text-zinc-400 hover:text-[#FFBF00] mb-8">
+      <Link to="/learn" className="inline-flex items-center gap-1 text-sm text-zinc-400 hover:text-[#C8F169] mb-8">
         <ArrowLeft size={14} /> Back to Learning Center
       </Link>
-      <div className="label-eyebrow text-[#FFBF00]/80 uppercase">{lesson.level} · Lesson {lesson.order}</div>
-      <h1 className="mt-3 text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+      <div className="label-eyebrow text-[#C8F169]/80 uppercase">{lesson.level} · Lesson {lesson.order}</div>
+      <h1 className="mt-3 text-4xl md:text-5xl font-normal text-white tracking-tight leading-tight">
         {lesson.title}
       </h1>
       <div className="mt-4 flex items-center gap-3 text-xs text-zinc-500 font-mono">
@@ -105,9 +105,9 @@ export default function LearnDetail() {
 
       <div className="prose-amber mt-10" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(renderMarkdown(lesson.content)) }} />
 
-      <div className="mt-12 card-base p-5 border border-amber-400/20 bg-amber-400/[0.03]">
+      <div className="mt-12 card-base p-5 border border-lime-300/20 bg-lime-300/[0.03]">
         <div className="flex items-start gap-3">
-          <AlertTriangle size={18} className="text-[#FFBF00] mt-0.5 shrink-0" />
+          <AlertTriangle size={18} className="text-[#C8F169] mt-0.5 shrink-0" />
           <p className="text-sm text-zinc-400">
             <span className="font-semibold text-white">Educational only.</span> This article is not financial, investment, or legal advice. Always do your own research.
           </p>

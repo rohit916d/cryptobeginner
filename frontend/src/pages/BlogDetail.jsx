@@ -76,11 +76,11 @@ export default function BlogDetail() {
 
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 py-14 md:py-20" data-testid="blog-article">
-      <Link to="/blog" className="inline-flex items-center gap-1 text-sm text-zinc-400 hover:text-[#FFBF00] mb-8">
+      <Link to="/blog" className="inline-flex items-center gap-1 text-sm text-zinc-400 hover:text-[#C8F169] mb-8">
         <ArrowLeft size={14} /> Back to Blog
       </Link>
-      <div className="text-xs font-bold uppercase tracking-[0.15em] text-[#FFBF00]">{post.category}</div>
-      <h1 className="mt-3 text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">{post.title}</h1>
+      <div className="text-xs font-bold uppercase tracking-[0.15em] text-[#C8F169]">{post.category}</div>
+      <h1 className="mt-3 text-4xl md:text-5xl font-normal text-white tracking-tight leading-tight">{post.title}</h1>
       <div className="mt-4 flex items-center gap-4 text-xs text-zinc-500 font-mono">
         <span className="inline-flex items-center gap-1"><Clock size={12} /> {post.read_time} min</span>
         <span className="inline-flex items-center gap-1"><User size={12} /> {post.author}</span>

@@ -45,7 +45,7 @@ export default function Learn() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
       <div className="max-w-3xl">
         <div className="label-eyebrow">Learning Center</div>
-        <h1 className="mt-3 text-4xl md:text-5xl font-extrabold tracking-tight text-white">
+        <h1 className="mt-3 text-4xl md:text-5xl font-normal tracking-tight text-white">
           Structured paths. <span className="brand-grad-text">Zero jargon.</span>
         </h1>
         <p className="mt-5 text-zinc-400 leading-relaxed">
@@ -61,7 +61,7 @@ export default function Learn() {
             data-testid={`level-tab-${l.key}`}
             className={`px-4 py-2 rounded-xl border text-sm font-medium transition-all ${
               level === l.key
-                ? "border-[#FFBF00]/50 bg-[#FFBF00]/10 text-[#FFBF00]"
+                ? "border-[#C8F169]/50 bg-[#C8F169]/10 text-[#C8F169]"
                 : "border-white/10 text-zinc-400 hover:text-white hover:border-white/20"
             }`}
           >
@@ -87,16 +87,16 @@ export default function Learn() {
             style={{ animationDelay: `${idx * 60}ms` }}
           >
             <div className="flex items-center justify-between">
-              <span className="label-eyebrow text-[#FFBF00]/80">Lesson {l.order}</span>
+              <span className="label-eyebrow text-[#C8F169]/80">Lesson {l.order}</span>
               <span className="text-xs text-zinc-500 inline-flex items-center gap-1 font-mono">
                 <Clock size={11} /> {l.read_time} min
               </span>
             </div>
-            <h3 className="mt-3 text-xl font-bold text-white group-hover:text-[#FFBF00] transition-colors">
+            <h3 className="mt-3 text-xl font-bold text-white group-hover:text-[#C8F169] transition-colors">
               {l.title}
             </h3>
             <p className="mt-2 text-sm text-zinc-400 leading-relaxed">{l.summary}</p>
-            <div className="mt-5 text-sm text-[#FFBF00] inline-flex items-center gap-1">
+            <div className="mt-5 text-sm text-[#C8F169] inline-flex items-center gap-1">
               Read lesson <ArrowRight size={13} />
             </div>
           </Link>

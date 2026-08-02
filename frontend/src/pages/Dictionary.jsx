@@ -41,7 +41,7 @@ export default function Dictionary() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
       <div className="label-eyebrow">Crypto Dictionary</div>
-      <h1 className="mt-3 text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+      <h1 className="mt-3 text-4xl md:text-5xl font-normal text-white tracking-tight">
         Every crypto term, <span className="brand-grad-text">decoded.</span>
       </h1>
       <p className="mt-4 text-zinc-400 max-w-2xl">
@@ -66,7 +66,7 @@ export default function Dictionary() {
         <button
           onClick={() => setActiveLetter(null)}
           className={`px-3 py-1.5 rounded-lg text-xs font-mono ${
-            !activeLetter ? "bg-[#FFBF00]/10 text-[#FFBF00] border border-[#FFBF00]/30" : "bg-white/[0.03] text-zinc-500 border border-white/5"
+            !activeLetter ? "bg-[#C8F169]/10 text-[#C8F169] border border-[#C8F169]/30" : "bg-white/[0.03] text-zinc-500 border border-white/5"
           }`}
         >ALL</button>
         {LETTERS.map((L) => {
@@ -78,7 +78,7 @@ export default function Dictionary() {
               onClick={() => setActiveLetter(L)}
               className={`w-8 h-8 text-xs font-mono rounded-lg ${
                 activeLetter === L
-                  ? "bg-[#FFBF00]/10 text-[#FFBF00] border border-[#FFBF00]/30"
+                  ? "bg-[#C8F169]/10 text-[#C8F169] border border-[#C8F169]/30"
                   : has
                   ? "bg-white/[0.03] text-zinc-300 border border-white/5 hover:text-white"
                   : "bg-white/[0.01] text-zinc-700 cursor-not-allowed"
@@ -92,7 +92,7 @@ export default function Dictionary() {
         {filtered.map((t) => (
           <div key={t.term} data-testid={`term-${t.term}`} className="card-base p-5 hover-lift">
             <div className="flex items-center gap-3 mb-2">
-              <span className="w-8 h-8 rounded-md bg-[#FFBF00]/10 border border-[#FFBF00]/20 grid place-items-center text-[#FFBF00] font-mono font-bold text-sm">
+              <span className="w-8 h-8 rounded-md bg-[#C8F169]/10 border border-[#C8F169]/20 grid place-items-center text-[#C8F169] font-mono font-bold text-sm">
                 {t.term[0].toUpperCase()}
               </span>
               <h3 className="text-base font-bold text-white">{t.term}</h3>

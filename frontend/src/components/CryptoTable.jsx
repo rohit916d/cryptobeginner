@@ -124,7 +124,7 @@ useEffect(() => {
           aria-label="Refresh market data"
           className="flex items-center gap-2 text-xs text-zinc-500 font-mono cursor-pointer hover:text-white transition-colors disabled:opacity-60 disabled:cursor-wait"
         >
-          <RefreshCw size={12} className={`text-[#FFBF00] ${refreshing ? "animate-spin" : ""}`} />
+          <RefreshCw size={12} className={`text-[#C8F169] ${refreshing ? "animate-spin" : ""}`} />
           {lastUpdated
   ? `Updated ${currentTime.toLocaleTimeString()}`
   : "Loading..."}

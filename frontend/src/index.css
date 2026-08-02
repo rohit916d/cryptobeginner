@@ -2,42 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Fonts: Cabinet Grotesk via Fontshare, Manrope + JetBrains Mono via Google */
-
+/* Fonts: Instrument Serif (display) + Space Grotesk (body/UI) + JetBrains Mono (data/ledger) */
 
 @layer base {
     :root {
-        /* Crypto Beginner — Dark Amber theme */
-        --background: 240 5% 4%;            /* #0A0A0B */
-        --foreground: 210 17% 98%;          /* #F8F9FA */
-        --card: 240 5% 7%;                  /* #121214 */
-        --card-foreground: 210 17% 98%;
-        --popover: 240 5% 7%;
-        --popover-foreground: 210 17% 98%;
-        --primary: 45 100% 50%;             /* #FFBF00 */
-        --primary-foreground: 240 5% 4%;
-        --secondary: 240 4% 11%;            /* #1A1A1C */
-        --secondary-foreground: 210 17% 98%;
-        --muted: 240 4% 11%;
-        --muted-foreground: 240 5% 65%;     /* #A1A1AA */
-        --accent: 45 100% 50%;
-        --accent-foreground: 240 5% 4%;
-        --destructive: 0 84% 60%;
+        /* Crypto Beginner — "The Ledger" theme: ink-navy base, chartreuse + violet dual accent */
+        --background: 219 29% 6%;            /* #0B0E14 */
+        --foreground: 210 20% 97%;           /* #F4F6F8 */
+        --card: 221 31% 10%;                 /* #121722 */
+        --card-foreground: 210 20% 97%;
+        --popover: 221 31% 10%;
+        --popover-foreground: 210 20% 97%;
+        --primary: 78 83% 68%;               /* #C8F169 chartreuse */
+        --primary-foreground: 222 30% 9%;
+        --secondary: 223 28% 15%;            /* #1B2130 */
+        --secondary-foreground: 210 20% 97%;
+        --muted: 223 28% 15%;
+        --muted-foreground: 220 15% 62%;     /* #8D95A8 */
+        --accent: 251 85% 74%;               /* #9B87F5 violet */
+        --accent-foreground: 222 30% 9%;
+        --destructive: 350 100% 66%;
         --destructive-foreground: 0 0% 98%;
-        --border: 240 5% 13%;
-        --input: 240 5% 13%;
-        --ring: 45 100% 50%;
-        --radius: 1rem;
+        --border: 222 20% 18%;
+        --input: 222 20% 18%;
+        --ring: 78 83% 68%;
+        --radius: 0.875rem;
 
-        --surface: #121214;
-        --surface-elevated: #1A1A1C;
-        --text-secondary: #A1A1AA;
-        --text-tertiary: #71717A;
-        --brand: #FFBF00;
-        --brand-hover: #F0B400;
-        --gold: #D4AF37;
-        --success: #10B981;
-        --danger: #EF4444;
+        --surface: #121722;
+        --surface-elevated: #1B2130;
+        --text-secondary: #8D95A8;
+        --text-tertiary: #565F73;
+        --brand: #C8F169;
+        --brand-hover: #B4E04F;
+        --brand-ink: #1A2100;                /* dark text-on-chartreuse */
+        --violet: #9B87F5;
+        --violet-soft: #C4B8FA;
+        --success: #33D17A;
+        --danger: #FF4D6A;
     }
 }
 
@@ -46,34 +47,38 @@
         @apply border-border;
     }
     html {
-    background: #0A0A0B;
-    color-scheme: dark;
-}
+        background: #0B0E14;
+        color-scheme: dark;
+    }
     body {
         @apply bg-background text-foreground;
-        font-family: "Manrope", system-ui, -apple-system, sans-serif;
+        font-family: "Space Grotesk", system-ui, -apple-system, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        background-color: #0A0A0B;
-        color: #F8F9FA;
+        background-color: #0B0E14;
+        color: #F4F6F8;
     }
     h1, h2, h3, h4, h5, h6 {
-        font-family: "Cabinet Grotesk", "Manrope", sans-serif;
-        font-weight: 700;
-        letter-spacing: -0.02em;
+        font-family: "Space Grotesk", system-ui, sans-serif;
+        letter-spacing: -0.01em;
+    }
+    h1 {
+        font-family: "Instrument Serif", "Space Grotesk", serif;
+        font-weight: 400;
     }
     .font-mono, code, pre {
         font-family: "JetBrains Mono", "SF Mono", Menlo, monospace;
     }
     ::selection {
-        background: rgba(255, 191, 0, 0.3);
-        color: #0A0A0B;
+        background: rgba(200, 241, 105, 0.3);
+        color: #0B0E14;
     }
 }
 
 @layer components {
+    /* Signature gradient text — chartreuse into violet, ledger-ink style */
     .brand-grad-text {
-        background: linear-gradient(180deg, #FFE08A 0%, #FFBF00 60%, #D4AF37 100%);
+        background: linear-gradient(100deg, #C8F169 0%, #C8F169 40%, #9B87F5 100%);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -91,52 +96,57 @@
     }
     .card-base {
         background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.06);
-        border-radius: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: var(--radius);
         transition: background-color 240ms ease, border-color 240ms ease, transform 240ms ease;
     }
     .card-base:hover {
-        background: rgba(255, 255, 255, 0.04);
-        border-color: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.035);
+        border-color: rgba(200, 241, 105, 0.18);
     }
     .btn-primary {
-        background: #FFBF00;
-        color: #0A0A0B;
+        background: #C8F169;
+        color: #1A2100;
         font-weight: 600;
-        border-radius: 0.75rem;
+        border-radius: 0.7rem;
         padding: 0.75rem 1.25rem;
-        box-shadow: 0 0 0 1px rgba(255, 191, 0, 0.3), 0 8px 24px -8px rgba(255, 191, 0, 0.4);
+        box-shadow: 0 0 0 1px rgba(200, 241, 105, 0.35), 0 8px 24px -8px rgba(200, 241, 105, 0.35);
         transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
     }
     .btn-primary:hover {
-        background: #F0B400;
+        background: #B4E04F;
         transform: translateY(-2px);
-        box-shadow: 0 0 0 1px rgba(255, 191, 0, 0.5), 0 14px 30px -10px rgba(255, 191, 0, 0.55);
+        box-shadow: 0 0 0 1px rgba(200, 241, 105, 0.55), 0 14px 30px -10px rgba(200, 241, 105, 0.45);
     }
     .btn-primary:active { transform: translateY(0); }
     .btn-secondary {
         background: var(--surface-elevated);
-        color: #FFBF00;
+        color: #C8F169;
         border: 1px solid rgba(255, 255, 255, 0.08);
         font-weight: 600;
-        border-radius: 0.75rem;
+        border-radius: 0.7rem;
         padding: 0.75rem 1.25rem;
         transition: all 200ms ease;
     }
     .btn-secondary:hover {
-        border-color: rgba(255, 191, 0, 0.4);
-        background: rgba(255, 191, 0, 0.05);
+        border-color: rgba(200, 241, 105, 0.4);
+        background: rgba(200, 241, 105, 0.05);
     }
     .label-eyebrow {
-        font-size: 0.7rem;
-        font-weight: 700;
-        letter-spacing: 0.18em;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 0.16em;
         text-transform: uppercase;
         color: var(--text-tertiary);
     }
+    .label-eyebrow::before {
+        content: "// ";
+        color: rgba(200, 241, 105, 0.55);
+    }
     .gold-divider {
         height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(255, 191, 0, 0.4), transparent);
+        background: linear-gradient(90deg, transparent, rgba(200, 241, 105, 0.35), rgba(155, 135, 245, 0.25), transparent);
     }
     .hover-lift {
         transition: transform 240ms ease, box-shadow 240ms ease;
@@ -144,6 +154,43 @@
     .hover-lift:hover {
         transform: translateY(-3px);
     }
+
+    /* ---- Ledger signature system ---- */
+    /* Fine ruled-paper texture, standing in for the old blurred "orb" glow */
+    .ledger-rule-bg {
+        background-image:
+            repeating-linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.035) 0px,
+                rgba(255, 255, 255, 0.035) 1px,
+                transparent 1px,
+                transparent 36px
+            );
+    }
+    /* Dashed vertical rail marking a "ledger entry" column */
+    .ledger-rail {
+        position: relative;
+        padding-left: 1.25rem;
+        border-left: 1px dashed rgba(200, 241, 105, 0.3);
+    }
+    /* Small monospace tag used like a block-height / entry number */
+    .block-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+        color: var(--text-tertiary);
+    }
+    .block-tag .dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 9999px;
+        background: #C8F169;
+        box-shadow: 0 0 8px rgba(200, 241, 105, 0.7);
+    }
+
     .prose-amber h2 {
         @apply text-2xl font-bold mt-10 mb-3 text-white;
     }
@@ -152,26 +199,26 @@
     }
     .prose-amber p {
         @apply text-base leading-relaxed mb-4;
-        color: #C7C7CC;
+        color: #C7CBD6;
     }
     .prose-amber ul {
         @apply list-disc pl-6 mb-4 space-y-2;
-        color: #C7C7CC;
+        color: #C7CBD6;
     }
     .prose-amber ol {
         @apply list-decimal pl-6 mb-4 space-y-2;
-        color: #C7C7CC;
+        color: #C7CBD6;
     }
     .prose-amber blockquote {
         @apply border-l-2 pl-4 my-6 italic;
-        border-color: #FFBF00;
-        color: #E4E4E7;
+        border-color: #C8F169;
+        color: #E4E6EB;
     }
-    .prose-amber strong { color: #FFBF00; font-weight: 600; }
+    .prose-amber strong { color: #C8F169; font-weight: 600; }
     .prose-amber a {
-        color: #FFBF00;
+        color: #C8F169;
         text-decoration: underline;
-        text-decoration-color: rgba(255, 191, 0, 0.4);
+        text-decoration-color: rgba(200, 241, 105, 0.4);
     }
     .prose-amber table {
         @apply w-full my-6 text-sm border-collapse;
@@ -180,7 +227,7 @@
         @apply border px-3 py-2 text-left;
         border-color: rgba(255, 255, 255, 0.08);
     }
-    .prose-amber th { color: #FFBF00; font-weight: 600; }
+    .prose-amber th { color: #C8F169; font-weight: 600; }
 }
 
 /* Subtle background grain */
@@ -189,12 +236,11 @@
     background-size: 3px 3px;
 }
 
-/* Animated gradient orb (hero) */
+/* Kept for any remaining references — now a quiet static tint, no blur/glow cliché */
 .orb {
     position: absolute;
     border-radius: 9999px;
-    filter: blur(80px);
-    opacity: 0.5;
+    opacity: 0.12;
     pointer-events: none;
 }
 
@@ -213,6 +259,11 @@
     to { opacity: 1; transform: translateY(0); }
 }
 .fade-up { animation: fadeUp 600ms ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+    .fade-up { animation: none; }
+    .marquee-track { animation: none; }
+}
 
 /* Hide scrollbar utility */
 .no-scrollbar::-webkit-scrollbar { display: none; }

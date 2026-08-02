@@ -28,13 +28,13 @@ export default function Navbar() {
     <header
       data-testid="navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#0A0A0B]/85 backdrop-blur-xl border-b border-white/5" : "bg-transparent"
+        scrolled ? "bg-[#0B0E14]/85 backdrop-blur-xl border-b border-white/5" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link to="/" data-testid="brand-logo" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#FFE08A] via-[#FFBF00] to-[#D4AF37] flex items-center justify-center shadow-[0_0_18px_rgba(255,191,0,0.35)]">
-            <span className="text-[#0A0A0B] font-black text-sm">C</span>
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#C8F169] to-[#9B87F5] flex items-center justify-center shadow-[0_0_18px_rgba(200,241,105,0.3)]">
+            <span className="text-[#0B0E14] font-black text-sm">C</span>
           </div>
           <span className="font-bold text-white tracking-tight">Crypto Beginner</span>
         </Link>
@@ -47,7 +47,7 @@ export default function Navbar() {
               data-testid={`nav-${n.label.toLowerCase()}`}
               className={({ isActive }) =>
                 `px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
-                  isActive ? "text-[#FFBF00]" : "text-zinc-400 hover:text-white"
+                  isActive ? "text-[#C8F169]" : "text-zinc-400 hover:text-white"
                 }`
               }
               end={n.to === "/"}
@@ -80,7 +80,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-white/5 bg-[#0A0A0B]/95 backdrop-blur-xl">
+        <div className="md:hidden border-t border-white/5 bg-[#0B0E14]/95 backdrop-blur-xl">
           <div className="px-4 py-4 flex flex-col gap-1">
             {NAV.map((n) => (
               <NavLink
@@ -89,7 +89,7 @@ export default function Navbar() {
                 data-testid={`mobile-nav-${n.label.toLowerCase()}`}
                 className={({ isActive }) =>
                   `px-3 py-3 text-sm font-medium rounded-lg ${
-                    isActive ? "bg-[#FFBF00]/10 text-[#FFBF00]" : "text-zinc-300"
+                    isActive ? "bg-[#C8F169]/10 text-[#C8F169]" : "text-zinc-300"
                   }`
                 }
                 end={n.to === "/"}

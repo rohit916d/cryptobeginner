@@ -35,14 +35,14 @@ export default function Contact() {
       <div className="grid md:grid-cols-2 gap-12">
         <div>
           <div className="label-eyebrow">Contact</div>
-          <h1 className="mt-3 text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+          <h1 className="mt-3 text-4xl md:text-5xl font-normal text-white tracking-tight">
             Let's <span className="brand-grad-text">talk.</span>
           </h1>
           <p className="mt-5 text-zinc-400 leading-relaxed">
             Feedback, content ideas, partnerships, or a typo we missed — we read everything.
           </p>
           <div className="mt-8 flex items-center gap-3 text-sm text-zinc-300">
-            <Mail size={16} className="text-[#FFBF00]" />
+            <Mail size={16} className="text-[#C8F169]" />
             hello@cryptobeginner.in
           </div>
           <p className="mt-6 text-xs text-zinc-500">
@@ -53,7 +53,7 @@ export default function Contact() {
         <form onSubmit={submit} data-testid="contact-form" className="card-base p-6 md:p-7 space-y-4">
           {status === "sent" ? (
             <div data-testid="contact-success" className="text-center py-10">
-              <CheckCircle2 className="mx-auto text-[#FFBF00]" size={36} />
+              <CheckCircle2 className="mx-auto text-[#C8F169]" size={36} />
               <h3 className="mt-4 text-lg font-bold text-white">Message received!</h3>
               <p className="mt-2 text-sm text-zinc-400">Thanks — we'll get back to you soon.</p>
               <button
@@ -81,7 +81,7 @@ export default function Contact() {
     required
     value={form.name}
     onChange={handle("name")}
-    className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5 text-white outline-none focus:border-[#FFBF00]/40"
+    className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5 text-white outline-none focus:border-[#C8F169]/40"
   />
 </div>
               <div>
@@ -98,7 +98,7 @@ export default function Contact() {
   required
   value={form.email}
   onChange={handle("email")}
-  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5 text-white outline-none focus:border-[#FFBF00]/40"
+  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5 text-white outline-none focus:border-[#C8F169]/40"
 />
               </div>
               <div>
@@ -113,7 +113,7 @@ export default function Contact() {
   autoComplete="name"
   value={form.subject}
   onChange={handle("subject")}
-  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5 text-white outline-none focus:border-[#FFBF00]/40"
+  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5 text-white outline-none focus:border-[#C8F169]/40"
 />
               </div>
               <div>
@@ -130,7 +130,7 @@ export default function Contact() {
   rows={5}
   value={form.message}
   onChange={handle("message")}
-  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5 text-white outline-none focus:border-[#FFBF00]/40 resize-none"
+  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5 text-white outline-none focus:border-[#C8F169]/40 resize-none"
 />
               </div>
               {error && <p className="text-xs text-rose-400">{error}</p>}

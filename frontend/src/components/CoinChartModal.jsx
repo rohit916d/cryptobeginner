@@ -63,7 +63,7 @@ export default function CoinChartModal({ coin, onClose }) {
       aria-label={`${coin.name} live chart`}
     >
       <div
-        className="bg-[#0A0A0B] border border-white/10 rounded-2xl w-full max-w-4xl h-[75vh] flex flex-col overflow-hidden"
+        className="bg-[#0B0E14] border border-white/10 rounded-2xl w-full max-w-4xl h-[75vh] flex flex-col overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between px-5 py-3 border-b border-white/5">

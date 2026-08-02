@@ -56,7 +56,7 @@ function CryptoNews() {
         {news.map((item, index) => (
           <article
             key={item.link || index}
-            className="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:border-yellow-500 transition"
+            className="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:border-lime-400 transition"
           >
             <picture>
               {!item.image && (
@@ -78,7 +78,7 @@ function CryptoNews() {
             </picture>
 
             <div className="p-5">
-              <p className="text-xs text-yellow-400 mb-2">
+              <p className="text-xs text-lime-300 mb-2">
                 {item.source}
               </p>
 
@@ -94,7 +94,7 @@ function CryptoNews() {
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-5 text-yellow-400 hover:underline"
+                className="inline-block mt-5 text-lime-300 hover:underline"
               >
                 Read Full News →
               </a>

@@ -11,7 +11,7 @@ export default function NotFound() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-24 md:py-32 text-center" data-testid="page-404">
       <div className="font-mono text-[10rem] leading-none brand-grad-text tracking-tighter">404</div>
-      <h1 className="mt-4 text-3xl md:text-4xl font-extrabold text-white">Lost on the blockchain</h1>
+      <h1 className="mt-4 text-3xl md:text-4xl font-normal text-white">Lost on the blockchain</h1>
       <p className="mt-4 text-zinc-400 max-w-md mx-auto leading-relaxed">
         We couldn't find that page. It may have been moved, renamed, or it never existed in the first place.
       </p>

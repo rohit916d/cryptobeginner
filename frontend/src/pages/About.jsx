@@ -11,7 +11,7 @@ export default function About() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-14 md:py-20">
       <div className="label-eyebrow">About</div>
-      <h1 className="mt-3 text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+      <h1 className="mt-3 text-4xl md:text-5xl font-normal text-white tracking-tight">
         We make crypto <span className="brand-grad-text">approachable.</span>
       </h1>
       <p className="mt-6 text-lg text-zinc-400 leading-relaxed">
@@ -25,7 +25,7 @@ export default function About() {
           { icon: HeartHandshake, title: "No Financial Advice", body: "We never recommend buying or selling anything. Our content is purely educational." },
         ].map((v) => (
           <div key={v.title} className="card-base p-6">
-            <v.icon size={20} className="text-[#FFBF00]" />
+            <v.icon size={20} className="text-[#C8F169]" />
             <h3 className="mt-3 text-lg font-bold text-white">{v.title}</h3>
             <p className="mt-2 text-sm text-zinc-400 leading-relaxed">{v.body}</p>
           </div>
