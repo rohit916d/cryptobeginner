@@ -58,19 +58,24 @@ function CryptoNews() {
             key={item.link || index}
             className="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:border-yellow-500 transition"
           >
-            <img
-              src={item.image || "/news-placeholder.jpg"}
-              alt={item.title}
-              width="600"
-              height="350"
-              loading="lazy"
-              decoding="async"
-              className="w-full h-48 object-cover"
-              onError={(e) => {
-                e.currentTarget.onerror = null;
-                e.currentTarget.src = "/news-placeholder.jpg";
-              }}
-            />
+            <picture>
+              {!item.image && (
+                <source srcSet="/news-placeholder.webp" type="image/webp" />
+              )}
+              <img
+                src={item.image || "/news-placeholder.jpg"}
+                alt={item.title}
+                width="600"
+                height="350"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-48 object-cover"
+                onError={(e) => {
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = "/news-placeholder.jpg";
+                }}
+              />
+            </picture>
 
             <div className="p-5">
               <p className="text-xs text-yellow-400 mb-2">
