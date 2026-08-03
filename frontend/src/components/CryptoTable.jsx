@@ -189,7 +189,7 @@ useEffect(() => {
                     }
                   }}
                   aria-label={`View live chart for ${c.name}`}
-                  className="border-b border-white/5 hover:bg-white/[0.02] transition-colors cursor-pointer"
+                  className="border-b border-white/5 hover:bg-gradient-to-r hover:from-[#C8F169]/[0.04] hover:to-transparent transition-all cursor-pointer relative hover:shadow-[inset_2px_0_0_0_#C8F169]"
                 >
                   <td className="py-4 px-5 md:px-6 text-zinc-500 font-mono">{c.market_cap_rank}</td>
                   <td className="py-4 px-2">

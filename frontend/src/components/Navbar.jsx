@@ -28,8 +28,13 @@ export default function Navbar() {
     <header
       data-testid="navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#0B0E14]/85 backdrop-blur-xl border-b border-white/5" : "bg-transparent"
+        scrolled ? "bg-[#0B0E14]/75 backdrop-blur-2xl" : "bg-transparent"
       }`}
+      style={
+        scrolled
+          ? { borderBottom: "1px solid transparent", backgroundImage: "linear-gradient(#0B0E14E6, #0B0E14E6), linear-gradient(90deg, rgba(200,241,105,0.35), rgba(155,135,245,0.25))", backgroundOrigin: "border-box", backgroundClip: "padding-box, border-box" }
+          : undefined
+      }
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link to="/" data-testid="brand-logo" className="flex items-center gap-2 group">

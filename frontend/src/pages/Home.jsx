@@ -4,6 +4,8 @@ import { ArrowRight, Sparkles, ShieldCheck, BookOpen, TrendingUp } from "lucide-
 import { useSEO } from "../lib/seo";
 import TiltCard from "../components/TiltCard";
 import Block3D from "../components/Block3D";
+import MagneticButton from "../components/MagneticButton";
+import AnimatedCounter from "../components/AnimatedCounter";
 
 const MarketStats = lazy(() => import("../components/MarketStats"));
 const CryptoTable = lazy(() => import("../components/CryptoTable"));
@@ -31,6 +33,7 @@ export default function Home() {
     <>
       {/* HERO */}
       <section data-testid="hero" className="relative overflow-hidden">
+        <div className="aurora-bg" />
         <div className="absolute inset-0 ledger-rule-bg opacity-60" />
         <div
           className="absolute -top-40 right-[-10%] w-[560px] h-[560px] rounded-full pointer-events-none"
@@ -57,9 +60,9 @@ export default function Home() {
                 Simple crypto education for complete beginners. Bitcoin, blockchain, wallets, scams, security — all explained without jargon, hype, or financial advice.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link to="/learn" data-testid="hero-cta-start" className="btn-primary inline-flex items-center gap-2">
+                <MagneticButton as={Link} to="/learn" data-testid="hero-cta-start" className="btn-primary inline-flex items-center gap-2">
                   Start Learning <ArrowRight size={16} />
-                </Link>
+                </MagneticButton>
                 <a href="#market" data-testid="hero-cta-market" className="btn-secondary inline-flex items-center gap-2">
                   Explore Market <TrendingUp size={16} />
                 </a>
@@ -74,9 +77,11 @@ export default function Home() {
 
             <div className="lg:col-span-5 fade-up" style={{ animationDelay: "180ms" }}>
               <div className="hidden md:block mb-6">
-                <Block3D />
+                <div className="glow-border rounded-full inline-block">
+                  <Block3D />
+                </div>
               </div>
-              <TiltCard className="relative card-base p-6 md:p-7">
+              <TiltCard className="glow-border relative card-base p-6 md:p-7">
                 <div className="absolute inset-0 rounded-2xl pointer-events-none" style={{ background: "radial-gradient(600px circle at 0% 0%, rgba(200,241,105,0.06), transparent 40%)" }} />
                 <div className="label-eyebrow">A 60-second primer</div>
                 <h3 className="text-xl font-normal text-white mt-2">What is crypto, really?</h3>
@@ -90,7 +95,9 @@ export default function Home() {
                     { k: "0", v: "Middlemen needed" },
                   ].map((s) => (
                     <div key={s.k} className="rounded-xl bg-white/[0.02] border border-white/5 p-3">
-                      <div className="font-mono text-lg text-[#C8F169] font-bold">{s.k}</div>
+                      <div className="font-mono text-lg text-[#C8F169] font-bold">
+                        <AnimatedCounter value={s.k} />
+                      </div>
                       <div className="text-[10px] uppercase tracking-wider text-zinc-500 mt-1">{s.v}</div>
                     </div>
                   ))}
@@ -147,7 +154,7 @@ export default function Home() {
               to={t.to}
               maxTilt={6}
               data-testid={`path-card-${t.title.toLowerCase()}`}
-              className="card-base p-7 relative overflow-hidden group block"
+              className="card-base glow-border p-7 relative overflow-hidden group block"
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${t.color} opacity-50 group-hover:opacity-80 transition-opacity`} />
               <div className="relative">
