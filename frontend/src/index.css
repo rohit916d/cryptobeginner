@@ -98,25 +98,39 @@
         background: rgba(255, 255, 255, 0.02);
         border: 1px solid rgba(255, 255, 255, 0.07);
         border-radius: var(--radius);
-        transition: background-color 240ms ease, border-color 240ms ease, transform 240ms ease;
+        box-shadow:
+            0 1px 1px rgba(0, 0, 0, 0.3),
+            0 10px 30px -14px rgba(0, 0, 0, 0.55),
+            inset 0 1px 0 rgba(255, 255, 255, 0.04);
+        transition: background-color 240ms ease, border-color 240ms ease, box-shadow 240ms ease;
     }
     .card-base:hover {
         background: rgba(255, 255, 255, 0.035);
         border-color: rgba(200, 241, 105, 0.18);
+        box-shadow:
+            0 1px 1px rgba(0, 0, 0, 0.3),
+            0 20px 44px -16px rgba(0, 0, 0, 0.6),
+            0 0 0 1px rgba(200, 241, 105, 0.08),
+            inset 0 1px 0 rgba(255, 255, 255, 0.05);
     }
     .btn-primary {
-        background: #C8F169;
+        background: linear-gradient(180deg, #D9FF8A 0%, #C8F169 55%, #B4E04F 100%);
         color: #1A2100;
         font-weight: 600;
         border-radius: 0.7rem;
         padding: 0.75rem 1.25rem;
-        box-shadow: 0 0 0 1px rgba(200, 241, 105, 0.35), 0 8px 24px -8px rgba(200, 241, 105, 0.35);
+        box-shadow:
+            0 1px 0 rgba(255, 255, 255, 0.4) inset,
+            0 -2px 0 rgba(0, 0, 0, 0.12) inset,
+            0 10px 24px -8px rgba(200, 241, 105, 0.45);
         transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
     }
     .btn-primary:hover {
-        background: #B4E04F;
         transform: translateY(-2px);
-        box-shadow: 0 0 0 1px rgba(200, 241, 105, 0.55), 0 14px 30px -10px rgba(200, 241, 105, 0.45);
+        box-shadow:
+            0 1px 0 rgba(255, 255, 255, 0.45) inset,
+            0 -2px 0 rgba(0, 0, 0, 0.12) inset,
+            0 16px 32px -8px rgba(200, 241, 105, 0.55);
     }
     .btn-primary:active { transform: translateY(0); }
     .btn-secondary {
@@ -153,6 +167,32 @@
     }
     .hover-lift:hover {
         transform: translateY(-3px);
+    }
+
+    /* Premium 3D tilt card: cursor-reactive glare overlay */
+    .tilt-card {
+        --glare-x: 50%;
+        --glare-y: 50%;
+        position: relative;
+        transform-style: preserve-3d;
+        will-change: transform;
+    }
+    .tilt-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: radial-gradient(
+            420px circle at var(--glare-x) var(--glare-y),
+            rgba(200, 241, 105, 0.1),
+            transparent 55%
+        );
+        opacity: 0;
+        transition: opacity 300ms ease;
+        pointer-events: none;
+    }
+    .tilt-card:hover::before {
+        opacity: 1;
     }
 
     /* ---- Ledger signature system ---- */
@@ -263,6 +303,72 @@
 @media (prefers-reduced-motion: reduce) {
     .fade-up { animation: none; }
     .marquee-track { animation: none; }
+}
+
+/* ---- Block3D: rotating blockchain block, hero centerpiece ---- */
+.block3d-scene {
+    perspective: 1100px;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+}
+.block3d-cube {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    transform-style: preserve-3d;
+    animation: block3dSpin 16s linear infinite;
+}
+@keyframes block3dSpin {
+    from { transform: rotateX(-16deg) rotateY(0deg); }
+    to   { transform: rotateX(-16deg) rotateY(360deg); }
+}
+.block3d-face {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border: 1px solid rgba(200, 241, 105, 0.28);
+    border-radius: 14px;
+    background: linear-gradient(155deg, rgba(200, 241, 105, 0.08), rgba(155, 135, 245, 0.06) 60%, rgba(255, 255, 255, 0.02));
+    backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+.block3d-label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    color: rgba(200, 241, 105, 0.75);
+}
+.block3d-value {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #F4F6F8;
+}
+.block3d-mini { font-size: 0.72rem; color: #C7CBD6; font-weight: 400; }
+
+.block3d-front  { transform: translateZ(110px); }
+.block3d-back   { transform: rotateY(180deg) translateZ(110px); }
+.block3d-right  { transform: rotateY(90deg) translateZ(110px); }
+.block3d-left   { transform: rotateY(-90deg) translateZ(110px); }
+.block3d-top    { transform: rotateX(90deg) translateZ(110px); background: rgba(200, 241, 105, 0.05); }
+.block3d-bottom { transform: rotateX(-90deg) translateZ(110px); background: rgba(155, 135, 245, 0.05); }
+
+@media (prefers-reduced-motion: reduce) {
+    .block3d-cube { animation: none; transform: rotateX(-16deg) rotateY(-28deg); }
+}
+@media (max-width: 640px) {
+    .block3d-scene, .block3d-cube, .block3d-face { width: 160px; height: 160px; }
+    .block3d-front  { transform: translateZ(80px); }
+    .block3d-back   { transform: rotateY(180deg) translateZ(80px); }
+    .block3d-right  { transform: rotateY(90deg) translateZ(80px); }
+    .block3d-left   { transform: rotateY(-90deg) translateZ(80px); }
+    .block3d-top    { transform: rotateX(90deg) translateZ(80px); }
+    .block3d-bottom { transform: rotateX(-90deg) translateZ(80px); }
 }
 
 /* Hide scrollbar utility */

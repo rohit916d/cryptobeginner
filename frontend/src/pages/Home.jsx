@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useEffect, lazy, Suspense } from "react";
 import { ArrowRight, Sparkles, ShieldCheck, BookOpen, TrendingUp } from "lucide-react";
 import { useSEO } from "../lib/seo";
+import TiltCard from "../components/TiltCard";
+import Block3D from "../components/Block3D";
 
 const MarketStats = lazy(() => import("../components/MarketStats"));
 const CryptoTable = lazy(() => import("../components/CryptoTable"));
@@ -71,7 +73,10 @@ export default function Home() {
             </div>
 
             <div className="lg:col-span-5 fade-up" style={{ animationDelay: "180ms" }}>
-              <div className="relative card-base p-6 md:p-7">
+              <div className="hidden md:block mb-6">
+                <Block3D />
+              </div>
+              <TiltCard className="relative card-base p-6 md:p-7">
                 <div className="absolute inset-0 rounded-2xl pointer-events-none" style={{ background: "radial-gradient(600px circle at 0% 0%, rgba(200,241,105,0.06), transparent 40%)" }} />
                 <div className="label-eyebrow">A 60-second primer</div>
                 <h3 className="text-xl font-normal text-white mt-2">What is crypto, really?</h3>
@@ -94,7 +99,7 @@ export default function Home() {
                 <Link to="/learn/what-is-cryptocurrency" data-testid="hero-primer-link" className="text-sm text-[#C8F169] hover:underline inline-flex items-center gap-1">
                   Read the full primer <ArrowRight size={13} />
                 </Link>
-              </div>
+              </TiltCard>
             </div>
           </div>
         </div>
@@ -136,11 +141,13 @@ export default function Home() {
             { title: "Intermediate", desc: "DeFi, staking, smart contracts, NFTs, L1 vs L2.", to: "/learn?level=intermediate", color: "from-violet-400/20 to-transparent" },
             { title: "Security", desc: "Scams, phishing, wallet & seed phrase protection.", to: "/learn?level=security", color: "from-rose-400/20 to-transparent" },
           ].map((t) => (
-            <Link
+            <TiltCard
+              as={Link}
               key={t.title}
               to={t.to}
+              maxTilt={6}
               data-testid={`path-card-${t.title.toLowerCase()}`}
-              className="card-base p-7 hover-lift relative overflow-hidden group"
+              className="card-base p-7 relative overflow-hidden group block"
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${t.color} opacity-50 group-hover:opacity-80 transition-opacity`} />
               <div className="relative">
@@ -151,7 +158,7 @@ export default function Home() {
                   Explore lessons <ArrowRight size={14} />
                 </div>
               </div>
-            </Link>
+            </TiltCard>
           ))}
         </div>
       </section>
