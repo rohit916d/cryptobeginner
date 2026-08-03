@@ -3,13 +3,13 @@ import { useEffect, lazy, Suspense } from "react";
 import { ArrowRight, Sparkles, ShieldCheck, BookOpen, TrendingUp } from "lucide-react";
 import { useSEO } from "../lib/seo";
 import TiltCard from "../components/TiltCard";
-import Block3D from "../components/Block3D";
 import MagneticButton from "../components/MagneticButton";
 import AnimatedCounter from "../components/AnimatedCounter";
 
 const MarketStats = lazy(() => import("../components/MarketStats"));
 const CryptoTable = lazy(() => import("../components/CryptoTable"));
 const CryptoNews = lazy(() => import("../components/CryptoNews"));
+const Block3DScene = lazy(() => import("../components/Block3DScene"));
 
 export default function Home() {
   useSEO({
@@ -76,10 +76,10 @@ export default function Home() {
             </div>
 
             <div className="lg:col-span-5 fade-up" style={{ animationDelay: "180ms" }}>
-              <div className="hidden md:block mb-6">
-                <div className="glow-border rounded-full inline-block">
-                  <Block3D />
-                </div>
+              <div className="hidden md:block mb-2 glow-border rounded-2xl overflow-hidden">
+                <Suspense fallback={<div style={{ height: 320 }} />}>
+                  <Block3DScene height={320} />
+                </Suspense>
               </div>
               <TiltCard className="glow-border relative card-base p-6 md:p-7">
                 <div className="absolute inset-0 rounded-2xl pointer-events-none" style={{ background: "radial-gradient(600px circle at 0% 0%, rgba(200,241,105,0.06), transparent 40%)" }} />
