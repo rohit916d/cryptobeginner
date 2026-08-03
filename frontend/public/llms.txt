@@ -1,20 +1,21 @@
 # Crypto Beginner
 
-Crypto Beginner is a free educational platform for learning cryptocurrency, Bitcoin, blockchain, Web3, wallets, DeFi, NFTs and digital assets.
+> Free, beginner-friendly education platform for learning cryptocurrency, Bitcoin, blockchain, Web3, wallets, DeFi, NFTs and digital assets — plus live market data. No financial advice.
 
-## Main Resources
+## Docs
 
-- [Dashboard](https://cryptobeginner.in/)
-- [Learn](https://cryptobeginner.in/learn)
-- [Dictionary](https://cryptobeginner.in/dictionary)
-- [Blog](https://cryptobeginner.in/blog)
+- [Learn](https://cryptobeginner.in/learn): Structured lessons across Beginner, Intermediate, and Security tracks.
+- [Dictionary](https://cryptobeginner.in/dictionary): Plain-English glossary of crypto and blockchain terms.
+- [Blog](https://cryptobeginner.in/blog): Articles on crypto news, guides, and explainers.
+- [Dashboard](https://cryptobeginner.in/): Live top-10 cryptocurrency prices, market stats, and news.
+
+## About
+
 - [About](https://cryptobeginner.in/about)
 - [Contact](https://cryptobeginner.in/contact)
-- [Privacy](https://cryptobeginner.in/privacy)
+- [Privacy Policy](https://cryptobeginner.in/privacy)
 - [Terms](https://cryptobeginner.in/terms)
+
+## Optional
+
 - [Sitemap](https://cryptobeginner.in/sitemap.xml)
-- [Robots](https://cryptobeginner.in/robots.txt)
-
-## Purpose
-
-This website provides beginner-friendly education about cryptocurrency and blockchain technology. It is intended for educational purposes only and does not provide financial advice.
