@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/api/(.*)",
+      "destination": "https://cryptobeginner-backend.vercel.app/api/$1"
+    },
+    {
       "source": "/sitemap.xml",
       "destination": "https://cryptobeginner.onrender.com/sitemap.xml"
     }
