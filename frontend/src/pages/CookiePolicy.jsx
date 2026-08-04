@@ -13,7 +13,7 @@ export default function CookiePolicy() {
   useSEO({
     title: "Cookie Policy",
     description: "How Crypto Beginner uses cookies and how you can control them.",
-    canonical: typeof window !== "undefined" ? window.location.href : undefined,
+    canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
   });
 
   return (

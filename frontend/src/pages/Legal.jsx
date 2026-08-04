@@ -44,7 +44,7 @@ export default function LegalPage({ slug }) {
   useSEO({
     title: data.title,
     description: data.description,
-    canonical: typeof window !== "undefined" ? window.location.href : undefined,
+    canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
   });
 
   return (

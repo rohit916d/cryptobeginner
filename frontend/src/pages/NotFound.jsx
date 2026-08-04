@@ -6,6 +6,7 @@ export default function NotFound() {
   useSEO({
     title: "Page not found",
     description: "The page you're looking for doesn't exist. Head back to Crypto Beginner.",
+    robots: "noindex,follow",
   });
 
   return (

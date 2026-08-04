@@ -13,7 +13,7 @@ export default function Dictionary() {
   useSEO({
     title: "Crypto A-Z Dictionary",
     description: "An A-Z searchable glossary of crypto terms — wallet, blockchain, DeFi, NFT, staking, gas, and more.",
-    canonical: typeof window !== "undefined" ? window.location.href : undefined,
+    canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
   });
 
   useEffect(() => {

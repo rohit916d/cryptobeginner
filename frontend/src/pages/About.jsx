@@ -5,7 +5,7 @@ export default function About() {
   useSEO({
     title: "About Us",
     description: "Crypto Beginner is a free education platform helping beginners learn crypto safely — without hype or financial advice.",
-    canonical: typeof window !== "undefined" ? window.location.href : undefined,
+    canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
   });
 
   return (

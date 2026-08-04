@@ -46,11 +46,12 @@ export default function BlogDetail() {
   }, [slug]);
 
   useSEO({
-    title: post?.title,
+    title: notFound ? "Article Not Found" : post?.title,
     description: post?.excerpt,
-    canonical: typeof window !== "undefined" ? window.location.href : undefined,
+    canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
     image: post?.cover_image,
     type: "article",
+    robots: notFound ? "noindex,follow" : "index,follow",
     jsonLd: post ? {
       "@context": "https://schema.org",
       "@type": "BlogPosting",

@@ -18,7 +18,7 @@ export default function Home() {
       "Learn Crypto, Bitcoin, Blockchain, Web3, Wallets, DeFi and Cryptocurrency from scratch with beginner-friendly guides, tutorials and live market data.",
     keywords:
       "crypto, cryptocurrency, bitcoin, blockchain, web3, defi, crypto for beginners, learn crypto, bitcoin guide, crypto education, wallets, ethereum",
-    canonical: typeof window !== "undefined" ? window.location.href : undefined,
+    canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
     image: "https://cryptobeginner.in/cryptobeginner-icon.png",
     jsonLd: {
       "@context": "https://schema.org",

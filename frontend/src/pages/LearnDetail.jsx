@@ -64,10 +64,11 @@ export default function LearnDetail() {
   }, [slug]);
 
   useSEO({
-    title: lesson?.title,
+    title: notFound ? "Lesson Not Found" : lesson?.title,
     description: lesson?.summary,
-    canonical: typeof window !== "undefined" ? window.location.href : undefined,
+    canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
     type: "article",
+    robots: notFound ? "noindex,follow" : "index,follow",
     jsonLd: lesson ? {
       "@context": "https://schema.org",
       "@type": "LearningResource",

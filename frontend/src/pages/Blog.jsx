@@ -13,7 +13,7 @@ export default function Blog() {
   useSEO({
     title: "Crypto Blog",
     description: "Beginner-friendly crypto articles on Bitcoin, blockchain, DeFi, scams, wallets and more.",
-    canonical: typeof window !== "undefined" ? window.location.href : undefined,
+    canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
   });
 
   useEffect(() => {

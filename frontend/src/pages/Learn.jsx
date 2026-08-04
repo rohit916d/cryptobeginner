@@ -20,7 +20,7 @@ export default function Learn() {
   useSEO({
     title: "Learning Center",
     description: "Structured crypto learning paths for absolute beginners. Beginner, intermediate, and security tracks.",
-    canonical: typeof window !== "undefined" ? window.location.href : undefined,
+    canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
   });
 
   useEffect(() => {
