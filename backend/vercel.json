@@ -1,4 +1,10 @@
 {
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/server.py"
+    }
+  ],
   "functions": {
     "server.py": {
       "maxDuration": 30
