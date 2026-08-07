@@ -1,7 +1,13 @@
 {
   "functions": {
     "server.py": {
-      "maxDuration": 30
+      "maxDuration": 60
     }
-  }
+  },
+  "crons": [
+    {
+      "path": "/api/admin/auto-generate",
+      "schedule": "0 4 * * *"
+    }
+  ]
 }

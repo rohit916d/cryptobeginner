@@ -1,4 +1,4 @@
-from fastapi import FastAPI, APIRouter, HTTPException, Response
+from fastapi import FastAPI, APIRouter, HTTPException, Response, Request
 from fastapi.responses import PlainTextResponse
 from starlette.middleware.cors import CORSMiddleware
 
@@ -15,8 +15,10 @@ from datetime import datetime, timezone, timedelta
 from typing import Optional
 
 import asyncio
+import json
 import logging
 import os
+import re
 import requests
 import uuid
 import google.genai
@@ -44,6 +46,7 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 client_ai = genai.Client(api_key=GEMINI_API_KEY)
 COINGECKO_API_KEY = os.getenv("COINGECKO_API_KEY")
 NEWSDATA_API_KEY = os.getenv("NEWSDATA_API_KEY")
+CRON_SECRET = os.getenv("CRON_SECRET")
 import os
 
 print("MONGO_URL =", repr(os.getenv("MONGO_URL")))
@@ -698,6 +701,199 @@ Question:
         return {
             "reply": str(e)
         }
+
+# ----------------------------------------------------
+# AUTO CONTENT GENERATION (daily cron)
+# ----------------------------------------------------
+
+BLOG_CATEGORIES = ["Bitcoin", "Blockchain", "DeFi", "Wallets", "Security", "NFTs", "Regulation", "Trading Basics"]
+LESSON_LEVELS = ["beginner", "intermediate", "security"]
+
+CONTENT_SAFETY_RULES = """
+Rules you must always follow:
+- This is EDUCATIONAL content for complete beginners. Never give financial advice.
+- Never predict future prices or tell the reader to buy/sell anything.
+- Never claim a specific coin is a "good investment" or guaranteed to rise.
+- Be factually careful: crypto facts change fast, so avoid absolute claims about
+  "the current price", "the current market cap", or anything that goes stale.
+  Focus on timeless concepts, mechanics, and how things work.
+- Tone: clear, simple, no hype, no jargon without explaining it first.
+- If the topic touches investing/trading, include a brief, natural disclaimer
+  that this is not financial advice.
+"""
+
+
+def slugify(text: str) -> str:
+    text = text.lower().strip()
+    text = re.sub(r"[^a-z0-9]+", "-", text)
+    return re.sub(r"-+", "-", text).strip("-")[:80]
+
+
+async def unique_slug(collection, base_slug: str) -> str:
+    slug = base_slug
+    i = 2
+    while await collection.find_one({"slug": slug}, {"_id": 0, "slug": 1}):
+        slug = f"{base_slug}-{i}"
+        i += 1
+    return slug
+
+
+def extract_json(raw: str) -> dict:
+    raw = raw.strip()
+    if raw.startswith("```"):
+        raw = re.sub(r"^```[a-zA-Z]*\n?", "", raw)
+        raw = re.sub(r"\n?```$", "", raw)
+    match = re.search(r"\{.*\}", raw, re.DOTALL)
+    if not match:
+        raise ValueError("No JSON object found in model output")
+    return json.loads(match.group(0))
+
+
+async def generate_blog_post():
+    existing = await db.blog.find({}, {"_id": 0, "title": 1}).sort("created_at", -1).limit(40).to_list(40)
+    existing_titles = [d["title"] for d in existing]
+
+    prompt = f"""
+You are a content writer for CryptoBeginner.in, a beginner crypto education site.
+
+{CONTENT_SAFETY_RULES}
+
+Write ONE new blog article on a specific, beginner-friendly crypto topic
+(pick from categories like {", ".join(BLOG_CATEGORIES)}, or a related one).
+Do NOT repeat any of these already-published titles (pick something genuinely
+different, ideally a specific angle rather than a generic repeat):
+{chr(10).join("- " + t for t in existing_titles) if existing_titles else "(none yet)"}
+
+Respond with ONLY a single valid JSON object, no markdown fences, no commentary,
+in exactly this shape:
+{{
+  "title": "string, specific and clear, under 70 characters",
+  "category": "one of {BLOG_CATEGORIES}",
+  "excerpt": "1-2 sentence summary, under 160 characters",
+  "read_time": integer minutes (realistic, 4-9),
+  "content": "600-900 words in Markdown. Use ## headers to structure it. End with a short, natural call-to-action linking to /learn using markdown link syntax."
+}}
+"""
+
+    response = client_ai.models.generate_content(
+        model="gemini-flash-lite-latest",
+        contents=prompt,
+    )
+
+    data = extract_json(response.text)
+
+    for field in ("title", "category", "excerpt", "content"):
+        if not data.get(field):
+            raise ValueError(f"Missing field in generated post: {field}")
+
+    slug = await unique_slug(db.blog, slugify(data["title"]))
+    category_kw = re.sub(r"[^a-zA-Z]+", "-", data.get("category", "crypto")).lower()
+
+    post = {
+        "id": str(uuid.uuid4()),
+        "slug": slug,
+        "title": data["title"],
+        "category": data.get("category", "Bitcoin"),
+        "excerpt": data["excerpt"],
+        "cover_image": f"https://source.unsplash.com/1200x630/?{category_kw},crypto,finance",
+        "read_time": int(data.get("read_time", 5)),
+        "author": "Crypto Beginner AI",
+        "content": data["content"],
+        "created_at": datetime.now(timezone.utc).isoformat(),
+        "ai_generated": True,
+    }
+
+    await db.blog.insert_one(post.copy())
+    post.pop("_id", None)
+    return post
+
+
+async def generate_lesson():
+    counts = {}
+    for level in LESSON_LEVELS:
+        counts[level] = await db.lessons.count_documents({"level": level})
+    target_level = min(counts, key=counts.get)
+
+    existing = await db.lessons.find({}, {"_id": 0, "title": 1}).to_list(200)
+    existing_titles = [d["title"] for d in existing]
+    max_order = await db.lessons.find({"level": target_level}, {"_id": 0, "order": 1}).sort("order", -1).limit(1).to_list(1)
+    next_order = (max_order[0]["order"] + 1) if max_order else 1
+
+    prompt = f"""
+You are writing one new lesson for CryptoBeginner.in's structured "{target_level}"
+learning track.
+
+{CONTENT_SAFETY_RULES}
+
+Do NOT repeat any of these already-published lesson titles:
+{chr(10).join("- " + t for t in existing_titles) if existing_titles else "(none yet)"}
+
+Respond with ONLY a single valid JSON object, no markdown fences, no commentary,
+in exactly this shape:
+{{
+  "title": "string, under 60 characters, e.g. 'What is a Seed Phrase?'",
+  "summary": "1-2 sentence summary, under 160 characters",
+  "read_time": integer minutes (realistic, 4-8),
+  "content": "500-800 words in Markdown, ## headers, written for someone with zero background, appropriate for the '{target_level}' level."
+}}
+"""
+
+    response = client_ai.models.generate_content(
+        model="gemini-flash-lite-latest",
+        contents=prompt,
+    )
+
+    data = extract_json(response.text)
+
+    for field in ("title", "summary", "content"):
+        if not data.get(field):
+            raise ValueError(f"Missing field in generated lesson: {field}")
+
+    slug = await unique_slug(db.lessons, slugify(data["title"]))
+
+    lesson = {
+        "slug": slug,
+        "title": data["title"],
+        "level": target_level,
+        "order": next_order,
+        "read_time": int(data.get("read_time", 5)),
+        "summary": data["summary"],
+        "content": data["content"],
+        "ai_generated": True,
+    }
+
+    await db.lessons.insert_one(lesson.copy())
+    lesson.pop("_id", None)
+    return lesson
+
+
+@api_router.get("/admin/auto-generate")
+async def auto_generate_content(request: Request):
+    if not CRON_SECRET:
+        raise HTTPException(500, "CRON_SECRET is not configured on the server")
+
+    auth_header = request.headers.get("authorization", "")
+    if auth_header != f"Bearer {CRON_SECRET}":
+        raise HTTPException(401, "Unauthorized")
+
+    result = {"blog_post": None, "lesson": None, "errors": []}
+
+    try:
+        result["blog_post"] = await generate_blog_post()
+    except Exception as e:
+        logger.error(f"Auto blog generation failed: {e}")
+        result["errors"].append(f"blog: {e}")
+
+    # Lessons are curriculum-ordered, so generate less often — roughly every
+    # 3rd day — to avoid the track growing faster than it can be curated.
+    if datetime.now(timezone.utc).timetuple().tm_yday % 3 == 0:
+        try:
+            result["lesson"] = await generate_lesson()
+        except Exception as e:
+            logger.error(f"Auto lesson generation failed: {e}")
+            result["errors"].append(f"lesson: {e}")
+
+    return result
     
 # ----------------------------------------------------
 # ROUTER
