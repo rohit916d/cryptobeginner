@@ -14,6 +14,13 @@ export default function Blog() {
     title: "Crypto Blog",
     description: "Beginner-friendly crypto articles on Bitcoin, blockchain, DeFi, scams, wallets and more.",
     canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
+    jsonLd: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: typeof window !== "undefined" ? window.location.origin + "/" : "" },
+        { "@type": "ListItem", position: 2, name: "Blog", item: typeof window !== "undefined" ? window.location.origin + window.location.pathname : "" },
+      ],
+    },
   });
 
   useEffect(() => {

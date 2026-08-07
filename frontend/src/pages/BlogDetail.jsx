@@ -52,15 +52,24 @@ export default function BlogDetail() {
     image: post?.cover_image,
     type: "article",
     robots: notFound ? "noindex,follow" : "index,follow",
-    jsonLd: post ? {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      headline: post.title,
-      description: post.excerpt,
-      image: post.cover_image,
-      author: { "@type": "Organization", name: post.author || "Crypto Beginner" },
-      datePublished: post.created_at,
-    } : null,
+    jsonLd: post ? [
+      {
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.excerpt,
+        image: post.cover_image,
+        author: { "@type": "Organization", name: post.author || "Crypto Beginner" },
+        datePublished: post.created_at,
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: typeof window !== "undefined" ? window.location.origin + "/" : "" },
+          { "@type": "ListItem", position: 2, name: "Blog", item: typeof window !== "undefined" ? window.location.origin + "/blog" : "" },
+          { "@type": "ListItem", position: 3, name: post.title, item: typeof window !== "undefined" ? window.location.origin + window.location.pathname : "" },
+        ],
+      },
+    ] : null,
   });
 
   if (notFound) {

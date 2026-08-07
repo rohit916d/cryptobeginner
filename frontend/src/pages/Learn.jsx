@@ -21,6 +21,13 @@ export default function Learn() {
     title: "Learning Center",
     description: "Structured crypto learning paths for absolute beginners. Beginner, intermediate, and security tracks.",
     canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
+    jsonLd: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: typeof window !== "undefined" ? window.location.origin + "/" : "" },
+        { "@type": "ListItem", position: 2, name: "Learn", item: typeof window !== "undefined" ? window.location.origin + window.location.pathname : "" },
+      ],
+    },
   });
 
   useEffect(() => {

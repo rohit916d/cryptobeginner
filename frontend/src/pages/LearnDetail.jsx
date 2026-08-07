@@ -69,14 +69,23 @@ export default function LearnDetail() {
     canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
     type: "article",
     robots: notFound ? "noindex,follow" : "index,follow",
-    jsonLd: lesson ? {
-      "@context": "https://schema.org",
-      "@type": "LearningResource",
-      name: lesson.title,
-      description: lesson.summary,
-      learningResourceType: "Lesson",
-      educationalLevel: lesson.level,
-    } : null,
+    jsonLd: lesson ? [
+      {
+        "@type": "LearningResource",
+        name: lesson.title,
+        description: lesson.summary,
+        learningResourceType: "Lesson",
+        educationalLevel: lesson.level,
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: typeof window !== "undefined" ? window.location.origin + "/" : "" },
+          { "@type": "ListItem", position: 2, name: "Learn", item: typeof window !== "undefined" ? window.location.origin + "/learn" : "" },
+          { "@type": "ListItem", position: 3, name: lesson.title, item: typeof window !== "undefined" ? window.location.origin + window.location.pathname : "" },
+        ],
+      },
+    ] : null,
   });
 
   if (notFound) {

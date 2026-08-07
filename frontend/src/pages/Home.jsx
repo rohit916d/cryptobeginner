@@ -20,13 +20,21 @@ export default function Home() {
       "crypto, cryptocurrency, bitcoin, blockchain, web3, defi, crypto for beginners, learn crypto, bitcoin guide, crypto education, wallets, ethereum",
     canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
     image: "https://cryptobeginner.in/cryptobeginner-icon.png",
-    jsonLd: {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: "Crypto Beginner",
-      description: "Beginner-friendly crypto education platform.",
-      url: typeof window !== "undefined" ? window.location.origin : "",
-    },
+    jsonLd: [
+      {
+        "@type": "WebSite",
+        name: "Crypto Beginner",
+        description: "Beginner-friendly crypto education platform.",
+        url: typeof window !== "undefined" ? window.location.origin : "",
+      },
+      {
+        "@type": "Organization",
+        name: "Crypto Beginner",
+        url: typeof window !== "undefined" ? window.location.origin : "",
+        logo: typeof window !== "undefined" ? window.location.origin + "/cryptobeginner-icon.png" : "",
+        description: "Free, beginner-friendly education platform for learning cryptocurrency, Bitcoin, and blockchain.",
+      },
+    ],
   });
   
   return (

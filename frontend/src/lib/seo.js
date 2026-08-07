@@ -40,7 +40,7 @@ export function useSEO({
     setMeta("robots", robots);
     setMeta("keywords", keywords);
     setMeta("author", author);
-    setMeta("theme-color", "#0A0A0B");
+    setMeta("theme-color", "#0B0E14");
 
     if (canonical) {
       let link = document.querySelector('link[rel="canonical"]');
@@ -60,7 +60,13 @@ export function useSEO({
         ldScript.id = "ld-json";
         document.head.appendChild(ldScript);
       }
-      ldScript.textContent = JSON.stringify(jsonLd);
+      // Accept either a single schema object or an array of schema objects
+      // (e.g. [WebSite, BreadcrumbList]) — wrapped in @graph so it's valid
+      // combined JSON-LD rather than two competing top-level objects.
+      const payload = Array.isArray(jsonLd)
+        ? { "@context": "https://schema.org", "@graph": jsonLd }
+        : jsonLd;
+      ldScript.textContent = JSON.stringify(payload);
         } else if (ldScript) {
       ldScript.remove();
     }
