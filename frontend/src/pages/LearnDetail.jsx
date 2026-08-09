@@ -85,6 +85,14 @@ export default function LearnDetail() {
           { "@type": "ListItem", position: 3, name: lesson.title, item: typeof window !== "undefined" ? window.location.origin + window.location.pathname : "" },
         ],
       },
+      ...(Array.isArray(lesson.faqs) && lesson.faqs.length > 0 ? [{
+        "@type": "FAQPage",
+        mainEntity: lesson.faqs.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
+      }] : []),
     ] : null,
   });
 
@@ -114,6 +122,23 @@ export default function LearnDetail() {
       </div>
 
       <div className="prose-amber mt-10" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(renderMarkdown(lesson.content)) }} />
+
+      {Array.isArray(lesson.faqs) && lesson.faqs.length > 0 && (
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold text-white mb-4">Frequently asked questions</h2>
+          <div className="space-y-3">
+            {lesson.faqs.map((f, i) => (
+              <details key={i} className="card-base p-4 group">
+                <summary className="cursor-pointer text-white font-medium list-none flex items-center justify-between gap-3">
+                  {f.question}
+                  <span className="text-[#C8F169] shrink-0 group-open:rotate-45 transition-transform text-xl leading-none">+</span>
+                </summary>
+                <p className="text-sm text-zinc-400 mt-3 leading-relaxed">{f.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className="mt-12 card-base p-5 border border-lime-300/20 bg-lime-300/[0.03]">
         <div className="flex items-start gap-3">

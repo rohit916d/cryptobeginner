@@ -771,7 +771,12 @@ in exactly this shape:
   "category": "one of {BLOG_CATEGORIES}",
   "excerpt": "1-2 sentence summary, under 160 characters",
   "read_time": integer minutes (realistic, 4-9),
-  "content": "600-900 words in Markdown. Use ## headers to structure it. End with a short, natural call-to-action linking to /learn using markdown link syntax."
+  "content": "600-900 words in Markdown. Use ## headers to structure it. End with a short, natural call-to-action linking to /learn using markdown link syntax.",
+  "faqs": [
+    {{"question": "a real question a beginner would type into Google about this topic", "answer": "a clear, 1-3 sentence answer"}},
+    {{"question": "a second distinct, realistic question", "answer": "a clear, 1-3 sentence answer"}},
+    {{"question": "a third distinct, realistic question", "answer": "a clear, 1-3 sentence answer"}}
+  ]
 }}
 """
 
@@ -799,6 +804,7 @@ in exactly this shape:
         "read_time": int(data.get("read_time", 5)),
         "author": "Crypto Beginner AI",
         "content": data["content"],
+        "faqs": data.get("faqs") if isinstance(data.get("faqs"), list) else [],
         "created_at": datetime.now(timezone.utc).isoformat(),
         "ai_generated": True,
     }
@@ -834,7 +840,12 @@ in exactly this shape:
   "title": "string, under 60 characters, e.g. 'What is a Seed Phrase?'",
   "summary": "1-2 sentence summary, under 160 characters",
   "read_time": integer minutes (realistic, 4-8),
-  "content": "500-800 words in Markdown, ## headers, written for someone with zero background, appropriate for the '{target_level}' level."
+  "content": "500-800 words in Markdown, ## headers, written for someone with zero background, appropriate for the '{target_level}' level.",
+  "faqs": [
+    {{"question": "a real question a beginner would type into Google about this topic", "answer": "a clear, 1-3 sentence answer"}},
+    {{"question": "a second distinct, realistic question", "answer": "a clear, 1-3 sentence answer"}},
+    {{"question": "a third distinct, realistic question", "answer": "a clear, 1-3 sentence answer"}}
+  ]
 }}
 """
 
@@ -859,6 +870,7 @@ in exactly this shape:
         "read_time": int(data.get("read_time", 5)),
         "summary": data["summary"],
         "content": data["content"],
+        "faqs": data.get("faqs") if isinstance(data.get("faqs"), list) else [],
         "ai_generated": True,
     }
 
