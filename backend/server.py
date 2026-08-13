@@ -343,6 +343,9 @@ async def crypto_news():
 
         raw = response.json()
 
+        if raw.get("status") != "success":
+            raise ValueError(f"newsdata.io returned an error: {raw.get('results') or raw.get('message') or raw}")
+
         news = []
 
         keywords = [
