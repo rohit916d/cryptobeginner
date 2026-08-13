@@ -1,4 +1,5 @@
 import { memo, useEffect, useState } from "react";
+import { API } from "../lib/api";
 
 function CryptoNews() {
   const [news, setNews] = useState([]);
@@ -10,10 +11,9 @@ function CryptoNews() {
     const loadNews = async () => {
       try {
         const res = await fetch(
-          `${process.env.REACT_APP_BACKEND_URL}/api/news`,
+          `${API}/news`,
           {
             signal: controller.signal,
-            cache: "force-cache",
           }
         );
 
