@@ -12,7 +12,7 @@ from pathlib import Path
 
 from datetime import datetime, timezone, timedelta
 
-from typing import Optional
+from typing import List, Optional
 
 import asyncio
 import base64
@@ -979,6 +979,59 @@ async def list_ai_content(request: Request):
     posts = await db.blog.find({"ai_generated": True}, {"_id": 0, "content": 0}).sort("created_at", -1).to_list(200)
     lessons = await db.lessons.find({"ai_generated": True}, {"_id": 0, "content": 0}).to_list(200)
     return {"blog_posts": posts, "lessons": lessons}
+
+
+class ManualBlogPost(BaseModel):
+    title: str = Field(min_length=1, max_length=140)
+    category: str = Field(default="Bitcoin", max_length=40)
+    excerpt: str = Field(min_length=1, max_length=300)
+    content: str = Field(min_length=1)
+    cover_image: Optional[str] = None
+    read_time: int = Field(default=5, ge=1, le=60)
+    faqs: Optional[List[dict]] = None
+
+
+@api_router.get("/admin/blog")
+async def admin_list_blog(request: Request):
+    require_admin(request)
+    posts = await db.blog.find({}, {"_id": 0, "content": 0}).sort("created_at", -1).to_list(300)
+    return {"data": posts}
+
+
+@api_router.post("/admin/blog")
+async def admin_create_blog(payload: ManualBlogPost, request: Request):
+    require_admin(request)
+
+    slug = await unique_slug(db.blog, slugify(payload.title))
+    category_kw = re.sub(r"[^a-zA-Z]+", "-", payload.category or "crypto").lower()
+
+    post = {
+        "id": str(uuid.uuid4()),
+        "slug": slug,
+        "title": payload.title,
+        "category": payload.category or "Bitcoin",
+        "excerpt": payload.excerpt,
+        "cover_image": payload.cover_image or f"https://source.unsplash.com/1200x630/?{category_kw},crypto,finance",
+        "read_time": payload.read_time,
+        "author": "Crypto Beginner",
+        "content": payload.content,
+        "faqs": payload.faqs or [],
+        "created_at": datetime.now(timezone.utc).isoformat(),
+        "ai_generated": False,
+    }
+
+    await db.blog.insert_one(post.copy())
+    post.pop("_id", None)
+    return post
+
+
+@api_router.delete("/admin/blog/{slug}")
+async def admin_delete_blog(slug: str, request: Request):
+    require_admin(request)
+    result = await db.blog.delete_one({"slug": slug})
+    if result.deleted_count == 0:
+        raise HTTPException(404, "Post not found")
+    return {"deleted": slug}
     
 # ----------------------------------------------------
 # ROUTER
