@@ -15,11 +15,15 @@ from datetime import datetime, timezone, timedelta
 from typing import Optional
 
 import asyncio
+import base64
+import hashlib
+import hmac
 import json
 import logging
 import os
 import re
 import requests
+import time
 import uuid
 import google.genai
 
@@ -47,6 +51,7 @@ client_ai = genai.Client(api_key=GEMINI_API_KEY)
 COINGECKO_API_KEY = os.getenv("COINGECKO_API_KEY")
 NEWSDATA_API_KEY = os.getenv("NEWSDATA_API_KEY")
 CRON_SECRET = os.getenv("CRON_SECRET")
+ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD")
 import os
 
 print("MONGO_URL =", repr(os.getenv("MONGO_URL")))
@@ -909,6 +914,71 @@ async def auto_generate_content(request: Request):
             result["errors"].append(f"lesson: {e}")
 
     return result
+
+
+# ----------------------------------------------------
+# ADMIN PANEL (auth + data endpoints)
+# ----------------------------------------------------
+
+ADMIN_TOKEN_TTL = 60 * 60 * 12  # 12 hours
+
+
+def make_admin_token() -> str:
+    if not ADMIN_PASSWORD:
+        raise HTTPException(500, "ADMIN_PASSWORD is not configured on the server")
+    payload = json.dumps({"exp": int(time.time()) + ADMIN_TOKEN_TTL})
+    payload_b64 = base64.urlsafe_b64encode(payload.encode()).decode()
+    sig = hmac.new(ADMIN_PASSWORD.encode(), payload_b64.encode(), hashlib.sha256).hexdigest()
+    return f"{payload_b64}.{sig}"
+
+
+def verify_admin_token(token: str) -> bool:
+    if not ADMIN_PASSWORD or not token or "." not in token:
+        return False
+    payload_b64, sig = token.rsplit(".", 1)
+    expected_sig = hmac.new(ADMIN_PASSWORD.encode(), payload_b64.encode(), hashlib.sha256).hexdigest()
+    if not hmac.compare_digest(sig, expected_sig):
+        return False
+    try:
+        payload = json.loads(base64.urlsafe_b64decode(payload_b64.encode()))
+    except Exception:
+        return False
+    return payload.get("exp", 0) > time.time()
+
+
+def require_admin(request: Request):
+    auth_header = request.headers.get("authorization", "")
+    token = auth_header[7:] if auth_header.startswith("Bearer ") else ""
+    if not verify_admin_token(token):
+        raise HTTPException(401, "Unauthorized")
+
+
+class AdminLogin(BaseModel):
+    password: str
+
+
+@api_router.post("/admin/login")
+async def admin_login(payload: AdminLogin):
+    if not ADMIN_PASSWORD:
+        raise HTTPException(500, "ADMIN_PASSWORD is not configured on the server")
+    if not hmac.compare_digest(payload.password, ADMIN_PASSWORD):
+        raise HTTPException(401, "Incorrect password")
+    return {"token": make_admin_token()}
+
+
+@api_router.get("/admin/contact-submissions")
+async def list_contact_submissions(request: Request):
+    require_admin(request)
+    items = await db.contact_submissions.find({}, {"_id": 0}).sort("created_at", -1).to_list(500)
+    return {"data": items}
+
+
+@api_router.get("/admin/content")
+async def list_ai_content(request: Request):
+    require_admin(request)
+    posts = await db.blog.find({"ai_generated": True}, {"_id": 0, "content": 0}).sort("created_at", -1).to_list(200)
+    lessons = await db.lessons.find({"ai_generated": True}, {"_id": 0, "content": 0}).to_list(200)
+    return {"blog_posts": posts, "lessons": lessons}
     
 # ----------------------------------------------------
 # ROUTER

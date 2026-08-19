@@ -16,6 +16,7 @@ const Contact = lazy(() => import("@/pages/Contact"));
 const LegalPage = lazy(() => import("@/pages/Legal"));
 const CookiePolicy = lazy(() => import("@/pages/CookiePolicy"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
+const Admin = lazy(() => import("@/pages/Admin"));
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
                 path="/cookie-policy"
                 element={<CookiePolicy />}
               />
+              <Route path="/admin" element={<Admin />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

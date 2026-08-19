@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { api } from "../lib/api";
-import { Mail, Send, CheckCircle2 } from "lucide-react";
+import { Send, CheckCircle2 } from "lucide-react";
 import { useSEO } from "../lib/seo";
 
 export default function Contact() {
@@ -41,11 +41,7 @@ export default function Contact() {
           <p className="mt-5 text-zinc-400 leading-relaxed">
             Feedback, content ideas, partnerships, or a typo we missed — we read everything.
           </p>
-          <div className="mt-8 flex items-center gap-3 text-sm text-zinc-300">
-            <Mail size={16} className="text-[#C8F169]" />
-            hello@cryptobeginner.in
-          </div>
-          <p className="mt-6 text-xs text-zinc-500">
+          <p className="mt-8 text-xs text-zinc-500">
             We never reply with investment advice and we will never ask for your seed phrase.
           </p>
         </div>
