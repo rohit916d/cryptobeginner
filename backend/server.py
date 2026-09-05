@@ -83,10 +83,7 @@ CACHE_TTL = timedelta(seconds=55)
 
 NEWS_CACHE = timedelta(minutes=10)
 
-_market_cache = {
-    "data": None,
-    "ts": None
-}
+_market_cache = {}
 
 _global_cache = {
     "data": None,
@@ -97,6 +94,23 @@ _news_cache = {
     "data": None,
     "ts": None
 }
+
+_search_cache = {}
+
+
+def _normalize_coin(coin: dict) -> dict:
+    return {
+        "id": coin.get("id"),
+        "name": coin.get("name"),
+        "symbol": coin.get("symbol", "").upper(),
+        "image": coin.get("image"),
+        "current_price": coin.get("current_price"),
+        "price_change_percentage_24h": coin.get("price_change_percentage_24h"),
+        "market_cap": coin.get("market_cap"),
+        "market_cap_rank": coin.get("market_cap_rank"),
+        "total_volume": coin.get("total_volume"),
+        "sparkline_7d": (coin.get("sparkline_in_7d") or {}).get("price", [])
+    }
 
 
 # ----------------------------------------------------
@@ -153,17 +167,23 @@ async def root():
 # ----------------------------------------------------
 
 @api_router.get("/market/top")
-async def get_top_coins():
+async def get_top_coins(page: int = 1, per_page: int = 10):
+
+    page = max(1, min(page, 20))
+    per_page = max(1, min(per_page, 50))
+    cache_key = f"{page}_{per_page}"
 
     now = datetime.now(timezone.utc)
 
+    cached_entry = _market_cache.get(cache_key)
     if (
-        _market_cache["data"]
-        and _market_cache["ts"]
-        and (now - _market_cache["ts"]) < CACHE_TTL
+        cached_entry
+        and cached_entry.get("data")
+        and cached_entry.get("ts")
+        and (now - cached_entry["ts"]) < CACHE_TTL
     ):
         return {
-            "data": _market_cache["data"],
+            "data": cached_entry["data"],
             "cached": True
         }
 
@@ -181,8 +201,8 @@ async def get_top_coins():
             params={
                 "vs_currency": "usd",
                 "order": "market_cap_desc",
-                "per_page": 10,
-                "page": 1,
+                "per_page": per_page,
+                "page": page,
                 "sparkline": "true",
                 "price_change_percentage": "24h"
             },
@@ -193,25 +213,9 @@ async def get_top_coins():
 
         coins = response.json()
 
-        data = []
+        data = [_normalize_coin(coin) for coin in coins]
 
-        for coin in coins:
-
-            data.append({
-                "id": coin.get("id"),
-                "name": coin.get("name"),
-                "symbol": coin.get("symbol", "").upper(),
-                "image": coin.get("image"),
-                "current_price": coin.get("current_price"),
-                "price_change_percentage_24h": coin.get("price_change_percentage_24h"),
-                "market_cap": coin.get("market_cap"),
-                "market_cap_rank": coin.get("market_cap_rank"),
-                "total_volume": coin.get("total_volume"),
-                "sparkline_7d": (coin.get("sparkline_in_7d") or {}).get("price", [])
-            })
-
-        _market_cache["data"] = data
-        _market_cache["ts"] = now
+        _market_cache[cache_key] = {"data": data, "ts": now}
 
         return {
             "data": data,
@@ -222,10 +226,10 @@ async def get_top_coins():
 
         logger.exception(e)
 
-        if _market_cache["data"]:
+        if cached_entry and cached_entry.get("data"):
 
             return {
-                "data": _market_cache["data"],
+                "data": cached_entry["data"],
                 "cached": True,
                 "stale": True
             }
@@ -234,6 +238,155 @@ async def get_top_coins():
             status_code=500,
             detail=str(e)
         )
+
+
+# ----------------------------------------------------
+# MARKET SEARCH — find any coin by name/symbol
+# ----------------------------------------------------
+
+@api_router.get("/market/search")
+async def search_coins(q: str = ""):
+
+    q = (q or "").strip()
+    if len(q) < 1:
+        return {"data": []}
+
+    now = datetime.now(timezone.utc)
+    cache_key = f"search_{q.lower()}"
+    cached_entry = _search_cache.get(cache_key)
+    if (
+        cached_entry
+        and cached_entry.get("ts")
+        and (now - cached_entry["ts"]) < CACHE_TTL
+    ):
+        return {"data": cached_entry["data"], "cached": True}
+
+    try:
+        headers = {}
+        if COINGECKO_API_KEY:
+            headers["x-cg-demo-api-key"] = COINGECKO_API_KEY
+
+        search_resp = await asyncio.to_thread(
+            requests.get,
+            "https://api.coingecko.com/api/v3/search",
+            headers=headers,
+            params={"query": q},
+            timeout=15
+        )
+        search_resp.raise_for_status()
+        matches = (search_resp.json() or {}).get("coins", [])[:15]
+
+        if not matches:
+            _search_cache[cache_key] = {"data": [], "ts": now}
+            return {"data": []}
+
+        ids = [m.get("id") for m in matches if m.get("id")]
+        order = {cid: i for i, cid in enumerate(ids)}
+
+        markets_resp = await asyncio.to_thread(
+            requests.get,
+            "https://api.coingecko.com/api/v3/coins/markets",
+            headers=headers,
+            params={
+                "vs_currency": "usd",
+                "ids": ",".join(ids),
+                "order": "market_cap_desc",
+                "sparkline": "true",
+                "price_change_percentage": "24h"
+            },
+            timeout=15
+        )
+        markets_resp.raise_for_status()
+        coins = markets_resp.json()
+
+        data = [_normalize_coin(c) for c in coins]
+        data.sort(key=lambda c: order.get(c["id"], 999))
+
+        _search_cache[cache_key] = {"data": data, "ts": now}
+
+        return {"data": data, "cached": False}
+
+    except Exception as e:
+        logger.exception(e)
+        if cached_entry and cached_entry.get("data"):
+            return {"data": cached_entry["data"], "cached": True, "stale": True}
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# ----------------------------------------------------
+# MARKET CATEGORIES — browse by coin category (meme, DeFi, etc.)
+# ----------------------------------------------------
+
+MARKET_CATEGORIES = [
+    {"id": "meme-token", "label": "Meme Coins"},
+    {"id": "decentralized-finance-defi", "label": "DeFi"},
+    {"id": "smart-contract-platform", "label": "Layer 1"},
+    {"id": "layer-2", "label": "Layer 2"},
+    {"id": "artificial-intelligence", "label": "AI"},
+    {"id": "gaming", "label": "Gaming"},
+    {"id": "stablecoins", "label": "Stablecoins"},
+    {"id": "exchange-based-tokens", "label": "Exchange Tokens"},
+]
+
+
+@api_router.get("/market/categories")
+async def get_categories():
+    return {"data": MARKET_CATEGORIES}
+
+
+@api_router.get("/market/category/{category_id}")
+async def get_coins_by_category(category_id: str, page: int = 1, per_page: int = 20):
+
+    valid_ids = {c["id"] for c in MARKET_CATEGORIES}
+    if category_id not in valid_ids:
+        raise HTTPException(status_code=404, detail="Unknown category")
+
+    page = max(1, min(page, 20))
+    per_page = max(1, min(per_page, 50))
+
+    now = datetime.now(timezone.utc)
+    cache_key = f"cat_{category_id}_{page}_{per_page}"
+    cached_entry = _search_cache.get(cache_key)
+    if (
+        cached_entry
+        and cached_entry.get("ts")
+        and (now - cached_entry["ts"]) < CACHE_TTL
+    ):
+        return {"data": cached_entry["data"], "cached": True}
+
+    try:
+        headers = {}
+        if COINGECKO_API_KEY:
+            headers["x-cg-demo-api-key"] = COINGECKO_API_KEY
+
+        response = await asyncio.to_thread(
+            requests.get,
+            "https://api.coingecko.com/api/v3/coins/markets",
+            headers=headers,
+            params={
+                "vs_currency": "usd",
+                "category": category_id,
+                "order": "market_cap_desc",
+                "per_page": per_page,
+                "page": page,
+                "sparkline": "true",
+                "price_change_percentage": "24h"
+            },
+            timeout=15
+        )
+        response.raise_for_status()
+        coins = response.json()
+        data = [_normalize_coin(c) for c in coins]
+
+        _search_cache[cache_key] = {"data": data, "ts": now}
+
+        return {"data": data, "cached": False}
+
+    except Exception as e:
+        logger.exception(e)
+        if cached_entry and cached_entry.get("data"):
+            return {"data": cached_entry["data"], "cached": True, "stale": True}
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 # ----------------------------------------------------

@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { api } from "../lib/api";
 import { formatUSD, formatPct } from "../lib/format";
-import { ArrowUpRight, ArrowDownRight, RefreshCw } from "lucide-react";
+import { ArrowUpRight, ArrowDownRight, RefreshCw, Search, ChevronDown, Loader2 } from "lucide-react";
 import Sparkline from "./Sparkline";
 import CoinChartModal from "./CoinChartModal";
+import MarketSearchModal from "./MarketSearchModal";
 const LIVE_SYMBOLS = {
   BTC: "btcusdt",
   ETH: "ethusdt",
@@ -20,18 +21,30 @@ export default function CryptoTable() {
   const [refreshing, setRefreshing] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [selectedCoin, setSelectedCoin] = useState(null);
+  const [visibleCount, setVisibleCount] = useState(10);
+  const [loadingMore, setLoadingMore] = useState(false);
+  const [hasMore, setHasMore] = useState(true);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const MAX_COINS = 50;
+  const PAGE_STEP = 10;
   
   // Live clock
   const [currentTime, setCurrentTime] = useState(new Date());
 
   const mountedRef = useRef(true);
-  const load = useCallback(async () => {
+  const visibleCountRef = useRef(visibleCount);
+  useEffect(() => { visibleCountRef.current = visibleCount; }, [visibleCount]);
+
+  const load = useCallback(async (count) => {
+    const n = count ?? visibleCountRef.current;
     setRefreshing(true);
     try {
-      const { data } = await api.get("/market/top");
+      const { data } = await api.get("/market/top", { params: { page: 1, per_page: n } });
       if (mountedRef.current) {
-        setCoins(data.data || []);
+        const list = data.data || [];
+        setCoins(list);
         setLastUpdated(new Date());
+        setHasMore(list.length >= n && n < MAX_COINS);
       }
     } catch (err) {
       // keep previous data on failure; will retry next cycle
@@ -43,12 +56,30 @@ export default function CryptoTable() {
     }
   }, []);
 
+  const handleShowMore = async () => {
+    const nextCount = Math.min(visibleCount + PAGE_STEP, MAX_COINS);
+    setLoadingMore(true);
+    try {
+      const { data } = await api.get("/market/top", { params: { page: 1, per_page: nextCount } });
+      const list = data.data || [];
+      if (mountedRef.current) {
+        setCoins(list);
+        setVisibleCount(nextCount);
+        setHasMore(list.length >= nextCount && nextCount < MAX_COINS);
+      }
+    } catch (err) {
+      // ignore; user can retry
+    } finally {
+      if (mountedRef.current) setLoadingMore(false);
+    }
+  };
+
   useEffect(() => {
 
   mountedRef.current = true;
   load();
 
-  const intervalId = setInterval(load, 60000);
+  const intervalId = setInterval(() => load(), 60000);
 
   const onVisible = () => {
     if (document.visibilityState === "visible") {
@@ -111,30 +142,43 @@ useEffect(() => {
 
   return (
     <div data-testid="crypto-table" className="card-base overflow-hidden">
-      <div className="flex items-center justify-between px-5 md:px-6 py-4 border-b border-white/5">
-        <div>
+      <div className="flex items-center justify-between px-5 md:px-6 py-4 border-b border-white/5 gap-3">
+        <div className="min-w-0">
           <div className="label-eyebrow">Live Market</div>
-          <h3 className="text-xl font-bold text-white mt-1">Top 10 Cryptocurrencies</h3>
+          <h3 className="text-xl font-bold text-white mt-1">Top {visibleCount} Cryptocurrencies</h3>
         </div>
+        <div className="flex items-center gap-2 shrink-0">
+          <button
+            type="button"
+            onClick={() => setSearchOpen(true)}
+            data-testid="market-search-open"
+            aria-label="Search any cryptocurrency"
+            title="Search any cryptocurrency"
+            className="flex items-center gap-2 text-xs text-zinc-400 font-medium border border-white/10 rounded-lg px-3 py-2 hover:text-white hover:border-white/25 hover:bg-white/[0.03] transition-colors"
+          >
+            <Search size={14} />
+            <span className="hidden sm:inline">Search</span>
+          </button>
         <button
           type="button"
-          onClick={load}
+          onClick={() => load()}
           disabled={refreshing}
           data-testid="market-refresh-btn"
           aria-label="Refresh market data"
           className="flex items-center gap-2 text-xs text-zinc-500 font-mono cursor-pointer hover:text-white transition-colors disabled:opacity-60 disabled:cursor-wait"
         >
           <RefreshCw size={12} className={`text-[#C8F169] ${refreshing ? "animate-spin" : ""}`} />
-          {lastUpdated
-  ? `Updated ${currentTime.toLocaleTimeString()}`
-  : "Loading..."}
+          <span className="hidden md:inline">
+            {lastUpdated ? `Updated ${currentTime.toLocaleTimeString()}` : "Loading..."}
+          </span>
         </button>
+        </div>
       </div>
 
       <div className="overflow-x-auto no-scrollbar">
         <table className="w-full text-sm">
   <caption className="sr-only">
-    Live top 10 cryptocurrency market prices including price, 24 hour change and market capitalization.
+    Live cryptocurrency market prices including price, 24 hour change and market capitalization.
   </caption>
           <thead>
             <tr className="text-left text-[10px] font-bold uppercase tracking-[0.15em] text-zinc-500 border-b border-white/5">
@@ -224,12 +268,42 @@ useEffect(() => {
           </tbody>
         </table>
       </div>
+
+      {hasMore && (
+        <div className="flex justify-center py-4 border-t border-white/5">
+          <button
+            type="button"
+            onClick={handleShowMore}
+            disabled={loadingMore}
+            data-testid="market-show-more"
+            className="flex items-center gap-2 text-sm font-medium text-[#C8F169] hover:text-white transition-colors disabled:opacity-60 disabled:cursor-wait"
+          >
+            {loadingMore ? (
+              <Loader2 size={14} className="animate-spin" />
+            ) : (
+              <ChevronDown size={14} />
+            )}
+            {loadingMore ? "Loading more..." : "Show more"}
+          </button>
+        </div>
+      )}
+
       <div className="px-5 md:px-6 py-3 text-[11px] text-zinc-600 border-t border-white/5">
         Data via CoinGecko · auto-refresh every 60s · not investment advice · tap a row for live chart
       </div>
 
       {selectedCoin && (
         <CoinChartModal coin={selectedCoin} onClose={() => setSelectedCoin(null)} />
+      )}
+
+      {searchOpen && (
+        <MarketSearchModal
+          onClose={() => setSearchOpen(false)}
+          onSelectCoin={(coin) => {
+            setSearchOpen(false);
+            setSelectedCoin(coin);
+          }}
+        />
       )}
     </div>
   );
