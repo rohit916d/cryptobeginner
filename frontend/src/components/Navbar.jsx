@@ -42,6 +42,13 @@ export default function Navbar() {
             <span className="text-[#0B0E14] font-black text-sm">C</span>
           </div>
           <span className="font-bold text-white tracking-tight">Crypto Beginner</span>
+          <span className="hidden lg:inline-flex items-center gap-1.5 ml-2 pl-2.5 pr-2 py-1 rounded-full border border-white/10 bg-white/[0.03]">
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C8F169] opacity-60" />
+              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#C8F169]" />
+            </span>
+            <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-500">Live market</span>
+          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, lazy, Suspense } from "react";
-import { ArrowRight, Sparkles, ShieldCheck, BookOpen, TrendingUp } from "lucide-react";
+import { ArrowRight, Sparkles, ShieldCheck, BookOpen, TrendingUp, GraduationCap, Lock, Layers } from "lucide-react";
 import { useSEO } from "../lib/seo";
 import TiltCard from "../components/TiltCard";
 import MagneticButton from "../components/MagneticButton";
@@ -120,6 +120,19 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TOPIC MARQUEE */}
+      <div className="relative border-y border-white/5 bg-white/[0.015] overflow-hidden py-3 mb-14">
+        <div className="marquee-track flex gap-10 whitespace-nowrap text-xs font-mono uppercase tracking-[0.2em] text-zinc-600">
+          {[...Array(2)].flatMap((_, loopIdx) =>
+            ["Bitcoin", "Blockchain", "Wallets", "DeFi", "Security", "Web3", "NFTs", "Staking", "Ethereum", "Exchanges"].map((t) => (
+              <span key={`${loopIdx}-${t}`} className="flex items-center gap-2 shrink-0">
+                <span className="w-1 h-1 rounded-full bg-[#C8F169]" /> {t}
+              </span>
+            ))
+          )}
+        </div>
+      </div>
+
       {/* MARKET STATS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-2">
         <div className="mb-6">
@@ -129,6 +142,31 @@ export default function Home() {
         <Suspense fallback={<div>Loading...</div>}>
   <MarketStats />
 </Suspense>
+      </section>
+
+      {/* WHY CRYPTO BEGINNER */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+        <div className="mb-10 text-center max-w-2xl mx-auto">
+          <div className="label-eyebrow justify-center flex">Why Crypto Beginner</div>
+          <h2 className="text-2xl md:text-4xl font-bold text-white mt-2">Built for people who've never touched crypto</h2>
+          <p className="mt-3 text-zinc-400">No hype, no price predictions, no jargon dumps — just clear explanations and real market context.</p>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {[
+            { icon: GraduationCap, title: "Zero to fluent", desc: "Structured lessons that build on each other — start with \u201cwhat is a blockchain\u201d and end up confident." },
+            { icon: ShieldCheck, title: "Safety first", desc: "Dedicated modules on scams, phishing and seed-phrase security, covered before we even talk about investing." },
+            { icon: TrendingUp, title: "Live market context", desc: "Real prices, market cap and dominance data sit alongside every lesson — theory meets the real thing." },
+            { icon: Lock, title: "No financial advice", desc: "We teach concepts, not predictions. You'll never see \u201cbuy this coin now\u201d on this site." },
+          ].map((f, i) => (
+            <TiltCard key={f.title} maxTilt={5} className="card-base p-6 hover-lift fade-up" style={{ animationDelay: `${i * 80}ms` }}>
+              <div className="w-10 h-10 rounded-xl bg-[#C8F169]/10 flex items-center justify-center mb-4">
+                <f.icon size={18} className="text-[#C8F169]" />
+              </div>
+              <h3 className="text-white font-semibold">{f.title}</h3>
+              <p className="text-sm text-zinc-400 mt-2 leading-relaxed">{f.desc}</p>
+            </TiltCard>
+          ))}
+        </div>
       </section>
 
       {/* TOP 10 TABLE */}
@@ -149,12 +187,16 @@ export default function Home() {
 </section>
 
       {/* LEARNING PATH CTA */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
+        <div className="mb-10">
+          <div className="label-eyebrow">Choose a track</div>
+          <h2 className="text-2xl md:text-4xl font-bold text-white mt-2">Where do you want to start?</h2>
+        </div>
         <div className="grid md:grid-cols-3 gap-5">
           {[
-            { title: "Beginner", desc: "Bitcoin, blockchain, wallets, exchanges — start here.", to: "/learn?level=beginner", color: "from-lime-300/20 to-transparent" },
-            { title: "Intermediate", desc: "DeFi, staking, smart contracts, NFTs, L1 vs L2.", to: "/learn?level=intermediate", color: "from-violet-400/20 to-transparent" },
-            { title: "Security", desc: "Scams, phishing, wallet & seed phrase protection.", to: "/learn?level=security", color: "from-rose-400/20 to-transparent" },
+            { n: "01", icon: BookOpen, title: "Beginner", desc: "Bitcoin, blockchain, wallets, exchanges — start here.", to: "/learn?level=beginner", color: "from-lime-300/20 to-transparent" },
+            { n: "02", icon: Layers, title: "Intermediate", desc: "DeFi, staking, smart contracts, NFTs, L1 vs L2.", to: "/learn?level=intermediate", color: "from-violet-400/20 to-transparent" },
+            { n: "03", icon: ShieldCheck, title: "Security", desc: "Scams, phishing, wallet & seed phrase protection.", to: "/learn?level=security", color: "from-rose-400/20 to-transparent" },
           ].map((t) => (
             <TiltCard
               as={Link}
@@ -166,8 +208,13 @@ export default function Home() {
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${t.color} opacity-50 group-hover:opacity-80 transition-opacity`} />
               <div className="relative">
-                <div className="label-eyebrow">Track</div>
-                <h3 className="text-2xl font-bold text-white mt-2">{t.title}</h3>
+                <div className="flex items-center justify-between">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
+                    <t.icon size={18} className="text-[#C8F169]" />
+                  </div>
+                  <span className="font-mono text-xs text-zinc-600">{t.n}</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mt-4">{t.title}</h3>
                 <p className="text-sm text-zinc-400 mt-2 leading-relaxed">{t.desc}</p>
                 <div className="mt-6 text-sm text-[#C8F169] inline-flex items-center gap-1">
                   Explore lessons <ArrowRight size={14} />
@@ -175,6 +222,61 @@ export default function Home() {
               </div>
             </TiltCard>
           ))}
+        </div>
+      </section>
+
+      {/* HOW YOU'LL LEARN */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
+        <div className="grid lg:grid-cols-12 gap-10 items-start">
+          <div className="lg:col-span-4">
+            <div className="label-eyebrow">The process</div>
+            <h2 className="text-2xl md:text-4xl font-bold text-white mt-2">How you'll learn</h2>
+            <p className="mt-3 text-zinc-400 max-w-sm leading-relaxed">
+              Three steps, no fluff. Most people finish the beginner track in a weekend.
+            </p>
+          </div>
+          <div className="lg:col-span-8 space-y-4">
+            {[
+              { title: "Pick your track", desc: "Beginner, Intermediate or Security — jump in wherever matches what you already know." },
+              { title: "Read bite-sized lessons", desc: "Each guide takes 5\u201310 minutes and builds on the last, with the dictionary a click away." },
+              { title: "Check it against live markets", desc: "Apply what you learned on real, live prices and data — no simulations." },
+            ].map((s, i) => (
+              <div key={s.title} className="flex gap-5 items-start card-base p-5 hover-lift">
+                <div className="font-mono text-2xl text-[#C8F169]/60 font-bold w-10 shrink-0">{String(i + 1).padStart(2, "0")}</div>
+                <div>
+                  <h3 className="text-white font-semibold">{s.title}</h3>
+                  <p className="text-sm text-zinc-400 mt-1 leading-relaxed">{s.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
+        <div className="relative overflow-hidden rounded-3xl glow-border card-base p-10 md:p-16 text-center">
+          <div
+            className="absolute inset-0 opacity-60 pointer-events-none"
+            style={{ background: "radial-gradient(700px circle at 50% 0%, rgba(200,241,105,0.12), transparent 60%)" }}
+          />
+          <div className="relative">
+            <div className="label-eyebrow justify-center flex">Ready when you are</div>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mt-3 max-w-2xl mx-auto leading-tight">
+              Start with lesson one — it's free, forever.
+            </h2>
+            <p className="mt-4 text-zinc-400 max-w-xl mx-auto">
+              No sign-up walls, no paywalls on core lessons. Just clear crypto education.
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <MagneticButton as={Link} to="/learn" data-testid="final-cta-start" className="btn-primary inline-flex items-center gap-2">
+                Start Learning <ArrowRight size={16} />
+              </MagneticButton>
+              <Link to="/dictionary" data-testid="final-cta-dictionary" className="btn-secondary inline-flex items-center gap-2">
+                Browse the dictionary
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>
