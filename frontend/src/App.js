@@ -17,6 +17,7 @@ const LegalPage = lazy(() => import("@/pages/Legal"));
 const CookiePolicy = lazy(() => import("@/pages/CookiePolicy"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
 const Admin = lazy(() => import("@/pages/Admin"));
+const DemoTrading = lazy(() => import("@/pages/DemoTrading"));
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
               <Route path="/learn" element={<Learn />} />
               <Route path="/learn/:slug" element={<LearnDetail />} />
               <Route path="/dictionary" element={<Dictionary />} />
+              <Route path="/demo-trading" element={<DemoTrading />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogDetail />} />
               <Route path="/about" element={<About />} />

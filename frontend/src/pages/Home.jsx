@@ -272,8 +272,8 @@ export default function Home() {
               <MagneticButton as={Link} to="/learn" data-testid="final-cta-start" className="btn-primary inline-flex items-center gap-2">
                 Start Learning <ArrowRight size={16} />
               </MagneticButton>
-              <Link to="/dictionary" data-testid="final-cta-dictionary" className="btn-secondary inline-flex items-center gap-2">
-                Browse the dictionary
+              <Link to="/demo-trading" data-testid="final-cta-demo-trading" className="btn-secondary inline-flex items-center gap-2">
+                Try Demo Trading <TrendingUp size={16} />
               </Link>
             </div>
           </div>

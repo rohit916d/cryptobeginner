@@ -113,6 +113,36 @@ def _normalize_coin(coin: dict) -> dict:
     }
 
 
+DEMO_STARTING_BALANCE = 10000.0
+
+
+async def _get_prices_usd(ids: list) -> dict:
+    """Batch-fetch live USD prices for a list of CoinGecko coin ids."""
+    ids = [i for i in ids if i]
+    if not ids:
+        return {}
+
+    headers = {}
+    if COINGECKO_API_KEY:
+        headers["x-cg-demo-api-key"] = COINGECKO_API_KEY
+
+    response = await asyncio.to_thread(
+        requests.get,
+        "https://api.coingecko.com/api/v3/simple/price",
+        headers=headers,
+        params={"ids": ",".join(ids), "vs_currencies": "usd"},
+        timeout=15
+    )
+    response.raise_for_status()
+    payload = response.json() or {}
+    return {cid: (payload.get(cid) or {}).get("usd") for cid in ids}
+
+
+async def _get_price_usd(coin_id: str):
+    prices = await _get_prices_usd([coin_id])
+    return prices.get(coin_id)
+
+
 # ----------------------------------------------------
 # MODELS
 # ----------------------------------------------------
@@ -149,6 +179,16 @@ class ChatRequest(BaseModel):
         min_length=1,
         max_length=4000
     )
+
+
+class DemoTradeRequest(BaseModel):
+    device_id: str = Field(min_length=8, max_length=100)
+    coin_id: str = Field(min_length=1, max_length=100)
+    symbol: str = Field(min_length=1, max_length=20)
+    name: str = Field(min_length=1, max_length=100)
+    image: Optional[str] = None
+    side: str = Field(pattern="^(buy|sell)$")
+    quantity: float = Field(gt=0)
 
 
 # ----------------------------------------------------
@@ -387,6 +427,187 @@ async def get_coins_by_category(category_id: str, page: int = 1, per_page: int =
         if cached_entry and cached_entry.get("data"):
             return {"data": cached_entry["data"], "cached": True, "stale": True}
         raise HTTPException(status_code=500, detail=str(e))
+
+
+# ----------------------------------------------------
+# DEMO / PAPER TRADING — practice trading, no real money
+# ----------------------------------------------------
+
+@api_router.get("/demo/account/{device_id}")
+async def get_demo_account(device_id: str):
+    if not device_id or len(device_id) < 8 or len(device_id) > 100:
+        raise HTTPException(status_code=400, detail="Invalid device id")
+
+    account = await db.demo_accounts.find_one({"device_id": device_id})
+    if not account:
+        account = {
+            "device_id": device_id,
+            "cash_balance": DEMO_STARTING_BALANCE,
+            "holdings": {},
+            "created_at": datetime.now(timezone.utc).isoformat(),
+        }
+        await db.demo_accounts.insert_one(dict(account))
+
+    holdings = account.get("holdings", {}) or {}
+    ids = list(holdings.keys())
+
+    try:
+        prices = await _get_prices_usd(ids) if ids else {}
+    except Exception as e:
+        logger.exception(e)
+        prices = {}
+
+    holdings_out = []
+    holdings_value = 0.0
+    for cid, h in holdings.items():
+        qty = h.get("quantity", 0)
+        avg_price = h.get("avg_price", 0)
+        price = prices.get(cid)
+        if price is None:
+            price = avg_price
+        value = price * qty
+        cost_basis = avg_price * qty
+        holdings_value += value
+        holdings_out.append({
+            "coin_id": cid,
+            "symbol": h.get("symbol"),
+            "name": h.get("name"),
+            "image": h.get("image"),
+            "quantity": qty,
+            "avg_price": avg_price,
+            "current_price": price,
+            "value": value,
+            "pnl": value - cost_basis,
+            "pnl_pct": ((value - cost_basis) / cost_basis * 100) if cost_basis else 0,
+        })
+
+    holdings_out.sort(key=lambda h: h["value"], reverse=True)
+
+    cash_balance = account.get("cash_balance", DEMO_STARTING_BALANCE)
+    total_value = cash_balance + holdings_value
+    total_pnl = total_value - DEMO_STARTING_BALANCE
+
+    return {
+        "device_id": device_id,
+        "cash_balance": cash_balance,
+        "holdings": holdings_out,
+        "holdings_value": holdings_value,
+        "total_value": total_value,
+        "starting_balance": DEMO_STARTING_BALANCE,
+        "total_pnl": total_pnl,
+        "total_pnl_pct": (total_pnl / DEMO_STARTING_BALANCE * 100),
+    }
+
+
+@api_router.post("/demo/trade")
+async def execute_demo_trade(payload: DemoTradeRequest):
+    device_id = payload.device_id
+
+    account = await db.demo_accounts.find_one({"device_id": device_id})
+    if not account:
+        account = {
+            "device_id": device_id,
+            "cash_balance": DEMO_STARTING_BALANCE,
+            "holdings": {},
+            "created_at": datetime.now(timezone.utc).isoformat(),
+        }
+        await db.demo_accounts.insert_one(dict(account))
+
+    try:
+        price = await _get_price_usd(payload.coin_id)
+    except Exception as e:
+        logger.exception(e)
+        price = None
+
+    if price is None:
+        raise HTTPException(status_code=400, detail="Could not fetch a live price for this coin right now")
+
+    total_cost = price * payload.quantity
+    holdings = account.get("holdings", {}) or {}
+    cash_balance = account.get("cash_balance", DEMO_STARTING_BALANCE)
+
+    if payload.side == "buy":
+        if total_cost > cash_balance + 1e-6:
+            raise HTTPException(status_code=400, detail="Insufficient virtual balance for this trade")
+
+        existing = holdings.get(payload.coin_id)
+        if existing:
+            new_qty = existing["quantity"] + payload.quantity
+            new_avg = ((existing["avg_price"] * existing["quantity"]) + total_cost) / new_qty
+            holdings[payload.coin_id] = {
+                **existing,
+                "quantity": new_qty,
+                "avg_price": new_avg,
+            }
+        else:
+            holdings[payload.coin_id] = {
+                "symbol": payload.symbol.upper(),
+                "name": payload.name,
+                "image": payload.image,
+                "quantity": payload.quantity,
+                "avg_price": price,
+            }
+        new_cash = cash_balance - total_cost
+
+    else:  # sell
+        existing = holdings.get(payload.coin_id)
+        if not existing or existing.get("quantity", 0) < payload.quantity - 1e-9:
+            raise HTTPException(status_code=400, detail="You don't hold enough of this coin to sell that amount")
+
+        remaining = existing["quantity"] - payload.quantity
+        if remaining <= 1e-9:
+            holdings.pop(payload.coin_id, None)
+        else:
+            holdings[payload.coin_id] = {**existing, "quantity": remaining}
+        new_cash = cash_balance + total_cost
+
+    await db.demo_accounts.update_one(
+        {"device_id": device_id},
+        {"$set": {"cash_balance": new_cash, "holdings": holdings}},
+        upsert=True,
+    )
+
+    transaction = {
+        "id": str(uuid.uuid4()),
+        "device_id": device_id,
+        "coin_id": payload.coin_id,
+        "symbol": payload.symbol.upper(),
+        "name": payload.name,
+        "image": payload.image,
+        "side": payload.side,
+        "quantity": payload.quantity,
+        "price": price,
+        "total": total_cost,
+        "created_at": datetime.now(timezone.utc).isoformat(),
+    }
+    await db.demo_transactions.insert_one(dict(transaction))
+
+    return {
+        "ok": True,
+        "cash_balance": new_cash,
+        "transaction": transaction,
+    }
+
+
+@api_router.get("/demo/transactions/{device_id}")
+async def get_demo_transactions(device_id: str, limit: int = 20):
+    limit = max(1, min(limit, 100))
+    cursor = db.demo_transactions.find({"device_id": device_id}).sort("created_at", -1).limit(limit)
+    txs = await cursor.to_list(length=limit)
+    for t in txs:
+        t.pop("_id", None)
+    return {"data": txs}
+
+
+@api_router.post("/demo/reset/{device_id}")
+async def reset_demo_account(device_id: str):
+    await db.demo_accounts.update_one(
+        {"device_id": device_id},
+        {"$set": {"cash_balance": DEMO_STARTING_BALANCE, "holdings": {}}},
+        upsert=True,
+    )
+    await db.demo_transactions.delete_many({"device_id": device_id})
+    return {"ok": True}
 
 
 # ----------------------------------------------------
