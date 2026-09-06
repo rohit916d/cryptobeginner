@@ -144,6 +144,120 @@ async def _get_price_usd(coin_id: str):
 
 
 # ----------------------------------------------------
+# FUTURES (leverage) — isolated-margin math helpers
+# ----------------------------------------------------
+
+def _futures_unrealized(position: dict, current_price: float):
+    entry = position["entry_price"]
+    qty = position["quantity"]
+    if position["side"] == "long":
+        pnl = (current_price - entry) * qty
+    else:
+        pnl = (entry - current_price) * qty
+    margin = position["margin"] or 1e-9
+    pnl_pct = (pnl / margin) * 100
+    return pnl, pnl_pct
+
+
+def _futures_is_liquidated(position: dict, current_price: float) -> bool:
+    liq = position.get("liquidation_price")
+    if liq is None:
+        return False
+    if position["side"] == "long":
+        return current_price <= liq
+    return current_price >= liq
+
+
+def _futures_check_tp_sl(position: dict, current_price: float):
+    side = position["side"]
+    tp = position.get("take_profit")
+    sl = position.get("stop_loss")
+    if side == "long":
+        if tp is not None and current_price >= tp:
+            return "take_profit"
+        if sl is not None and current_price <= sl:
+            return "stop_loss"
+    else:
+        if tp is not None and current_price <= tp:
+            return "take_profit"
+        if sl is not None and current_price >= sl:
+            return "stop_loss"
+    return None
+
+
+async def _sync_futures_positions(device_id: str):
+    """
+    Fetches this device's OPEN futures positions, marks-to-market against live
+    prices, and auto-closes anything that has hit its take-profit, stop-loss,
+    or liquidation price — crediting/debiting the virtual cash balance as it
+    goes. Returns (open_positions_enriched, locked_margin, unrealized_pnl,
+    current_cash_balance).
+    """
+    positions = await db.demo_positions.find({"device_id": device_id, "status": "open"}).to_list(200)
+
+    account = await db.demo_accounts.find_one({"device_id": device_id})
+    cash_balance = (account or {}).get("cash_balance", DEMO_STARTING_BALANCE)
+
+    if not positions:
+        return [], 0.0, 0.0, cash_balance
+
+    ids = list({p["coin_id"] for p in positions})
+    try:
+        prices = await _get_prices_usd(ids)
+    except Exception as e:
+        logger.exception(e)
+        prices = {}
+
+    open_out = []
+    locked_margin = 0.0
+    unrealized_total = 0.0
+
+    for p in positions:
+        price = prices.get(p["coin_id"])
+        if price is None:
+            # Can't mark-to-market right now — keep position open, skip trigger checks.
+            locked_margin += p["margin"]
+            open_out.append({**p, "current_price": p["entry_price"], "pnl": 0.0, "pnl_pct": 0.0})
+            continue
+
+        liquidated = _futures_is_liquidated(p, price)
+        reason = "liquidation" if liquidated else _futures_check_tp_sl(p, price)
+
+        if reason:
+            close_price = (
+                p["liquidation_price"] if reason == "liquidation"
+                else (p["take_profit"] if reason == "take_profit" else p["stop_loss"])
+            )
+            pnl, _ = _futures_unrealized(p, close_price)
+            pnl = max(pnl, -p["margin"])  # isolated margin — never lose more than you put up
+            cash_balance = cash_balance + p["margin"] + pnl
+
+            await db.demo_positions.update_one(
+                {"id": p["id"]},
+                {"$set": {
+                    "status": "closed",
+                    "close_price": close_price,
+                    "close_reason": reason,
+                    "pnl": pnl,
+                    "closed_at": datetime.now(timezone.utc).isoformat(),
+                }}
+            )
+            await db.demo_accounts.update_one(
+                {"device_id": device_id},
+                {"$set": {"cash_balance": cash_balance}},
+                upsert=True,
+            )
+        else:
+            pnl, pnl_pct = _futures_unrealized(p, price)
+            locked_margin += p["margin"]
+            unrealized_total += pnl
+            open_out.append({**p, "current_price": price, "pnl": pnl, "pnl_pct": pnl_pct})
+
+    open_out.sort(key=lambda p: p.get("opened_at", ""), reverse=True)
+    return open_out, locked_margin, unrealized_total, cash_balance
+
+
+# ----------------------------------------------------
 # MODELS
 # ----------------------------------------------------
 
@@ -189,6 +303,24 @@ class DemoTradeRequest(BaseModel):
     image: Optional[str] = None
     side: str = Field(pattern="^(buy|sell)$")
     quantity: float = Field(gt=0)
+
+
+class FuturesOpenRequest(BaseModel):
+    device_id: str = Field(min_length=8, max_length=100)
+    coin_id: str = Field(min_length=1, max_length=100)
+    symbol: str = Field(min_length=1, max_length=20)
+    name: str = Field(min_length=1, max_length=100)
+    image: Optional[str] = None
+    side: str = Field(pattern="^(long|short)$")
+    leverage: float = Field(ge=1, le=50)
+    margin: float = Field(gt=0)
+    take_profit: Optional[float] = Field(default=None, gt=0)
+    stop_loss: Optional[float] = Field(default=None, gt=0)
+
+
+class FuturesCloseRequest(BaseModel):
+    device_id: str = Field(min_length=8, max_length=100)
+    position_id: str = Field(min_length=1, max_length=100)
 
 
 # ----------------------------------------------------
@@ -483,8 +615,13 @@ async def get_demo_account(device_id: str):
 
     holdings_out.sort(key=lambda h: h["value"], reverse=True)
 
-    cash_balance = account.get("cash_balance", DEMO_STARTING_BALANCE)
-    total_value = cash_balance + holdings_value
+    # Mark-to-market open futures positions (auto-closes anything that hit
+    # its TP / SL / liquidation price, updating cash_balance as a side effect).
+    open_positions, futures_margin_locked, futures_unrealized_pnl, cash_balance = (
+        await _sync_futures_positions(device_id)
+    )
+
+    total_value = cash_balance + holdings_value + futures_margin_locked + futures_unrealized_pnl
     total_pnl = total_value - DEMO_STARTING_BALANCE
 
     return {
@@ -492,6 +629,9 @@ async def get_demo_account(device_id: str):
         "cash_balance": cash_balance,
         "holdings": holdings_out,
         "holdings_value": holdings_value,
+        "futures_margin_locked": futures_margin_locked,
+        "futures_unrealized_pnl": futures_unrealized_pnl,
+        "futures_open_count": len(open_positions),
         "total_value": total_value,
         "starting_balance": DEMO_STARTING_BALANCE,
         "total_pnl": total_pnl,
@@ -607,7 +747,179 @@ async def reset_demo_account(device_id: str):
         upsert=True,
     )
     await db.demo_transactions.delete_many({"device_id": device_id})
+    await db.demo_positions.delete_many({"device_id": device_id})
     return {"ok": True}
+
+
+# ----------------------------------------------------
+# DEMO FUTURES — leveraged long/short with TP / SL, virtual money only
+# ----------------------------------------------------
+
+MAX_LEVERAGE = 50
+MAINTENANCE_BUFFER = 0.0  # simplified: liquidation = 100% of margin lost
+
+
+@api_router.post("/demo/futures/open")
+async def open_futures_position(payload: FuturesOpenRequest):
+    device_id = payload.device_id
+
+    account = await db.demo_accounts.find_one({"device_id": device_id})
+    if not account:
+        account = {
+            "device_id": device_id,
+            "cash_balance": DEMO_STARTING_BALANCE,
+            "holdings": {},
+            "created_at": datetime.now(timezone.utc).isoformat(),
+        }
+        await db.demo_accounts.insert_one(dict(account))
+
+    # Settle any pending auto-closes first so we check margin against fresh cash.
+    _, _, _, cash_balance = await _sync_futures_positions(device_id)
+
+    leverage = max(1.0, min(payload.leverage, MAX_LEVERAGE))
+
+    if payload.margin > cash_balance + 1e-6:
+        raise HTTPException(status_code=400, detail="Insufficient virtual balance for this margin")
+
+    try:
+        price = await _get_price_usd(payload.coin_id)
+    except Exception as e:
+        logger.exception(e)
+        price = None
+
+    if price is None or price <= 0:
+        raise HTTPException(status_code=400, detail="Could not fetch a live price for this coin right now")
+
+    # Validate TP/SL are on the correct side of entry for this direction.
+    if payload.side == "long":
+        if payload.take_profit is not None and payload.take_profit <= price:
+            raise HTTPException(status_code=400, detail="Take-profit must be above the entry price for a long")
+        if payload.stop_loss is not None and payload.stop_loss >= price:
+            raise HTTPException(status_code=400, detail="Stop-loss must be below the entry price for a long")
+        liquidation_price = price * (1 - 1 / leverage) * (1 - MAINTENANCE_BUFFER)
+    else:
+        if payload.take_profit is not None and payload.take_profit >= price:
+            raise HTTPException(status_code=400, detail="Take-profit must be below the entry price for a short")
+        if payload.stop_loss is not None and payload.stop_loss <= price:
+            raise HTTPException(status_code=400, detail="Stop-loss must be above the entry price for a short")
+        liquidation_price = price * (1 + 1 / leverage) * (1 + MAINTENANCE_BUFFER)
+
+    size = payload.margin * leverage
+    quantity = size / price
+
+    position = {
+        "id": str(uuid.uuid4()),
+        "device_id": device_id,
+        "coin_id": payload.coin_id,
+        "symbol": payload.symbol.upper(),
+        "name": payload.name,
+        "image": payload.image,
+        "side": payload.side,
+        "leverage": leverage,
+        "margin": payload.margin,
+        "size": size,
+        "quantity": quantity,
+        "entry_price": price,
+        "liquidation_price": liquidation_price,
+        "take_profit": payload.take_profit,
+        "stop_loss": payload.stop_loss,
+        "status": "open",
+        "close_price": None,
+        "close_reason": None,
+        "pnl": None,
+        "opened_at": datetime.now(timezone.utc).isoformat(),
+        "closed_at": None,
+    }
+    await db.demo_positions.insert_one(dict(position))
+
+    new_cash = cash_balance - payload.margin
+    await db.demo_accounts.update_one(
+        {"device_id": device_id},
+        {"$set": {"cash_balance": new_cash}},
+        upsert=True,
+    )
+
+    position.pop("_id", None)
+    return {"ok": True, "cash_balance": new_cash, "position": position}
+
+
+@api_router.get("/demo/futures/positions/{device_id}")
+async def list_futures_positions(device_id: str):
+    open_positions, locked_margin, unrealized_pnl, cash_balance = await _sync_futures_positions(device_id)
+    for p in open_positions:
+        p.pop("_id", None)
+    return {
+        "data": open_positions,
+        "locked_margin": locked_margin,
+        "unrealized_pnl": unrealized_pnl,
+        "cash_balance": cash_balance,
+    }
+
+
+@api_router.post("/demo/futures/close")
+async def close_futures_position(payload: FuturesCloseRequest):
+    device_id = payload.device_id
+
+    # Run the auto-close sweep first — the position may already have hit
+    # its TP/SL/liquidation, in which case there's nothing left to close.
+    await _sync_futures_positions(device_id)
+
+    position = await db.demo_positions.find_one({
+        "id": payload.position_id,
+        "device_id": device_id,
+        "status": "open",
+    })
+    if not position:
+        raise HTTPException(status_code=404, detail="Open position not found (it may have already closed)")
+
+    try:
+        price = await _get_price_usd(position["coin_id"])
+    except Exception as e:
+        logger.exception(e)
+        price = None
+
+    if price is None:
+        raise HTTPException(status_code=400, detail="Could not fetch a live price for this coin right now")
+
+    pnl, _ = _futures_unrealized(position, price)
+    pnl = max(pnl, -position["margin"])
+
+    account = await db.demo_accounts.find_one({"device_id": device_id}) or {}
+    cash_balance = account.get("cash_balance", DEMO_STARTING_BALANCE)
+    new_cash = cash_balance + position["margin"] + pnl
+
+    await db.demo_positions.update_one(
+        {"id": position["id"]},
+        {"$set": {
+            "status": "closed",
+            "close_price": price,
+            "close_reason": "manual",
+            "pnl": pnl,
+            "closed_at": datetime.now(timezone.utc).isoformat(),
+        }}
+    )
+    await db.demo_accounts.update_one(
+        {"device_id": device_id},
+        {"$set": {"cash_balance": new_cash}},
+        upsert=True,
+    )
+
+    return {"ok": True, "cash_balance": new_cash, "close_price": price, "pnl": pnl}
+
+
+@api_router.get("/demo/futures/history/{device_id}")
+async def get_futures_history(device_id: str, limit: int = 20):
+    limit = max(1, min(limit, 100))
+    cursor = (
+        db.demo_positions
+        .find({"device_id": device_id, "status": "closed"})
+        .sort("closed_at", -1)
+        .limit(limit)
+    )
+    items = await cursor.to_list(length=limit)
+    for i in items:
+        i.pop("_id", None)
+    return {"data": items}
 
 
 # ----------------------------------------------------

@@ -5,6 +5,7 @@ import { api } from "../lib/api";
 import { getDeviceId } from "../lib/deviceId";
 import { formatUSD, formatPct } from "../lib/format";
 import TradeModal from "../components/TradeModal";
+import FuturesModal from "../components/FuturesModal";
 
 export default function DemoTrading() {
   useSEO({
@@ -17,9 +18,13 @@ export default function DemoTrading() {
 
   const [account, setAccount] = useState(null);
   const [transactions, setTransactions] = useState([]);
+  const [positions, setPositions] = useState([]);
+  const [futuresHistory, setFuturesHistory] = useState([]);
   const [loading, setLoading] = useState(true);
   const [tradeOpen, setTradeOpen] = useState(false);
   const [tradeCoin, setTradeCoin] = useState(null);
+  const [futuresOpen, setFuturesOpen] = useState(false);
+  const [closingId, setClosingId] = useState(null);
   const [confirmingReset, setConfirmingReset] = useState(false);
   const [resetting, setResetting] = useState(false);
 
@@ -27,12 +32,16 @@ export default function DemoTrading() {
 
   const loadAll = useCallback(async () => {
     try {
-      const [accRes, txRes] = await Promise.all([
+      const [accRes, txRes, posRes, histRes] = await Promise.all([
         api.get(`/demo/account/${deviceId}`),
         api.get(`/demo/transactions/${deviceId}`, { params: { limit: 20 } }),
+        api.get(`/demo/futures/positions/${deviceId}`),
+        api.get(`/demo/futures/history/${deviceId}`, { params: { limit: 10 } }),
       ]);
       setAccount(accRes.data);
       setTransactions(txRes.data.data || []);
+      setPositions(posRes.data.data || []);
+      setFuturesHistory(histRes.data.data || []);
     } catch (err) {
       // keep whatever we had; user can retry via a trade or refresh
     } finally {
@@ -69,6 +78,18 @@ export default function DemoTrading() {
     }
   };
 
+  const handleClosePosition = async (positionId) => {
+    setClosingId(positionId);
+    try {
+      await api.post("/demo/futures/close", { device_id: deviceId, position_id: positionId });
+      await loadAll();
+    } catch (err) {
+      // no-op — user can retry
+    } finally {
+      setClosingId(null);
+    }
+  };
+
   const totalPnlUp = (account?.total_pnl ?? 0) >= 0;
 
   return (
@@ -96,6 +117,14 @@ export default function DemoTrading() {
           >
             <Plus size={16} /> New Trade
           </button>
+          <button
+            type="button"
+            onClick={() => setFuturesOpen(true)}
+            data-testid="demo-new-position"
+            className="btn-secondary inline-flex items-center gap-2"
+          >
+            <TrendingUp size={16} /> New Position
+          </button>
         </div>
       </div>
 
@@ -115,6 +144,11 @@ export default function DemoTrading() {
           <div className="mt-3 font-mono text-2xl font-bold text-white">
             {loading ? <span className="text-zinc-700">····</span> : formatUSD(account?.holdings_value)}
           </div>
+          {!loading && account?.futures_open_count > 0 && (
+            <div className="mt-1 text-xs text-zinc-500 font-mono">
+              +{formatUSD(account.futures_margin_locked)} margin in {account.futures_open_count} position{account.futures_open_count === 1 ? "" : "s"}
+            </div>
+          )}
         </div>
         <div className="card-base p-5">
           <div className="label-eyebrow">Total Portfolio</div>
@@ -216,6 +250,138 @@ export default function DemoTrading() {
         )}
       </div>
 
+      {/* FUTURES — OPEN POSITIONS */}
+      <div className="card-base overflow-hidden mb-10">
+        <div className="flex items-center justify-between px-5 md:px-6 py-4 border-b border-white/5">
+          <h3 className="text-xl font-bold text-white">Open Positions</h3>
+          <span className="text-[9px] px-1.5 py-0.5 rounded bg-[#C8F169]/10 text-[#C8F169] font-mono uppercase">Leverage</span>
+        </div>
+
+        {loading ? (
+          <div className="py-14 flex justify-center">
+            <Loader2 size={22} className="text-[#C8F169] animate-spin" />
+          </div>
+        ) : positions.length === 0 ? (
+          <div className="py-14 text-center px-6">
+            <p className="text-sm text-zinc-500">No open leveraged positions — try a long or short with Take Profit / Stop Loss.</p>
+            <button
+              type="button"
+              onClick={() => setFuturesOpen(true)}
+              className="btn-secondary inline-flex items-center gap-2 mt-4"
+            >
+              <TrendingUp size={14} /> Open a position
+            </button>
+          </div>
+        ) : (
+          <div className="overflow-x-auto no-scrollbar">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="text-left text-[10px] font-bold uppercase tracking-[0.15em] text-zinc-500 border-b border-white/5">
+                  <th scope="col" className="py-3 px-5 md:px-6">Coin</th>
+                  <th scope="col" className="py-3 px-2">Side</th>
+                  <th scope="col" className="py-3 px-2 text-right hidden sm:table-cell">Entry</th>
+                  <th scope="col" className="py-3 px-2 text-right">Margin</th>
+                  <th scope="col" className="py-3 px-2 text-right hidden md:table-cell">Liq. Price</th>
+                  <th scope="col" className="py-3 px-2 text-right">P&amp;L</th>
+                  <th scope="col" className="py-3 px-5 md:px-6 text-right">Close</th>
+                </tr>
+              </thead>
+              <tbody>
+                {positions.map((p) => {
+                  const up = p.pnl >= 0;
+                  const isLong = p.side === "long";
+                  return (
+                    <tr key={p.id} data-testid={`position-row-${p.symbol}`} className="border-b border-white/5 last:border-b-0">
+                      <td className="py-4 px-5 md:px-6">
+                        <div className="flex items-center gap-3">
+                          <img src={p.image} alt={p.name} className="w-7 h-7 rounded-full" loading="lazy" />
+                          <div>
+                            <div className="font-semibold text-white">{p.name}</div>
+                            <div className="text-xs text-zinc-500 font-mono uppercase">{p.symbol} · {p.leverage}x</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td className="py-4 px-2">
+                        <span className={`inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full ${isLong ? "bg-emerald-400/10 text-emerald-400" : "bg-rose-400/10 text-rose-400"}`}>
+                          {isLong ? <TrendingUp size={11} /> : <TrendingDown size={11} />}
+                          {isLong ? "Long" : "Short"}
+                        </span>
+                      </td>
+                      <td className="py-4 px-2 text-right font-mono text-zinc-400 hidden sm:table-cell">{formatUSD(p.entry_price)}</td>
+                      <td className="py-4 px-2 text-right font-mono text-white">{formatUSD(p.margin)}</td>
+                      <td className="py-4 px-2 text-right font-mono text-amber-400 hidden md:table-cell">{formatUSD(p.liquidation_price)}</td>
+                      <td className={`py-4 px-2 text-right font-mono ${up ? "text-emerald-400" : "text-rose-400"}`}>
+                        <div className="inline-flex items-center gap-1 justify-end">
+                          {up ? <ArrowUpRight size={13} /> : <ArrowDownRight size={13} />}
+                          {formatUSD(p.pnl)}
+                        </div>
+                        <div className="text-[11px] opacity-80">{formatPct(p.pnl_pct)}</div>
+                      </td>
+                      <td className="py-4 px-5 md:px-6 text-right">
+                        <button
+                          type="button"
+                          onClick={() => handleClosePosition(p.id)}
+                          disabled={closingId === p.id}
+                          data-testid={`position-close-${p.symbol}`}
+                          className="text-xs font-semibold text-rose-400 hover:underline disabled:opacity-50 inline-flex items-center gap-1"
+                        >
+                          {closingId === p.id && <Loader2 size={11} className="animate-spin" />}
+                          Close
+                        </button>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
+
+      {/* FUTURES — HISTORY */}
+      {futuresHistory.length > 0 && (
+        <div className="card-base overflow-hidden mb-10">
+          <div className="flex items-center justify-between px-5 md:px-6 py-4 border-b border-white/5">
+            <h3 className="text-xl font-bold text-white">Position History</h3>
+          </div>
+          <ul>
+            {futuresHistory.map((p) => {
+              const up = (p.pnl ?? 0) >= 0;
+              const isLong = p.side === "long";
+              const reasonLabel = { manual: "Closed", take_profit: "Take Profit", stop_loss: "Stop Loss", liquidation: "Liquidated" }[p.close_reason] || "Closed";
+              return (
+                <li
+                  key={p.id}
+                  data-testid={`futures-history-${p.id}`}
+                  className="flex items-center gap-3 px-5 md:px-6 py-3 border-b border-white/5 last:border-b-0"
+                >
+                  <img src={p.image} alt={p.name} className="w-6 h-6 rounded-full shrink-0" loading="lazy" />
+                  <div className="min-w-0 flex-1">
+                    <div className="text-sm text-white">
+                      <span className={`font-semibold ${isLong ? "text-emerald-400" : "text-rose-400"}`}>
+                        {isLong ? "Long" : "Short"}
+                      </span>{" "}
+                      {p.symbol} · {p.leverage}x
+                      {p.close_reason && p.close_reason !== "manual" && (
+                        <span className={`ml-2 text-[10px] px-1.5 py-0.5 rounded-full ${p.close_reason === "take_profit" ? "bg-emerald-400/10 text-emerald-400" : "bg-amber-400/10 text-amber-400"}`}>
+                          {reasonLabel}
+                        </span>
+                      )}
+                    </div>
+                    <div className="text-xs text-zinc-500">
+                      {p.closed_at ? new Date(p.closed_at).toLocaleString() : ""}
+                    </div>
+                  </div>
+                  <div className={`text-right shrink-0 font-mono text-sm ${up ? "text-emerald-400" : "text-rose-400"}`}>
+                    {formatUSD(p.pnl)}
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
+
       {/* TRANSACTION HISTORY */}
       <div className="card-base overflow-hidden mb-10">
         <div className="flex items-center justify-between px-5 md:px-6 py-4 border-b border-white/5">
@@ -303,6 +469,14 @@ export default function DemoTrading() {
           holdingQtyFor={holdingQtyFor}
           onClose={() => setTradeOpen(false)}
           onTraded={() => loadAll()}
+        />
+      )}
+
+      {futuresOpen && (
+        <FuturesModal
+          cashBalance={account?.cash_balance}
+          onClose={() => setFuturesOpen(false)}
+          onOpened={() => loadAll()}
         />
       )}
     </section>

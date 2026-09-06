@@ -3,6 +3,7 @@ import { X, Loader2, ArrowUpRight, ArrowDownRight } from "lucide-react";
 import { api } from "../lib/api";
 import { getDeviceId } from "../lib/deviceId";
 import { formatUSD } from "../lib/format";
+import FuturesTradePanel from "./FuturesTradePanel";
 
 // Map coin symbol -> TradingView trading pair for live chart
 function getTradingViewSymbol(symbol) {
@@ -15,6 +16,7 @@ function getTradingViewSymbol(symbol) {
 export default function CoinChartModal({ coin, onClose }) {
   const containerRef = useRef(null);
 
+  const [tradeMode, setTradeMode] = useState("spot");
   const [side, setSide] = useState("buy");
   const [quantity, setQuantity] = useState("");
   const [submitting, setSubmitting] = useState(false);
@@ -174,10 +176,29 @@ export default function CoinChartModal({ coin, onClose }) {
           {/* DEMO TRADE PANEL */}
           <div className="w-full md:w-[300px] shrink-0 border-t md:border-t-0 md:border-l border-white/5 flex flex-col overflow-y-auto">
             <div className="px-4 pt-4">
-              <div className="flex items-center justify-between mb-1">
+              <div className="flex items-center justify-between mb-2">
                 <span className="text-[10px] uppercase tracking-widest text-zinc-500 font-bold">Demo Trade</span>
                 <span className="text-[9px] px-1.5 py-0.5 rounded bg-[#C8F169]/10 text-[#C8F169] font-mono">Virtual $</span>
               </div>
+              <div className="flex rounded-xl overflow-hidden border border-white/10 mb-3">
+                <button
+                  type="button"
+                  onClick={() => setTradeMode("spot")}
+                  data-testid="chart-mode-spot"
+                  className={`flex-1 py-1.5 text-xs font-semibold transition-colors ${tradeMode === "spot" ? "bg-white/10 text-white" : "text-zinc-500 hover:text-white"}`}
+                >
+                  Spot
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setTradeMode("futures")}
+                  data-testid="chart-mode-futures"
+                  className={`flex-1 py-1.5 text-xs font-semibold transition-colors ${tradeMode === "futures" ? "bg-white/10 text-white" : "text-zinc-500 hover:text-white"}`}
+                >
+                  Futures (Leverage)
+                </button>
+              </div>
+              {tradeMode === "spot" && (
               <div className="flex rounded-xl overflow-hidden border border-white/10">
                 <button
                   type="button"
@@ -196,8 +217,14 @@ export default function CoinChartModal({ coin, onClose }) {
                   Sell
                 </button>
               </div>
+              )}
             </div>
 
+            {tradeMode === "futures" ? (
+              <div className="px-4 py-3 flex-1 overflow-y-auto">
+                <FuturesTradePanel coin={coin} cashBalance={cashBalance} onOpened={() => refreshAccount()} compact />
+              </div>
+            ) : (
             <form onSubmit={handleSubmit} className="px-4 py-3 flex flex-col gap-2.5 flex-1">
               <div className="flex items-center justify-between text-[11px] text-zinc-500">
                 <span>Live price</span>
@@ -271,6 +298,7 @@ export default function CoinChartModal({ coin, onClose }) {
               </button>
               <p className="text-[10px] text-zinc-600 text-center">Virtual money only — this is a practice trade.</p>
             </form>
+            )}
           </div>
         </div>
       </div>
