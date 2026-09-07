@@ -113,7 +113,7 @@ def _normalize_coin(coin: dict) -> dict:
     }
 
 
-DEMO_STARTING_BALANCE = 10000.0
+DEMO_STARTING_BALANCE = 100000.0
 
 
 async def _get_prices_usd(ids: list) -> dict:
@@ -559,6 +559,64 @@ async def get_coins_by_category(category_id: str, page: int = 1, per_page: int =
         if cached_entry and cached_entry.get("data"):
             return {"data": cached_entry["data"], "cached": True, "stale": True}
         raise HTTPException(status_code=500, detail=str(e))
+
+
+# ----------------------------------------------------
+# CANDLES — OHLC data (CoinGecko) so we can draw entry/TP/SL/liquidation
+# lines directly on the chart, which the TradingView iframe embed doesn't
+# allow us to do. Uses CoinGecko (already relied on elsewhere in this app)
+# rather than an exchange API — several exchanges block cloud/datacenter
+# IP ranges (including Vercel's) on their public market-data endpoints.
+# ----------------------------------------------------
+
+_candles_cache = {}
+CANDLES_CACHE_TTL = timedelta(seconds=45)
+
+ALLOWED_OHLC_DAYS = {1, 7, 14, 30, 90, 180}
+
+
+@api_router.get("/market/ohlc/{coin_id}")
+async def get_ohlc(coin_id: str, days: int = 1):
+    if days not in ALLOWED_OHLC_DAYS:
+        days = 1
+
+    cache_key = f"{coin_id}_{days}"
+    now = datetime.now(timezone.utc)
+    cached_entry = _candles_cache.get(cache_key)
+    if cached_entry and (now - cached_entry["ts"]) < CANDLES_CACHE_TTL:
+        return {"data": cached_entry["data"], "cached": True}
+
+    try:
+        headers = {}
+        if COINGECKO_API_KEY:
+            headers["x-cg-demo-api-key"] = COINGECKO_API_KEY
+
+        response = await asyncio.to_thread(
+            requests.get,
+            f"https://api.coingecko.com/api/v3/coins/{coin_id}/ohlc",
+            headers=headers,
+            params={"vs_currency": "usd", "days": days},
+            timeout=15,
+        )
+        response.raise_for_status()
+        raw = response.json()
+        data = [
+            {
+                "time": int(row[0] / 1000),
+                "open": row[1],
+                "high": row[2],
+                "low": row[3],
+                "close": row[4],
+            }
+            for row in raw
+        ]
+        _candles_cache[cache_key] = {"data": data, "ts": now}
+        return {"data": data, "cached": False}
+    except Exception as e:
+        logger.exception(e)
+        if cached_entry:
+            return {"data": cached_entry["data"], "cached": True, "stale": True}
+        raise HTTPException(status_code=502, detail="Couldn't fetch candle data right now")
 
 
 # ----------------------------------------------------

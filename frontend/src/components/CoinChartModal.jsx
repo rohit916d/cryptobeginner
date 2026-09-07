@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { X, Loader2, ArrowUpRight, ArrowDownRight } from "lucide-react";
+import { X, Loader2, ArrowUpRight, ArrowDownRight, TrendingUp, TrendingDown } from "lucide-react";
 import { api } from "../lib/api";
 import { getDeviceId } from "../lib/deviceId";
 import { formatUSD } from "../lib/format";
 import FuturesTradePanel from "./FuturesTradePanel";
+import PositionChart from "./PositionChart";
 
 // Map coin symbol -> TradingView trading pair for live chart
 function getTradingViewSymbol(symbol) {
@@ -24,6 +25,10 @@ export default function CoinChartModal({ coin, onClose }) {
   const [successMsg, setSuccessMsg] = useState("");
   const [heldQty, setHeldQty] = useState(0);
   const [cashBalance, setCashBalance] = useState(null);
+  const [existingPosition, setExistingPosition] = useState(null);
+  const [positionsLoading, setPositionsLoading] = useState(false);
+  const [previewLine, setPreviewLine] = useState(null);
+  const [closingPosition, setClosingPosition] = useState(false);
 
   const deviceId = getDeviceId();
 
@@ -67,12 +72,41 @@ export default function CoinChartModal({ coin, onClose }) {
       .catch(() => {});
   };
 
+  const refreshPosition = () => {
+    if (!coin) return;
+    setPositionsLoading(true);
+    api
+      .get(`/demo/futures/positions/${deviceId}`)
+      .then(({ data }) => {
+        const match = (data.data || []).find((p) => p.coin_id === coin.id);
+        setExistingPosition(match || null);
+      })
+      .catch(() => {})
+      .finally(() => setPositionsLoading(false));
+  };
+
+  const handleClosePosition = async () => {
+    if (!existingPosition) return;
+    setClosingPosition(true);
+    try {
+      await api.post("/demo/futures/close", { device_id: deviceId, position_id: existingPosition.id });
+      refreshPosition();
+      refreshAccount();
+    } catch (err) {
+      // no-op — user can retry
+    } finally {
+      setClosingPosition(false);
+    }
+  };
+
   useEffect(() => {
     refreshAccount();
+    refreshPosition();
     setSide("buy");
     setQuantity("");
     setError("");
     setSuccessMsg("");
+    setPreviewLine(null);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [coin?.id]);
 
@@ -93,6 +127,22 @@ export default function CoinChartModal({ coin, onClose }) {
   const price = coin.current_price ?? null;
   const qtyNum = parseFloat(quantity) || 0;
   const estimatedTotal = price ? price * qtyNum : 0;
+
+  const chartLines = existingPosition
+    ? [
+        { price: existingPosition.entry_price, color: "#ffffff", title: "Entry", dashed: false },
+        existingPosition.take_profit && { price: existingPosition.take_profit, color: "#34d399", title: "Take Profit", dashed: false },
+        existingPosition.stop_loss && { price: existingPosition.stop_loss, color: "#fb7185", title: "Stop Loss", dashed: false },
+        { price: existingPosition.liquidation_price, color: "#fbbf24", title: "Liquidation", dashed: true },
+      ].filter(Boolean)
+    : previewLine
+    ? [
+        previewLine.entryPrice && { price: previewLine.entryPrice, color: "#ffffff", title: "Entry (planned)", dashed: true },
+        previewLine.takeProfit && { price: previewLine.takeProfit, color: "#34d399", title: "Take Profit", dashed: true },
+        previewLine.stopLoss && { price: previewLine.stopLoss, color: "#fb7185", title: "Stop Loss", dashed: true },
+        previewLine.liquidationPrice && { price: previewLine.liquidationPrice, color: "#fbbf24", title: "Liquidation", dashed: true },
+      ].filter(Boolean)
+    : [];
 
   const setQtyFromFraction = (fraction) => {
     if (!price) return;
@@ -168,9 +218,16 @@ export default function CoinChartModal({ coin, onClose }) {
         <div className="flex-1 min-h-0 flex flex-col md:flex-row">
           {/* CHART */}
           <div className="flex-1 min-h-[38vh] md:min-h-0">
-            <div className="tradingview-widget-container h-full" ref={containerRef}>
+            <div
+              className="tradingview-widget-container h-full"
+              ref={containerRef}
+              style={{ display: tradeMode === "spot" ? "block" : "none" }}
+            >
               <div className="tradingview-widget-container__widget h-full" />
             </div>
+            {tradeMode === "futures" && (
+              <PositionChart coinId={coin.id} lines={chartLines} />
+            )}
           </div>
 
           {/* DEMO TRADE PANEL */}
@@ -222,7 +279,76 @@ export default function CoinChartModal({ coin, onClose }) {
 
             {tradeMode === "futures" ? (
               <div className="px-4 py-3 flex-1 overflow-y-auto">
-                <FuturesTradePanel coin={coin} cashBalance={cashBalance} onOpened={() => refreshAccount()} compact />
+                {positionsLoading ? (
+                  <div className="flex justify-center py-10">
+                    <Loader2 size={20} className="text-[#C8F169] animate-spin" />
+                  </div>
+                ) : existingPosition ? (
+                  <div className="space-y-3">
+                    <div className="rounded-xl border border-white/10 bg-white/[0.02] p-3.5">
+                      <div className="flex items-center justify-between mb-2.5">
+                        <span
+                          className={`inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full ${
+                            existingPosition.side === "long" ? "bg-emerald-400/10 text-emerald-400" : "bg-rose-400/10 text-rose-400"
+                          }`}
+                        >
+                          {existingPosition.side === "long" ? <TrendingUp size={11} /> : <TrendingDown size={11} />}
+                          {existingPosition.side === "long" ? "Long" : "Short"} · {existingPosition.leverage}x
+                        </span>
+                        <span className={`font-mono text-sm font-semibold ${existingPosition.pnl >= 0 ? "text-emerald-400" : "text-rose-400"}`}>
+                          {formatUSD(existingPosition.pnl)}
+                        </span>
+                      </div>
+                      <div className="space-y-1.5 text-[11px]">
+                        <div className="flex items-center justify-between text-zinc-500">
+                          <span>Entry price</span>
+                          <span className="font-mono text-white">{formatUSD(existingPosition.entry_price)}</span>
+                        </div>
+                        <div className="flex items-center justify-between text-zinc-500">
+                          <span>Margin</span>
+                          <span className="font-mono text-white">{formatUSD(existingPosition.margin)}</span>
+                        </div>
+                        {existingPosition.take_profit && (
+                          <div className="flex items-center justify-between text-zinc-500">
+                            <span>Take Profit</span>
+                            <span className="font-mono text-emerald-400">{formatUSD(existingPosition.take_profit)}</span>
+                          </div>
+                        )}
+                        {existingPosition.stop_loss && (
+                          <div className="flex items-center justify-between text-zinc-500">
+                            <span>Stop Loss</span>
+                            <span className="font-mono text-rose-400">{formatUSD(existingPosition.stop_loss)}</span>
+                          </div>
+                        )}
+                        <div className="flex items-center justify-between text-zinc-500">
+                          <span>Liquidation</span>
+                          <span className="font-mono text-amber-400">{formatUSD(existingPosition.liquidation_price)}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={handleClosePosition}
+                      disabled={closingPosition}
+                      data-testid="chart-position-close"
+                      className="w-full flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 font-semibold text-sm bg-rose-400 text-[#1A0000] hover:bg-rose-300 transition-colors disabled:opacity-50"
+                    >
+                      {closingPosition && <Loader2 size={14} className="animate-spin" />}
+                      {closingPosition ? "Closing..." : "Close Position"}
+                    </button>
+                    <p className="text-[10px] text-zinc-600 text-center">
+                      You already have an open {coin.symbol} position — close it to open a new one.
+                    </p>
+                  </div>
+                ) : (
+                  <FuturesTradePanel
+                    coin={coin}
+                    cashBalance={cashBalance}
+                    onOpened={() => { refreshAccount(); refreshPosition(); }}
+                    onPreviewChange={setPreviewLine}
+                    compact
+                  />
+                )}
               </div>
             ) : (
             <form onSubmit={handleSubmit} className="px-4 py-3 flex flex-col gap-2.5 flex-1">

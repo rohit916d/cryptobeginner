@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Loader2, TrendingUp, TrendingDown, AlertTriangle } from "lucide-react";
 import { api } from "../lib/api";
 import { getDeviceId } from "../lib/deviceId";
@@ -6,7 +6,7 @@ import { formatUSD } from "../lib/format";
 
 const LEVERAGE_PRESETS = [2, 5, 10, 20, 50];
 
-export default function FuturesTradePanel({ coin, cashBalance, onOpened, compact = false }) {
+export default function FuturesTradePanel({ coin, cashBalance, onOpened, onPreviewChange, compact = false }) {
   const [side, setSide] = useState("long");
   const [leverage, setLeverage] = useState(10);
   const [margin, setMargin] = useState("");
@@ -28,6 +28,22 @@ export default function FuturesTradePanel({ coin, cashBalance, onOpened, compact
 
   const tpNum = parseFloat(takeProfit) || null;
   const slNum = parseFloat(stopLoss) || null;
+
+  useEffect(() => {
+    onPreviewChange?.({
+      side,
+      entryPrice: price,
+      takeProfit: tpNum,
+      stopLoss: slNum,
+      liquidationPrice,
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [side, price, tpNum, slNum, liquidationPrice]);
+
+  useEffect(() => {
+    return () => onPreviewChange?.(null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const tpError =
     tpNum && price

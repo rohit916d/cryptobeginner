@@ -11,7 +11,7 @@ export default function DemoTrading() {
   useSEO({
     title: "Demo Trading — Practice Crypto Trading With Virtual Money",
     description:
-      "Practice buying and selling crypto with a free virtual $10,000 account. Real live prices, zero real-money risk — a safe way to learn how trading works.",
+      "Practice buying and selling crypto with a free virtual $100,000 account. Real live prices, zero real-money risk — a safe way to learn how trading works.",
     keywords: "demo trading, paper trading, practice crypto trading, virtual portfolio, crypto simulator",
     canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
   });
@@ -155,7 +155,7 @@ export default function DemoTrading() {
           <div className="mt-3 font-mono text-2xl font-bold text-white">
             {loading ? <span className="text-zinc-700">····</span> : formatUSD(account?.total_value)}
           </div>
-          <div className="mt-1 text-xs text-zinc-500">Started at {formatUSD(account?.starting_balance ?? 10000)}</div>
+          <div className="mt-1 text-xs text-zinc-500">Started at {formatUSD(account?.starting_balance ?? 100000)}</div>
         </div>
         <div className="card-base p-5 relative overflow-hidden">
           <div className="flex items-center justify-between">
@@ -428,7 +428,7 @@ export default function DemoTrading() {
       <div className="flex items-center justify-between flex-wrap gap-3 card-base p-5">
         <div>
           <div className="text-sm font-semibold text-white">Start over</div>
-          <p className="text-xs text-zinc-500 mt-0.5">Resets your virtual balance to {formatUSD(account?.starting_balance ?? 10000)} and clears all holdings & history.</p>
+          <p className="text-xs text-zinc-500 mt-0.5">Resets your virtual balance to {formatUSD(account?.starting_balance ?? 100000)} and clears all holdings & history.</p>
         </div>
         {!confirmingReset ? (
           <button
