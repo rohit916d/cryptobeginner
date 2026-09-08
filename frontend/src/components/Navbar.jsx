@@ -6,6 +6,7 @@ const NAV = [
   { to: "/", label: "Dashboard" },
   { to: "/learn", label: "Learn" },
   { to: "/demo-trading", label: "Demo Trading" },
+  { to: "/real-trading", label: "Real Trading" },
   { to: "/dictionary", label: "Dictionary" },
   { to: "/blog", label: "Blog" },
   { to: "/about", label: "About" },
