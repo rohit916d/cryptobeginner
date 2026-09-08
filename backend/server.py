@@ -5,6 +5,7 @@ from starlette.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 
 from motor.motor_asyncio import AsyncIOMotorClient
+from pymongo import ReturnDocument
 
 from pydantic import BaseModel, Field, EmailStr
 
@@ -52,9 +53,6 @@ COINGECKO_API_KEY = os.getenv("COINGECKO_API_KEY")
 NEWSDATA_API_KEY = os.getenv("NEWSDATA_API_KEY")
 CRON_SECRET = os.getenv("CRON_SECRET")
 ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD")
-import os
-
-print("MONGO_URL =", repr(os.getenv("MONGO_URL")))
 
 client = AsyncIOMotorClient(MONGO_URL)
 
@@ -73,6 +71,49 @@ api_router = APIRouter(prefix="/api")
 logging.basicConfig(level=logging.INFO)
 
 logger = logging.getLogger(__name__)
+
+
+# ----------------------------------------------------
+# RATE LIMITING
+# ----------------------------------------------------
+# Backend runs as stateless Vercel serverless functions, so an in-memory
+# limiter wouldn't reliably see repeated requests from the same client.
+# Using Mongo as the shared counter store instead (fixed-window per IP).
+
+def _client_ip(request: Request) -> str:
+    xff = request.headers.get("x-forwarded-for")
+    if xff:
+        return xff.split(",")[0].strip()
+    return request.client.host if request.client else "unknown"
+
+
+async def rate_limit(request: Request, bucket: str, max_requests: int, window_seconds: int):
+    ip = _client_ip(request)
+    window_id = int(time.time() // window_seconds)
+    doc_id = f"{bucket}:{ip}:{window_id}"
+
+    try:
+        doc = await db.rate_limits.find_one_and_update(
+            {"_id": doc_id},
+            {
+                "$inc": {"count": 1},
+                "$setOnInsert": {"created_at": datetime.now(timezone.utc)},
+            },
+            upsert=True,
+            return_document=ReturnDocument.AFTER,
+        )
+    except Exception as e:
+        # If the rate-limit store itself is having trouble, fail open rather
+        # than take the whole site down over it — just log and continue.
+        logger.exception(e)
+        return
+
+    count = (doc or {}).get("count", 1)
+    if count > max_requests:
+        raise HTTPException(
+            status_code=429,
+            detail="Too many requests — please slow down and try again shortly.",
+        )
 
 
 # ----------------------------------------------------
@@ -408,7 +449,7 @@ async def get_top_coins(page: int = 1, per_page: int = 10):
 
         raise HTTPException(
             status_code=500,
-            detail=str(e)
+            detail="Something went wrong fetching live data. Please try again shortly."
         )
 
 
@@ -482,7 +523,7 @@ async def search_coins(q: str = ""):
         logger.exception(e)
         if cached_entry and cached_entry.get("data"):
             return {"data": cached_entry["data"], "cached": True, "stale": True}
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(status_code=500, detail="Something went wrong fetching live data. Please try again shortly.")
 
 
 # ----------------------------------------------------
@@ -558,7 +599,7 @@ async def get_coins_by_category(category_id: str, page: int = 1, per_page: int =
         logger.exception(e)
         if cached_entry and cached_entry.get("data"):
             return {"data": cached_entry["data"], "cached": True, "stale": True}
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(status_code=500, detail="Something went wrong fetching live data. Please try again shortly.")
 
 
 # ----------------------------------------------------
@@ -698,7 +739,8 @@ async def get_demo_account(device_id: str):
 
 
 @api_router.post("/demo/trade")
-async def execute_demo_trade(payload: DemoTradeRequest):
+async def execute_demo_trade(payload: DemoTradeRequest, request: Request):
+    await rate_limit(request, "demo_trade", max_requests=30, window_seconds=60)
     device_id = payload.device_id
 
     account = await db.demo_accounts.find_one({"device_id": device_id})
@@ -818,7 +860,8 @@ MAINTENANCE_BUFFER = 0.0  # simplified: liquidation = 100% of margin lost
 
 
 @api_router.post("/demo/futures/open")
-async def open_futures_position(payload: FuturesOpenRequest):
+async def open_futures_position(payload: FuturesOpenRequest, request: Request):
+    await rate_limit(request, "futures_open", max_requests=30, window_seconds=60)
     device_id = payload.device_id
 
     account = await db.demo_accounts.find_one({"device_id": device_id})
@@ -1050,7 +1093,7 @@ async def get_global_market():
 
         raise HTTPException(
             status_code=500,
-            detail=str(e)
+            detail="Something went wrong fetching live data. Please try again shortly."
         )
 
 
@@ -1162,7 +1205,7 @@ async def crypto_news():
 
         raise HTTPException(
             status_code=500,
-            detail=str(e)
+            detail="Something went wrong fetching live data. Please try again shortly."
         )
     
     # ----------------------------------------------------
@@ -1268,7 +1311,8 @@ async def blog_detail(slug: str):
 # ----------------------------------------------------
 
 @api_router.post("/contact")
-async def contact(payload: ContactCreate):
+async def contact(payload: ContactCreate, request: Request):
+    await rate_limit(request, "contact", max_requests=5, window_seconds=3600)
 
     submission = ContactSubmission(
         **payload.model_dump()
@@ -1368,6 +1412,8 @@ async def startup():
 
     try:
 
+        await db.rate_limits.create_index("created_at", expireAfterSeconds=3600)
+
         # Seed Lessons
         if await db.lessons.count_documents({}) == 0:
 
@@ -1425,7 +1471,8 @@ async def shutdown():
 # ----------------------------------------------------
 
 @api_router.post("/chat")
-async def chat(req: ChatRequest):
+async def chat(req: ChatRequest, request: Request):
+    await rate_limit(request, "chat", max_requests=15, window_seconds=3600)
     try:
 
         response = client_ai.models.generate_content(
@@ -1448,10 +1495,10 @@ Question:
         }
 
     except Exception as e:
-        print("Gemini Error:", e)
+        logger.exception(e)
 
         return {
-            "reply": str(e)
+            "reply": "Sorry, I'm having trouble responding right now — please try again in a moment."
         }
 
 # ----------------------------------------------------
@@ -1702,7 +1749,8 @@ class AdminLogin(BaseModel):
 
 
 @api_router.post("/admin/login")
-async def admin_login(payload: AdminLogin):
+async def admin_login(payload: AdminLogin, request: Request):
+    await rate_limit(request, "admin_login", max_requests=5, window_seconds=900)
     if not ADMIN_PASSWORD:
         raise HTTPException(500, "ADMIN_PASSWORD is not configured on the server")
     if not hmac.compare_digest(payload.password, ADMIN_PASSWORD):
@@ -1793,14 +1841,20 @@ app.add_middleware(
     CORSMiddleware,
 
     allow_origins=[
-        "*"
+        "https://cryptobeginner.in",
+        "https://www.cryptobeginner.in",
     ],
 
-    allow_credentials=True,
+    # Allow Vercel preview deployments for this project, and local dev servers.
+    allow_origin_regex=r"https://.*\.vercel\.app|http://localhost:\d+",
 
-    allow_methods=["*"],
+    # We authenticate with a Bearer token in the Authorization header, not cookies,
+    # so "credentials" (cookies / TLS client certs) are never actually used here.
+    allow_credentials=False,
 
-    allow_headers=["*"]
+    allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
+
+    allow_headers=["Content-Type", "Authorization"]
 
 )
 
