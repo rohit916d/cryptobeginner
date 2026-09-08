@@ -175,7 +175,8 @@ useEffect(() => {
         </div>
       </div>
 
-      <div className="overflow-x-auto no-scrollbar">
+      {/* DESKTOP TABLE */}
+      <div className="overflow-x-auto no-scrollbar hidden md:block">
         <table className="w-full text-sm">
   <caption className="sr-only">
     Live cryptocurrency market prices including price, 24 hour change and market capitalization.
@@ -267,6 +268,53 @@ useEffect(() => {
             })}
           </tbody>
         </table>
+      </div>
+
+      {/* MOBILE CARD LIST — includes the 7D chart, hidden from the desktop table above */}
+      <div className="md:hidden divide-y divide-white/5">
+        {loading && coins.length === 0 &&
+          SKELETON_KEYS.map((sk) => (
+            <div key={sk} className="px-4 py-3.5">
+              <div className="h-10 bg-white/5 rounded animate-pulse" />
+            </div>
+          ))}
+        {coins.map((c) => {
+          const up = (c.price_change_percentage_24h ?? 0) >= 0;
+          return (
+            <div
+              key={c.id}
+              data-testid={`coin-row-mobile-${c.symbol}`}
+              onClick={() => setSelectedCoin(c)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  setSelectedCoin(c);
+                }
+              }}
+              aria-label={`View live chart for ${c.name}`}
+              className="flex items-center gap-2.5 px-4 py-3.5 active:bg-white/[0.03] transition-colors cursor-pointer"
+            >
+              <span className="text-zinc-500 font-mono text-[11px] w-4 shrink-0 text-center">{c.market_cap_rank}</span>
+              <img src={c.image} alt={c.name} className="w-8 h-8 rounded-full shrink-0" loading="lazy" />
+              <div className="min-w-0 flex-1">
+                <div className="font-semibold text-white text-sm truncate">{c.name}</div>
+                <div className="text-[11px] text-zinc-500 font-mono uppercase">{c.symbol}</div>
+              </div>
+              <div className="shrink-0">
+                <Sparkline data={c.sparkline_7d} width={60} height={28} />
+              </div>
+              <div className="text-right shrink-0 w-[78px]">
+                <div className="font-mono text-white text-sm">{Number(c.current_price).toFixed(2)}</div>
+                <div className={`text-[11px] font-mono inline-flex items-center gap-0.5 justify-end w-full ${up ? "text-emerald-400" : "text-rose-400"}`}>
+                  {up ? <ArrowUpRight size={10} /> : <ArrowDownRight size={10} />}
+                  {formatPct(c.price_change_percentage_24h)}
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
 
       {hasMore && (
