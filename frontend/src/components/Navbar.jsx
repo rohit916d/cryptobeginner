@@ -8,6 +8,7 @@ const NAV = [
   { to: "/demo-trading", label: "Demo Trading" },
   { to: "/real-trading", label: "Real Trading" },
   { to: "/dictionary", label: "Dictionary" },
+  { to: "/recommended", label: "Exchanges" },
   { to: "/blog", label: "Blog" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },

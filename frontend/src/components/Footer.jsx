@@ -39,6 +39,7 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm text-zinc-400">
               <li><Link to="/learn" className="hover:text-[#C8F169] transition-colors inline-flex items-center gap-1 group">Learning Center <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" /></Link></li>
               <li><Link to="/dictionary" className="hover:text-[#C8F169] transition-colors">Crypto Dictionary</Link></li>
+              <li><Link to="/recommended" className="hover:text-[#C8F169] transition-colors">Recommended Exchanges</Link></li>
               <li><Link to="/blog" className="hover:text-[#C8F169] transition-colors">Blog</Link></li>
             </ul>
           </div>

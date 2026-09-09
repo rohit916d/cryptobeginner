@@ -225,6 +225,28 @@ export default function Home() {
         </div>
       </section>
 
+      {/* RECOMMENDED EXCHANGES PROMO */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
+        <Link
+          to="/recommended"
+          data-testid="home-recommended-promo"
+          className="group card-base glow-border p-6 md:p-8 flex flex-col md:flex-row md:items-center justify-between gap-5 hover:bg-white/[0.03] transition-colors"
+        >
+          <div>
+            <div className="label-eyebrow">Ready to buy?</div>
+            <h3 className="text-xl md:text-2xl font-bold text-white mt-2">
+              See our recommended exchanges &amp; wallets
+            </h3>
+            <p className="text-sm text-zinc-400 mt-1.5 max-w-xl">
+              Where beginners in India actually buy crypto, and how to store it safely afterwards.
+            </p>
+          </div>
+          <span className="btn-secondary inline-flex items-center gap-2 shrink-0 w-fit group-hover:bg-white/10 transition-colors">
+            View picks <ArrowRight size={14} />
+          </span>
+        </Link>
+      </section>
+
       {/* HOW YOU'LL LEARN */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
         <div className="grid lg:grid-cols-12 gap-10 items-start">

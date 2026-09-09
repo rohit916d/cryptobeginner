@@ -19,6 +19,7 @@ const NotFound = lazy(() => import("@/pages/NotFound"));
 const Admin = lazy(() => import("@/pages/Admin"));
 const DemoTrading = lazy(() => import("@/pages/DemoTrading"));
 const RealTrading = lazy(() => import("@/pages/RealTrading"));
+const Recommended = lazy(() => import("@/pages/Recommended"));
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
               <Route path="/dictionary" element={<Dictionary />} />
               <Route path="/demo-trading" element={<DemoTrading />} />
               <Route path="/real-trading" element={<RealTrading />} />
+              <Route path="/recommended" element={<Recommended />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogDetail />} />
               <Route path="/about" element={<About />} />
