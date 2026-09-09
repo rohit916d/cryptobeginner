@@ -20,14 +20,14 @@ export const EXCHANGES = [
     link: "https://coindcx.com/", // TODO: replace with your CoinDCX affiliate link
   },
   {
-    id: "wazirx",
-    name: "WazirX",
-    initials: "WX",
+    id: "bybit",
+    name: "Bybit",
+    initials: "BY",
     color: "#3A2A1E",
     badge: "Easy for beginners",
-    description: "Simple, well-known Indian exchange with a straightforward buy/sell interface.",
-    features: ["UPI & bank transfer", "Simple mobile app", "P2P trading option"],
-    link: "https://wazirx.com/", // TODO: replace with your WazirX affiliate link
+    description: "A major global exchange with a clean app, deep liquidity, and strong derivatives/futures options.",
+    features: ["Simple mobile app", "Deep liquidity", "Futures & derivatives"],
+    link: "https://www.bybit.com/", // TODO: replace with your Bybit affiliate link
   },
   {
     id: "binance",
