@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { Wallet, TrendingUp, TrendingDown, RotateCcw, Plus, ArrowUpRight, ArrowDownRight, Loader2 } from "lucide-react";
-import { useSEO } from "../lib/seo";
+import { useSEO, SITE_ORIGIN } from "../lib/seo";
 import { api } from "../lib/api";
 import { getDeviceId } from "../lib/deviceId";
 import { formatUSD, formatPct } from "../lib/format";
@@ -13,7 +13,7 @@ export default function DemoTrading() {
     description:
       "Practice buying and selling crypto with a free virtual $100,000 account. Real live prices, zero real-money risk — a safe way to learn how trading works.",
     keywords: "demo trading, paper trading, practice crypto trading, virtual portfolio, crypto simulator",
-    canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
+    canonical: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : undefined,
   });
 
   const [account, setAccount] = useState(null);

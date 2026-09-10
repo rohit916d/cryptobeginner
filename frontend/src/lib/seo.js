@@ -1,5 +1,10 @@
 import { useEffect } from "react";
 
+// Always the same, regardless of which domain variant (www vs non-www) served
+// the page — canonical tags must point to ONE consistent URL or Google will
+// treat www/non-www as duplicate content and may pick the "wrong" version.
+export const SITE_ORIGIN = "https://cryptobeginner.in";
+
 export function useSEO({
   title,
   description,

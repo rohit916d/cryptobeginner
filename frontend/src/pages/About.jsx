@@ -1,11 +1,11 @@
-import { useSEO } from "../lib/seo";
+import { useSEO, SITE_ORIGIN } from "../lib/seo";
 import { ShieldCheck, BookOpen, HeartHandshake } from "lucide-react";
 
 export default function About() {
   useSEO({
     title: "About Us",
     description: "Crypto Beginner is a free education platform helping beginners learn crypto safely — without hype or financial advice.",
-    canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
+    canonical: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : undefined,
   });
 
   return (

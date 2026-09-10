@@ -1,4 +1,4 @@
-import { useSEO } from "../lib/seo";
+import { useSEO, SITE_ORIGIN } from "../lib/seo";
 
 const COOKIE_SECTIONS = [
   ["What are cookies?", "Cookies are small text files stored on your device by your browser when you visit a website. They help the site remember things about your visit."],
@@ -13,7 +13,7 @@ export default function CookiePolicy() {
   useSEO({
     title: "Cookie Policy",
     description: "How Crypto Beginner uses cookies and how you can control them.",
-    canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
+    canonical: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : undefined,
   });
 
   return (

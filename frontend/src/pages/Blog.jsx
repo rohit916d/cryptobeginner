@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../lib/api";
 import { Clock, ArrowRight } from "lucide-react";
-import { useSEO } from "../lib/seo";
+import { useSEO, SITE_ORIGIN } from "../lib/seo";
 
 export default function Blog() {
   const [posts, setPosts] = useState([]);
@@ -13,12 +13,12 @@ export default function Blog() {
   useSEO({
     title: "Crypto Blog",
     description: "Beginner-friendly crypto articles on Bitcoin, blockchain, DeFi, scams, wallets and more.",
-    canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
+    canonical: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : undefined,
     jsonLd: {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: typeof window !== "undefined" ? window.location.origin + "/" : "" },
-        { "@type": "ListItem", position: 2, name: "Blog", item: typeof window !== "undefined" ? window.location.origin + window.location.pathname : "" },
+        { "@type": "ListItem", position: 2, name: "Blog", item: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : "" },
       ],
     },
   });

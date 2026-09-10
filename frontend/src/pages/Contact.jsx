@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { api } from "../lib/api";
 import { Send, CheckCircle2 } from "lucide-react";
-import { useSEO } from "../lib/seo";
+import { useSEO, SITE_ORIGIN } from "../lib/seo";
 
 export default function Contact() {
   useSEO({
     title: "Contact Us",
     description: "Get in touch with the Crypto Beginner team — feedback, content suggestions, partnerships.",
-    canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
+    canonical: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : undefined,
   });
 
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });

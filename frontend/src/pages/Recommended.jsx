@@ -1,5 +1,5 @@
 import { ExternalLink, ShieldCheck } from "lucide-react";
-import { useSEO } from "../lib/seo";
+import { useSEO, SITE_ORIGIN } from "../lib/seo";
 import { EXCHANGES } from "../lib/affiliates";
 
 function PartnerCard({ item }) {
@@ -44,7 +44,7 @@ export default function Recommended() {
     description:
       "Compare beginner-friendly crypto exchanges in India — CoinDCX, Bybit, Binance, CoinSwitch and more.",
     keywords: "best crypto exchange india, beginner exchange, coindcx, bybit, binance, coinswitch",
-    canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
+    canonical: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : undefined,
   });
 
   return (

@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import DOMPurify from "dompurify";
 import { api } from "../lib/api";
 import { ArrowLeft, Clock, User } from "lucide-react";
-import { useSEO } from "../lib/seo";
+import { useSEO, SITE_ORIGIN } from "../lib/seo";
 
 // Reuse rendering logic
 function renderMarkdown(md) {
@@ -48,7 +48,7 @@ export default function BlogDetail() {
   useSEO({
     title: notFound ? "Article Not Found" : post?.title,
     description: post?.excerpt,
-    canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
+    canonical: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : undefined,
     image: post?.cover_image,
     type: "article",
     robots: notFound ? "noindex,follow" : "index,follow",
@@ -66,7 +66,7 @@ export default function BlogDetail() {
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: typeof window !== "undefined" ? window.location.origin + "/" : "" },
           { "@type": "ListItem", position: 2, name: "Blog", item: typeof window !== "undefined" ? window.location.origin + "/blog" : "" },
-          { "@type": "ListItem", position: 3, name: post.title, item: typeof window !== "undefined" ? window.location.origin + window.location.pathname : "" },
+          { "@type": "ListItem", position: 3, name: post.title, item: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : "" },
         ],
       },
       ...(Array.isArray(post.faqs) && post.faqs.length > 0 ? [{

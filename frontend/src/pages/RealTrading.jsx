@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ShieldAlert, Wallet, ExternalLink, ArrowRight, ShieldCheck, Lock } from "lucide-react";
-import { useSEO } from "../lib/seo";
+import { useSEO, SITE_ORIGIN } from "../lib/seo";
 
 export default function RealTrading() {
   useSEO({
@@ -8,7 +8,7 @@ export default function RealTrading() {
     description:
       "Connect your own crypto wallet and trade real crypto across 85+ blockchains. Non-custodial — your funds never touch our servers. Real money, real trades, irreversible.",
     keywords: "connect wallet, crypto swap, real trading, non-custodial, wallet connect, defi swap",
-    canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
+    canonical: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : undefined,
   });
 
   return (

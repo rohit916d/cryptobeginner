@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { api } from "../lib/api";
 import { Search } from "lucide-react";
-import { useSEO } from "../lib/seo";
+import { useSEO, SITE_ORIGIN } from "../lib/seo";
 
 const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
@@ -13,12 +13,12 @@ export default function Dictionary() {
   useSEO({
     title: "Crypto A-Z Dictionary",
     description: "An A-Z searchable glossary of crypto terms — wallet, blockchain, DeFi, NFT, staking, gas, and more.",
-    canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
+    canonical: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : undefined,
     jsonLd: {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: typeof window !== "undefined" ? window.location.origin + "/" : "" },
-        { "@type": "ListItem", position: 2, name: "Dictionary", item: typeof window !== "undefined" ? window.location.origin + window.location.pathname : "" },
+        { "@type": "ListItem", position: 2, name: "Dictionary", item: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : "" },
       ],
     },
   });

@@ -1,4 +1,4 @@
-import { useSEO } from "../lib/seo";
+import { useSEO, SITE_ORIGIN } from "../lib/seo";
 
 const CONTENT = {
   privacy: {
@@ -44,7 +44,7 @@ export default function LegalPage({ slug }) {
   useSEO({
     title: data.title,
     description: data.description,
-    canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
+    canonical: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : undefined,
   });
 
   return (

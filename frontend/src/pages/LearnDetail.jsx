@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import DOMPurify from "dompurify";
 import { api } from "../lib/api";
 import { ArrowLeft, Clock, AlertTriangle } from "lucide-react";
-import { useSEO } from "../lib/seo";
+import { useSEO, SITE_ORIGIN } from "../lib/seo";
 
 function renderMarkdown(md) {
   if (!md) return "";
@@ -66,7 +66,7 @@ export default function LearnDetail() {
   useSEO({
     title: notFound ? "Lesson Not Found" : lesson?.title,
     description: lesson?.summary,
-    canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
+    canonical: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : undefined,
     type: "article",
     robots: notFound ? "noindex,follow" : "index,follow",
     jsonLd: lesson ? [
@@ -82,7 +82,7 @@ export default function LearnDetail() {
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: typeof window !== "undefined" ? window.location.origin + "/" : "" },
           { "@type": "ListItem", position: 2, name: "Learn", item: typeof window !== "undefined" ? window.location.origin + "/learn" : "" },
-          { "@type": "ListItem", position: 3, name: lesson.title, item: typeof window !== "undefined" ? window.location.origin + window.location.pathname : "" },
+          { "@type": "ListItem", position: 3, name: lesson.title, item: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : "" },
         ],
       },
       ...(Array.isArray(lesson.faqs) && lesson.faqs.length > 0 ? [{

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { api } from "../lib/api";
 import { ArrowRight, BookOpen, Clock } from "lucide-react";
-import { useSEO } from "../lib/seo";
+import { useSEO, SITE_ORIGIN } from "../lib/seo";
 
 const LEVELS = [
   { key: "beginner", label: "Beginner", desc: "Foundations: Bitcoin, blockchain, wallets, exchanges." },
@@ -20,12 +20,12 @@ export default function Learn() {
   useSEO({
     title: "Learning Center",
     description: "Structured crypto learning paths for absolute beginners. Beginner, intermediate, and security tracks.",
-    canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
+    canonical: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : undefined,
     jsonLd: {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: typeof window !== "undefined" ? window.location.origin + "/" : "" },
-        { "@type": "ListItem", position: 2, name: "Learn", item: typeof window !== "undefined" ? window.location.origin + window.location.pathname : "" },
+        { "@type": "ListItem", position: 2, name: "Learn", item: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : "" },
       ],
     },
   });
