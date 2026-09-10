@@ -51,25 +51,4 @@ export const EXCHANGES = [
   },
 ];
 
-export const WALLETS = [
-  {
-    id: "ledger",
-    name: "Ledger",
-    initials: "LG",
-    color: "#1A1A1A",
-    badge: "Most popular hardware wallet",
-    description: "A physical device that keeps your crypto's private keys offline — the gold standard for security.",
-    features: ["Offline key storage", "Supports 5,500+ coins", "Works with most wallet apps"],
-    link: "https://www.ledger.com/", // TODO: replace with your Ledger affiliate link
-  },
-  {
-    id: "trezor",
-    name: "Trezor",
-    initials: "TZ",
-    color: "#0F2A1E",
-    badge: "Open-source security",
-    description: "A well-established hardware wallet with fully open-source firmware you (or anyone) can audit.",
-    features: ["Offline key storage", "Fully open-source", "Beginner setup wizard"],
-    link: "https://trezor.io/", // TODO: replace with your Trezor affiliate link
-  },
-];
+export const WALLETS = [];

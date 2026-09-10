@@ -1,6 +1,6 @@
-import { ExternalLink, ShieldCheck, Wallet as WalletIcon } from "lucide-react";
+import { ExternalLink, ShieldCheck } from "lucide-react";
 import { useSEO } from "../lib/seo";
-import { EXCHANGES, WALLETS } from "../lib/affiliates";
+import { EXCHANGES } from "../lib/affiliates";
 
 function PartnerCard({ item }) {
   return (
@@ -40,10 +40,10 @@ function PartnerCard({ item }) {
 
 export default function Recommended() {
   useSEO({
-    title: "Recommended Exchanges & Wallets for Crypto Beginners",
+    title: "Recommended Crypto Exchanges for Beginners",
     description:
-      "Compare beginner-friendly crypto exchanges and hardware wallets in India — CoinDCX, WazirX, Binance, CoinSwitch, Ledger, Trezor and more.",
-    keywords: "best crypto exchange india, beginner exchange, hardware wallet, coindcx, wazirx, binance, ledger, trezor",
+      "Compare beginner-friendly crypto exchanges in India — CoinDCX, Bybit, Binance, CoinSwitch and more.",
+    keywords: "best crypto exchange india, beginner exchange, coindcx, bybit, binance, coinswitch",
     canonical: typeof window !== "undefined" ? window.location.origin + window.location.pathname : undefined,
   });
 
@@ -55,11 +55,11 @@ export default function Recommended() {
           PARTNER PICKS
         </div>
         <h1 className="text-3xl md:text-5xl font-normal text-white leading-tight">
-          Recommended <span className="brand-grad-text italic">Exchanges &amp; Wallets</span>
+          Recommended <span className="brand-grad-text italic">Exchanges</span>
         </h1>
         <p className="mt-3 text-zinc-400 max-w-2xl leading-relaxed">
           Platforms we think are solid for a first-time crypto buyer in India — where to actually
-          buy, and how to keep it safe afterwards.
+          buy, and what to look for before you sign up.
         </p>
       </div>
 
@@ -75,24 +75,11 @@ export default function Recommended() {
       </div>
 
       {/* EXCHANGES */}
-      <div className="mb-12">
+      <div>
         <h2 className="text-xl font-bold text-white mb-5">Exchanges — where to buy</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {EXCHANGES.map((ex) => (
             <PartnerCard key={ex.id} item={ex} />
-          ))}
-        </div>
-      </div>
-
-      {/* WALLETS */}
-      <div>
-        <div className="flex items-center gap-2 mb-5">
-          <WalletIcon size={18} className="text-[#C8F169]" />
-          <h2 className="text-xl font-bold text-white">Hardware Wallets — where to store it safely</h2>
-        </div>
-        <div className="grid sm:grid-cols-2 gap-5">
-          {WALLETS.map((w) => (
-            <PartnerCard key={w.id} item={w} />
           ))}
         </div>
       </div>

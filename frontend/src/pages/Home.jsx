@@ -235,10 +235,10 @@ export default function Home() {
           <div>
             <div className="label-eyebrow">Ready to buy?</div>
             <h3 className="text-xl md:text-2xl font-bold text-white mt-2">
-              See our recommended exchanges &amp; wallets
+              See our recommended exchanges
             </h3>
             <p className="text-sm text-zinc-400 mt-1.5 max-w-xl">
-              Where beginners in India actually buy crypto, and how to store it safely afterwards.
+              Where beginners in India actually buy crypto — a quick comparison to help you pick.
             </p>
           </div>
           <span className="btn-secondary inline-flex items-center gap-2 shrink-0 w-fit group-hover:bg-white/10 transition-colors">
