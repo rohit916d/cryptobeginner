@@ -1,5 +1,6 @@
 import { ExternalLink, ShieldCheck } from "lucide-react";
 import { useSEO } from "../lib/seo";
+import StackSection from "../components/StackSection";
 import { EXCHANGES } from "../lib/affiliates";
 
 function PartnerCard({ item }) {
@@ -48,7 +49,9 @@ export default function Recommended() {
   });
 
   return (
-    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
+    <>
+    <StackSection index={0}>
+    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 w-full">
       <div className="mb-8">
         <div className="block-tag mb-3">
           <span className="dot" />
@@ -64,7 +67,7 @@ export default function Recommended() {
       </div>
 
       {/* DISCLOSURE */}
-      <div className="rounded-xl border border-white/10 bg-white/[0.02] px-4 py-3 mb-10 flex items-start gap-2.5">
+      <div className="rounded-xl border border-white/10 bg-white/[0.02] px-4 py-3 flex items-start gap-2.5">
         <ShieldCheck size={15} className="text-[#C8F169] shrink-0 mt-0.5" />
         <p className="text-xs text-zinc-500 leading-relaxed">
           <span className="text-zinc-300 font-medium">Affiliate disclosure:</span> some links below are
@@ -73,7 +76,11 @@ export default function Recommended() {
           and always do your own research before choosing where to trade.
         </p>
       </div>
+    </section>
+    </StackSection>
 
+    <StackSection index={1}>
+    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
       {/* EXCHANGES */}
       <div>
         <h2 className="text-xl font-bold text-white mb-5">Exchanges — where to buy</h2>
@@ -84,5 +91,7 @@ export default function Recommended() {
         </div>
       </div>
     </section>
+    </StackSection>
+    </>
   );
 }

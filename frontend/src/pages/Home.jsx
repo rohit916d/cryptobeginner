@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, lazy, Suspense } from "react";
 import { ArrowRight, Sparkles, ShieldCheck, BookOpen, TrendingUp, GraduationCap, Lock, Layers } from "lucide-react";
 import { useSEO } from "../lib/seo";
+import StackSection from "../components/StackSection";
 import TiltCard from "../components/TiltCard";
 import MagneticButton from "../components/MagneticButton";
 import AnimatedCounter from "../components/AnimatedCounter";
@@ -40,7 +41,8 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section data-testid="hero" className="relative overflow-hidden">
+      <StackSection index={0}>
+      <section data-testid="hero" className="relative overflow-hidden w-full">
         <div className="aurora-bg" />
         <div className="absolute inset-0 ledger-rule-bg opacity-60" />
         <div
@@ -119,6 +121,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </StackSection>
 
       {/* TOPIC MARQUEE */}
       <div className="relative border-y border-white/5 bg-white/[0.015] overflow-hidden py-3 mb-14">
@@ -145,7 +148,8 @@ export default function Home() {
       </section>
 
       {/* WHY CRYPTO BEGINNER */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+      <StackSection index={1}>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 w-full">
         <div className="mb-10 text-center max-w-2xl mx-auto">
           <div className="label-eyebrow justify-center flex">Why Crypto Beginner</div>
           <h2 className="text-2xl md:text-4xl font-bold text-white mt-2">Built for people who've never touched crypto</h2>
@@ -168,6 +172,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+      </StackSection>
 
       {/* TOP 10 TABLE */}
 <section
@@ -187,7 +192,8 @@ export default function Home() {
 </section>
 
       {/* LEARNING PATH CTA */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
+      <StackSection index={2}>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24 w-full">
         <div className="mb-10">
           <div className="label-eyebrow">Choose a track</div>
           <h2 className="text-2xl md:text-4xl font-bold text-white mt-2">Where do you want to start?</h2>
@@ -224,9 +230,11 @@ export default function Home() {
           ))}
         </div>
       </section>
+      </StackSection>
 
       {/* RECOMMENDED EXCHANGES PROMO */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
+      <StackSection index={3}>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24 w-full">
         <Link
           to="/recommended"
           data-testid="home-recommended-promo"
@@ -246,9 +254,11 @@ export default function Home() {
           </span>
         </Link>
       </section>
+      </StackSection>
 
       {/* HOW YOU'LL LEARN */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
+      <StackSection index={4}>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24 w-full">
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-4">
             <div className="label-eyebrow">The process</div>
@@ -274,9 +284,11 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </StackSection>
 
       {/* FINAL CTA */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
+      <StackSection index={5}>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24 w-full">
         <div className="relative overflow-hidden rounded-3xl glow-border card-base p-10 md:p-16 text-center">
           <div
             className="absolute inset-0 opacity-60 pointer-events-none"
@@ -301,6 +313,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </StackSection>
     </>
   );
 }
