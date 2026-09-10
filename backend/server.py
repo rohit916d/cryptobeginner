@@ -1350,18 +1350,22 @@ Sitemap: https://cryptobeginner.in/sitemap.xml
 async def sitemap():
 
     base = "https://cryptobeginner.in"
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
-    urls = [
-        "/",
-        "/learn",
-        "/dictionary",
-        "/blog",
-        "/about",
-        "/contact",
-        "/privacy",
-        "/terms",
-        "/disclaimer",
-        "/cookie-policy"
+    static_urls = [
+        ("/", "1.0", "daily"),
+        ("/learn", "0.9", "weekly"),
+        ("/demo-trading", "0.9", "weekly"),
+        ("/recommended", "0.8", "monthly"),
+        ("/dictionary", "0.8", "weekly"),
+        ("/blog", "0.8", "daily"),
+        ("/real-trading", "0.7", "monthly"),
+        ("/about", "0.5", "monthly"),
+        ("/contact", "0.5", "monthly"),
+        ("/privacy", "0.2", "yearly"),
+        ("/terms", "0.2", "yearly"),
+        ("/disclaimer", "0.2", "yearly"),
+        ("/cookie-policy", "0.2", "yearly"),
     ]
 
     lessons = await db.lessons.find(
@@ -1374,25 +1378,37 @@ async def sitemap():
         {"slug": 1}
     ).to_list(500)
 
-    for lesson in lessons:
-        urls.append(
-            "/learn/" + lesson["slug"]
-        )
-
-    for blog in blogs:
-        urls.append(
-            "/blog/" + blog["slug"]
-        )
-
     xml = """<?xml version="1.0" encoding="UTF-8"?>"""
 
     xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
 
-    for url in urls:
-
+    for path, priority, changefreq in static_urls:
         xml += f"""
 <url>
-<loc>{base}{url}</loc>
+<loc>{base}{path}</loc>
+<lastmod>{today}</lastmod>
+<changefreq>{changefreq}</changefreq>
+<priority>{priority}</priority>
+</url>
+"""
+
+    for lesson in lessons:
+        xml += f"""
+<url>
+<loc>{base}/learn/{lesson["slug"]}</loc>
+<lastmod>{today}</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+"""
+
+    for blog in blogs:
+        xml += f"""
+<url>
+<loc>{base}/blog/{blog["slug"]}</loc>
+<lastmod>{today}</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
 </url>
 """
 
