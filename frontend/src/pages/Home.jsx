@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, lazy, Suspense } from "react";
 import { ArrowRight, Sparkles, ShieldCheck, BookOpen, TrendingUp, GraduationCap, Lock, Layers } from "lucide-react";
 import { useSEO, SITE_ORIGIN } from "../lib/seo";
+import AdSlot, { AD_SLOTS } from "../components/AdSlot";
 import TiltCard from "../components/TiltCard";
 import MagneticButton from "../components/MagneticButton";
 import AnimatedCounter from "../components/AnimatedCounter";
@@ -168,6 +169,11 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* AD SLOT */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+        <AdSlot slot={AD_SLOTS.homeMidPage} />
+      </div>
 
       {/* TOP 10 TABLE */}
 <section

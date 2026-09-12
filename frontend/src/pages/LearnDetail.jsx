@@ -4,6 +4,7 @@ import DOMPurify from "dompurify";
 import { api } from "../lib/api";
 import { ArrowLeft, Clock, AlertTriangle } from "lucide-react";
 import { useSEO, SITE_ORIGIN } from "../lib/seo";
+import AdSlot, { AD_SLOTS } from "../components/AdSlot";
 
 function renderMarkdown(md) {
   if (!md) return "";
@@ -122,6 +123,10 @@ export default function LearnDetail() {
       </div>
 
       <div className="prose-amber mt-10" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(renderMarkdown(lesson.content)) }} />
+
+      <div className="mt-10">
+        <AdSlot slot={AD_SLOTS.articleInline} />
+      </div>
 
       {Array.isArray(lesson.faqs) && lesson.faqs.length > 0 && (
         <div className="mt-12">

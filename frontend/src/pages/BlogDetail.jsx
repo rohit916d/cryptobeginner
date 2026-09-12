@@ -4,6 +4,7 @@ import DOMPurify from "dompurify";
 import { api } from "../lib/api";
 import { ArrowLeft, Clock, User } from "lucide-react";
 import { useSEO, SITE_ORIGIN } from "../lib/seo";
+import AdSlot, { AD_SLOTS } from "../components/AdSlot";
 
 // Reuse rendering logic
 function renderMarkdown(md) {
@@ -111,6 +112,10 @@ export default function BlogDetail() {
       )}
 
       <div className="prose-amber mt-10" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(renderMarkdown(post.content)) }} />
+
+      <div className="mt-10">
+        <AdSlot slot={AD_SLOTS.articleInline} />
+      </div>
 
       {Array.isArray(post.faqs) && post.faqs.length > 0 && (
         <div className="mt-12">
