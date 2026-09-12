@@ -13,11 +13,11 @@ const Block3DScene = lazy(() => import("../components/Block3DScene"));
 
 export default function Home() {
   useSEO({
-    title: "Learn Crypto, Bitcoin & Blockchain From Zero",
+    title: "Crypto For Beginners in India — Learn Bitcoin & Blockchain",
     description:
-      "Learn Crypto, Bitcoin, Blockchain, Web3, Wallets, DeFi and Cryptocurrency from scratch with beginner-friendly guides, tutorials and live market data.",
+      "Crypto for beginners in India — learn Bitcoin, blockchain, wallets, DeFi and cryptocurrency from scratch with free, beginner-friendly guides and live market data.",
     keywords:
-      "crypto, cryptocurrency, bitcoin, blockchain, web3, defi, crypto for beginners, learn crypto, bitcoin guide, crypto education, wallets, ethereum",
+      "crypto for beginners, crypto beginner guide india, learn bitcoin india, cryptocurrency, blockchain, web3, defi, bitcoin guide, crypto education, wallets, ethereum",
     canonical: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : undefined,
     image: "https://cryptobeginner.in/cryptobeginner-icon.png",
     jsonLd: [
@@ -62,10 +62,10 @@ export default function Home() {
               <h1 className="mt-5 text-5xl sm:text-6xl lg:text-7xl font-normal tracking-tight leading-[0.98]">
                 <span className="text-white">Learn Crypto</span>
                 <br />
-                <span className="brand-grad-text italic">From Zero.</span>
+                <span className="brand-grad-text italic">For Beginners.</span>
               </h1>
               <p className="mt-6 text-lg text-zinc-400 max-w-xl leading-relaxed">
-                Simple crypto education for complete beginners. Bitcoin, blockchain, wallets, scams, security — all explained without jargon, hype, or financial advice.
+                Simple crypto education for complete beginners in India. Bitcoin, blockchain, wallets, scams, security — all explained without jargon, hype, or financial advice.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <MagneticButton as={Link} to="/learn" data-testid="hero-cta-start" className="btn-primary inline-flex items-center gap-2">
