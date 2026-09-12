@@ -1,5 +1,1 @@
-# This file will contain your Google AdSense authorization line once your
-# account is approved, e.g.:
-# google.com, pub-1234567890123456, DIRECT, f08c47fec0942fa0
-#
-# Send Claude your Publisher ID after AdSense approval and this gets filled in.
+google.com, pub-3873453202331498, DIRECT, f08c47fec0942fa0
