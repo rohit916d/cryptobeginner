@@ -1,5 +1,6 @@
 export const config = {
   matcher: ["/learn/:slug", "/blog/:slug"],
+  runtime: "nodejs",
 };
 
 const BOT_PATTERNS = [
