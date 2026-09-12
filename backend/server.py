@@ -24,6 +24,7 @@ import logging
 import os
 import re
 import requests
+from requests_oauthlib import OAuth1
 import time
 import uuid
 import google.genai
@@ -55,6 +56,62 @@ CRON_SECRET = os.getenv("CRON_SECRET")
 ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD")
 
 client = AsyncIOMotorClient(MONGO_URL)
+
+# ----------------------------------------------------
+# X (TWITTER) AUTO-POSTING
+# ----------------------------------------------------
+# Requires an X Developer app with OAuth 1.0a User Context credentials
+# (posting on X's v2 API costs money since Feb 2026 — roughly $0.20 per
+# tweet that contains a link, billed to whatever payment method is on the
+# X developer account). All four values below must be set for this to do
+# anything; if any are missing, posting is silently skipped (never blocks
+# blog creation).
+
+X_API_KEY = os.getenv("X_API_KEY")
+X_API_SECRET = os.getenv("X_API_SECRET")
+X_ACCESS_TOKEN = os.getenv("X_ACCESS_TOKEN")
+X_ACCESS_TOKEN_SECRET = os.getenv("X_ACCESS_TOKEN_SECRET")
+
+
+def _craft_blog_tweet(title: str, slug: str) -> str:
+    url = f"https://cryptobeginner.in/blog/{slug}"
+    prefix = "📚 New on Crypto Beginner: "
+    # Twitter/X counts a link as a fixed 23 chars regardless of real length.
+    budget = 280 - len(prefix) - 23 - 2  # -2 for the blank line before the URL
+    title_out = title if len(title) <= budget else title[: budget - 1].rstrip() + "…"
+    return f"{prefix}{title_out}\n\n{url}"
+
+
+async def post_to_x(text: str) -> bool:
+    if not all([X_API_KEY, X_API_SECRET, X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET]):
+        logger.info("X auto-post skipped — X_API_* env vars not fully configured")
+        return False
+
+    try:
+        auth = OAuth1(X_API_KEY, X_API_SECRET, X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET)
+        response = await asyncio.to_thread(
+            requests.post,
+            "https://api.twitter.com/2/tweets",
+            auth=auth,
+            json={"text": text},
+            timeout=15,
+        )
+        if response.status_code not in (200, 201):
+            logger.error(f"X post failed: {response.status_code} {response.text}")
+            return False
+        return True
+    except Exception as e:
+        logger.exception(e)
+        return False
+
+
+async def post_blog_to_x(post: dict):
+    """Fire-and-forget: never let an X posting failure break blog creation."""
+    try:
+        text = _craft_blog_tweet(post["title"], post["slug"])
+        await post_to_x(text)
+    except Exception as e:
+        logger.exception(e)
 
 db = client[DB_NAME]
 
@@ -1626,6 +1683,9 @@ in exactly this shape:
 
     await db.blog.insert_one(post.copy())
     post.pop("_id", None)
+
+    await post_blog_to_x(post)
+
     return post
 
 
@@ -1830,6 +1890,9 @@ async def admin_create_blog(payload: ManualBlogPost, request: Request):
 
     await db.blog.insert_one(post.copy())
     post.pop("_id", None)
+
+    await post_blog_to_x(post)
+
     return post
 
 

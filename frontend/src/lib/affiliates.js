@@ -17,7 +17,7 @@ export const EXCHANGES = [
     badge: "Popular in India",
     description: "One of India's largest crypto exchanges — INR deposits via UPI/bank transfer, 200+ coins.",
     features: ["UPI & bank transfer", "200+ coins listed", "Beginner-friendly app"],
-    link: "https://coindcx.com/", // TODO: replace with your CoinDCX affiliate link
+    link: "https://invite.coindcx.com/74580222", // CoinDCX affiliate link
   },
   {
     id: "bybit",
@@ -27,7 +27,7 @@ export const EXCHANGES = [
     badge: "Easy for beginners",
     description: "A major global exchange with a clean app, deep liquidity, and strong derivatives/futures options.",
     features: ["Simple mobile app", "Deep liquidity", "Futures & derivatives"],
-    link: "https://www.bybit.com/", // TODO: replace with your Bybit affiliate link
+    link: "https://www.bybit.com/invite?ref=JNMNJ2&medium=referral&utm_campaign=evergreen&share_to=post", // Bybit affiliate link
   },
   {
     id: "binance",
