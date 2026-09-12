@@ -24,7 +24,7 @@ export default function Learn() {
     jsonLd: {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: typeof window !== "undefined" ? window.location.origin + "/" : "" },
+        { "@type": "ListItem", position: 1, name: "Home", item: typeof window !== "undefined" ? SITE_ORIGIN + "/" : "" },
         { "@type": "ListItem", position: 2, name: "Learn", item: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : "" },
       ],
     },
