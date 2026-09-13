@@ -50,7 +50,7 @@ export default function Contact() {
           {status === "sent" ? (
             <div data-testid="contact-success" className="text-center py-10">
               <CheckCircle2 className="mx-auto text-[#C8F169]" size={36} />
-              <h3 className="mt-4 text-lg font-bold text-white">Message received!</h3>
+              <h2 className="mt-4 text-lg font-bold text-white">Message received!</h2>
               <p className="mt-2 text-sm text-zinc-400">Thanks — we'll get back to you soon.</p>
               <button
                 type="button"

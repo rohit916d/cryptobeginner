@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useEffect, lazy, Suspense } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import { ArrowRight, Sparkles, ShieldCheck, BookOpen, TrendingUp, GraduationCap, Lock, Layers } from "lucide-react";
 import { useSEO, SITE_ORIGIN } from "../lib/seo";
 import AdSlot, { AD_SLOTS } from "../components/AdSlot";
@@ -93,7 +93,7 @@ export default function Home() {
               <TiltCard className="glow-border relative card-base p-6 md:p-7">
                 <div className="absolute inset-0 rounded-2xl pointer-events-none" style={{ background: "radial-gradient(600px circle at 0% 0%, rgba(200,241,105,0.06), transparent 40%)" }} />
                 <div className="label-eyebrow">A 60-second primer</div>
-                <h3 className="text-xl font-normal text-white mt-2">What is crypto, really?</h3>
+                <h2 className="text-xl font-normal text-white mt-2">What is crypto, really?</h2>
                 <p className="text-sm text-zinc-400 mt-3 leading-relaxed">
                   Crypto is digital money that lives on a public ledger called a blockchain — no banks, no middlemen. It's borderless, scarce, and programmable.
                 </p>

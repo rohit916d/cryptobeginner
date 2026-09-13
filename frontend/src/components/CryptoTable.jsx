@@ -1,10 +1,10 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, lazy, Suspense } from "react";
 import { api } from "../lib/api";
 import { formatUSD, formatPct } from "../lib/format";
 import { ArrowUpRight, ArrowDownRight, RefreshCw, Search, ChevronDown, Loader2 } from "lucide-react";
 import Sparkline from "./Sparkline";
-import CoinChartModal from "./CoinChartModal";
-import MarketSearchModal from "./MarketSearchModal";
+const CoinChartModal = lazy(() => import("./CoinChartModal"));
+const MarketSearchModal = lazy(() => import("./MarketSearchModal"));
 const LIVE_SYMBOLS = {
   BTC: "btcusdt",
   ETH: "ethusdt",
@@ -341,17 +341,21 @@ useEffect(() => {
       </div>
 
       {selectedCoin && (
-        <CoinChartModal coin={selectedCoin} onClose={() => setSelectedCoin(null)} />
+        <Suspense fallback={null}>
+          <CoinChartModal coin={selectedCoin} onClose={() => setSelectedCoin(null)} />
+        </Suspense>
       )}
 
       {searchOpen && (
-        <MarketSearchModal
-          onClose={() => setSearchOpen(false)}
-          onSelectCoin={(coin) => {
-            setSearchOpen(false);
-            setSelectedCoin(coin);
-          }}
-        />
+        <Suspense fallback={null}>
+          <MarketSearchModal
+            onClose={() => setSearchOpen(false)}
+            onSelectCoin={(coin) => {
+              setSearchOpen(false);
+              setSelectedCoin(coin);
+            }}
+          />
+        </Suspense>
       )}
     </div>
   );

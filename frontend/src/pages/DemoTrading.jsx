@@ -176,7 +176,7 @@ export default function DemoTrading() {
       {/* HOLDINGS */}
       <div className="card-base overflow-hidden mb-10">
         <div className="flex items-center justify-between px-5 md:px-6 py-4 border-b border-white/5">
-          <h3 className="text-xl font-bold text-white">Your Holdings</h3>
+          <h2 className="text-xl font-bold text-white">Your Holdings</h2>
         </div>
 
         {loading ? (
@@ -253,7 +253,7 @@ export default function DemoTrading() {
       {/* FUTURES — OPEN POSITIONS */}
       <div className="card-base overflow-hidden mb-10">
         <div className="flex items-center justify-between px-5 md:px-6 py-4 border-b border-white/5">
-          <h3 className="text-xl font-bold text-white">Open Positions</h3>
+          <h2 className="text-xl font-bold text-white">Open Positions</h2>
           <span className="text-[9px] px-1.5 py-0.5 rounded bg-[#C8F169]/10 text-[#C8F169] font-mono uppercase">Leverage</span>
         </div>
 
@@ -342,7 +342,7 @@ export default function DemoTrading() {
       {futuresHistory.length > 0 && (
         <div className="card-base overflow-hidden mb-10">
           <div className="flex items-center justify-between px-5 md:px-6 py-4 border-b border-white/5">
-            <h3 className="text-xl font-bold text-white">Position History</h3>
+            <h2 className="text-xl font-bold text-white">Position History</h2>
           </div>
           <ul>
             {futuresHistory.map((p) => {
@@ -385,7 +385,7 @@ export default function DemoTrading() {
       {/* TRANSACTION HISTORY */}
       <div className="card-base overflow-hidden mb-10">
         <div className="flex items-center justify-between px-5 md:px-6 py-4 border-b border-white/5">
-          <h3 className="text-xl font-bold text-white">Recent Trades</h3>
+          <h2 className="text-xl font-bold text-white">Recent Trades</h2>
         </div>
         {!loading && transactions.length === 0 ? (
           <div className="py-10 text-center px-6">

@@ -85,7 +85,7 @@ export default function RealTrading() {
         <div className="flex items-center justify-between px-5 py-4 border-b border-white/5">
           <div>
             <div className="label-eyebrow">Swap</div>
-            <h3 className="text-lg font-bold text-white mt-1">Connect Wallet &amp; Trade</h3>
+            <h2 className="text-lg font-bold text-white mt-1">Connect Wallet &amp; Trade</h2>
           </div>
           <a
             href="https://portal.thirdweb.com/bridge/bridge-widget/iframe"

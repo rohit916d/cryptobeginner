@@ -102,7 +102,7 @@ export default function Dictionary() {
               <span className="w-8 h-8 rounded-md bg-[#C8F169]/10 border border-[#C8F169]/20 grid place-items-center text-[#C8F169] font-mono font-bold text-sm">
                 {t.term[0].toUpperCase()}
               </span>
-              <h3 className="text-base font-bold text-white">{t.term}</h3>
+              <h2 className="text-base font-bold text-white">{t.term}</h2>
             </div>
             <p className="text-sm text-zinc-400 leading-relaxed">{t.definition}</p>
           </div>

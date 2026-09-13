@@ -26,14 +26,14 @@ export default function About() {
         ].map((v) => (
           <div key={v.title} className="card-base p-6">
             <v.icon size={20} className="text-[#C8F169]" />
-            <h3 className="mt-3 text-lg font-bold text-white">{v.title}</h3>
+            <h2 className="mt-3 text-lg font-bold text-white">{v.title}</h2>
             <p className="mt-2 text-sm text-zinc-400 leading-relaxed">{v.body}</p>
           </div>
         ))}
       </div>
 
       <div className="mt-14 card-base p-7">
-        <h3 className="text-xl font-bold text-white">Our mission</h3>
+        <h2 className="text-xl font-bold text-white">Our mission</h2>
         <p className="mt-3 text-zinc-400 leading-relaxed">
           Millions of beginners enter crypto each year and lose money to scams, hacks, and confusion. We exist to lower that loss — one clear lesson at a time. If we can help even one reader avoid a phishing site or back up their seed phrase properly, we've done our job.
         </p>

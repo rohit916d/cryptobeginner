@@ -99,9 +99,9 @@ export default function Learn() {
                 <Clock size={11} /> {l.read_time} min
               </span>
             </div>
-            <h3 className="mt-3 text-xl font-bold text-white group-hover:text-[#C8F169] transition-colors">
+            <h2 className="mt-3 text-xl font-bold text-white group-hover:text-[#C8F169] transition-colors">
               {l.title}
-            </h3>
+            </h2>
             <p className="mt-2 text-sm text-zinc-400 leading-relaxed">{l.summary}</p>
             <div className="mt-5 text-sm text-[#C8F169] inline-flex items-center gap-1">
               Read lesson <ArrowRight size={13} />

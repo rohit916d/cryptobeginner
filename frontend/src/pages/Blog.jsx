@@ -91,9 +91,9 @@ export default function Blog() {
                   <Clock size={11} /> {p.read_time}m
                 </span>
               </div>
-              <h3 className="mt-3 text-lg font-bold text-white group-hover:text-[#C8F169] transition-colors leading-snug">
+              <h2 className="mt-3 text-lg font-bold text-white group-hover:text-[#C8F169] transition-colors leading-snug">
                 {p.title}
-              </h3>
+              </h2>
               <p className="mt-2 text-sm text-zinc-400 line-clamp-2">{p.excerpt}</p>
               <div className="mt-4 text-xs text-[#C8F169] inline-flex items-center gap-1">
                 Read article <ArrowRight size={12} />
