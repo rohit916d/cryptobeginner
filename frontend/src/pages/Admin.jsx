@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { api } from "../lib/api";
 import { useSEO } from "../lib/seo";
-import { Mail, FileText, LogOut, Lock, Loader2, PenSquare, Trash2, ExternalLink, CheckCircle2 } from "lucide-react";
+import { Mail, FileText, LogOut, Lock, Loader2, PenSquare, Trash2, ExternalLink, CheckCircle2, ImageUp } from "lucide-react";
 
 const TOKEN_KEY = "cb_admin_token";
 
@@ -160,8 +160,31 @@ function WritePostTab({ token, onPublished }) {
   const [form, setForm] = useState(empty);
   const [status, setStatus] = useState("idle"); // idle | saving | done | error
   const [error, setError] = useState("");
+  const [uploading, setUploading] = useState(false);
+  const [uploadError, setUploadError] = useState("");
 
   const set = (k) => (e) => setForm({ ...form, [k]: e.target.value });
+
+  const handleFileSelect = async (e) => {
+    const file = e.target.files?.[0];
+    e.target.value = ""; // allow re-selecting the same file later
+    if (!file) return;
+
+    setUploadError("");
+    setUploading(true);
+    try {
+      const fd = new FormData();
+      fd.append("file", file);
+      const res = await api.post("/admin/upload-image", fd, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      setForm((f) => ({ ...f, cover_image: res.data.url }));
+    } catch (err) {
+      setUploadError(err?.response?.data?.detail || "Upload failed. Try a smaller image or a different format.");
+    } finally {
+      setUploading(false);
+    }
+  };
 
   const submit = async (e) => {
     e.preventDefault();
@@ -240,13 +263,35 @@ function WritePostTab({ token, onPublished }) {
       </div>
 
       <div>
-        <label className="label-eyebrow block mb-1.5">Cover image URL (optional — a relevant stock photo is used if left blank)</label>
-        <input
-          value={form.cover_image}
-          onChange={set("cover_image")}
-          placeholder="https://..."
-          className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5 text-white outline-none focus:border-[#C8F169]/40"
-        />
+        <label className="label-eyebrow block mb-1.5">Cover image (optional — a relevant stock photo is used if left blank)</label>
+        <div className="flex gap-2">
+          <input
+            value={form.cover_image}
+            onChange={set("cover_image")}
+            placeholder="https://... or upload a file"
+            className="flex-1 bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5 text-white outline-none focus:border-[#C8F169]/40"
+          />
+          <label className="shrink-0 inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-white/10 text-sm text-zinc-300 hover:text-white hover:border-white/25 cursor-pointer transition-colors">
+            {uploading ? <Loader2 size={15} className="animate-spin" /> : <ImageUp size={15} />}
+            {uploading ? "Uploading..." : "Upload"}
+            <input
+              type="file"
+              accept="image/jpeg,image/png,image/webp,image/gif"
+              className="hidden"
+              onChange={handleFileSelect}
+              disabled={uploading}
+            />
+          </label>
+        </div>
+        {uploadError && <p className="text-xs text-rose-400 mt-1.5">{uploadError}</p>}
+        {form.cover_image && (
+          <img
+            src={form.cover_image}
+            alt="Cover preview"
+            className="mt-3 h-32 w-full max-w-xs object-cover rounded-lg border border-white/10"
+            onError={(e) => { e.currentTarget.style.display = "none"; }}
+          />
+        )}
       </div>
 
       <div>

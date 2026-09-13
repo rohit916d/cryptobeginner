@@ -1,4 +1,4 @@
-from fastapi import FastAPI, APIRouter, HTTPException, Response, Request
+from fastapi import FastAPI, APIRouter, HTTPException, Response, Request, UploadFile, File
 from fastapi.responses import PlainTextResponse
 from starlette.middleware.cors import CORSMiddleware
 
@@ -1864,6 +1864,55 @@ async def admin_list_blog(request: Request):
     require_admin(request)
     posts = await db.blog.find({}, {"_id": 0, "content": 0}).sort("created_at", -1).to_list(300)
     return {"data": posts}
+
+
+# ----------------------------------------------------
+# IMAGE UPLOAD — lets the admin panel upload a cover image directly
+# instead of needing an external image host. Stored as base64 in Mongo
+# (fine at this scale) and served back through /api/images/{id}.
+# ----------------------------------------------------
+
+MAX_UPLOAD_BYTES = 5 * 1024 * 1024  # 5MB
+ALLOWED_IMAGE_TYPES = {"image/jpeg", "image/png", "image/webp", "image/gif"}
+
+
+@api_router.post("/admin/upload-image")
+async def upload_image(request: Request, file: UploadFile = File(...)):
+    require_admin(request)
+    await rate_limit(request, "upload_image", max_requests=20, window_seconds=3600)
+
+    if file.content_type not in ALLOWED_IMAGE_TYPES:
+        raise HTTPException(status_code=400, detail="Only JPEG, PNG, WEBP or GIF images are allowed")
+
+    data = await file.read()
+    if len(data) > MAX_UPLOAD_BYTES:
+        raise HTTPException(status_code=400, detail="Image is too large (max 5MB)")
+    if len(data) == 0:
+        raise HTTPException(status_code=400, detail="Empty file")
+
+    image_id = str(uuid.uuid4())
+    await db.uploaded_images.insert_one({
+        "id": image_id,
+        "content_type": file.content_type,
+        "data": base64.b64encode(data).decode("ascii"),
+        "created_at": datetime.now(timezone.utc).isoformat(),
+    })
+
+    return {"url": f"/api/images/{image_id}"}
+
+
+@api_router.get("/images/{image_id}")
+async def get_image(image_id: str):
+    doc = await db.uploaded_images.find_one({"id": image_id})
+    if not doc:
+        raise HTTPException(status_code=404, detail="Image not found")
+
+    raw = base64.b64decode(doc["data"])
+    return Response(
+        content=raw,
+        media_type=doc.get("content_type", "image/jpeg"),
+        headers={"Cache-Control": "public, max-age=31536000, immutable"},
+    )
 
 
 @api_router.post("/admin/blog")
