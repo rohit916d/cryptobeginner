@@ -35,7 +35,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="label-eyebrow mb-3">Learn</h4>
+            <h3 className="label-eyebrow mb-3">Learn</h3>
             <ul className="space-y-2.5 text-sm text-zinc-400">
               <li><Link to="/learn" className="hover:text-[#C8F169] transition-colors inline-flex items-center gap-1 group">Learning Center <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" /></Link></li>
               <li><Link to="/dictionary" className="hover:text-[#C8F169] transition-colors">Crypto Dictionary</Link></li>
@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="label-eyebrow mb-3">Company</h4>
+            <h3 className="label-eyebrow mb-3">Company</h3>
             <ul className="space-y-2.5 text-sm text-zinc-400">
               <li><Link to="/about" className="hover:text-[#C8F169] transition-colors">About Us</Link></li>
               <li><Link to="/contact" className="hover:text-[#C8F169] transition-colors">Contact</Link></li>

@@ -94,6 +94,7 @@ function CryptoNews() {
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`Read full article: ${item.title}`}
                 className="inline-block mt-5 text-lime-300 hover:underline"
               >
                 Read Full News →

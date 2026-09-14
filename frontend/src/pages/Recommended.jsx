@@ -30,6 +30,7 @@ function PartnerCard({ item }) {
         target="_blank"
         rel="noopener noreferrer sponsored"
         data-testid={`partner-link-${item.id}`}
+        aria-label={`Get started with ${item.name}`}
         className="btn-secondary inline-flex items-center justify-center gap-2 mt-5 w-full"
       >
         Get Started <ExternalLink size={14} />
