@@ -108,7 +108,7 @@ export default function RealTrading() {
         </div>
       </div>
 
-      <p className="text-xs text-zinc-600 text-center mt-6 max-w-xl mx-auto leading-relaxed">
+      <p className="text-xs text-zinc-400 text-center mt-6 max-w-xl mx-auto leading-relaxed">
         This widget connects directly to your wallet and the blockchain. Crypto Beginner does not process,
         hold, or have access to your funds at any point, and cannot reverse a transaction once submitted.
       </p>

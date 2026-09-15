@@ -1,6 +1,6 @@
 export default function Sparkline({ data, width = 100, height = 32 }) {
   if (!data || data.length < 2) {
-    return <div style={{ width, height }} className="text-zinc-700 text-xs flex items-center justify-center">—</div>;
+    return <div style={{ width, height }} className="text-zinc-400 text-xs flex items-center justify-center">—</div>;
   }
 
   const min = Math.min(...data);

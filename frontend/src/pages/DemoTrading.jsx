@@ -136,13 +136,13 @@ export default function DemoTrading() {
             <Wallet size={16} className="text-[#C8F169]" />
           </div>
           <div className="mt-3 font-mono text-2xl font-bold text-white">
-            {loading ? <span className="text-zinc-700">····</span> : formatUSD(account?.cash_balance)}
+            {loading ? <span className="text-zinc-400">····</span> : formatUSD(account?.cash_balance)}
           </div>
         </div>
         <div className="card-base p-5">
           <div className="label-eyebrow">Holdings Value</div>
           <div className="mt-3 font-mono text-2xl font-bold text-white">
-            {loading ? <span className="text-zinc-700">····</span> : formatUSD(account?.holdings_value)}
+            {loading ? <span className="text-zinc-400">····</span> : formatUSD(account?.holdings_value)}
           </div>
           {!loading && account?.futures_open_count > 0 && (
             <div className="mt-1 text-xs text-zinc-500 font-mono">
@@ -153,7 +153,7 @@ export default function DemoTrading() {
         <div className="card-base p-5">
           <div className="label-eyebrow">Total Portfolio</div>
           <div className="mt-3 font-mono text-2xl font-bold text-white">
-            {loading ? <span className="text-zinc-700">····</span> : formatUSD(account?.total_value)}
+            {loading ? <span className="text-zinc-400">····</span> : formatUSD(account?.total_value)}
           </div>
           <div className="mt-1 text-xs text-zinc-500">Started at {formatUSD(account?.starting_balance ?? 100000)}</div>
         </div>
@@ -163,7 +163,7 @@ export default function DemoTrading() {
             {totalPnlUp ? <TrendingUp size={16} className="text-emerald-400" /> : <TrendingDown size={16} className="text-rose-400" />}
           </div>
           <div className={`mt-3 font-mono text-2xl font-bold ${totalPnlUp ? "text-emerald-400" : "text-rose-400"}`}>
-            {loading ? <span className="text-zinc-700">····</span> : formatUSD(account?.total_pnl)}
+            {loading ? <span className="text-zinc-400">····</span> : formatUSD(account?.total_pnl)}
           </div>
           {!loading && account && (
             <div className={`mt-1 text-xs font-mono ${totalPnlUp ? "text-emerald-400" : "text-rose-400"}`}>

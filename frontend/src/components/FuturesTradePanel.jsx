@@ -250,7 +250,7 @@ export default function FuturesTradePanel({ coin, cashBalance, onOpened, onPrevi
         {submitting && <Loader2 size={14} className="animate-spin" />}
         {submitting ? "Opening position..." : `Open ${leverage}x ${side === "long" ? "Long" : "Short"}`}
       </button>
-      <p className="text-[10px] text-zinc-600 text-center leading-relaxed">
+      <p className="text-[10px] text-zinc-400 text-center leading-relaxed">
         Virtual money only. Leverage magnifies gains <span className="italic">and</span> losses — you can lose your entire margin.
       </p>
     </form>

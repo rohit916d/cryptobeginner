@@ -92,7 +92,7 @@ export default function MarketStats() {
             <it.icon size={16} className="text-[#C8F169]" />
           </div>
           <div className="mt-4 font-mono text-2xl md:text-3xl font-bold text-white tracking-tight">
-            {loading && !it.value ? <span className="text-zinc-700">····</span> : it.value}
+            {loading && !it.value ? <span className="text-zinc-400">····</span> : it.value}
           </div>
           {it.sub && <div className={`mt-1 text-xs font-mono ${it.subColor}`}>{it.sub}</div>}
         </div>

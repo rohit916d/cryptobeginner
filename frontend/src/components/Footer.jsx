@@ -29,7 +29,7 @@ export default function Footer() {
               </span>
               @Cryptobegin_ner
             </a>
-            <p className="mt-6 text-xs text-zinc-600">
+            <p className="mt-6 text-xs text-zinc-400">
               © {new Date().getFullYear()} Crypto Beginner · cryptobeginner.in · Educational content only — not financial advice.
             </p>
           </div>

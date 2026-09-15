@@ -114,7 +114,7 @@ export default function MarketSearchModal({ onClose, onSelectCoin }) {
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search any crypto — Bitcoin, Dogecoin, Solana..."
             data-testid="market-search-input"
-            className="flex-1 bg-transparent outline-none text-sm text-white placeholder:text-zinc-600"
+            className="flex-1 bg-transparent outline-none text-sm text-white placeholder:text-zinc-400"
           />
           <button
             type="button"
@@ -152,7 +152,7 @@ export default function MarketSearchModal({ onClose, onSelectCoin }) {
         <div className="overflow-y-auto flex-1 min-h-[240px]">
           {showEmptyPrompt && (
             <div className="flex flex-col items-center justify-center h-full py-16 text-center px-6">
-              <Search size={28} className="text-zinc-700 mb-3" />
+              <Search size={28} className="text-zinc-400 mb-3" />
               <p className="text-sm text-zinc-500">Type a coin name, or pick a category above.</p>
             </div>
           )}
@@ -211,7 +211,7 @@ export default function MarketSearchModal({ onClose, onSelectCoin }) {
           )}
         </div>
 
-        <div className="px-5 py-2.5 text-[11px] text-zinc-600 border-t border-white/5">
+        <div className="px-5 py-2.5 text-[11px] text-zinc-400 border-t border-white/5">
           Data via CoinGecko · not investment advice · tap a coin for its live chart
         </div>
       </div>

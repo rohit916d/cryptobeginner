@@ -336,7 +336,7 @@ useEffect(() => {
         </div>
       )}
 
-      <div className="px-5 md:px-6 py-3 text-[11px] text-zinc-600 border-t border-white/5">
+      <div className="px-5 md:px-6 py-3 text-[11px] text-zinc-400 border-t border-white/5">
         Data via CoinGecko · auto-refresh every 60s · not investment advice · tap a row for live chart
       </div>
 

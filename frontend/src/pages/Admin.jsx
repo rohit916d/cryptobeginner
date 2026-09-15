@@ -44,7 +44,7 @@ function LoginForm({ onSuccess }) {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
-            className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder:text-zinc-600 focus:outline-none focus:border-[#C8F169]/40"
+            className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder:text-zinc-400 focus:outline-none focus:border-[#C8F169]/40"
           />
           {error && <p className="text-sm text-rose-400">{error}</p>}
           <button type="submit" disabled={loading} className="btn-primary w-full flex items-center justify-center gap-2">

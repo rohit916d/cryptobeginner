@@ -49,7 +49,7 @@ export default function AdSlot({ slot, format = "auto", className = "", label = 
 
   return (
     <div className={`w-full ${className}`}>
-      {label && <div className="text-[10px] uppercase tracking-wider text-zinc-600 mb-1.5 text-center">Advertisement</div>}
+      {label && <div className="text-[10px] uppercase tracking-wider text-zinc-400 mb-1.5 text-center">Advertisement</div>}
       <ins
         ref={insRef}
         className="adsbygoogle"

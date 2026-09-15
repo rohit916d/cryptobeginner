@@ -21,7 +21,7 @@ export default function CookiePolicy() {
       <div className="label-eyebrow">Legal</div>
       <h1 className="mt-3 text-4xl md:text-5xl font-normal text-white tracking-tight">Cookie Policy</h1>
       <p className="mt-4 text-zinc-400">How Crypto Beginner uses cookies and how you can control them.</p>
-      <p className="mt-2 text-xs text-zinc-600 font-mono">Last updated: February 2026</p>
+      <p className="mt-2 text-xs text-zinc-400 font-mono">Last updated: February 2026</p>
 
       <div className="mt-10 space-y-8">
         {COOKIE_SECTIONS.map(([h, p]) => (

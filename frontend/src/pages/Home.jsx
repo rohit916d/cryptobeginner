@@ -123,7 +123,7 @@ export default function Home() {
 
       {/* TOPIC MARQUEE */}
       <div className="relative border-y border-white/5 bg-white/[0.015] overflow-hidden py-3 mb-14">
-        <div className="marquee-track flex gap-10 whitespace-nowrap text-xs font-mono uppercase tracking-[0.2em] text-zinc-600">
+        <div className="marquee-track flex gap-10 whitespace-nowrap text-xs font-mono uppercase tracking-[0.2em] text-zinc-400">
           {[...Array(2)].flatMap((_, loopIdx) =>
             ["Bitcoin", "Blockchain", "Wallets", "DeFi", "Security", "Web3", "NFTs", "Staking", "Ethereum", "Exchanges"].map((t) => (
               <span key={`${loopIdx}-${t}`} className="flex items-center gap-2 shrink-0">
@@ -218,7 +218,7 @@ export default function Home() {
                   <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
                     <t.icon size={18} className="text-[#C8F169]" />
                   </div>
-                  <span className="font-mono text-xs text-zinc-600">{t.n}</span>
+                  <span className="font-mono text-xs text-zinc-400">{t.n}</span>
                 </div>
                 <h3 className="text-2xl font-bold text-white mt-4">{t.title}</h3>
                 <p className="text-sm text-zinc-400 mt-2 leading-relaxed">{t.desc}</p>

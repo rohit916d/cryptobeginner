@@ -336,7 +336,7 @@ export default function CoinChartModal({ coin, onClose }) {
                       {closingPosition && <Loader2 size={14} className="animate-spin" />}
                       {closingPosition ? "Closing..." : "Close Position"}
                     </button>
-                    <p className="text-[10px] text-zinc-600 text-center">
+                    <p className="text-[10px] text-zinc-400 text-center">
                       You already have an open {coin.symbol} position — close it to open a new one.
                     </p>
                   </div>
@@ -422,7 +422,7 @@ export default function CoinChartModal({ coin, onClose }) {
                 )}
                 {submitting ? "Placing trade..." : `${side === "buy" ? "Buy" : "Sell"} ${coin.symbol}`}
               </button>
-              <p className="text-[10px] text-zinc-600 text-center">Virtual money only — this is a practice trade.</p>
+              <p className="text-[10px] text-zinc-400 text-center">Virtual money only — this is a practice trade.</p>
             </form>
             )}
           </div>

@@ -121,7 +121,7 @@ export default function TradeModal({ initialCoin = null, onClose, onTraded, hold
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search a coin to trade..."
                 data-testid="trade-search-input"
-                className="flex-1 bg-transparent outline-none text-sm text-white placeholder:text-zinc-600"
+                className="flex-1 bg-transparent outline-none text-sm text-white placeholder:text-zinc-400"
               />
               {searching && <Loader2 size={14} className="animate-spin text-[#C8F169]" />}
             </div>
@@ -234,7 +234,7 @@ export default function TradeModal({ initialCoin = null, onClose, onTraded, hold
                 {submitting && <Loader2 size={14} className="animate-spin" />}
                 {submitting ? "Placing trade..." : `${side === "buy" ? "Buy" : "Sell"} ${coin.symbol}`}
               </button>
-              <p className="text-[10px] text-zinc-600 text-center mt-2">Virtual money only — this is a practice trade.</p>
+              <p className="text-[10px] text-zinc-400 text-center mt-2">Virtual money only — this is a practice trade.</p>
             </div>
           </form>
         )}

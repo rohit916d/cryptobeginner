@@ -86,7 +86,7 @@ export default function FuturesModal({ initialCoin = null, cashBalance, onClose,
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search a coin to trade..."
                 data-testid="futures-search-input"
-                className="flex-1 bg-transparent outline-none text-sm text-white placeholder:text-zinc-600"
+                className="flex-1 bg-transparent outline-none text-sm text-white placeholder:text-zinc-400"
               />
               {searching && <Loader2 size={14} className="animate-spin text-[#C8F169]" />}
             </div>

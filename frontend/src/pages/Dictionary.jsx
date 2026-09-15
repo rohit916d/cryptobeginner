@@ -62,7 +62,7 @@ export default function Dictionary() {
           value={q}
           onChange={(e) => setQ(e.target.value)}
           placeholder="Search terms or definitions…"
-          className="flex-1 bg-transparent outline-none text-white placeholder:text-zinc-600 py-2"
+          className="flex-1 bg-transparent outline-none text-white placeholder:text-zinc-400 py-2"
         />
         {q && (
           <button onClick={() => setQ("")} className="text-xs text-zinc-500 hover:text-white px-2">Clear</button>
@@ -88,7 +88,7 @@ export default function Dictionary() {
                   ? "bg-[#C8F169]/10 text-[#C8F169] border border-[#C8F169]/30"
                   : has
                   ? "bg-white/[0.03] text-zinc-300 border border-white/5 hover:text-white"
-                  : "bg-white/[0.01] text-zinc-700 cursor-not-allowed"
+                  : "bg-white/[0.01] text-zinc-400 cursor-not-allowed"
               }`}
             >{L}</button>
           );

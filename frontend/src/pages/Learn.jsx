@@ -112,7 +112,7 @@ export default function Learn() {
 
       {!loading && lessons.length === 0 && (
         <div className="mt-12 text-center text-zinc-500">
-          <BookOpen className="mx-auto mb-3 text-zinc-700" />
+          <BookOpen className="mx-auto mb-3 text-zinc-400" />
           No lessons available in this track yet.
         </div>
       )}
