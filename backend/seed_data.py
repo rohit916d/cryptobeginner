@@ -244,167 +244,223 @@ Exchange regulation varies significantly by country and continues to evolve. In 
         "title": "DeFi Basics",
         "level": "intermediate",
         "order": 1,
-        "read_time": 7,
+        "read_time": 8,
         "summary": "Decentralized Finance lets you lend, borrow, and trade without banks. Here's how it works.",
         "content": """## Banking without Banks
 
-**Decentralized Finance (DeFi)** is a stack of financial services built on public blockchains — primarily Ethereum. Instead of banks and brokers, smart contracts execute everything automatically.
+**Decentralized Finance**, commonly shortened to **DeFi**, is a broad stack of financial services built on public blockchains — most prominently Ethereum, though many other chains now host their own DeFi ecosystems. Instead of relying on banks, brokers, and clearinghouses to move money and enforce agreements, DeFi uses smart contracts: self-executing code that carries out financial logic automatically, transparently, and without asking anyone's permission.
 
-## What can you do in DeFi?
+## Why DeFi caught on
 
-- **Lend & earn interest** — Deposit crypto into protocols like Aave and earn yield.
-- **Borrow** — Use crypto as collateral to borrow other crypto.
-- **Swap** — Trade tokens instantly on DEXs like Uniswap.
-- **Provide liquidity** — Earn fees by adding tokens to liquidity pools.
-- **Yield farm** — Move funds across protocols hunting the best returns.
+Traditional finance often requires paperwork, credit checks, business hours, and geographic restrictions. DeFi flips this model: anyone with an internet connection and a crypto wallet can access lending markets, exchanges, and savings products instantly, at any hour, from anywhere in the world. Every rule is written directly into open-source code that anyone can inspect, rather than hidden inside a bank's internal policies.
+
+## What can you actually do in DeFi?
+
+- **Lend & earn interest** — Deposit crypto into lending protocols like Aave or Compound, and borrowers pay interest that gets distributed to depositors, similar to a savings account but without a bank in the middle.
+- **Borrow** — Put up crypto as collateral (usually worth more than the loan itself) to borrow other crypto, often used by traders who don't want to sell their long-term holdings.
+- **Swap tokens** — Trade one cryptocurrency for another instantly using decentralized exchanges like Uniswap, powered by automated market maker algorithms rather than traditional order books.
+- **Provide liquidity** — Deposit pairs of tokens into a liquidity pool so others can trade against them, earning a share of trading fees in return.
+- **Yield farm** — Actively move funds between different protocols chasing the highest available returns, often by combining lending, staking, and liquidity provision strategies.
+- **Use derivatives and insurance** — More advanced DeFi platforms now offer synthetic assets, options, and protocol-level insurance against smart-contract failure.
+
+## How lending and borrowing actually works
+
+Most DeFi lending is **overcollateralized**, meaning if you want to borrow $100 worth of a token, you typically need to deposit $150 or more worth of a different token as collateral. If the value of your collateral falls too close to the value of your loan, the protocol automatically liquidates part of your position to protect lenders — all without a human loan officer involved.
 
 ## The risks are real
 
-- **Smart-contract bugs** can drain entire pools in seconds.
-- **Impermanent loss** for liquidity providers when prices move.
-- **Rug pulls** — anonymous teams disappearing with funds.
-- **Liquidation cascades** during volatile market crashes.
+- **Smart-contract bugs** can be exploited by hackers to drain entire liquidity pools within minutes, and there have been losses reaching hundreds of millions of dollars from single incidents.
+- **Impermanent loss** affects liquidity providers when the price of the two tokens in a pool moves apart, sometimes leaving them with less value than if they had simply held the tokens.
+- **Rug pulls** occur when anonymous teams launch a token or protocol, attract deposits, and then disappear with the funds.
+- **Liquidation cascades** can happen during sharp market crashes, where falling collateral values trigger a wave of automatic liquidations that push prices down even further.
+- **Regulatory uncertainty** — many governments are still figuring out how to classify and regulate DeFi activity, which could affect access or taxation in the future.
 
 ## A beginner's mindset
 
-Start with audited blue-chip protocols (Aave, Uniswap, Lido). Use small amounts. Read the docs. Never deposit life-savings.""",
+If you're curious about DeFi, start by researching well-established, audited protocols with a long track record, such as Aave, Uniswap, or Lido, rather than brand-new projects promising unusually high returns. Use only small amounts you're comfortable losing while you learn how transactions, gas fees, and wallet approvals work. Read the protocol's documentation, understand exactly what you're signing before approving any transaction, and never deposit funds you can't afford to lose completely — DeFi has no customer support line and no deposit insurance.""",
     },
     {
         "slug": "staking",
         "title": "Staking",
         "level": "intermediate",
         "order": 2,
-        "read_time": 5,
+        "read_time": 7,
         "summary": "Staking lets you earn rewards by helping secure a blockchain. Here's how it actually works.",
         "content": """## Earning by Helping Secure the Network
 
-**Staking** is the process of locking up cryptocurrency to help validate transactions on a Proof-of-Stake (PoS) blockchain. In return, you earn rewards — similar to interest on a savings account.
+**Staking** is the process of locking up cryptocurrency to help validate transactions and secure a blockchain that uses a Proof-of-Stake (PoS) consensus mechanism. In return for committing your tokens and helping keep the network honest, you earn rewards — a process often compared to earning interest on a savings account, though the underlying mechanics and risks are quite different.
 
-## How it works
+## Why Proof-of-Stake exists
 
-1. You lock (stake) tokens through a validator.
-2. The blockchain randomly selects validators to confirm new blocks.
-3. Validators earn token rewards, which they share with stakers.
+Older blockchains like Bitcoin use Proof-of-Work, where miners compete using massive amounts of computing power and electricity to add new blocks. Proof-of-Stake was designed as a more energy-efficient alternative: instead of burning electricity, validators put their own money at risk by staking tokens. If they act honestly, they earn rewards. If they try to cheat the network, they can lose part of their staked tokens — an economic incentive to behave correctly.
+
+## How staking actually works
+
+1. You lock (stake) your tokens, either by running your own validator node or by delegating your tokens to an existing validator.
+2. The blockchain protocol randomly selects validators, often weighted by how much they have staked, to propose and confirm new blocks.
+3. Validators earn newly issued tokens and/or transaction fees as a reward for their work.
+4. If you delegated your tokens to a validator rather than running your own, that validator shares a portion of the rewards with you, usually keeping a small commission.
+
+## Running a validator vs. delegating
+
+Running your own validator node typically requires a minimum amount of tokens (32 ETH for Ethereum, for example), technical setup, and reliable uptime — if your node goes offline too often, you can be penalized. Most everyday users instead delegate their tokens to a professional validator or use a liquid staking service, which handles the technical complexity in exchange for a small fee.
 
 ## Popular networks that support staking
 
-- Ethereum (ETH)
-- Solana (SOL)
-- Cardano (ADA)
-- Polkadot (DOT)
+- **Ethereum (ETH)** — Moved fully to Proof-of-Stake in 2022 during "The Merge."
+- **Solana (SOL)** — Known for very fast block times and low staking barriers.
+- **Cardano (ADA)** — Uses a staking model with no minimum lock-up requirement in many wallets.
+- **Polkadot (DOT)** — Uses "nominated proof of stake," where token holders nominate trusted validators.
 
-## Risks to know
+## Liquid staking: staking without losing flexibility
 
-- **Lock-up periods**: Funds may be locked for days or weeks.
-- **Slashing**: Misbehaving validators get penalized — and so do their stakers.
-- **Smart-contract risk** with liquid-staking protocols.
-- **Token price volatility** can wipe out your rewards.
+Traditional staking can lock your tokens for a period, making them unavailable for trading or other uses. Liquid staking protocols like Lido solve this by giving you a separate token representing your staked position, which you can trade, use as collateral in DeFi, or sell — while your original tokens continue earning staking rewards in the background.
+
+## Risks to know before you stake
+
+- **Lock-up periods**: Depending on the network, staked funds may be locked for anywhere from a few days to several weeks before you can withdraw them.
+- **Slashing**: If a validator misbehaves or has poor uptime, a portion of the staked tokens — including those delegated by other users — can be forfeited as a penalty.
+- **Smart-contract risk**: Liquid staking protocols and staking pools rely on smart contracts, which can contain bugs or be exploited.
+- **Token price volatility**: Even attractive staking yields can be wiped out if the underlying token's price falls sharply during the staking period.
+- **Validator selection matters**: Choosing an unreliable or dishonest validator can reduce your rewards or expose you to slashing risk.
 
 ## Educational note
 
-This is general information only — not investment advice.""",
+This page is general information only and not investment advice. Staking rewards, lock-up terms, and risks vary significantly between networks and providers, so always research the specific protocol carefully before committing funds.""",
     },
     {
         "slug": "smart-contracts",
         "title": "Smart Contracts",
         "level": "intermediate",
         "order": 3,
-        "read_time": 5,
+        "read_time": 7,
         "summary": "Smart contracts are self-executing agreements written in code. They power most of crypto.",
         "content": """## Agreements That Run Themselves
 
-A **smart contract** is code that lives on a blockchain. It automatically executes when specific conditions are met — no lawyers, no escrow, no middleman.
+A **smart contract** is a piece of code that lives permanently on a blockchain. It automatically executes its programmed logic when specific conditions are met — no lawyers, no escrow agent, no middleman required to enforce the agreement. Once deployed, a smart contract runs exactly as written, every single time, for anyone who interacts with it.
+
+## Where the idea came from
+
+The concept of a "smart contract" predates blockchain itself — computer scientist Nick Szabo described the idea in the 1990s as a way to embed contract terms directly into computer protocols. Blockchains like Ethereum, launched in 2015, made this idea practical for the first time by providing a decentralized computer that anyone could deploy code to, with the results enforced by thousands of independent network participants rather than one company's servers.
 
 ## A simple analogy
 
-Think of a vending machine. You put a coin in, press a button, and a snack falls out. The machine doesn't need a cashier. A smart contract is the same idea — but for money, ownership, and digital agreements.
+Think of a vending machine. You insert a coin, press a button, and a snack falls out automatically — no cashier required to complete the transaction. A smart contract works on the same principle, except instead of snacks it can automatically handle money, ownership records, voting, or almost any other digital agreement, as long as the conditions can be clearly defined in code.
 
-## What can smart contracts do?
+## What can smart contracts actually do?
 
-- Send tokens automatically when triggered.
-- Lock funds until a date or condition.
-- Distribute royalties to NFT creators forever.
-- Run entire decentralized exchanges.
+- **Send tokens automatically** when a specific trigger occurs, such as a payment being received or a deadline passing.
+- **Lock funds** until a certain date or condition is met, useful for savings plans, vesting schedules, or escrow arrangements.
+- **Distribute royalties** to NFT creators automatically and forever, every time their artwork is resold on a marketplace.
+- **Power entire decentralized exchanges**, automatically matching trades and calculating prices without a company running an order book.
+- **Run decentralized autonomous organizations (DAOs)**, where community votes are tallied and executed directly by code.
+- **Manage complex DeFi products** like lending pools, insurance protocols, and yield-generating vaults.
+
+## How a smart contract gets created and used
+
+A developer writes the contract's logic in a programming language such as Solidity (the most common language on Ethereum), tests it thoroughly, and then deploys it to the blockchain — a process that costs a network fee known as "gas." Once deployed, anyone can interact with the contract by sending it a transaction, and the results are recorded permanently and transparently on the blockchain for anyone to verify.
 
 ## Limitations and risks
 
-- **Bugs are forever** — once deployed, smart-contract code is usually permanent.
-- **Exploits can be catastrophic** — hundreds of millions have been lost to bugs.
-- **Oracle risk** — contracts rely on external data feeds, which can be manipulated.
+- **Bugs are often permanent** — once a smart contract is deployed, its code is usually extremely difficult or impossible to change, meaning any mistake in the original logic stays in place unless the developers built in an upgrade mechanism from the start.
+- **Exploits can be catastrophic** — because smart contracts frequently hold large amounts of money, security flaws have led to hundreds of millions of dollars in losses across the industry over the years.
+- **Oracle risk** — many smart contracts need real-world data (like a token's current price) to function. This data comes from services called oracles, and if an oracle is manipulated or fails, the smart contract can behave incorrectly.
+- **Gas costs** — every interaction with a smart contract requires paying a network fee, which can become expensive during periods of high network congestion.
+- **Legal uncertainty** — the enforceability of smart contracts under traditional law is still being worked out in many jurisdictions.
 
-## Where they run
+## Where smart contracts run
 
-Ethereum is the most common platform, but others (Solana, Avalanche, Polygon) also support smart contracts.""",
+Ethereum remains the most widely used platform for smart contracts and has the largest ecosystem of developers and audited protocols. Other blockchains, including Solana, Avalanche, Polygon, and BNB Chain, also support smart contracts, often with different trade-offs around speed, cost, and programming languages, giving developers a range of platforms to choose from depending on their needs.""",
     },
     {
         "slug": "nfts",
         "title": "NFTs",
         "level": "intermediate",
         "order": 4,
-        "read_time": 5,
+        "read_time": 7,
         "summary": "An NFT proves you own a unique digital item. They are more (and less) than memes about cartoon apes.",
         "content": """## Unique Digital Ownership
 
-An **NFT (Non-Fungible Token)** is a one-of-a-kind token on a blockchain. Unlike Bitcoin where every coin is identical, every NFT is unique — making it perfect for representing ownership of digital art, collectibles, music, in-game items, and even real-world assets.
+An **NFT**, short for **Non-Fungible Token**, is a one-of-a-kind token recorded on a blockchain. The word "fungible" means interchangeable — one rupee note is identical in value to any other rupee note, and one Bitcoin is identical to any other Bitcoin. NFTs are the opposite: each one is unique and cannot be exchanged on a one-to-one basis for another, which makes them useful for representing ownership of things that are inherently one-of-a-kind, such as digital art, collectibles, music, in-game items, and even certain real-world assets.
+
+## How NFTs relate to the underlying asset
+
+It's important to understand what an NFT actually contains. In most cases, the token itself stores a small amount of data on the blockchain — the owner's wallet address, a unique ID, and a link pointing to the actual media file, which is often stored elsewhere (on a service like IPFS or a regular web server) rather than directly on the blockchain due to storage costs. This means owning an NFT is really about owning a verifiable, blockchain-recorded claim of authenticity and provenance, not necessarily exclusive rights to view or copy the underlying image or file, which anyone can often still see online.
 
 ## What can NFTs represent?
 
-- Digital art and collectibles
-- Music albums and royalties
-- Domain names (e.g., `.eth`)
-- Tickets and memberships
-- In-game items
+- **Digital art and collectibles** — the most well-known use case, from generative art projects to single hand-crafted pieces.
+- **Music albums and royalties** — artists can sell NFTs tied to songs or albums, sometimes with built-in royalty payments on future resales.
+- **Domain names** — blockchain-based domains such as those ending in `.eth` are represented and traded as NFTs.
+- **Tickets and memberships** — event tickets or exclusive community access passes that are harder to counterfeit than paper tickets.
+- **In-game items** — weapons, skins, or land in blockchain-based games that players can genuinely own and trade outside the game itself.
+- **Real-world asset tokenization** — emerging experiments in representing real estate deeds or certificates through NFTs.
 
-## How they work
+## How NFTs are created and traded
 
-1. A creator "mints" an NFT through a smart contract.
-2. The smart contract stores: the owner's wallet address, the token's ID, and a link to the media.
-3. The NFT can be transferred or sold like any other token.
+1. A creator "mints" an NFT by deploying or interacting with a smart contract, which generates a new unique token and records the creator as its first owner.
+2. The smart contract permanently stores key details: the current owner's wallet address, the token's unique identifier, and a reference to the associated media or metadata.
+3. The NFT can then be listed for sale, auctioned, or transferred on marketplaces such as OpenSea or Blur, with the blockchain recording every change of ownership.
+4. Many NFT smart contracts include a royalty mechanism, automatically paying the original creator a percentage every time the NFT is resold.
 
-## The honest reality
+## The honest reality of the NFT market
 
-NFT prices crashed massively after 2022. Many projects were pure speculation. The technology, however, remains genuinely useful for proving digital ownership.
+NFT trading volumes and prices grew explosively during 2021, driven partly by genuine interest in digital art and partly by intense speculation. Prices for most collections crashed significantly after 2022, and many projects that promised roadmaps, utility, or long-term value turned out to be low-effort speculation or outright scams. That said, the underlying technology remains genuinely useful for proving digital ownership and provenance, and serious use cases in ticketing, gaming, and digital identity continue to develop even as speculative trading has cooled considerably.
+
+## Things to watch out for
+
+- **Wash trading** — some reported sales volumes are artificially inflated by traders selling NFTs to themselves.
+- **Copyright confusion** — buying an NFT of an image does not automatically grant you copyright over that image unless explicitly stated in the terms.
+- **Rug pulls** — anonymous project teams sometimes abandon a collection after the initial sale, leaving buyers with worthless tokens.
+- **Platform risk** — marketplaces can change their fee structures, royalty enforcement, or even shut down.
 
 ## Educational reminder
 
-Never buy NFTs (or anything) because of FOMO. Treat them as collectibles, not investments.""",
+Never buy NFTs, or any digital asset, purely because of fear of missing out (FOMO). Treat them as speculative collectibles rather than guaranteed investments, and only spend what you would be comfortable losing entirely.""",
     },
     {
         "slug": "layer-1-vs-layer-2",
         "title": "Layer 1 vs Layer 2",
         "level": "intermediate",
         "order": 5,
-        "read_time": 5,
+        "read_time": 7,
         "summary": "L1 is the main blockchain. L2 sits on top to make it faster and cheaper. Here's why both matter.",
         "content": """## Two Layers, One Goal: Scale
 
-As blockchains grew popular, they got slow and expensive. The community responded with a layered design.
+As blockchains grew popular, a fundamental problem became obvious: the more people who wanted to use a network, the slower and more expensive it became. A blockchain that can only process a handful of transactions per second simply cannot support millions of everyday users the way traditional payment networks can. The community responded with a layered design that splits work between a highly secure base layer and faster, cheaper layers built on top of it.
 
 ## Layer 1 (L1) — The Base
 
-The main blockchain. It handles security, consensus, and final settlement.
+A Layer 1 is the main, foundational blockchain itself. It handles the most critical jobs: security, consensus among participants, and final settlement of transactions. Everything that happens on layers built on top of it ultimately depends on the L1 for its guarantees of safety and permanence.
 
 **Examples:** Bitcoin, Ethereum, Solana, Avalanche.
 
-**Strengths:** Maximum security and decentralization.
-**Weakness:** Slower and more expensive at scale.
+**Strengths:** Maximum security and decentralization, since these networks are secured by large numbers of independent validators or miners spread around the world.
+**Weakness:** Processing transactions directly on an L1 tends to be slower and, during busy periods, considerably more expensive, since every single node on the network must process and store every transaction.
 
 ## Layer 2 (L2) — The Highway
 
-Built on top of an L1, bundling many transactions together and posting summaries back to the L1.
+A Layer 2 is a separate system built on top of an L1 that handles transactions faster and cheaper, while still relying on the underlying L1 for final security. Most L2s work by bundling together large batches of transactions off the main chain and then posting a compressed summary (or cryptographic proof) back to the L1, inheriting much of its security without repeating all of its work.
 
-**Examples:** Arbitrum, Optimism, Base, Polygon zkEVM (all on Ethereum); Lightning Network (on Bitcoin).
+**Examples:** Arbitrum, Optimism, Base, and Polygon zkEVM (all built on Ethereum); the Lightning Network (built on Bitcoin).
 
-**Strengths:** Much faster, much cheaper.
-**Weakness:** Slightly different security assumptions; requires bridging.
+**Strengths:** Much faster transaction speeds and dramatically lower fees, often a fraction of what the same transaction would cost directly on the L1.
+**Weakness:** Slightly different security assumptions depending on the specific L2 design, and users typically need to "bridge" assets between the L1 and L2, which introduces its own risks and occasional delays.
+
+## The main types of Layer 2 technology
+
+- **Optimistic rollups** (used by Arbitrum and Optimism) assume transactions are valid by default and only run a full check if someone challenges them within a set time window, which is why withdrawals back to the L1 can take about a week.
+- **Zero-knowledge (ZK) rollups** (used by zkSync and Polygon zkEVM) generate a cryptographic proof that a batch of transactions is valid, allowing much faster withdrawals since the proof itself guarantees correctness.
+- **State channels** (like Bitcoin's Lightning Network) let two parties transact rapidly and privately between themselves, only settling the final balance on the main chain when the channel closes.
+- **Sidechains** are separate blockchains that run in parallel to an L1 with their own security model, connected via a bridge, offering high speed but generally weaker security guarantees than rollups.
 
 ## A simple analogy
 
-L1 is the highway authority — slow but extremely reliable. L2s are bus services running on top — fast and cheap, but they ultimately depend on the highway being there.
+Think of the Layer 1 as the highway authority: slow to build new roads and expensive to maintain, but extremely reliable and trusted by everyone. Layer 2s are like bus and metro services running on top of that highway system — fast, cheap, and convenient for daily use, but ultimately dependent on the highway infrastructure being there and secure underneath them.
 
 ## Why beginners should care
 
-Most modern crypto apps run on L2s today. Knowing the difference helps you avoid paying $50 in gas fees when you could pay $0.10.""",
+Most modern crypto applications, from DeFi platforms to NFT marketplaces, now run primarily on Layer 2 networks rather than directly on Ethereum's base layer. Understanding the difference helps you avoid unnecessarily paying $30–$50 in gas fees for a transaction that could cost a fraction of a rupee on an L2, and it also helps you understand why an app might ask you to "bridge" your funds before you can start using it.""",
     },
     # ============== SECURITY ==============
     {
