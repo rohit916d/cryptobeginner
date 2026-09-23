@@ -468,175 +468,216 @@ Most modern crypto applications, from DeFi platforms to NFT marketplaces, now ru
         "title": "Crypto Scams",
         "level": "security",
         "order": 1,
-        "read_time": 6,
+        "read_time": 7,
         "summary": "Scammers love crypto's irreversibility. Here are the top scam patterns and how to avoid them.",
         "content": """## Crypto Transactions are Final
 
-In crypto, there is no "chargeback." If you send funds to a scammer, they're gone. This is why scams thrive — and why you need to know the patterns.
+In traditional banking, if you get scammed, you can often call your bank and request a chargeback. In crypto, there is no such safety net. Once a transaction is confirmed on the blockchain, it is permanent and irreversible — there is no customer service line to call, no fraud department to dispute the charge, and no way to claw the funds back. This finality is exactly why crypto has become such a magnet for scammers, and why understanding common scam patterns is one of the most valuable skills you can build before putting real money into this space.
 
-## Top scam patterns
+## Top scam patterns to recognize
 
 ### 1. Giveaway scams
-"Send 1 ETH, get 2 ETH back!" — celebrity impersonator on Twitter/X. **Always fake.**
+A fake celebrity or company account on social media posts something like "Send 1 ETH to this address and receive 2 ETH back as part of our giveaway!" This is always fake, no matter how convincing the profile picture, verified badge, or comment section (often filled with bots) may look. No legitimate giveaway ever requires you to send crypto first.
 
-### 2. Romance / pig-butchering scams
-A stranger from a dating app slowly builds trust, then introduces you to a "great" trading platform. You "make profits" but can never withdraw.
+### 2. Romance and "pig-butchering" scams
+A stranger reaches out on a dating app or social media, builds a relationship over weeks or months, and eventually introduces you to a "great investment opportunity" — usually a fake trading platform they control. Early on, you may even be allowed to withdraw a small profit to build trust. Once you deposit a larger amount, withdrawals mysteriously stop working, and the scammer disappears.
 
-### 3. Fake support
-Someone on Discord or Telegram DMs you offering "help." They ask for your seed phrase or to "verify" via a malicious link.
+### 3. Fake support scams
+Someone messages you on Discord, Telegram, or Twitter/X claiming to be "support" for a wallet or exchange you use. They ask you to "verify your wallet" through a malicious link, or worse, ask directly for your seed phrase or private key. Legitimate support staff never need your seed phrase to help you.
 
 ### 4. Investment Ponzi schemes
-"Guaranteed 1% daily returns!" — Math doesn't lie. If it sounds too good to be true, it always is.
+Platforms promising "guaranteed 1% daily returns" or similarly unrealistic, fixed profits are almost always Ponzi schemes, where early investors are paid using money from newer investors rather than genuine trading profits. The scheme collapses once new deposits slow down, and most participants lose their money.
 
-### 5. Job offers
-Fake recruiters send you a "coding test" or "wallet test" file that drains your funds when opened.
+### 5. Fake job offers
+Scammers posing as recruiters offer high-paying remote crypto jobs, then send a "coding test," "wallet integration test," or software download that secretly contains malware designed to steal wallet credentials the moment it's opened.
 
-## Universal red flags
+### 6. Pump-and-dump schemes
+A group coordinates to buy a low-value token together, hype it aggressively on social media to attract outside buyers, and then sell off their holdings at the inflated price — leaving latecomers holding a token that quickly crashes back down.
 
-- Urgency ("act now or lose out")
-- Guaranteed returns
-- Anyone asking for your seed phrase
-- Unsolicited DMs
-- Links that look almost like the real domain
+## Universal red flags to watch for
+
+- Urgency or pressure ("act now or miss out forever")
+- Promises of guaranteed or unusually high returns
+- Anyone asking for your seed phrase or private key, under any circumstance
+- Unsolicited direct messages offering help, investment advice, or opportunities
+- Website links that look almost identical to a real domain but with a subtle misspelling
+- Requests to install unfamiliar software or browser extensions
+
+## What to do if you suspect a scam
+
+Stop all communication immediately, do not send any further funds, and never attempt to "recover" lost funds by paying an additional fee to someone who contacts you claiming they can help — this is itself a very common follow-up scam targeting people who already lost money once.
 
 ## Golden rule
 
-**Never share your seed phrase. No legitimate service will ever ask for it.**""",
+**Never share your seed phrase or private key with anyone, for any reason. No legitimate service, exchange, or support agent will ever need it to help you.** If you internalize this single rule, you will avoid the vast majority of crypto scams in existence today.""",
     },
     {
         "slug": "fake-airdrops",
         "title": "Fake Airdrops",
         "level": "security",
         "order": 2,
-        "read_time": 4,
+        "read_time": 7,
         "summary": "Airdrops can be legitimate — but most are bait. Learn how to spot the difference.",
         "content": """## What is an Airdrop?
 
-An **airdrop** is when a crypto project distributes free tokens to wallets — usually to bootstrap a community or reward early users.
+An **airdrop** is when a crypto project distributes free tokens directly to a large number of wallet addresses, usually as a way to bootstrap a community, reward early users of a protocol, or build awareness before a bigger launch. Legitimate airdrops have made some early users genuinely wealthy — for example, people who used Uniswap or Arbitrum before their token launches received substantial free token distributions simply for having interacted with the platform earlier. This history of real rewards is exactly what scammers exploit to make fake airdrops believable.
 
-## How scammers weaponize them
+## How scammers weaponize airdrops
 
-1. Tokens magically appear in your wallet.
-2. They have an "official" looking name and a website link.
-3. You visit the site and connect your wallet to "claim."
-4. The site requests a malicious signature — and drains your funds.
+1. Tokens with an official-sounding name suddenly and unexpectedly appear in your wallet, without you doing anything to receive them.
+2. The token often includes a website link in its name or description, appearing helpfully right inside your wallet app or a block explorer.
+3. Curious, you visit the linked site, which looks polished and professional, and it invites you to "claim" your free tokens by connecting your wallet.
+4. Once connected, the site requests you sign a transaction or message — but this signature isn't actually claiming anything. It's secretly authorizing the attacker's contract to drain tokens or NFTs from your wallet.
 
-## How to stay safe
+## Why this works so well
 
-- **Never interact with random tokens** in your wallet. Just ignore them.
-- **Use a burner wallet** for any airdrop you do want to claim.
-- **Verify the project** via two official sources (Twitter, Discord, CoinGecko) before connecting.
-- **Read every signature request carefully** — never blindly approve.
+The scam exploits curiosity and the fear of missing out. Most people have heard stories of others getting rich from a surprise airdrop, so finding free tokens sitting in their own wallet feels exciting rather than suspicious. Scammers also rely on the fact that most people don't carefully read what a wallet signature request actually authorizes before clicking "approve" or "sign."
 
-## Real vs. fake
+## How to stay safe from fake airdrops
 
-Real airdrops (Uniswap, Arbitrum, Optimism) are announced publicly, well in advance, with very clear official documentation. If you "discover" an airdrop nobody else is talking about, it's almost certainly a trap.""",
+- **Never interact with unexpected tokens** that appear in your wallet. Simply ignore them — you don't need to sell, transfer, or even acknowledge them for them to be harmless sitting there.
+- **Use a separate "burner" wallet** with little to no valuable assets if you do want to experiment with claiming airdrops, keeping your main holdings completely isolated from the risk.
+- **Verify the project through at least two independent official sources** — such as the project's verified Twitter/X account and their official Discord — before ever connecting your main wallet to a claim site.
+- **Read every signature request carefully.** Wallets like MetaMask show what permissions you're granting; if the request looks vague, overly broad, or unfamiliar, decline it.
+- **Never pay a "gas fee" or "unlock fee"** to claim a supposedly free airdrop — legitimate airdrops never require you to pay anything to receive free tokens, beyond the standard network fee for your own claim transaction, if any.
+
+## Real airdrops vs. fake ones
+
+Genuine, well-known airdrops are typically announced publicly and well in advance, through the project's official blog, verified social media accounts, and community channels, often with a detailed eligibility criteria page you can check without connecting a wallet. If you "discover" an airdrop that nobody else in your network or on official channels is discussing, and it just appeared out of nowhere in your wallet, treat it as a scam until proven otherwise.
+
+## What to do if you already connected your wallet to a suspicious site
+
+If you've already interacted with a fake airdrop site, immediately use a token approval checker tool such as Revoke.cash to review and revoke any permissions you may have unknowingly granted. Move any remaining valuable assets in that wallet to a fresh, uncompromised wallet as an extra precaution, since some malicious contracts can be designed to drain funds even after the initial interaction.""",
     },
     {
         "slug": "wallet-safety",
         "title": "Wallet Safety",
         "level": "security",
         "order": 3,
-        "read_time": 5,
+        "read_time": 7,
         "summary": "Securing your wallet is the #1 skill in crypto. Here's a beginner-friendly safety checklist.",
         "content": """## Your Wallet, Your Responsibility
 
-In crypto, you are your own bank. That's powerful — and dangerous. Most lost funds aren't due to hacks; they're due to user mistakes.
+In crypto, there's a saying that captures a fundamental shift in responsibility: you are your own bank. This is empowering — nobody can freeze your account or deny you a transaction — but it's also unforgiving, because there's no institution to bail you out if something goes wrong. Data from wallet security firms consistently shows that the majority of lost crypto funds aren't the result of sophisticated blockchain hacks; they come from simple, preventable user mistakes like weak backups, careless clicking, or falling for social engineering.
 
 ## The wallet safety checklist
 
-1. **Write down your seed phrase on paper** — never store digitally.
-2. **Use two physical backups** — fire-proof safes are ideal.
-3. **Buy a hardware wallet** for anything you can't afford to lose.
-4. **Verify download URLs** — fake MetaMask sites are everywhere.
-5. **Enable a wallet password / biometric lock**.
-6. **Use different wallets** for daily use vs. long-term holdings.
-7. **Never copy-paste addresses** without double-checking the first and last 4 characters.
-8. **Bookmark official dApp URLs** to avoid phishing.
+1. **Write down your seed phrase on paper, using a pen** — never store it as a screenshot, in a notes app, in a password manager's notes field, or anywhere connected to the internet.
+2. **Keep at least two physical backups** in separate locations, ideally protected from fire, flooding, or theft, such as a home safe and a trusted family member's house.
+3. **Buy a hardware wallet** for any amount of crypto you genuinely could not afford to lose. The one-time cost is trivial compared to the security it provides.
+4. **Always verify download URLs and app store listings** before installing wallet software — fake MetaMask and Trust Wallet apps and websites are a persistent and effective scam vector.
+5. **Enable a strong password and biometric lock** on your wallet app, in addition to your seed phrase backup.
+6. **Use separate wallets for different purposes** — a "hot" wallet with small amounts for daily use and experimentation, and a separate, more secure wallet for long-term holdings you rarely touch.
+7. **Never blindly copy-paste wallet addresses.** Malware exists that silently swaps a copied address for an attacker's address on your clipboard, so always double-check the first and last four characters match what you expect before sending.
+8. **Bookmark official dApp URLs directly** rather than searching for them each time, since fake sponsored search results impersonating popular apps are common.
 
-## Advanced (worth it)
+## Advanced protections worth considering
 
-- Use a **passphrase** (25th word) on your hardware wallet.
-- Use **multi-sig** wallets for very large holdings.
-- Run security check apps like **Revoke.cash** quarterly to revoke risky token approvals.
+- **A passphrase (sometimes called the "25th word")** adds an extra custom word on top of your standard seed phrase on hardware wallets, creating a hidden wallet that's useless to anyone who only has your base seed phrase.
+- **Multi-signature ("multi-sig") wallets** require approval from multiple separate keys or people before a transaction can go through, which is especially valuable for larger holdings, shared funds, or business treasuries.
+- **Periodic token approval audits** using a tool like Revoke.cash help you find and cancel old permissions you may have granted to dApps or contracts you no longer use or trust, closing a common attack surface.
+- **Consider wallet insurance or custody services** for very large holdings, where professional custodians offer institutional-grade security in exchange for a fee.
+
+## Building good habits early
+
+Security isn't a one-time setup — it's an ongoing set of habits. Get into the routine of pausing before every transaction to ask what exactly you're signing, resist urgency in any message asking you to act quickly, and treat any unsolicited contact about your wallet with default suspicion. The earlier in your crypto journey you build these habits, the less likely you are to make a costly mistake once your holdings grow.
 
 ## Final wisdom
 
-You won't lose your funds because someone "hacks" the blockchain. You'll lose them because you fell for one moment of inattention. Build careful habits early.""",
+You are far more likely to lose your funds to your own moment of carelessness — a copied address, a rushed click, a shared seed phrase — than to someone directly "hacking" a blockchain itself, which remains extraordinarily difficult on major networks. Treat your wallet with the same seriousness you would treat a safe full of cash, because in practice, that's exactly what it is.""",
     },
     {
         "slug": "phishing-attacks",
         "title": "Phishing Attacks",
         "level": "security",
         "order": 4,
-        "read_time": 5,
+        "read_time": 7,
         "summary": "Phishing is the #1 attack vector in crypto. Learn the tricks attackers use — and how to defeat them.",
         "content": """## Phishing: The Most Common Crypto Attack
 
-**Phishing** is when an attacker tricks you into giving up credentials or signing a malicious transaction. In crypto, one careless click can drain a wallet in seconds.
+**Phishing** is when an attacker tricks you into revealing sensitive information or approving a malicious transaction by pretending to be someone or something trustworthy. In traditional online life, phishing might cost you a password that can be reset. In crypto, phishing is far more dangerous: one careless click or one blind signature can drain a wallet completely and permanently within seconds, with no way to reverse the damage.
 
-## Common phishing vectors
+## Why crypto phishing is especially effective
 
-- **Email** — "Your Binance account is locked, click here."
-- **Search ads** — Fake MetaMask, fake Uniswap at the top of Google.
-- **Discord DMs** — "Mod" asking you to verify.
-- **Wallet pop-ups** — Look-alike sites asking to "reconnect."
-- **Twitter replies** — A bot impersonating support under a tweet.
+Crypto phishing often doesn't need to steal a password at all. Instead, it tricks you into personally signing a transaction that hands over control of your assets — technically, you approved it yourself, which makes it much harder to dispute or recover compared to a stolen credit card number. Attackers also benefit from the genuine complexity of the space; many newcomers don't fully understand what a wallet signature actually authorizes, making it easier to disguise a harmful request as a routine one.
+
+## Common phishing vectors to watch for
+
+- **Email** — Messages claiming "Your Binance account is locked, click here to verify" that link to a fake login page designed to steal your exchange credentials.
+- **Search engine ads** — Fake MetaMask, Uniswap, or wallet download pages appearing as the very first sponsored result on Google, sometimes ranking above the real official site.
+- **Discord and Telegram DMs** — Someone posing as a "moderator" or "admin" reaching out to help with a problem you posted about publicly, then asking you to verify your wallet through a link.
+- **Fake wallet pop-ups** — Look-alike websites that mimic a real dApp's "reconnect your wallet" prompt to capture a malicious signature.
+- **Twitter/X replies** — A bot account replying to a real company's support tweet, impersonating official support and offering to help.
+- **Fake browser extensions** — Malicious clones of popular wallet extensions listed in browser stores, designed to look identical to the real thing.
 
 ## Defenses that actually work
 
-1. **Bookmark official dApp URLs** — never use Google to find them.
-2. **Inspect every signature** in your wallet before signing.
-3. **Treat every DM as suspicious** — official support never DMs first.
-4. **Hover over links** before clicking to see the true URL.
-5. **Enable 2FA** (authenticator app, not SMS) on every exchange account.
-6. **Use a password manager** — it won't auto-fill on a fake domain.
+1. **Bookmark official dApp and exchange URLs directly** — never rely on searching for them each time, since search ads and even some search results can be compromised.
+2. **Inspect every signature request in your wallet** before approving it — modern wallets show what permissions or actions you're granting, and a vague or overly broad request is a red flag.
+3. **Treat every unsolicited direct message as suspicious**, no matter how official it looks. Legitimate support teams almost never initiate contact through DMs.
+4. **Hover over links before clicking** to check the actual destination URL, since displayed text can easily be made to look different from where a link actually leads.
+5. **Enable two-factor authentication (2FA)** using an authenticator app rather than SMS, since SIM-swapping attacks can intercept text-message codes.
+6. **Use a password manager** for exchange logins — a password manager will refuse to auto-fill your credentials on a fake domain, even one that looks visually identical to the real site.
+7. **Keep wallet software and browser extensions updated**, since developers frequently patch security vulnerabilities that attackers try to exploit.
 
-## A useful habit
+## Understanding what you're signing
 
-Before signing any wallet transaction, ask yourself: "What is this signature giving away?" If you don't know — don't sign.""",
+Wallet transactions generally fall into a few categories: sending funds directly, approving a smart contract to spend a specific token on your behalf, or signing an off-chain message. Attackers frequently disguise approval requests as something harmless, hoping you'll click through without reading. Before signing anything, pause and ask: What exactly is this authorizing? For how much? For how long? If the answer isn't completely clear, it's safer to decline and research further.
+
+## A useful habit to build
+
+Make it a personal rule that you never sign a wallet transaction while distracted, rushed, or under any sense of urgency created by the request itself. Attackers rely on speed and pressure to prevent careful thinking. Slowing down for even thirty extra seconds to actually read a transaction request is, in practice, one of the single most effective defenses against crypto phishing that exists.""",
     },
     {
         "slug": "seed-phrase-protection",
         "title": "Seed Phrase Protection",
         "level": "security",
         "order": 5,
-        "read_time": 5,
+        "read_time": 8,
         "summary": "Your seed phrase is the master key to your crypto. Protect it like your life depends on it.",
         "content": """## What is a Seed Phrase?
 
-A **seed phrase** (also called a recovery phrase or mnemonic) is a sequence of 12 or 24 random words. It's the master backup of your wallet — anyone with these words can recreate the wallet and steal everything.
+A **seed phrase**, also called a recovery phrase or mnemonic phrase, is a sequence of 12 or 24 randomly generated words that acts as the master backup for your entire crypto wallet. Behind the scenes, this phrase mathematically generates all of your wallet's private keys, meaning anyone who obtains these words can fully recreate your wallet on any device, anywhere in the world, and gain complete control over every asset inside it — with no password, PIN, or additional verification required.
+
+## Why the seed phrase matters more than anything else
+
+Every other security measure in crypto — passwords, biometric locks, two-factor authentication — protects access to an app or account. The seed phrase is fundamentally different: it protects the underlying assets themselves, independent of any app, company, or device. Even if your phone is destroyed, lost, or stolen, and even if the wallet company that made your app goes out of business entirely, your seed phrase alone is enough to fully recover your funds using any compatible wallet software.
 
 ## How to store a seed phrase safely
 
-### DO
-- Write it down on **paper** with a pen.
-- Keep **two copies** in separate physical locations.
-- Consider engraving it on **stainless steel** for fire/water resistance.
-- Use a **safe** or safety deposit box for very large holdings.
+### What you should do
+- Write it down on **physical paper** using a pen, immediately when your wallet is created.
+- Keep **at least two copies** stored in separate physical locations, so a single fire, flood, or theft can't wipe out your only backup.
+- Consider engraving your seed phrase onto a **stainless steel plate**, which is far more resistant to fire and water damage than paper over a long time horizon.
+- For very large holdings, consider a **bank safety deposit box** or a home safe rated for fire resistance.
+- Double-check every word is spelled correctly and in the exact order shown, since a single mistake can make the backup useless.
 
-### DO NOT
-- Take a screenshot.
-- Type it into Notes, Word, or any cloud document.
-- Email it or store it in Google Drive / iCloud.
-- Photograph it.
-- Share it with anyone — even "support."
+### What you should never do
+- Take a **screenshot** or photograph of your seed phrase with your phone.
+- Type it into a **Notes app, Word document, spreadsheet**, or any other digital file.
+- Email it to yourself, or store it in **cloud storage** like Google Drive, iCloud, or Dropbox.
+- Store it in a **password manager**, unless that specific manager is designed and audited for this exact purpose — most general password managers are not built for this.
+- Share it with **anyone**, including people claiming to be customer support, family members you haven't planned inheritance with carefully, or "helpful" strangers online.
 
-## Common ways people lose their seed phrase
+## Common ways people accidentally lose their seed phrase
 
-- Phone gets lost or stolen with the phrase in Notes.
-- Cloud backup gets hacked.
-- Spouse/partner sells the device without knowing.
-- A "support agent" in Discord asks for it.
-- An updated browser extension steals it via fake popup.
+- A phone is lost, stolen, or sold, and the seed phrase had been carelessly saved in the Notes app.
+- A personal cloud backup account is hacked, exposing a photo or document containing the phrase.
+- A family member or partner sells or gives away an old device without realizing it, or the paper backup itself, contains something valuable.
+- A scammer posing as "support" in a Discord or Telegram server convinces someone to type their seed phrase into a fake "wallet verification" website.
+- A malicious or compromised browser extension silently captures the phrase when it's typed or pasted during wallet setup.
 
-## A simple test
+## A simple test for your backup
 
-If you can't recover your wallet by re-installing the wallet app and typing in your seed — your backup isn't safe enough.
+A genuinely reliable backup should let you fully recover your wallet from scratch: uninstall your wallet app, reinstall it on a different device, and restore it using only your written seed phrase. If this process works smoothly and shows the correct balance, your backup is solid. If you're ever unsure whether your written copy is accurate or complete, test it in a low-stakes way before you rely on it for anything significant.
+
+## What to do if you suspect your seed phrase is compromised
+
+If there's any chance your seed phrase has been seen, photographed, or typed into an untrusted website, treat it as compromised immediately. Create a brand-new wallet with a fresh seed phrase, and transfer all of your assets to it as quickly as possible — waiting even a short time gives an attacker who has your phrase every opportunity to move your funds first.
 
 ## Final word
 
-Your seed phrase is the **only** thing standing between your crypto and a thief. Treat it with religious seriousness.""",
+Your seed phrase is the single point of failure that stands between your crypto holdings and anyone who might want to take them. Every other security precaution in this space is secondary to protecting these words. Treat them with the seriousness you would give the only key to a vault holding everything you own — because that is exactly what they are.""",
     },
 ]
 
