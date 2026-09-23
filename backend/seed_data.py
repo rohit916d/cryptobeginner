@@ -7,110 +7,148 @@ LESSONS = [
         "title": "What is Bitcoin?",
         "level": "beginner",
         "order": 1,
-        "read_time": 6,
+        "read_time": 8,
         "summary": "Bitcoin is the first decentralized digital currency. Learn what it is, how it works, and why it matters.",
         "content": """## A New Kind of Money
 
-Bitcoin is the world's first decentralized digital currency. It was created in 2009 by an anonymous person (or group) known as **Satoshi Nakamoto**. Unlike the rupees, dollars, or euros in your bank account, Bitcoin is not controlled by any government, bank, or company.
+Bitcoin is the world's first decentralized digital currency. It was created in 2009 by an anonymous person (or group) known as **Satoshi Nakamoto**, who published a nine-page white paper describing a system for electronic cash that needed no trusted third party. Unlike the rupees, dollars, or euros sitting in your bank account, Bitcoin is not issued or controlled by any government, central bank, or company. It exists purely as entries on a shared digital ledger that anyone in the world can verify.
 
 ## Why was Bitcoin invented?
 
-The 2008 global financial crisis exposed how fragile traditional banking is. Bitcoin was designed as an alternative: a form of money that does not need banks to function. No middlemen, no central authority, no censorship.
+The 2008 global financial crisis exposed how fragile traditional banking really is. Banks failed, governments printed money to bail them out, and millions of people watched their savings lose value or become temporarily inaccessible. Bitcoin was designed as a direct response: a form of money that does not depend on banks, cannot be printed at will by a central authority, and cannot be frozen or censored by a single institution. The very first block of the Bitcoin blockchain, mined in January 2009, contained a hidden message referencing a newspaper headline about bank bailouts — a quiet reminder of exactly the problem Bitcoin was trying to solve.
 
-## How does Bitcoin work?
+## How does Bitcoin actually work?
 
-Bitcoin lives on something called a **blockchain** — a public ledger that records every transaction ever made. Thousands of computers around the world keep a copy of this ledger and constantly verify it. This makes Bitcoin extremely difficult to hack or counterfeit.
+Bitcoin lives on something called a **blockchain** — a public ledger that records every single transaction ever made since 2009. Thousands of independent computers around the world, called nodes, each keep a full copy of this ledger and constantly check it against the rules of the network. This distributed structure makes Bitcoin extremely difficult to hack, alter, or shut down, because there is no single server or office that an attacker could target.
 
-When you send Bitcoin to someone:
-1. Your wallet creates a digital signature using your private key.
-2. The transaction is broadcast to the network.
-3. Miners bundle transactions into a block and add it to the blockchain.
-4. The recipient sees the Bitcoin in their wallet — usually within 10 minutes.
+When you send Bitcoin to someone, a fairly elegant process happens behind the scenes:
 
-## Key Properties
+1. Your wallet software creates a digital signature using your private key, proving that you — and only you — authorized the transfer.
+2. This signed transaction is broadcast out to the peer-to-peer network.
+3. Specialized computers called miners collect pending transactions, bundle them into a "block," and compete to add that block to the chain by solving a computational puzzle.
+4. Once the block is added, the transaction is considered confirmed, and the recipient typically sees the funds in their wallet within about ten minutes.
 
-- **Limited supply**: There will only ever be 21 million Bitcoin.
-- **Borderless**: Send it anywhere in the world, 24/7.
-- **Pseudonymous**: Transactions are public but tied to wallet addresses, not names.
-- **Volatile**: The price can swing significantly. Never invest more than you can afford to lose.
+## Key properties that make Bitcoin unique
+
+- **Limited supply**: The Bitcoin protocol guarantees that there will only ever be 21 million coins in existence. This hard cap is enforced by code, not by policy that can be changed on a whim.
+- **Borderless**: You can send Bitcoin to anyone, anywhere on the planet, at any hour of the day, without asking permission from a bank or government.
+- **Pseudonymous**: Every transaction is publicly visible on the blockchain, but it is tied to a wallet address rather than a real-world name, offering a layer of privacy.
+- **Volatile**: Bitcoin's price has historically swung by large percentages within short periods. It has gone through multiple boom-and-bust cycles, and past performance is never a guarantee of future results.
+- **Divisible**: A single Bitcoin can be split into 100 million smaller units called satoshis, so you don't need to buy a whole coin to participate.
+
+## Common misconceptions worth clearing up
+
+Many newcomers assume Bitcoin transactions are completely anonymous, but they are actually traceable on the public ledger by anyone with the right tools. Others assume mining is done on a home laptop; in reality, competitive mining today relies on specialized industrial hardware. It's also worth knowing that "buying Bitcoin" on most apps usually just gives you an IOU from that company unless you withdraw the coins to a wallet where you control the private keys yourself.
 
 ## Educational disclaimer
 
-This page is for education only. It is not financial advice. Always do your own research before interacting with any cryptocurrency.""",
+This page is for education only. It is not financial advice. Cryptocurrency markets carry significant risk, and prices can fall as quickly as they rise. Always do your own research, understand the technology, and never invest more than you can comfortably afford to lose.""",
     },
     {
         "slug": "what-is-blockchain",
         "title": "What is Blockchain?",
         "level": "beginner",
         "order": 2,
-        "read_time": 5,
+        "read_time": 7,
         "summary": "Blockchain is the engine that powers most cryptocurrencies. Here's how it really works, in plain English.",
         "content": """## Imagine a Shared Notebook
 
-A blockchain is a special kind of database — think of it as a notebook shared by millions of people around the world. Whenever someone writes a new page (a "block"), everyone updates their copy. Once a page is written, **it can never be erased or changed**.
+A blockchain is a special kind of database — think of it as a notebook shared simultaneously by millions of people around the world. Whenever someone writes a new page (called a "block"), everyone holding a copy of the notebook updates it at the same time. Once a page is written and accepted by the network, it becomes essentially permanent: it can never be secretly erased, edited, or rewritten by any single participant.
 
 ## Three properties that make blockchain special
 
-1. **Decentralized** — No single person, company, or government controls it.
-2. **Transparent** — Anyone can inspect every entry, ever.
-3. **Tamper-proof** — Each new block is cryptographically linked to the previous one, like a chain.
+1. **Decentralized** — No single person, company, or government owns or controls the notebook. Copies are spread across thousands of independent computers, so there is no central point of failure.
+2. **Transparent** — Anyone with an internet connection can inspect every entry ever recorded, going all the way back to the very first block. This openness is very different from a traditional bank ledger, which only the bank can see.
+3. **Tamper-proof** — Each new block contains a cryptographic fingerprint (called a hash) of the block before it. This links every block into a chain, so changing even a tiny detail in an old block would break the fingerprint of every block that comes after it — making tampering practically impossible without the entire network noticing.
+
+## How blocks actually get added
+
+Adding a new block isn't as simple as typing text into a notebook. Depending on the blockchain, a mechanism called a consensus algorithm decides who gets to add the next block and verifies that the transactions inside it are valid. Bitcoin uses Proof-of-Work, where computers compete by solving a mathematical puzzle. Many newer blockchains, including Ethereum since 2022, use Proof-of-Stake, where validators lock up coins as collateral instead of burning electricity. Either way, the goal is the same: make sure no single actor can rewrite history or spend the same coin twice.
 
 ## A practical example
 
-When you send Bitcoin to a friend, the transaction is recorded on the Bitcoin blockchain. Years later, anyone can still look up that transaction. But because addresses are pseudonymous, your real name is not attached.
+When you send Bitcoin to a friend, the transaction is broadcast to the network and eventually recorded permanently on the Bitcoin blockchain. Years later, anyone — a curious stranger, a journalist, or a regulator — can still look up that exact transaction using a block explorer website. However, because wallet addresses are pseudonymous strings of letters and numbers, your real name is not directly attached to the transaction unless you've linked your identity to that address somewhere else, such as on an exchange that requires ID verification.
 
-## Beyond money
+## Public vs. private blockchains
 
-Blockchain is not only used for cryptocurrency. It powers:
-- Decentralized apps (dApps)
-- NFTs and digital art
-- Supply-chain tracking
-- Identity verification
+Most of what people talk about — Bitcoin, Ethereum, Solana — are public blockchains: anyone can join, read the ledger, and submit transactions. There are also private or permissioned blockchains used by businesses and consortiums, where only approved participants can read or write data. These are popular for supply-chain tracking or interbank settlement, where full public transparency isn't desired but the tamper-resistant structure of a blockchain is still useful.
+
+## Beyond just money
+
+Blockchain technology is not limited to cryptocurrency. It also powers:
+
+- **Decentralized apps (dApps)** — software that runs on a blockchain instead of a single company's server.
+- **NFTs and digital art** — provable ownership records for unique digital items.
+- **Supply-chain tracking** — recording the journey of a product from factory to shelf so it can't be faked.
+- **Identity verification** — letting people prove credentials without relying on one central database.
+- **Voting systems** — experimental projects exploring tamper-resistant digital elections.
+
+## Trade-offs worth understanding
+
+Blockchains aren't free lunches. Because every node stores a full copy of the ledger and verifies every transaction, blockchains are generally slower and more resource-intensive than a traditional centralized database. This is often called the "blockchain trilemma" — the challenge of balancing decentralization, security, and speed all at once. Different blockchains make different trade-offs among these three goals.
 
 ## In one sentence
 
-A blockchain is a public, append-only ledger that lets people coordinate without trusting any central authority.""",
+A blockchain is a public, append-only ledger that lets people and machines coordinate and transact with one another without needing to trust any single central authority.""",
     },
     {
         "slug": "what-is-cryptocurrency",
         "title": "What is Cryptocurrency?",
         "level": "beginner",
         "order": 3,
-        "read_time": 5,
+        "read_time": 7,
         "summary": "Cryptocurrency is digital money secured by cryptography. Learn the basics and types.",
         "content": """## Money for the Internet Age
 
-Cryptocurrency is digital money that uses **cryptography** for security. It lives on a blockchain and can be sent peer-to-peer, anywhere in the world, without a bank.
+Cryptocurrency is digital money that uses **cryptography** — the mathematics of secure communication — to control the creation of new units and verify the transfer of funds. It lives on a blockchain and can be sent peer-to-peer, anywhere in the world, without needing a bank, a payment processor, or any other middleman to approve the transaction.
 
-## Common types
+## What makes something a "cryptocurrency"?
 
-- **Bitcoin (BTC)** — The original, most valuable cryptocurrency. Often called "digital gold."
-- **Ethereum (ETH)** — Programmable money. Powers smart contracts, DeFi and NFTs.
-- **Stablecoins (USDT, USDC)** — Pegged 1:1 with the US dollar to reduce volatility.
-- **Altcoins** — Any cryptocurrency other than Bitcoin (Solana, Cardano, etc.).
+At its core, a cryptocurrency is simply an entry in a distributed ledger, secured by cryptographic signatures. When you "own" cryptocurrency, what you actually own is a private key that lets you prove control over a certain balance recorded on that ledger. This is a fundamentally different model from a bank account, where the bank's internal database is the single source of truth and you are trusting them to maintain it honestly.
+
+## Common types of cryptocurrency
+
+- **Bitcoin (BTC)** — The original cryptocurrency, launched in 2009. Often referred to as "digital gold" because of its fixed supply and role as a long-term store of value for many holders.
+- **Ethereum (ETH)** — Much more than just a currency. Ethereum is a programmable blockchain that powers smart contracts, decentralized finance (DeFi) applications, and NFTs.
+- **Stablecoins (USDT, USDC, DAI)** — Tokens designed to hold a steady value, usually pegged 1:1 with the US dollar, making them useful for trading and payments without the wild price swings of other coins.
+- **Altcoins** — A catch-all term for any cryptocurrency other than Bitcoin, including projects like Solana, Cardano, Avalanche, and thousands of smaller tokens, each with different goals and technology.
+- **Utility and governance tokens** — Coins that grant holders specific rights within an application, such as voting on protocol changes or paying for services on a particular network.
+
+## How is new cryptocurrency created?
+
+Different networks use different methods. Bitcoin releases new coins to miners as a reward for successfully adding a block, a process that halves roughly every four years until the full 21 million supply is reached. Proof-of-Stake networks like Ethereum instead reward validators who lock up existing coins to help secure the network. Some tokens are also pre-minted entirely at launch and distributed through sales, airdrops, or team allocations rather than ongoing mining or staking.
 
 ## How do you store cryptocurrency?
 
-In a **wallet**. A wallet holds the secret keys that let you spend your coins. There are two main kinds:
-- **Hot wallets** — Connected to the internet. Convenient but riskier.
-- **Cold wallets** — Offline hardware devices. Slower to use but much safer.
+Cryptocurrency is stored in a **wallet**, which is really just software or hardware that manages the private keys proving your ownership of coins on the blockchain. There are two broad categories:
+
+- **Hot wallets** — Apps or browser extensions connected to the internet, such as mobile wallets. They are convenient for everyday use but more exposed to hacking attempts and malware.
+- **Cold wallets** — Physical hardware devices that keep your private keys completely offline. They are slower to use for frequent transactions but offer much stronger protection for larger holdings.
+
+## Why does cryptocurrency have value?
+
+This is one of the most debated questions in the space. Supporters point to scarcity, the cost and energy required to secure the network, growing real-world adoption, and the utility of programmable money for things like remittances or decentralized applications. Critics argue that much of the value is speculative and driven by market sentiment rather than underlying cash flows. As with any asset, price is ultimately determined by what buyers and sellers agree it's worth at a given moment.
 
 ## A reality check
 
-Crypto prices are highly volatile. Many projects fail. Scams are common. Treat this space as you would any high-risk emerging technology — with curiosity and caution.""",
+Crypto prices are highly volatile, and it is common for coins to lose 50% or more of their value within months. Many projects launched with big promises have failed or turned out to be outright scams. Regulation is still evolving in most countries, including India, so the legal and tax treatment of crypto can change. Treat this space the way you would any high-risk emerging technology — with genuine curiosity, careful research, and caution about how much of your money you put at risk.""",
     },
     {
         "slug": "what-is-a-wallet",
         "title": "What is a Wallet?",
         "level": "beginner",
         "order": 4,
-        "read_time": 5,
+        "read_time": 7,
         "summary": "A crypto wallet doesn't actually 'hold' your coins — it holds your keys. Here's what that means.",
         "content": """## Wallets Hold Keys, Not Coins
 
-This is the single most important idea: a crypto wallet does **not** store your coins. Your coins live on the blockchain. The wallet stores your **private keys** — the secret codes that prove you own those coins.
+This is the single most important idea to understand as a beginner: a crypto wallet does **not** actually store your coins inside it. Your coins always live on the blockchain, as entries in that shared public ledger. What the wallet really stores is your **private keys** — long, secret strings of characters that mathematically prove you have the right to spend the coins associated with a particular address.
 
-> If someone gets your private key, they get your money. Full stop.
+> If someone else gets your private key, they get complete control of your money. There is no password reset, no customer service line, and no way to reverse the damage. Full stop.
+
+## How a wallet actually works
+
+Every wallet is built around a key pair: a private key, which you must keep completely secret, and a public key (or address derived from it), which you can freely share with others so they can send you funds. When you want to make a transaction, your wallet software uses the private key to create a digital signature. The network checks that signature against your public address to confirm you are authorized to move those funds — all without your private key ever being revealed.
 
 ## Types of wallets
 
@@ -118,56 +156,87 @@ This is the single most important idea: a crypto wallet does **not** store your 
 |------|---------|----------|-------------|
 | Hot (mobile / browser) | MetaMask, Trust Wallet | Medium | High |
 | Cold (hardware) | Ledger, Trezor | Very High | Medium |
-| Custodial (exchange) | Binance, Coinbase | You don't own the keys | Highest |
+| Custodial (exchange) | Binance, Coinbase, WazirX | You don't own the keys | Highest |
+| Paper wallet | Printed keys/QR codes | High if stored well | Low |
+
+Hot wallets are apps installed on a phone or browser, always connected to the internet, which makes them convenient for daily transactions but somewhat more exposed to malware and phishing. Cold wallets are physical devices that generate and store your keys completely offline, signing transactions internally so your private key never touches an internet-connected computer. Custodial wallets, offered by exchanges, are the easiest to use because the company manages the keys on your behalf — but this also means you are trusting that company not to freeze your account, get hacked, or go bankrupt.
 
 ## Seed phrase: your master password
 
-When you create a wallet, you receive a **12 or 24-word seed phrase**. This is the master backup of your wallet. Whoever has it has complete control.
+When you create a non-custodial wallet, you are shown a **12 or 24-word seed phrase** (sometimes called a recovery phrase). This sequence of words is a human-readable backup of your private keys. Whoever possesses this phrase can restore your wallet on any device and gain full control over the funds inside it — no PIN or password required.
 
-**Golden rules:**
-- Write it down on paper. Never digital.
-- Never share it with anyone — not even support agents.
-- Store copies in two safe physical locations.
+**Golden rules for your seed phrase:**
+- Write it down on paper with a pen. Never store it digitally, in a screenshot, a notes app, or an email draft.
+- Never share it with anyone — not a friend, not a "support agent," not even a family member unless it's for inheritance planning with proper precautions.
+- Store copies in at least two separate, safe physical locations, ideally protected from fire and water damage.
+- Consider a metal backup plate for long-term holdings, since paper can degrade or burn.
 
-## Your first wallet
+## Custodial vs. non-custodial: know the difference
 
-For learning: a mobile wallet like Trust Wallet is fine.
-For holding meaningful value: invest in a hardware wallet.""",
+If you buy crypto on an exchange and simply leave it there, you have a custodial wallet — you're trusting the platform the way you trust a bank. If you move that crypto to a wallet where only you hold the seed phrase, you have a non-custodial wallet — full responsibility, and full control, rests with you. The popular saying in the crypto community, "not your keys, not your coins," captures this trade-off well.
+
+## Choosing your first wallet
+
+For learning purposes and small amounts, a reputable mobile wallet like Trust Wallet or MetaMask is perfectly fine to get comfortable with sending, receiving, and interacting with apps. Once you start holding an amount of value that would genuinely hurt to lose, it's worth investing in a hardware wallet. The extra step of physically confirming each transaction on a small screen adds a meaningful layer of protection against malware and remote attackers.""",
     },
     {
         "slug": "what-is-an-exchange",
         "title": "What is an Exchange?",
         "level": "beginner",
         "order": 5,
-        "read_time": 5,
+        "read_time": 7,
         "summary": "Exchanges are where you trade crypto. Understand centralized vs. decentralized and how to stay safe.",
         "content": """## The Marketplace of Crypto
 
-A crypto exchange is a platform where you can buy, sell, and trade cryptocurrencies. They come in two main flavors.
+A crypto exchange is a platform where you can buy, sell, and trade cryptocurrencies — either against traditional currency like rupees and dollars, or against other cryptocurrencies. Think of it as the meeting point between people who want to buy crypto and people who want to sell it, with the exchange providing the infrastructure, order matching, and (in most cases) custody of funds while you trade. Exchanges generally come in two main flavors, each with a very different philosophy.
 
 ## Centralized Exchanges (CEX)
 
-Operated by a company. You create an account, complete KYC (identity verification), deposit funds, and trade.
+A centralized exchange is operated by a company that manages the platform, matches buy and sell orders, and typically holds users' funds on their behalf. To use one, you usually create an account, complete KYC (Know Your Customer) identity verification by uploading a government ID, deposit funds through bank transfer or card, and then place trades.
 
-**Examples:** Binance, Coinbase, Kraken, WazirX.
+**Examples:** Binance, Coinbase, Kraken, WazirX, CoinDCX.
 
-**Pros:** Easy onboarding, high liquidity, fiat support.
-**Cons:** You don't truly own your coins — the exchange does. Hacks and bankruptcies (FTX, Mt. Gox) have caused massive losses.
+**Pros:**
+- Easy onboarding for beginners, with intuitive apps and customer support.
+- High liquidity, meaning large orders can usually be filled quickly at fair prices.
+- Direct support for depositing and withdrawing fiat currency like INR or USD.
+- Advanced trading tools such as limit orders, stop-losses, and charts.
+
+**Cons:**
+- You don't truly own your coins while they sit on the exchange — the exchange controls the private keys, not you.
+- Centralized exchanges are attractive targets for hackers, and history has several painful examples: the Mt. Gox collapse in 2014 and the FTX bankruptcy in 2022 both wiped out billions of dollars belonging to users who had left funds on the platform.
+- Accounts can be frozen or restricted based on the exchange's internal policies or regulatory pressure.
 
 ## Decentralized Exchanges (DEX)
 
-Smart contracts on a blockchain. You connect your wallet directly — no account, no KYC.
+A decentralized exchange runs entirely on smart contracts deployed on a blockchain, with no central company controlling user funds. Instead of creating an account, you connect your own wallet directly to the platform's website and trade straight from your wallet, with the smart contract handling the swap automatically.
 
-**Examples:** Uniswap, PancakeSwap, Curve.
+**Examples:** Uniswap, PancakeSwap, Curve, dYdX.
 
-**Pros:** You stay in control of your keys. Permissionless.
-**Cons:** Higher learning curve, smart-contract risk, no customer support.
+**Pros:**
+- You retain full control of your private keys and funds at all times — the exchange never takes custody.
+- Permissionless access: no account creation, no KYC, no geographic restrictions in most cases.
+- Transparent pricing and liquidity pools that anyone can inspect on-chain.
+
+**Cons:**
+- Steeper learning curve for beginners unfamiliar with wallets and gas fees.
+- Smart-contract risk — a bug or exploit in the underlying code can lead to loss of funds.
+- No customer support line to call if you make a mistake, such as sending funds to the wrong address.
+- Prices can be affected by "slippage" on low-liquidity token pairs.
+
+## How to choose between them
+
+Many experienced crypto users end up using both types of exchange for different purposes. A centralized exchange is often the easiest way to convert rupees or dollars into crypto for the first time, thanks to simple bank integrations and customer support. A decentralized exchange becomes more useful once you're already holding crypto in your own wallet and want to swap between tokens, access newer projects, or participate in DeFi without handing custody to a third party.
 
 ## Best practice
 
 > "Not your keys, not your coins."
 
-Use a CEX to buy and sell. Withdraw long-term holdings to a self-custody wallet you control.""",
+A widely repeated piece of wisdom in the crypto community is to use a centralized exchange primarily as an on-ramp and off-ramp — buying and selling crypto for regular money — while withdrawing anything you intend to hold for the medium or long term to a self-custody wallet that only you control. This limits your exposure if an exchange ever gets hacked, freezes withdrawals, or shuts down unexpectedly.
+
+## A note on regulation
+
+Exchange regulation varies significantly by country and continues to evolve. In India, for example, crypto exchanges are required to register with the Financial Intelligence Unit and comply with KYC and tax reporting rules. Always check the current regulatory status and reputation of any exchange before depositing significant funds, and never treat an exchange balance as equivalent to money sitting safely in an insured bank account.""",
     },
     # ============== INTERMEDIATE ==============
     {
