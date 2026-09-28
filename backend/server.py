@@ -66,7 +66,13 @@ NEWSDATA_API_KEY = os.getenv("NEWSDATA_API_KEY")
 CRON_SECRET = os.getenv("CRON_SECRET")
 ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD")
 
-client = AsyncIOMotorClient(MONGO_URL)
+client = AsyncIOMotorClient(
+    MONGO_URL,
+    serverSelectionTimeoutMS=8000,
+    connectTimeoutMS=8000,
+    socketTimeoutMS=15000,
+    maxPoolSize=20,
+)
 
 # ----------------------------------------------------
 # X (TWITTER) AUTO-POSTING
@@ -1585,10 +1591,18 @@ async def startup():
 
         # Sync repo-managed Markdown content (blog posts + lessons) and run
         # one-time migrations (e.g. duplicate-post cleanup). Idempotent.
+        # Runs in the background so a slow/hung DB can never block startup
+        # or take the API down; endpoints serve as soon as the app is up.
+        async def _background_sync():
+            try:
+                await sync_repo_content(db, logger)
+            except Exception as e:
+                logger.exception(f"Content sync failed: {e}")
+
         try:
-            await sync_repo_content(db, logger)
+            asyncio.create_task(_background_sync())
         except Exception as e:
-            logger.exception(f"Content sync failed: {e}")
+            logger.exception(f"Could not schedule content sync: {e}")
 
     except Exception as e:
 
