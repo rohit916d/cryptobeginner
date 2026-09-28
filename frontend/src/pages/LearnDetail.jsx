@@ -2,52 +2,12 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import DOMPurify from "dompurify";
 import { api } from "../lib/api";
-import { ArrowLeft, Clock, AlertTriangle } from "lucide-react";
+import { ArrowLeft, Clock, AlertTriangle, User, CalendarDays } from "lucide-react";
 import { useSEO, SITE_ORIGIN } from "../lib/seo";
+import { renderMarkdown, formatDate } from "../lib/markdown";
 import AdSlot, { AD_SLOTS } from "../components/AdSlot";
-
-function renderMarkdown(md) {
-  if (!md) return "";
-  let html = md
-    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-
-  // Tables
-  html = html.replace(/((?:^\|.*\|\s*\n)+)/gm, (block) => {
-    const lines = block.trim().split("\n");
-    if (lines.length < 2) return block;
-    const head = lines[0].split("|").slice(1, -1).map((s) => `<th>${s.trim()}</th>`).join("");
-    const rows = lines.slice(2).map((r) => {
-      const cells = r.split("|").slice(1, -1).map((c) => `<td>${c.trim()}</td>`).join("");
-      return `<tr>${cells}</tr>`;
-    }).join("");
-    return `<table><thead><tr>${head}</tr></thead><tbody>${rows}</tbody></table>`;
-  });
-
-  html = html
-    .replace(/^### (.+)$/gm, "<h3>$1</h3>")
-    .replace(/^## (.+)$/gm, "<h2>$1</h2>")
-    .replace(/^> (.+)$/gm, "<blockquote>$1</blockquote>")
-    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-    .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2">$1</a>');
-
-  // Lists
-  html = html.replace(/(?:^- .+\n?)+/gm, (m) => {
-    const items = m.trim().split("\n").map((l) => `<li>${l.replace(/^- /, "")}</li>`).join("");
-    return `<ul>${items}</ul>`;
-  });
-  html = html.replace(/(?:^\d+\. .+\n?)+/gm, (m) => {
-    const items = m.trim().split("\n").map((l) => `<li>${l.replace(/^\d+\. /, "")}</li>`).join("");
-    return `<ol>${items}</ol>`;
-  });
-
-  // Paragraphs
-  html = html.split(/\n{2,}/).map((blk) => {
-    if (/^<(h\d|ul|ol|blockquote|table)/.test(blk.trim())) return blk;
-    return `<p>${blk.replace(/\n/g, " ")}</p>`;
-  }).join("\n");
-
-  return html;
-}
+import AuthorBio from "../components/AuthorBio";
+import NewsletterSignup from "../components/NewsletterSignup";
 
 export default function LearnDetail() {
   const { slug } = useParams();
@@ -118,8 +78,14 @@ export default function LearnDetail() {
       <h1 className="mt-3 text-4xl md:text-5xl font-normal text-white tracking-tight leading-tight">
         {lesson.title}
       </h1>
-      <div className="mt-4 flex items-center gap-3 text-xs text-zinc-500 font-mono">
-        <Clock size={12} /> {lesson.read_time} min read
+      <div className="mt-4 flex flex-wrap items-center gap-3 text-xs text-zinc-500 font-mono">
+        <span className="inline-flex items-center gap-1"><Clock size={12} /> {lesson.read_time} min read</span>
+        {lesson.author && (
+          <span className="inline-flex items-center gap-1"><User size={12} /> {lesson.author}</span>
+        )}
+        {lesson.created_at && (
+          <span className="inline-flex items-center gap-1"><CalendarDays size={12} /> {formatDate(lesson.created_at)}</span>
+        )}
       </div>
 
       <div className="prose-amber mt-10" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(renderMarkdown(lesson.content)) }} />
@@ -144,6 +110,12 @@ export default function LearnDetail() {
           </div>
         </div>
       )}
+
+      <AuthorBio author={lesson.author} date={formatDate(lesson.created_at)} />
+
+      <div className="mt-8">
+        <NewsletterSignup compact />
+      </div>
 
       <div className="mt-12 card-base p-5 border border-lime-300/20 bg-lime-300/[0.03]">
         <div className="flex items-start gap-3">

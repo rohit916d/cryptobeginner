@@ -1,38 +1,17 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import DOMPurify from "dompurify";
 import { api } from "../lib/api";
-import { ArrowLeft, Clock, User } from "lucide-react";
+import { ArrowLeft, Clock, User, CalendarDays } from "lucide-react";
 import { useSEO, SITE_ORIGIN } from "../lib/seo";
+import { renderMarkdown, formatDate } from "../lib/markdown";
 import AdSlot, { AD_SLOTS } from "../components/AdSlot";
-
-// Reuse rendering logic
-function renderMarkdown(md) {
-  if (!md) return "";
-  let html = md.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-  html = html
-    .replace(/^### (.+)$/gm, "<h3>$1</h3>")
-    .replace(/^## (.+)$/gm, "<h2>$1</h2>")
-    .replace(/^> (.+)$/gm, "<blockquote>$1</blockquote>")
-    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-    .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2">$1</a>');
-  html = html.replace(/(?:^- .+\n?)+/gm, (m) => {
-    const items = m.trim().split("\n").map((l) => `<li>${l.replace(/^- /, "")}</li>`).join("");
-    return `<ul>${items}</ul>`;
-  });
-  html = html.replace(/(?:^\d+\. .+\n?)+/gm, (m) => {
-    const items = m.trim().split("\n").map((l) => `<li>${l.replace(/^\d+\. /, "")}</li>`).join("");
-    return `<ol>${items}</ol>`;
-  });
-  html = html.split(/\n{2,}/).map((blk) => {
-    if (/^<(h\d|ul|ol|blockquote|table)/.test(blk.trim())) return blk;
-    return `<p>${blk.replace(/\n/g, " ")}</p>`;
-  }).join("\n");
-  return html;
-}
+import AuthorBio from "../components/AuthorBio";
+import NewsletterSignup from "../components/NewsletterSignup";
 
 export default function BlogDetail() {
   const { slug } = useParams();
+  const navigate = useNavigate();
   const [post, setPost] = useState(null);
   const [notFound, setNotFound] = useState(false);
 
@@ -41,7 +20,16 @@ export default function BlogDetail() {
     setPost(null);
     setNotFound(false);
     api.get(`/blog/${slug}`)
-      .then((r) => { if (mounted) setPost(r.data); })
+      .then((r) => {
+        if (!mounted) return;
+        // API 301-redirects deleted duplicate slugs to the canonical post;
+        // keep the URL bar on the canonical slug too.
+        if (r.data?.slug && r.data.slug !== slug) {
+          navigate(`/blog/${r.data.slug}`, { replace: true });
+          return;
+        }
+        setPost(r.data);
+      })
       .catch(() => { if (mounted) setNotFound(true); });
     return () => { mounted = false; };
   }, [slug]);
@@ -100,9 +88,12 @@ export default function BlogDetail() {
       </Link>
       <div className="text-xs font-bold uppercase tracking-[0.15em] text-[#C8F169]">{post.category}</div>
       <h1 className="mt-3 text-4xl md:text-5xl font-normal text-white tracking-tight leading-tight">{post.title}</h1>
-      <div className="mt-4 flex items-center gap-4 text-xs text-zinc-500 font-mono">
+      <div className="mt-4 flex flex-wrap items-center gap-4 text-xs text-zinc-500 font-mono">
         <span className="inline-flex items-center gap-1"><Clock size={12} /> {post.read_time} min</span>
         <span className="inline-flex items-center gap-1"><User size={12} /> {post.author}</span>
+        {post.created_at && (
+          <span className="inline-flex items-center gap-1"><CalendarDays size={12} /> {formatDate(post.created_at)}</span>
+        )}
       </div>
 
       {post.cover_image && (
@@ -133,6 +124,12 @@ export default function BlogDetail() {
           </div>
         </div>
       )}
+
+      <AuthorBio author={post.author} date={formatDate(post.created_at)} />
+
+      <div className="mt-8">
+        <NewsletterSignup compact />
+      </div>
 
       <div className="mt-12 border-t border-white/5 pt-6 text-xs text-zinc-500">
         Educational content only — not financial advice. Always do your own research.

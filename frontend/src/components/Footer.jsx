@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import { X as XIcon, ArrowUpRight } from "lucide-react";
+import NewsletterSignup from "./NewsletterSignup";
 
 export default function Footer() {
   return (
     <footer data-testid="footer" className="relative mt-24 bg-[#0B0E14]">
       <div className="gold-divider" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div className="mb-10 max-w-md">
+          <NewsletterSignup compact />
+        </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-4 group w-fit">

@@ -1,5 +1,5 @@
 from fastapi import FastAPI, APIRouter, HTTPException, Response, Request, UploadFile, File
-from fastapi.responses import PlainTextResponse
+from fastapi.responses import PlainTextResponse, RedirectResponse
 from starlette.middleware.cors import CORSMiddleware
 
 from dotenv import load_dotenv
@@ -33,6 +33,7 @@ print("Google GenAI Version:", google.genai.__version__)
 
 from google import genai
 from seed_data import LESSONS, BLOG_POSTS, GLOSSARY
+from content_sync import sync_repo_content
 
 
 # ----------------------------------------------------
@@ -1358,6 +1359,19 @@ async def blog_detail(slug: str):
     )
 
     if not article:
+        # Fallback: a deleted numbered duplicate (e.g. "topic-2") redirects
+        # to its canonical base article instead of 404ing.
+        base = _base_slug(slug)
+        if base != slug:
+            canonical = await db.blog.find_one(
+                {"slug": base},
+                {"_id": 0, "slug": 1}
+            )
+            if canonical:
+                return RedirectResponse(
+                    url=f"/api/blog/{base}",
+                    status_code=301,
+                )
         raise HTTPException(404, "Article not found")
 
     return article
@@ -1366,6 +1380,32 @@ async def blog_detail(slug: str):
 # ----------------------------------------------------
 # CONTACT
 # ----------------------------------------------------
+
+class NewsletterSignup(BaseModel):
+
+    email: EmailStr
+
+
+@api_router.post("/newsletter")
+async def newsletter_signup(payload: NewsletterSignup, request: Request):
+    """Collect newsletter emails. Rate-limited; dedupes by email."""
+    await rate_limit(request, "newsletter", max_requests=5, window_seconds=3600)
+
+    email = payload.email.strip().lower()
+    existing = await db.newsletter.find_one({"email": email}, {"_id": 0, "email": 1})
+    if existing:
+        return {"ok": True, "already": True}
+
+    await db.newsletter.insert_one(
+        {
+            "id": str(uuid.uuid4()),
+            "email": email,
+            "created_at": datetime.now(timezone.utc).isoformat(),
+            "source": "site",
+        }
+    )
+    return {"ok": True}
+
 
 @api_router.post("/contact")
 async def contact(payload: ContactCreate, request: Request):
@@ -1523,6 +1563,13 @@ async def startup():
 
             logger.info(f"Seeded {len(GLOSSARY)} glossary terms")
 
+        # Sync repo-managed Markdown content (blog posts + lessons) and run
+        # one-time migrations (e.g. duplicate-post cleanup). Idempotent.
+        try:
+            await sync_repo_content(db, logger)
+        except Exception as e:
+            logger.exception(f"Content sync failed: {e}")
+
     except Exception as e:
 
         logger.exception(e)
@@ -1621,6 +1668,29 @@ def extract_json(raw: str) -> dict:
     return json.loads(match.group(0))
 
 
+# Local cover images per blog category (generated assets in frontend/public/covers).
+# Replaces the dead source.unsplash.com URLs that used to 404 on every post.
+CATEGORY_COVERS = {
+    "bitcoin": "/covers/bitcoin.jpg",
+    "blockchain": "/covers/blockchain.jpg",
+    "defi": "/covers/defi.jpg",
+    "wallets": "/covers/wallets.jpg",
+    "security": "/covers/security.jpg",
+    "nfts": "/covers/nfts.jpg",
+    "regulation": "/covers/regulation.jpg",
+    "trading basics": "/covers/trading-basics.jpg",
+}
+
+
+def cover_for_category(category: str) -> str:
+    return CATEGORY_COVERS.get((category or "").strip().lower(), "/covers/crypto.jpg")
+
+
+def _base_slug(slug: str) -> str:
+    """Strip a trailing -N dedup suffix so 'topic' and 'topic-2' share a base."""
+    return re.sub(r"-\d+$", "", slug)
+
+
 async def generate_blog_post():
     existing = await db.blog.find({}, {"_id": 0, "title": 1}).sort("created_at", -1).limit(40).to_list(40)
     existing_titles = [d["title"] for d in existing]
@@ -1643,7 +1713,7 @@ in exactly this shape:
   "category": "one of {BLOG_CATEGORIES}",
   "excerpt": "1-2 sentence summary, under 160 characters",
   "read_time": integer minutes (realistic, 4-9),
-  "content": "600-900 words in Markdown. Use ## headers to structure it. End with a short, natural call-to-action linking to /learn using markdown link syntax.",
+  "content": "900-1200 words in Markdown (this is REQUIRED — thin posts are rejected). Use ## headers to structure it: open with a hook, explain concepts with concrete examples, include a 'common mistakes' or step-by-step section where relevant, and add India-specific context (INR, Indian exchanges, crypto taxation) where natural. End with a short, natural call-to-action linking to /learn using markdown link syntax.",
   "faqs": [
     {{"question": "a real question a beginner would type into Google about this topic", "answer": "a clear, 1-3 sentence answer"}},
     {{"question": "a second distinct, realistic question", "answer": "a clear, 1-3 sentence answer"}},
@@ -1663,18 +1733,33 @@ in exactly this shape:
         if not data.get(field):
             raise ValueError(f"Missing field in generated post: {field}")
 
-    slug = await unique_slug(db.blog, slugify(data["title"]))
-    category_kw = re.sub(r"[^a-zA-Z]+", "-", data.get("category", "crypto")).lower()
+    base = _base_slug(slugify(data["title"]))
+    # Hard dedup: if this topic (or a numbered variant) already exists, skip
+    # instead of creating "topic-2" duplicates.
+    dup = await db.blog.find_one(
+        {"slug": {"$regex": f"^{re.escape(base)}(-\\d+)?$"}},
+        {"_id": 0, "slug": 1},
+    )
+    if dup:
+        raise ValueError(f"Duplicate topic skipped (already have: {dup['slug']})")
+
+    # Enforce minimum substance: reject thin generations outright.
+    word_count = len(data["content"].split())
+    if word_count < 700:
+        raise ValueError(f"Generated post too thin ({word_count} words), rejected")
+
+    slug = await unique_slug(db.blog, base)
+    category = data.get("category", "Bitcoin")
 
     post = {
         "id": str(uuid.uuid4()),
         "slug": slug,
         "title": data["title"],
-        "category": data.get("category", "Bitcoin"),
+        "category": category,
         "excerpt": data["excerpt"],
-        "cover_image": f"https://source.unsplash.com/1200x630/?{category_kw},crypto,finance",
-        "read_time": int(data.get("read_time", 5)),
-        "author": "Crypto Beginner AI",
+        "cover_image": cover_for_category(category),
+        "read_time": max(4, round(word_count / 200)),
+        "author": "Crypto Beginner Editorial Team",
         "content": data["content"],
         "faqs": data.get("faqs") if isinstance(data.get("faqs"), list) else [],
         "created_at": datetime.now(timezone.utc).isoformat(),
@@ -1715,7 +1800,7 @@ in exactly this shape:
   "title": "string, under 60 characters, e.g. 'What is a Seed Phrase?'",
   "summary": "1-2 sentence summary, under 160 characters",
   "read_time": integer minutes (realistic, 4-8),
-  "content": "500-800 words in Markdown, ## headers, written for someone with zero background, appropriate for the '{target_level}' level.",
+  "content": "800-1100 words in Markdown (REQUIRED — thin lessons are rejected). ## headers, written for someone with zero background, appropriate for the '{target_level}' level. Include concrete examples, a short recap, and India-specific context where natural.",
   "faqs": [
     {{"question": "a real question a beginner would type into Google about this topic", "answer": "a clear, 1-3 sentence answer"}},
     {{"question": "a second distinct, realistic question", "answer": "a clear, 1-3 sentence answer"}},
@@ -1734,6 +1819,9 @@ in exactly this shape:
     for field in ("title", "summary", "content"):
         if not data.get(field):
             raise ValueError(f"Missing field in generated lesson: {field}")
+
+    if len(data["content"].split()) < 600:
+        raise ValueError("Generated lesson too thin, rejected")
 
     slug = await unique_slug(db.lessons, slugify(data["title"]))
 

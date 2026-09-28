@@ -32,7 +32,7 @@ const CONTENT = {
       ["Not financial advice", "Nothing on Crypto Beginner is financial, investment, trading, tax, or legal advice. We are educators, not advisors."],
       ["High-risk asset class", "Cryptocurrencies are highly volatile and can lose value rapidly. Many projects fail. Many are scams. Never invest funds you cannot afford to lose entirely."],
       ["Do your own research", "Always do your own research (DYOR) and consult qualified professionals before making financial decisions."],
-      ["No endorsements", "Mention of any coin, exchange, wallet, or service is for illustration only and is not an endorsement or recommendation."],
+      ["No endorsements", "Mention of any coin, exchange, wallet, or service in our educational articles is for illustration only and is not an endorsement or recommendation. Our separate Recommendations page lists services we suggest based on our own criteria — those listings may include referral links, as disclosed on that page — but inclusion there is still not financial advice."],
       ["Third-party data", "Market data is provided by CoinGecko. We make no warranty about its accuracy or completeness."],
       ["Stay safe", "Never share your seed phrase, private keys, or passwords with anyone — including anyone claiming to represent Crypto Beginner."],
     ],
