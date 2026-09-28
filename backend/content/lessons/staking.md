@@ -3,11 +3,10 @@ title: Staking
 level: intermediate
 order: 2
 summary: Staking lets you earn rewards by helping secure a blockchain. Here's how it actually works.
-read_time: 5
+read_time: 6
 author: Crypto Beginner Editorial Team
 created_at: 2026-08-22T10:00:00+00:00
 ---
-
 In the mining lesson, you learned how Proof of Work secures networks through raw computing power. This lesson covers the alternative: **Proof of Stake**, where networks are secured by locked-up coins instead of electricity — and where anyone holding those coins can participate through **staking**.
 
 > **Educational note:** This lesson explains how staking works. It is general information only — not investment advice, and not a suggestion to stake anything.

@@ -2,7 +2,7 @@
 title: What is Crypto Gas? Network Fees Explained
 category: Blockchain
 excerpt: Sending crypto always costs a network fee called gas. Learn what gas is, why it exists, and practical ways beginners can keep fees low.
-read_time: 6
+read_time: 7
 author: Crypto Beginner Editorial Team
 cover_image: /covers/blockchain.jpg
 created_at: 2026-09-15T04:06:17.275999+00:00
@@ -14,7 +14,6 @@ faqs:
   - question: Do all blockchains charge gas fees?
     answer: Not all use the gas model specifically, but nearly every blockchain charges some kind of transaction fee. The fee prevents spam and pays the people or machines that secure the network.
 ---
-
 Send a message on WhatsApp and it feels free. Send cryptocurrency from one wallet to another and you will notice an extra charge attached to the transaction. That charge is commonly called **gas**, and for beginners it is one of the most confusing — and occasionally most expensive — parts of using crypto.
 
 Why should moving *your own* digital assets cost you money? The answer is more interesting than you might expect. This guide explains what gas is, why networks need it, how fees are calculated, and the practical habits that keep your costs down.

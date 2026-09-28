@@ -3,7 +3,7 @@ title: What are Crypto Liquidity Pools?
 level: intermediate
 order: 9
 summary: "Learn how liquidity pools power decentralized finance (DeFi) by allowing automated trading without traditional buyers and sellers."
-read_time: 5
+read_time: 4
 author: Crypto Beginner Editorial Team
 created_at: 2026-08-01T10:00:00+00:00
 ---

@@ -3,7 +3,7 @@ title: Wallet Safety
 level: security
 order: 3
 summary: "Securing your wallet is the #1 skill in crypto. Here's a beginner-friendly safety checklist."
-read_time: 5
+read_time: 6
 author: Crypto Beginner Editorial Team
 created_at: 2026-08-01T10:00:00+00:00
 ---
@@ -90,5 +90,3 @@ A sensible beginner pattern: keep spending money in a hot wallet and savings in 
 - I treat urgency and "too good to be true" offers as red flags.
 
 Wallet safety is a habit, not a one-time setup. Review this checklist every few months, and revisit it before moving any significant amount. In the next lesson, you will learn about phishing — the most common attack you will actually face — and exactly how to defeat it.
-
-Continue your security track with the next lesson, and revisit the [Learning Hub](/learn) anytime to review earlier material.

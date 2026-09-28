@@ -2,7 +2,7 @@
 title: What is Crypto Halving? Bitcoin Halving Explained
 category: Bitcoin
 excerpt: The Bitcoin halving cuts new coin creation in half every four years. Learn how it works, why it exists, and what it means for beginners.
-read_time: 5
+read_time: 6
 author: Crypto Beginner Editorial Team
 cover_image: /covers/bitcoin.jpg
 created_at: 2026-08-24T04:08:19.951134+00:00
@@ -14,7 +14,6 @@ faqs:
   - question: Will new Bitcoins be created forever?
     answer: No. Bitcoin has a hard cap of 21 million coins. Once that limit is reached, expected around the year 2140, no new Bitcoins will ever be created and miners will earn only transaction fees.
 ---
-
 Of all the ideas in cryptocurrency, few are as distinctive as the **halving**. Unlike regular money, which central banks can print in whatever quantity they choose, Bitcoin has a strict supply limit written directly into its code: only 21 million Bitcoins will ever exist.
 
 The halving is the mechanism that enforces that limit gradually over time. In this guide, we will explain what a halving is, how it works mechanically, why Bitcoin's creator designed it this way, how it affects miners, and — importantly — how beginners should think about the hype that surrounds each event.

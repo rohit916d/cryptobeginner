@@ -2,7 +2,7 @@
 title: "Bitcoin Is Around $79K — But the Next Move May Depend on U.S. Inflation"
 category: "Bitcoin"
 excerpt: "Bitcoin is sitting around the $79K area after a pretty volatile week."
-read_time: 6
+read_time: 5
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/bitcoin.jpg"
 created_at: "2026-09-06T15:38:08.004777+00:00"
@@ -14,7 +14,6 @@ faqs:
   - question: "Should I trade based on inflation reports?"
     answer: "Trading around news events is extremely risky, even for professionals — prices often whipsaw in both directions within minutes. Beginners are better off understanding the macro backdrop for context while sticking to a long-term learning plan rather than betting on single data releases."
 ---
-
 Prices move every day, but some days the *reason* matters more than the move itself. When Bitcoin sits near a big round number like $79,000 after a volatile week, beginners naturally ask: "What happens next?" The honest answer is that nobody knows. But there is a smarter question: **what forces are pushing on the price right now?**
 
 One of the biggest is something that has nothing to do with crypto at all: **U.S. inflation data.** This article explains — in plain language — why an inflation report from Washington can shake the price of a decentralized digital asset, and how to think about macro news without getting played by it.

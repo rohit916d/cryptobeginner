@@ -3,7 +3,7 @@ title: What are Crypto Oracles?
 level: intermediate
 order: 10
 summary: "Learn how blockchains securely connect to real-world data like sports scores, weather, and financial prices using decentralized oracles."
-read_time: 5
+read_time: 4
 author: Crypto Beginner Editorial Team
 created_at: 2026-08-01T10:00:00+00:00
 ---
