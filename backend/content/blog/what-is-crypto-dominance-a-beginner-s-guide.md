@@ -77,6 +77,8 @@ Treat dominance as one instrument on a dashboard, not as the steering wheel.
 
 For Indian readers, dominance has one extra layer of relevance: **tax efficiency of attention**. India applies a 30% tax on crypto profits plus 1% TDS on transactions, which makes frequent rotation between dozens of altcoins expensive and complicated to track. Understanding dominance helps you see the big picture — whether the market is in a Bitcoin-led phase or an altcoin-led phase — without needing to chase every small coin individually. Fewer, more deliberate decisions are kinder to both your portfolio and your tax filing.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 ## A Simple Habit to Build
 
 Add dominance to your weekly market check, not your daily one. Once a week, note three numbers: Bitcoin dominance, total market cap, and the Bitcoin price. Over a few months, you will develop an intuitive feel for how these move together — rising dominance with falling prices means defensive positioning; falling dominance with rising prices means risk appetite. That intuition is worth far more than reacting to any single day's reading.

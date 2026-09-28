@@ -79,6 +79,8 @@ Write your own version of this table, keep it offline, and review it twice a yea
 - Use the official apps of Indian exchanges from the Play Store or App Store, and enable every security feature they offer — 2FA, withdrawal address whitelisting, and email/SMS alerts for logins and withdrawals.
 - Report crypto fraud to cybercrime.gov.in and to the impersonated platform. Reporting helps the next potential victim even when recovery is unlikely.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 ## Recap Checklist
 
 - I protect keys (paper backups, tested), accounts (unique passwords + 2FA), devices (locked, updated), behaviour (sceptical, deliberate), and storage (hot/cold split).

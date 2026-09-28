@@ -96,6 +96,8 @@ They can look similar in your wallet — "new coins appeared!" — but the mecha
 
 Receiving new coins from a hard fork raises genuinely tricky tax questions: when is the income recognized, and at what value? India's 30% tax on crypto gains plus 1% TDS framework does not always map cleanly onto fork events. Keep careful records of any fork you participate in — dates, block numbers, and values — and consult a qualified tax professional rather than guessing.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 Hard forks sound dramatic, and sometimes they are. But at their core, they are simply how decentralized systems do what centralized companies do with an update button: evolve. Understanding them means understanding how crypto governs itself without anyone in charge — which is arguably the whole point of the technology.
 
 Continue with [our free beginner track](/learn) to keep building your foundation.

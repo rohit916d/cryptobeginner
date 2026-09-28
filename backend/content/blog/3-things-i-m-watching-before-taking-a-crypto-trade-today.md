@@ -63,6 +63,8 @@ Also decide your target in advance: where will you take profit? "I'll see how it
 - **Moving the stop-loss.** You set a stop, price approaches it, and you move it lower "to give it room." That is not patience — that is refusing to accept being wrong. A stop-loss you do not honor is decoration.
 - **Trading every day because the market is open 24/7.** Crypto never closes, which means it can consume your sleep, work, and peace of mind. Set trading hours like a job. The market will still be there tomorrow.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 ## A Quick Pre-Trade Checklist
 
 Before your next trade, run through this in under two minutes:

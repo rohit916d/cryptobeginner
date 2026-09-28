@@ -10,8 +10,6 @@ created_at: 2026-08-12T10:00:00+00:00
 
 When most people first hear about cryptocurrency, they think of Bitcoin. After all, Bitcoin was the first digital currency and remains the most famous. But the world of digital assets is much bigger than one coin. Browse any crypto listing and you will see thousands of different names. Everything that is not Bitcoin falls into one big category: **altcoins**.
 
-This is the final lesson of the Beginner track — a clear map of the whole crypto landscape.
-
 > **Quick reminder:** This guide is for educational purposes only and is not financial advice. Nothing here is a recommendation to buy, sell, or hold any asset.
 
 ## What Does "Altcoin" Mean?
@@ -20,7 +18,7 @@ The word is a blend of **"alternative"** and **"coin"** — any cryptocurrency t
 
 ## A Brief History
 
-Bitcoin launched in 2009 as digital money with no central authority. Soon developers asked a bigger question: what else can blockchain technology do? In 2011, **Litecoin** arrived as a faster-transaction alternative — one of the earliest altcoins. In 2015, **Ethereum** launched as a programmable platform where developers could build applications directly on the blockchain. After that, thousands of altcoins followed. Many failed and faded; a few grew into networks with millions of users. This pattern — bursts of innovation followed by most projects dying off — has repeated in every crypto cycle since.
+Bitcoin launched in 2009 as digital money with no central authority. Soon developers asked a bigger question: what else can blockchain technology do? In 2011, **Litecoin** arrived as a faster-transaction alternative — one of the earliest altcoins. In 2015, **Ethereum** launched as a programmable platform where developers could build applications directly on the blockchain. After that, thousands of altcoins followed. Many failed and faded; a few grew into networks with millions of users.
 
 ## The Main Categories of Altcoins
 
@@ -62,7 +60,7 @@ Pick any three coins you have heard of besides Bitcoin. For each one, try to ans
 
 ## Altcoins vs. Bitcoin: The Key Differences
 
-Bitcoin is the oldest (2009), has the largest and most decentralised security network, and follows fixed, unchangeable supply rules — which is why it is often treated as the "blue chip" of crypto. That says nothing about guarantees (there are none). Altcoins, by contrast, vary enormously: some are serious infrastructure with strong networks, others are tiny experiments, and many are pure speculation. Their supply rules, security, and volatility differ coin by coin — so never treat "altcoin" as one uniform thing.
+Bitcoin is the oldest (2009), has the largest and most decentralised security network, and follows fixed, unchangeable supply rules — which is why it is often treated as the "blue chip" of crypto. Altcoins, by contrast, vary enormously: some are serious infrastructure with strong networks, others are tiny experiments, and many are pure speculation. Their supply rules, security, and volatility differ coin by coin — so never treat "altcoin" as one uniform thing.
 
 ## Common Beginner Mistakes
 
@@ -78,6 +76,8 @@ A few things Indian beginners should know about altcoins:
 - **Availability varies by exchange.** Indian exchanges list a curated set of altcoins; global exchanges list far more. A coin being listed somewhere is not an endorsement — exchanges list for trading volume.
 - **Taxes are the same 30%.** India's flat 30% tax on crypto gains (plus surcharge and cess) applies to altcoin profits exactly like Bitcoin profits, and the 1% TDS applies too. There is no "small coin" exemption.
 - **Rupee on-ramps matter.** You typically buy altcoins with INR on an Indian exchange, or by first buying a major coin and swapping it. Each step can be a taxable event — the tax lesson in the Intermediate track covers this in detail.
+
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
 
 ## You Have Finished the Beginner Track
 

@@ -20,7 +20,7 @@ Imagine a giant public notebook shared across thousands of computers worldwide. 
 
 But here is the problem: if anyone could write in the notebook whenever they wanted, a fraudster could write fake entries — "Ravi sent me 1,000 coins" — even though Ravi never agreed. So the network needs rules for **who** gets to add new pages, and **how** everyone else verifies those pages are legitimate.
 
-Transactions are grouped into bundles called **blocks**. To add a new block to the permanent history, computers must first solve a puzzle. Mining is the process of solving that puzzle.
+Transactions are grouped into bundles called **blocks**. To add a new block to the permanent history, computers must first solve a puzzle.
 
 ## The Guessing Game: Proof of Work
 

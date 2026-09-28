@@ -104,6 +104,8 @@ Whether 0.003 ETH feels cheap or expensive depends on the day's ETH price and yo
 
 One detail Indian users should know: network fees are a cost of transacting, but under India's crypto tax rules you cannot deduct them from your taxable gains the way a business would deduct expenses. The 30% tax applies to your gross profit on each sale. Keeping a record of fees is still useful for your own accounting — and the 1% TDS deducted by Indian exchanges applies to the transaction value, separate from gas entirely.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 ## The Bottom Line
 
 Gas is the price of using a decentralised computer that nobody owns and everybody can verify. It prevents spam, pays the network's guardians, and rises and falls with demand. Once you understand that, fees stop feeling like a scam and start feeling like what they are: the operating cost of the system.

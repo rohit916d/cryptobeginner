@@ -99,6 +99,8 @@ Advanced beginner move: delete the wallet app, reinstall it, and restore using y
 
 Setting up wallets is free, but remember: when you eventually sell or trade crypto in India, profits face a flat **30% tax** (plus surcharge/cess) and most transactions trigger **1% TDS**. Moving crypto between your own wallets is not a sale — but every buy/sell record matters. Start a simple log now: date, amount, price in INR. Future-you will be grateful.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 ## The Bottom Line
 
 Your first wallet is a rite of passage: exchange account for convenience, self-custody wallet for real ownership, seed phrase on paper as the sacred rule connecting both. Take it slow, start tiny, test everything, and treat your seed phrase like the key to a vault — because it is one.

@@ -27,8 +27,6 @@ The name is slightly misleading, so let us unpack it:
 - **"Contract"** because it encodes the terms of an agreement: who gets what, under which conditions. Like a legal contract it defines obligations — but unlike one, it enforces itself.
 - **"Smart"** only means it executes without human intervention. Smart contracts are not intelligent: they cannot exercise judgement or understand intent. They do exactly what the code says — including when the code says something the author did not intend.
 
-That last point is the source of most smart-contract disasters, as you will see below.
-
 ## What Can Smart Contracts Do?
 
 Once you grasp the vending-machine idea, the possibilities open up:

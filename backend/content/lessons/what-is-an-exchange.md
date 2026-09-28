@@ -79,6 +79,8 @@ For an Indian beginner, the realistic path looks like this:
 4. **Buy, then learn to withdraw.** Practice moving a small amount to your own wallet (from the previous lesson). This single skill separates informed users from gamblers.
 5. **Understand the tax before you trade.** India taxes crypto gains at a flat **30%** plus surcharge and cess, with **1% TDS** on transfers. Every trade — even crypto-to-crypto — can be a taxable event. Keep records from day one.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 > Red flags that should make you walk away: guaranteed returns, "double your crypto" schemes, exchanges promoted only through Telegram groups, anyone asking for your seed phrase, and platforms with no verifiable company behind them.
 
 ## The WazirX Lesson

@@ -50,7 +50,17 @@ DB_NAME = os.getenv("DB_NAME")
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-client_ai = genai.Client(api_key=GEMINI_API_KEY)
+client_ai = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
+
+def require_ai_client():
+    """Return the AI client or fail cleanly when GEMINI_API_KEY is not set."""
+    if client_ai is None:
+        raise HTTPException(
+            status_code=503,
+            detail="AI features are not configured on the server (GEMINI_API_KEY missing)",
+        )
+    return client_ai
+
 COINGECKO_API_KEY = os.getenv("COINGECKO_API_KEY")
 NEWSDATA_API_KEY = os.getenv("NEWSDATA_API_KEY")
 CRON_SECRET = os.getenv("CRON_SECRET")
@@ -1407,6 +1417,16 @@ async def newsletter_signup(payload: NewsletterSignup, request: Request):
     return {"ok": True}
 
 
+@api_router.post("/newsletter/unsubscribe")
+async def newsletter_unsubscribe(payload: NewsletterSignup, request: Request):
+    """Remove an email from the newsletter list. Rate-limited."""
+    await rate_limit(request, "newsletter_unsub", max_requests=5, window_seconds=3600)
+
+    email = payload.email.strip().lower()
+    result = await db.newsletter.delete_many({"email": email})
+    return {"ok": True, "removed": result.deleted_count}
+
+
 @api_router.post("/contact")
 async def contact(payload: ContactCreate, request: Request):
     await rate_limit(request, "contact", max_requests=5, window_seconds=3600)
@@ -1595,7 +1615,7 @@ async def chat(req: ChatRequest, request: Request):
     await rate_limit(request, "chat", max_requests=15, window_seconds=3600)
     try:
 
-        response = client_ai.models.generate_content(
+        response = require_ai_client().models.generate_content(
             model="gemini-flash-lite-latest",
             contents=f"""
 You are Crypto Beginner AI.
@@ -1722,7 +1742,7 @@ in exactly this shape:
 }}
 """
 
-    response = client_ai.models.generate_content(
+    response = require_ai_client().models.generate_content(
         model="gemini-flash-lite-latest",
         contents=prompt,
     )
@@ -1809,7 +1829,7 @@ in exactly this shape:
 }}
 """
 
-    response = client_ai.models.generate_content(
+    response = require_ai_client().models.generate_content(
         model="gemini-flash-lite-latest",
         contents=prompt,
     )

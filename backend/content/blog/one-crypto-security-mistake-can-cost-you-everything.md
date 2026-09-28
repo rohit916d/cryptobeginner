@@ -76,6 +76,8 @@ Crypto scams are rising in India, and the government has a dedicated reporting c
 
 For storing seed-phrase backups, a bank locker is a practical option many Indians already use for important documents. And remember that crypto gains in India are taxed at 30% plus applicable surcharge — keeping clean records of your transactions is part of financial hygiene, not just security.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 ## If Something Already Went Wrong
 
 Do not panic, but act fast:

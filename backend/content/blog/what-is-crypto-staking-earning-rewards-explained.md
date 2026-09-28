@@ -70,6 +70,8 @@ Two honest implications: first, a quoted reward rate is **not comparable to a ba
 - **Smart-contract risk.** Liquid staking tokens and DeFi staking pools add layers of code — and code has bugs. Each layer is a new thing that can break.
 - **Tax in India.** Staking rewards are taxable income in India under current rules (crypto gains face 30% tax plus applicable surcharge, with 1% TDS on transfers). Rewards complicate your tax math — track every payout's INR value at receipt. This is educational information, not tax advice; consult a professional.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 ## Staking vs. Mining: The Quick Comparison
 
 | | Mining (Proof of Work) | Staking (Proof of Stake) |

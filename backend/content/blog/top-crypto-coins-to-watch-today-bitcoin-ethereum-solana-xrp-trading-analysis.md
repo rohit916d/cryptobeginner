@@ -35,6 +35,8 @@ Bitcoin is the coin every beginner should learn to read first - before touching 
 
 The most important concept here is **correlation**: most altcoins move in the same direction as Bitcoin, only more violently. When Bitcoin rallies, altcoins often rally harder; when Bitcoin drops 10%, altcoins routinely drop 20-30%. This means:
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 - **Check Bitcoin first.** Before analysing any altcoin, look at what BTC is doing. An altcoin "breaking out" while Bitcoin is breaking down is often a trap, not an opportunity.
 - **Bitcoin dominance matters.** This metric shows what percentage of the total crypto market value belongs to Bitcoin. When dominance rises, money is flowing toward relative safety; when it falls, risk appetite is spreading into altcoins.
 - **Psychological levels are real.** Round numbers - previous highs, previous lows, big round figures - act as magnets for price because thousands of traders watch the same levels. You do not need to trade them; just observe how price reacts around them.

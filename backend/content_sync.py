@@ -78,7 +78,7 @@ def _as_iso(value):
     return str(value)
 
 
-async def _sync_collection(db, collection_name, kind):
+async def _sync_collection(db, collection_name, kind, logger=None):
     """Upsert every backend/content/<kind>/*.md file into its collection."""
     coll = db[collection_name]
     dir_path = CONTENT_DIR / kind
@@ -128,24 +128,69 @@ async def _sync_collection(db, collection_name, kind):
             )
 
         created_at = meta.get("created_at")
-        existing = await coll.find_one({"slug": slug}, {"_id": 0, "created_at": 1, "id": 1})
+        # Race-safe upsert: exactly one doc per slug, even if several
+        # serverless instances sync concurrently. Existing publish dates
+        # and ids are never overwritten.
+        import uuid as _uuid
 
-        if existing:
-            # Never overwrite an existing publish date; keep the original.
-            doc["created_at"] = existing.get("created_at") or (
-                _as_iso(created_at) if created_at else now
-            )
-            if existing.get("id"):
-                doc["id"] = existing["id"]
-            await coll.update_one({"slug": slug}, {"$set": doc})
-        else:
-            import uuid as _uuid
-
-            doc["id"] = str(_uuid.uuid4())
-            doc["created_at"] = _as_iso(created_at) if created_at else now
-            await coll.insert_one(doc)
+        await coll.update_one(
+            {"slug": slug},
+            {
+                "$set": doc,
+                "$setOnInsert": {
+                    "id": str(_uuid.uuid4()),
+                    "created_at": _as_iso(created_at) if created_at else now,
+                },
+            },
+            upsert=True,
+        )
         synced += 1
     return synced
+
+
+async def _run_slug_dedupe(db):
+    """One-time repair: if several docs share a slug (e.g. from a past
+    concurrent sync), keep the richest one and delete the rest. Then add a
+    unique index on slug so it can never recur."""
+    flag = await db.meta.find_one({"_id": "slug_dedupe_v1"})
+    if flag:
+        return 0
+    removed = 0
+    for collection_name in ("blog", "lessons"):
+        coll = db[collection_name]
+        docs = [d async for d in coll.find(
+            {}, {"_id": 1, "slug": 1, "source": 1, "content": 1, "updated_at": 1})]
+        seen = {}
+
+        def rank(d):
+            # Prefer the repo-managed version, then longer content.
+            return (
+                1 if d.get("source") == "repo" else 0,
+                len(d.get("content") or ""),
+            )
+
+        for doc in docs:
+            slug = doc.get("slug")
+            if not slug:
+                continue
+            prev = seen.get(slug)
+            if prev is None:
+                seen[slug] = doc
+                continue
+            keep, drop = (doc, prev) if rank(doc) >= rank(prev) else (prev, doc)
+            await coll.delete_one({"_id": drop["_id"]})
+            seen[slug] = keep
+            removed += 1
+        # Unique index prevents any future duplicate slugs.
+        try:
+            await coll.create_index("slug", unique=True)
+        except Exception:
+            pass
+    await db.meta.insert_one(
+        {"_id": "slug_dedupe_v1", "deleted": removed,
+         "at": datetime.now(timezone.utc).isoformat()}
+    )
+    return removed
 
 
 async def _run_duplicate_cleanup(db):
@@ -166,11 +211,13 @@ async def sync_repo_content(db, logger=None):
     if not CONTENT_DIR.is_dir():
         return {"blog": 0, "lessons": 0, "duplicates_removed": 0}
     removed = await _run_duplicate_cleanup(db)
-    blog_n = await _sync_collection(db, "blog", "blog")
-    lesson_n = await _sync_collection(db, "lessons", "lessons")
+    deduped = await _run_slug_dedupe(db)
+    blog_n = await _sync_collection(db, "blog", "blog", logger)
+    lesson_n = await _sync_collection(db, "lessons", "lessons", logger)
     if logger:
         logger.info(
             f"Content sync: {blog_n} blog posts, {lesson_n} lessons, "
-            f"{removed} duplicates removed"
+            f"{removed} duplicates removed, {deduped} slug-dupes repaired"
         )
-    return {"blog": blog_n, "lessons": lesson_n, "duplicates_removed": removed}
+    return {"blog": blog_n, "lessons": lesson_n, "duplicates_removed": removed,
+            "slug_dupes_repaired": deduped}

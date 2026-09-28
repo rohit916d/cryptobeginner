@@ -90,6 +90,8 @@ Practical notes:
 
 A common myth is that P2P trades are "off the books." In India, crypto-to-crypto and crypto-to-INR transactions are taxable events regardless of where they happen — currently a **30% tax on gains** plus applicable surcharge and cess, with **1% TDS** on transfers above thresholds. P2P does not exempt you. Keep records of every trade: dates, amounts in INR, and transaction IDs. This is educational information, not tax advice — speak to a qualified tax professional about your situation.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 ## The Big Picture
 
 P2P trading is crypto at its most human — real people, real payment apps, real negotiation, with escrow as the referee. Used carefully on reputable platforms, it is a legitimate way to move between INR and crypto. Used carelessly, it is where beginners get burned.

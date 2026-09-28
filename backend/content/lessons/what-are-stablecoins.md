@@ -68,6 +68,8 @@ This is the part beginners skip, so read carefully:
 4. **Technical risk.** Smart-contract bugs, wallet mistakes, sending on the wrong network — a stablecoin sent to the wrong address is gone just as permanently as Bitcoin would be.
 5. **Not an investment.** Stablecoins are designed to *hold* value, not grow it. Anyone promising high "guaranteed" returns on stablecoin deposits is selling you risk disguised as safety — a classic setup for scams targeting Indian savers.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 ## Stablecoins in India: Practical Notes
 
 - You can buy USDT/USDC on Indian exchanges (CoinDCX, CoinSwitch) with INR via UPI after KYC.

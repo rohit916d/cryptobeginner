@@ -37,8 +37,6 @@ But nothing physical was ever "sent" anywhere. Crypto never travels like a parce
 
 Now suppose you want to spend those funds. The network will not take your word for it — you must **prove** you are the rightful owner. You do this by using your **private key** to digitally "sign" the transaction. Other computers on the network check your digital signature against your public address. The mathematics guarantees that the signature could only have been created by the private key matching that address — **without ever revealing the private key itself**.
 
-This is the clever part: you prove ownership while keeping your secret completely hidden.
-
 ## Why Digital Signatures Are Hard to Fake
 
 A digital signature is not a name written in cursive. It is a long string of characters produced by feeding the transaction details and your private key into a mathematical function. Three properties make it trustworthy:

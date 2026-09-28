@@ -35,19 +35,15 @@ An important technical nuance beginners miss: the NFT usually stores a **link** 
 - **In-game items** — weapons, skins, or land that players truly own and can trade outside the game.
 - **Identity and credentials** — certificates, diplomas, or licences issued as verifiable tokens.
 
-Notice the pattern: NFTs are most useful wherever **provable, transferable ownership of something unique** matters.
-
 ### Try it yourself: mental exercise
 
 Think of something you own that is one-of-a-kind — a signed book, a limited-edition sneaker, a concert ticket. What proves it is genuine today? (A signature that could be forged, a receipt, the seller's word.) Now imagine its authenticity and ownership history recorded on a public blockchain, verifiable by anyone in seconds. Which parts of buying and selling it become easier — and which new problems appear? (Hint: what if you lose the wallet holding it?)
 
 ## The Honest Reality: Hype, Crash, and What Remains
 
-No honest NFT lesson skips this part. Around 2021–2022, NFTs became a speculative mania: cartoon-animal collections sold for life-changing sums, celebrities promoted drops, and headlines treated JPEGs like lottery tickets. Then prices crashed — massively. Many collections lost 90% or more of their value, and countless projects were abandoned.
+No honest NFT lesson skips this part. Around 2021–2022, NFTs became a speculative mania: cartoon-animal collections sold for life-changing sums, celebrities promoted drops, and headlines treated JPEGs like lottery tickets. Then prices crashed — massively. Many collections lost 90% or more of their value, and countless projects were abandoned. Most buyers were not purchasing digital ownership — they were betting prices would keep rising because new buyers would keep arriving. When the new buyers stopped, prices collapsed. The underlying technology — a blockchain record of unique ownership — kept working exactly as designed through the entire cycle.
 
-What happened was speculation, not technology failure. Most buyers were not purchasing digital ownership — they were betting prices would keep rising because new buyers would keep arriving. When the new buyers stopped, prices collapsed. The underlying technology — a blockchain record of unique ownership — kept working exactly as designed through the entire cycle.
-
-This distinction matters for your education: **the mania discredited the speculation, not the concept.** Proving digital ownership remains genuinely useful, and serious applications (ticketing, identity, gaming assets, creator royalties) continue to be built. But anything marketed primarily on "number go up" deserves the same scepticism you would give any hype-driven asset.
+**The mania discredited the speculation, not the concept.** Proving digital ownership remains genuinely useful, and serious applications (ticketing, identity, gaming assets, creator royalties) continue to be built. But anything marketed primarily on "number go up" deserves the same scepticism you would give any hype-driven asset.
 
 ## Common Beginner Mistakes
 
@@ -55,13 +51,15 @@ This distinction matters for your education: **the mania discredited the specula
 2. **Confusing the image with the token.** Right-clicking and saving an NFT's image gives you a copy of the picture — not the token, not the ownership record, not the provenance. Ownership lives on the blockchain, not in the JPEG.
 3. **Ignoring royalties and fees.** Marketplaces charge fees on sales, and creating (minting) NFTs costs gas. Beginners sometimes discover that selling a low-value NFT costs more in fees than the sale brings in.
 4. **Trusting screenshots as proof.** Scammers send fake "you won an NFT" messages with links to phishing sites. Connecting your wallet to a malicious site can drain it in seconds. No legitimate project asks you to connect your wallet to claim a surprise prize.
-5. **Treating collectibles as investments.** The original thin version of this lesson said it well: treat NFTs as collectibles, not investments. Money spent on something you enjoy owning is entertainment; money "invested" in hype is usually a donation to strangers.
+5. **Treating collectibles as investments.** Treat NFTs as collectibles, not investments. Money spent on something you enjoy owning is entertainment; money "invested" in hype is usually a donation to strangers.
 
 ## NFTs in the Indian Context
 
 - **Creator opportunity.** Indian artists, musicians, and designers have used NFTs to sell directly to global buyers without galleries or labels taking a cut — with smart-contract royalties paying them on every resale. For creators, the technology is arguably more interesting than for collectors.
 - **Taxes apply as usual.** Selling an NFT at a profit falls under India's 30% crypto tax regime, with 1% TDS on transfers. Buying, minting, and selling each create records you should keep.
 - **Watch for fake marketplaces.** Fraudulent NFT sites targeting Indian users have been common — always verify you are on the genuine marketplace URL before connecting a wallet, and never connect a wallet holding significant funds to an unfamiliar site.
+
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
 
 ## NFTs vs. Regular Crypto: A Quick Comparison
 

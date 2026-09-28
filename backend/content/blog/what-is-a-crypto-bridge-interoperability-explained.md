@@ -106,6 +106,8 @@ None of this means bridges are unusable — millions of transfers go through saf
 - **Using bridges you found via social media links.** Always navigate to the official site yourself or use a bookmark.
 - **Forgetting about taxes.** In India, moving assets between chains is generally not itself a taxable transfer, but any *swap or sale* along the way can trigger the 30% tax on gains plus 1% TDS. Keep records of what you did and when. Tax rules evolve, so confirm with a qualified professional.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 ## When Should a Beginner Actually Use a Bridge?
 
 Honestly? Most beginners do not need a bridge for their first few months. If you are buying, holding, and learning on one network or exchange, bridging adds risk without benefit. Bridges become relevant when you have a specific reason: an app you want to try exists only on another chain, or fees on your current network make small transactions impractical.

@@ -74,6 +74,8 @@ Solana's speed is genuinely interesting technology. But SOL, the coin, can move 
 3. **Ignoring fees and taxes in India.** Selling crypto in India attracts a 30% tax on gains plus 1% TDS on transactions on Indian exchanges like CoinDCX or CoinSwitch. Frequent trading of a volatile coin like SOL can rack up a real tax bill even when profits look good on screen.
 4. **Keeping everything on an exchange.** If you hold SOL long term, learn about self-custody wallets. Exchanges can freeze withdrawals, get hacked, or face regulatory trouble.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 ## How to Approach Solana as a Beginner
 
 If you want to learn about Solana, start with education, not money:

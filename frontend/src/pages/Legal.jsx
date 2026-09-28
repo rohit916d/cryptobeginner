@@ -5,11 +5,12 @@ const CONTENT = {
     title: "Privacy Policy",
     description: "How Crypto Beginner collects, uses, and protects your information.",
     sections: [
-      ["What we collect", "We collect minimal data: page analytics, contact-form submissions you voluntarily provide, and standard server logs. We do not run ads and we do not sell user data."],
-      ["How we use it", "To improve content, respond to your messages, and detect abuse. That's it."],
+      ["What we collect", "We collect minimal data: page analytics, contact-form submissions you voluntarily provide, newsletter email addresses you voluntarily submit, and standard server logs. We do not run ads and we do not sell user data."],
+      ["Newsletter", "If you subscribe to our newsletter, we store your email address solely to send you educational emails. We never share it with third parties. You can unsubscribe at any time using the unsubscribe option in any newsletter signup box, and your address is then deleted from our list."],
+      ["How we use it", "To improve content, respond to your messages, send newsletters you requested, and detect abuse. That's it."],
       ["Cookies", "We use first-party cookies for analytics and session continuity. You can disable them in your browser at any time. See our Cookie Policy for details."],
       ["Third parties", "Our market data is sourced from CoinGecko. No data is sold."],
-      ["Your rights", "You may request deletion of your contact submissions by emailing hello@cryptobeginner.in."],
+      ["Your rights", "You may request deletion of your contact submissions or newsletter subscription by emailing hello@cryptobeginner.in."],
       ["Updates", "We may update this policy. Significant changes will be reflected on this page with a new date."],
     ],
   },
@@ -52,7 +53,7 @@ export default function LegalPage({ slug }) {
       <div className="label-eyebrow">Legal</div>
       <h1 className="mt-3 text-4xl md:text-5xl font-normal text-white tracking-tight">{data.title}</h1>
       <p className="mt-4 text-zinc-400">{data.description}</p>
-      <p className="mt-2 text-xs text-zinc-400 font-mono">Last updated: February 2026</p>
+      <p className="mt-2 text-xs text-zinc-400 font-mono">Last updated: September 2026</p>
 
       <div className="mt-10 space-y-8">
         {data.sections.map(([h, p]) => (

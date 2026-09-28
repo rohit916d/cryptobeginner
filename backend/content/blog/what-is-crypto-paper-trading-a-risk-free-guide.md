@@ -44,6 +44,8 @@ Honesty matters here — simulation has real blind spots:
 3. **Fees and taxes.** Simulators often ignore trading fees. Real trading in India also triggers a **30% tax on gains** plus 1% TDS on transfers — costs that quietly eat returns. (Educational note, not tax advice.)
 4. **The discipline illusion.** It is easy to follow a plan with fake money. Real money tempts you to break every rule you set.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 Paper trading teaches you *process*. It does not teach you *profit*.
 
 ## Your 30-Day Paper Trading Plan

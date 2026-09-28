@@ -74,6 +74,8 @@ Answer these in two minutes and you know more about "today's market" than most h
 - **Confusing a green day with a bull market.** One strong day does not change a trend. Beginners extrapolate; professionals wait for confirmation across multiple days.
 - **No plan for "wrong."** Reading market updates without your own levels, entries, and stop-losses is entertainment, not trading.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 ## The Bottom Line
 
 Daily market updates are useful as *weather reports*, not *travel orders*. Learn to read the layers — Bitcoin's backdrop, capital rotation, your own setup — and watch the five questions above instead of chasing every headline move. The traders who last are not the ones who react fastest to news; they are the ones who need the news the least, because they already have a plan.

@@ -79,6 +79,8 @@ One critical habit: **always verify the receiving address on the device's own sc
 - Because of the 30% tax on crypto gains plus 1% TDS in India, moving coins between your own wallets (hot to hardware) is not a taxable event by itself — but keep records of all transfers so you can demonstrate the trail if questioned.
 - If the cost of a hardware wallet feels steep relative to your holdings, that is useful information: it probably means your holdings are still small enough that a well-secured hot wallet plus good habits are sufficient for now.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 ## Recap Checklist
 
 - I understand a hardware wallet keeps private keys offline and signs transactions inside the device.

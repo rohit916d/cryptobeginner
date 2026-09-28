@@ -76,6 +76,8 @@ Not all blockchains charge the same:
 
 For Indian users, gas has an extra dimension: **tax**. Every crypto-to-crypto swap or transfer can interact with India's 30% tax on gains and 1% TDS rules. A DeFi user making dozens of small transactions might rack up meaningful gas costs *and* a paperwork headache. If you experiment with on-chain apps, keep a simple log: date, transaction, gas paid in INR terms. Your future self (and your chartered accountant) will thank you.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 ## Summary
 
 - Gas fees pay the computers that secure the blockchain and prevent spam.

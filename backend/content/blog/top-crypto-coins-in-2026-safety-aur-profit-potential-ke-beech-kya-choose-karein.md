@@ -86,6 +86,8 @@ The exact split depends entirely on your risk tolerance. A cautious beginner mig
 - **Following influencers blindly.** Many crypto promoters are paid to hype tokens. If someone is urgently telling you to buy, ask who benefits from your purchase.
 - **Investing without an exit plan.** Decide in advance under what conditions you would sell - both for taking profits and for cutting losses. "I will figure it out later" is how small losses become large ones.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 ## Putting It All Together
 
 Here is a practical checklist to run through before considering any coin:

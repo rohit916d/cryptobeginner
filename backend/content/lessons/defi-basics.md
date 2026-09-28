@@ -14,11 +14,11 @@ Welcome to the Intermediate track. You finished the Beginner lessons knowing wha
 
 ## Banking Without Banks
 
-**Decentralised Finance (DeFi)** is a set of financial services built on public blockchains — mostly Ethereum and similar networks. Lending, borrowing, trading, and earning interest all happen through **smart contracts**: code that executes automatically when conditions are met, with no bank manager, broker, or paperwork in the middle.
+**Decentralised Finance (DeFi)** is a set of financial services built on public blockchains — mostly Ethereum and similar networks. Lending, borrowing, trading, and earning interest all happen through **smart contracts**: code that executes automatically when conditions are met.
 
-Compare that with traditional finance. To earn interest on savings in India, you open a bank account, the bank lends your money out, keeps most of the profit, and pays you a small cut. In DeFi, you interact directly with a smart contract: you deposit crypto, borrowers borrow it, and the interest flows to you automatically — the code enforces the rules, not a company.
+Compare that with traditional finance. To earn interest on savings in India, you open a bank account, the bank lends your money out, keeps most of the profit, and pays you a small cut. In DeFi, you interact directly with a smart contract: you deposit crypto, borrowers borrow it, and the interest flows to you automatically.
 
-The next lesson covers smart contracts in depth. For now, just remember: **smart contracts are the engine; DeFi is the car.**
+For now, just remember: **smart contracts are the engine; DeFi is the car.**
 
 ## What Can You Do in DeFi?
 
@@ -36,7 +36,7 @@ You can lock up crypto as **collateral** and borrow other crypto against it. Bec
 
 ### Provide liquidity and earn fees
 
-You can deposit a pair of tokens into a liquidity pool. Every time someone trades against that pool, they pay a small fee — and you earn a share of it, proportional to your deposit. This sounds like free income, but it carries a sneaky risk called **impermanent loss** (explained below).
+You can deposit a pair of tokens into a liquidity pool. Every time someone trades against that pool, they pay a small fee — and you earn a share of it, proportional to your deposit.
 
 ### Yield farming
 
@@ -73,6 +73,8 @@ A few India-specific points worth knowing:
 - **No regulatory safety net.** Indian regulators have not licensed DeFi protocols, and there is no deposit insurance. If a protocol is exploited, there is no authority to appeal to — Indian or otherwise.
 - **Taxes still apply.** Every DeFi interaction — swapping, earning interest, receiving rewards — can be a taxable event under India's 30% crypto tax regime, with 1% TDS on transfers. DeFi's complexity makes record-keeping harder, not optional. The tax lesson later in this track will cover this properly.
 - **INR on-ramps.** You cannot deposit rupees directly into a DeFi protocol. You buy crypto on an Indian exchange first, move it to your own wallet, then interact with DeFi. Each hop adds fees and tax considerations.
+
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
 
 ## Key Takeaways
 

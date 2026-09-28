@@ -89,6 +89,8 @@ Whether you are receiving your first crypto from an Indian exchange like CoinDCX
 
 In India, crypto transfers are not anonymous for tax purposes the way the technology might suggest. Indian exchanges report transactions, and the 30% tax on crypto gains plus 1% TDS on transfers apply regardless of which wallet addresses you use. Moving crypto between your own wallets is not a taxable event by itself, but selling or swapping generally is. Keep records of your addresses and transactions — your future self (and your chartered accountant) will thank you.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 > **Bottom line:** A wallet address is your public receiving point — safe to share, dangerous to mistype. Copy, verify, match the network, and test with small amounts. Master this ritual and you eliminate the most common way beginners lose funds.
 
 Want to go further? Learn how addresses connect to private keys and seed phrases in [our free beginner track](/learn).

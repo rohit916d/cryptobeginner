@@ -91,6 +91,8 @@ If you want to learn by doing — with a tiny amount:
 - **Sharing the seed phrase.** Anyone with your 12/24-word recovery phrase owns your bitcoin. No legitimate support agent will ever ask for it.
 - **Ignoring taxes.** In India, crypto profits face 30% tax and every transaction triggers 1% TDS. Track everything from day one.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 ## The Bottom Line
 
 Bitcoin is digital money without middlemen: a shared, unchangeable ledger secured by global computing power, with a fixed supply of 21 million. It is a genuine technological breakthrough — and also a volatile, risky asset surrounded by scams. Both things are true. Understanding it properly is the foundation of everything else in crypto.

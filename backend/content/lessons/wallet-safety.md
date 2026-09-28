@@ -12,7 +12,7 @@ In crypto, there is no customer care desk that can reverse a wrong transaction, 
 
 ## Think of Your Wallet Like a Real Wallet — Only Stricter
 
-A physical wallet holds cash: if someone steals it, the cash is gone. A crypto wallet works the same way, with one big difference — crypto transactions are irreversible and pseudonymous. Once coins leave your address, no authority on earth can pull them back. That single fact is why wallet safety is not optional reading; it is the foundation of everything else you will do in crypto.
+A physical wallet holds cash: if someone steals it, the cash is gone. A crypto wallet works the same way, with one big difference — crypto transactions are irreversible and pseudonymous. Once coins leave your address, no authority on earth can pull them back.
 
 Your wallet does not actually "hold" your coins. The coins live on the blockchain. What your wallet holds are the **keys** that prove you own them and let you move them. Protecting your wallet really means protecting those keys.
 
@@ -35,7 +35,7 @@ Fake wallet apps are one of the most common ways beginners lose money. Always do
 
 ### 2. Write your seed phrase on paper — never store it digitally
 
-Write the 12 or 24 words down by hand, in order, on paper (or better, engrave them on a metal plate, which survives fire and water). Never save it as a screenshot, a photo, a note in your phone, a Google Doc, or an email to yourself. Every digital copy is a copy a hacker, a malware program, or a cloud breach can steal. This is the single most important habit in this entire lesson.
+Write the 12 or 24 words down by hand, in order, on paper (or better, engrave them on a metal plate, which survives fire and water). Never save it as a screenshot, a photo, a note in your phone, a Google Doc, or an email to yourself. Every digital copy is a copy a hacker, a malware program, or a cloud breach can steal.
 
 ### 3. Keep your seed phrase offline and private
 
@@ -43,7 +43,7 @@ Store the paper somewhere safe and private — a home safe, a locker, or another
 
 ### 4. Lock your devices and your wallet app
 
-Use a strong device PIN or biometric lock, keep your phone and computer updated, and set your wallet app to require authentication (fingerprint or PIN) before sending funds. If your phone is lost, a locked wallet buys you time.
+Use a strong device PIN or biometric lock, keep your phone and computer updated, and set your wallet app to require authentication (fingerprint or PIN) before sending funds.
 
 ### 5. Start with small amounts
 
@@ -79,6 +79,8 @@ A sensible beginner pattern: keep spending money in a hot wallet and savings in 
 - Indian exchanges like CoinDCX and CoinSwitch require KYC and offer security options like 2FA and withdrawal whitelists — enable every one of them.
 - Crypto gains in India are taxed at a flat 30% plus applicable surcharge and cess, with 1% TDS on transfers. Keep records of your wallet addresses and transactions from day one.
 - Be extra cautious with crypto-related messages on WhatsApp and Telegram, which are heavily used for scams targeting Indian users.
+
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
 
 ## Recap Checklist
 

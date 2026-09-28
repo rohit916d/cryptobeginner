@@ -102,6 +102,8 @@ Answering these five questions takes ten minutes and puts you ahead of most casu
 
 Whatever a coin's supply design, your Indian tax obligations are identical: 30% tax on profits when you sell or swap, plus 1% TDS on transactions. Protocol-level events like halvings or burns are not tax events for holders — only your own buy/sell/swap actions are. Do not let supply narratives confuse your record-keeping.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 ## The Bottom Line
 
 Crypto inflation is simply the rate at which new coins enter circulation — the protocol's way of paying for its own security. Projects choose between fixed caps, ongoing issuance, and burn mechanisms, each with real trade-offs. Understanding these designs helps you evaluate *how a network works*, which is far more valuable than using supply as a shortcut for price predictions.

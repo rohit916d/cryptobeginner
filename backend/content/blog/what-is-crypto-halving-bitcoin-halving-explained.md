@@ -98,4 +98,6 @@ Understanding those ideas will serve you far better than trying to guess what an
 
 And one India-specific note: if you hold Bitcoin on an Indian exchange through a halving, nothing changes about your holdings — the event affects *new supply creation*, not existing coins. Your tax obligations also remain exactly the same: 30% on profits when you sell, with 1% TDS on transactions. Protocol events do not create tax events.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 Want to understand the mining process that halvings regulate? Continue with [our free beginner track](/learn), which explains mining, blocks, and supply from absolute zero.

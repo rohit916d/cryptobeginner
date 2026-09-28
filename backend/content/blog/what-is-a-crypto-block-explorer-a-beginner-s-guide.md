@@ -94,6 +94,8 @@ Practical habits that protect your privacy:
 
 India taxes crypto transfers at a flat **30% on gains plus a 1% TDS** (tax deducted at source) on most transactions. That makes record-keeping genuinely important, and block explorers are a free way to do it. If you ever need to prove when a transfer happened, how much was sent, or what fee you paid, the explorer's timestamped record is your evidence. Consider saving TxIDs of important transfers in a simple spreadsheet alongside the INR value at the time. (Tax rules change, so always confirm current requirements with a qualified tax professional.)
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 ## Common Beginner Mistakes
 
 - **Using the wrong explorer** for the network and concluding the transaction "does not exist."

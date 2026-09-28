@@ -81,6 +81,8 @@ That link gets created the moment you complete KYC on an exchange, post the addr
 
 Because every receipt to your address is permanently recorded, your addresses effectively form an audit trail. India's 30% tax on crypto gains and 1% TDS on transfers make clean records valuable. Consider maintaining a simple log: date, address used, asset, amount, and approximate INR value. If questions ever arise, the blockchain already has the receipts — your job is simply to organize them.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 Your public address is your identity on the blockchain: shareable, permanent, and powerful. Treat the address casually, the keys seriously, and the network selection with extreme care, and you will avoid the mistakes that cost beginners the most.
 
 Continue with [our free beginner track](/learn) to learn about private keys, seed phrases, and wallet safety next.

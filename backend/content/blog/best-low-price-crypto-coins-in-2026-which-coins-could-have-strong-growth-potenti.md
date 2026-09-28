@@ -95,6 +95,8 @@ If a coin passes all five with honest answers, it might be worth deeper study. M
 
 Whatever you decide, remember the math of Indian crypto taxation: a flat **30% tax on profits** (no deductions except purchase cost) plus **1% TDS** on every transaction. Chasing dozens of tiny "cheap coin" trades generates a pile of TDS deductions and a reporting nightmare — and losses cannot be offset against gains. Fewer, well-researched positions are dramatically simpler and cheaper to manage.
 
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 ## The Bottom Line
 
 The cheapest-looking coin in the market is often the most expensive mistake. Unit price is marketing; market cap is math. Growth potential comes from real usage, sound tokenomics, honest teams, and reasonable valuations — never from a low number on the price tag. Learn to evaluate coins this way and you become immune to an entire industry of hype.
