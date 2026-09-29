@@ -1493,13 +1493,29 @@ async def sitemap():
 
     lessons = await db.lessons.find(
         {},
-        {"slug": 1}
+        {"slug": 1, "updated_at": 1, "created_at": 1}
     ).to_list(500)
 
     blogs = await db.blog.find(
         {},
-        {"slug": 1}
+        {"slug": 1, "updated_at": 1, "created_at": 1}
     ).to_list(500)
+
+    def _lastmod(doc):
+        # Prefer the real updated_at/created_at so Google sees actual freshness.
+        for key in ("updated_at", "created_at"):
+            val = doc.get(key)
+            if not val:
+                continue
+            try:
+                if hasattr(val, "strftime"):
+                    return val.strftime("%Y-%m-%d")
+                s = str(val).strip()
+                # Handle ISO datetimes like "2026-09-25T04:06:17.079722+00:00"
+                return s[:10] if len(s) >= 10 and s[4] == "-" else today
+            except Exception:
+                continue
+        return today
 
     xml = """<?xml version="1.0" encoding="UTF-8"?>"""
 
@@ -1519,7 +1535,7 @@ async def sitemap():
         xml += f"""
 <url>
 <loc>{base}/learn/{lesson["slug"]}</loc>
-<lastmod>{today}</lastmod>
+<lastmod>{_lastmod(lesson)}</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
@@ -1529,7 +1545,7 @@ async def sitemap():
         xml += f"""
 <url>
 <loc>{base}/blog/{blog["slug"]}</loc>
-<lastmod>{today}</lastmod>
+<lastmod>{_lastmod(blog)}</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
