@@ -32,7 +32,7 @@ export default function BlogDetail() {
       })
       .catch(() => { if (mounted) setNotFound(true); });
     return () => { mounted = false; };
-  }, [slug]);
+  }, [slug, navigate]);
 
   useSEO({
     title: notFound ? "Article Not Found" : post?.title,
