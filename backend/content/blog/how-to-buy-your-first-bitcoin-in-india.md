@@ -17,6 +17,8 @@ faqs:
 
 Buying your first Bitcoin can feel intimidating. Charts, jargon, scary headlines — it's a lot. But the actual process of buying Bitcoin in India in 2026 is straightforward, and this guide walks you through every step in plain language.
 
+> **Educational content only.** This is not financial advice. Bitcoin is volatile — never invest money you can't afford to lose.
+
 Before we start: this is an educational guide, not financial advice. Bitcoin's price is volatile — it can rise or fall sharply, and you should never invest money you can't afford to lose.
 
 ## What You Need Before You Begin
