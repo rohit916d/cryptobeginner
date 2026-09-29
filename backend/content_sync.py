@@ -156,6 +156,7 @@ async def _run_slug_dedupe(db):
     if flag:
         return 0
     removed = 0
+    drop_ids = []
     for collection_name in ("blog", "lessons"):
         coll = db[collection_name]
         docs = [d async for d in coll.find(
@@ -178,12 +179,18 @@ async def _run_slug_dedupe(db):
                 seen[slug] = doc
                 continue
             keep, drop = (doc, prev) if rank(doc) >= rank(prev) else (prev, doc)
-            await coll.delete_one({"_id": drop["_id"]})
+            drop_ids.append((collection_name, drop["_id"]))
             seen[slug] = keep
             removed += 1
-        # Unique index prevents any future duplicate slugs.
+    # Batch the deletions: one delete_many per collection instead of
+    # hundreds of sequential delete_one calls (too slow on serverless).
+    # Index is created AFTER deletions so the unique constraint succeeds.
+    for collection_name in ("blog", "lessons"):
+        ids = [i for c, i in drop_ids if c == collection_name]
+        if ids:
+            await db[collection_name].delete_many({"_id": {"$in": ids}})
         try:
-            await coll.create_index("slug", unique=True)
+            await db[collection_name].create_index("slug", unique=True)
         except Exception:
             pass
     await db.meta.insert_one(
