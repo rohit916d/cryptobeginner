@@ -33,7 +33,7 @@ print("Google GenAI Version:", google.genai.__version__)
 
 from google import genai
 from seed_data import LESSONS, BLOG_POSTS, GLOSSARY
-from content_sync import sync_repo_content
+from content_sync import sync_repo_content, _run_slug_dedupe
 
 
 # ----------------------------------------------------
@@ -1589,10 +1589,16 @@ async def startup():
 
             logger.info(f"Seeded {len(GLOSSARY)} glossary terms")
 
-        # Sync repo-managed Markdown content (blog posts + lessons) and run
-        # one-time migrations (e.g. duplicate-post cleanup). Idempotent.
-        # Runs in the background so a slow/hung DB can never block startup
-        # or take the API down; endpoints serve as soon as the app is up.
+        # One-time slug-dedupe migration runs in the FOREGROUND (with a timeout)
+        # because serverless functions freeze background tasks between requests.
+        # Regular content sync runs in the background afterwards.
+        try:
+            await asyncio.wait_for(_run_slug_dedupe(db), timeout=25)
+        except asyncio.TimeoutError:
+            logger.warning("Slug dedupe timed out; will retry on next cold start")
+        except Exception as e:
+            logger.exception(f"Slug dedupe failed: {e}")
+
         async def _background_sync():
             try:
                 await sync_repo_content(db, logger)
