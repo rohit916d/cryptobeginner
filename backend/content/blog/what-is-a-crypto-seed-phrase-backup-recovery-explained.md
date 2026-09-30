@@ -21,6 +21,8 @@ Not if you wrote down twelve (or twenty-four) simple English words on a piece of
 
 That short list of words is called a **seed phrase** — also known as a recovery phrase or backup phrase. It is the single most important concept in crypto security, and understanding it properly is more valuable than any trading tip. Let us break it down in plain language.
 
+> **Educational content only.** This is not financial advice.
+
 ## What Exactly Is a Seed Phrase?
 
 When you create a new non-custodial crypto wallet — an app where *you* control the keys, like MetaMask, Trust Wallet, or a hardware wallet — the software generates a master key for you. Instead of showing you a terrifying string of letters and numbers, it shows you something human-friendly: a sequence of 12 or 24 ordinary English words drawn from a standard global list. Words like "river," "lamp," or "seven."

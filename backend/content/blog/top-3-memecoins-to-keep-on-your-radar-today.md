@@ -1,5 +1,5 @@
 ---
-title: Top 3 Memecoins to Keep on Your Radar Today
+title: "What Are Memecoins? Risks Beginners Should Know"
 category: Trading Basics
 excerpt: "Memecoins run on jokes, community, and attention — not fundamentals. Learn what they are, why they move, and how to weigh the risk."
 read_time: 7
@@ -18,6 +18,8 @@ faqs:
 A coin based on a cartoon dog became one of the most famous cryptocurrencies in the world. A token named after a frog meme created overnight millionaires. If you are new to crypto, this probably sounds absurd. Welcome to memecoins — the strangest, funniest, and riskiest corner of the market.
 
 This guide explains what memecoins are, why they exist, and how to think about their risk like an adult. It is not a buying guide. Nothing here is a recommendation — by the end, you will understand why that matters.
+
+> **Educational content only.** This is not financial advice. Crypto markets are volatile — never invest money you can't afford to lose.
 
 ## What Is a Memecoin?
 

@@ -19,6 +19,8 @@ Here is the first hard truth every crypto beginner must absorb: unlike a bank ac
 
 That is why one of the earliest decisions you will make is *where to keep your crypto* — and that decision comes down to two categories: **hot wallets** and **cold wallets**. The difference is simple, the implications are enormous, and most experienced users end up using both.
 
+> **Educational content only.** This is not financial advice.
+
 ## Quick Refresher: What Does a Wallet Actually Store?
 
 A crypto wallet does not hold coins the way a leather wallet holds cash. Your coins live on the blockchain itself. What your wallet stores are your **cryptographic keys**: your public address (which you share to receive funds, like an email address) and your private key (which proves ownership and authorizes spending, like a password that can never be reset).

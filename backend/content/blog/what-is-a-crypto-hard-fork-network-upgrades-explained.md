@@ -21,6 +21,8 @@ Blockchains cannot work that way. There is no company, no CEO, and no central se
 
 The answer is a process called a **hard fork** — one of the most dramatic and most misunderstood events in cryptocurrency. This guide explains what hard forks are, why they happen, what actually occurs during one, and what you as a beginner should do (and avoid) when one is announced.
 
+> **Educational content only.** This is not financial advice.
+
 ## First: What Is a Fork?
 
 Picture a blockchain as a shared book of records. Every computer on the network, called a **node**, holds an identical copy. Transactions are written into the book page by page, and each page (block) is chained to the one before it.

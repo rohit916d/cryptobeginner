@@ -19,6 +19,8 @@ Every beginner in crypto asks some version of the same question: is there a coin
 
 This guide gives you a framework for evaluating large-cap coins like Bitcoin, Ethereum, Solana, XRP, and BNB on both dimensions, so you can make informed decisions instead of chasing hype.
 
+> **Educational content only.** This is not financial advice. Crypto markets are volatile — never invest money you can't afford to lose.
+
 ## First, Redefine "Safe"
 
 In traditional investing, "safe" might mean a government bond or a fixed deposit. In crypto, nothing qualifies. Even Bitcoin - the oldest, largest, and most established cryptocurrency - has experienced drops of 50% or more multiple times in its history.

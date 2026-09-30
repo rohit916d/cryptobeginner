@@ -19,6 +19,8 @@ Every crypto project has a story it tells on social media — and then there is 
 
 Learning to read whitepapers is like learning to read a company's annual report before investing in its stock. You do not need to understand every page — but knowing what to look for separates informed participants from hype-followers. This guide teaches you exactly that.
 
+> **Educational content only.** This is not financial advice.
+
 ## Why Whitepapers Exist
 
 The tradition started with Bitcoin. In 2008, an anonymous author published a nine-page paper describing "a peer-to-peer electronic cash system." No marketing team, no influencer campaign — just a technical document explaining a solution to a real problem: making online payments without trusted middlemen.

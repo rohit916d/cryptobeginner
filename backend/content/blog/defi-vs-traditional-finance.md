@@ -17,6 +17,8 @@ faqs:
 
 "DeFi will replace banks." You have probably seen the claim. It is bold, exciting — and like most bold claims in crypto, it needs unpacking. This guide gives you an honest, beginner-friendly comparison of DeFi (decentralized finance) and traditional finance (banks, brokers, and the systems you already use), so you can judge the hype for yourself.
 
+> **Educational content only.** This is not financial advice. Crypto markets are volatile — never invest money you can't afford to lose.
+
 ## First: What Is DeFi, Really?
 
 Traditional finance runs on **institutions**: banks hold your money, brokers execute your trades, and companies enforce the rules. DeFi replaces institutions with **code** — programs called smart contracts that live on blockchains like Ethereum and run exactly as written, for anyone, without permission.

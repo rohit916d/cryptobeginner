@@ -16,6 +16,8 @@ faqs:
 ---
 Creating your first crypto wallet is the moment crypto stops being theory and becomes real. It is also the moment most beginners make their first serious mistake — usually with the seed phrase. This guide walks you through the entire process safely, step by step, so your first wallet is a confident start rather than a cautionary tale.
 
+> **Educational content only.** This is not financial advice.
+
 ## Step 0: Understand the Two Kinds of Wallets
 
 Before downloading anything, know what you are choosing between:

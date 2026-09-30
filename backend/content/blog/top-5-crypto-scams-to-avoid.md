@@ -19,6 +19,8 @@ Every market cycle brings the same unwelcome guest: a fresh wave of scams wearin
 
 Here are the five scams doing the most damage right now, how each one works, and the red flags that give them away.
 
+> **Educational content only.** This is not financial advice.
+
 ## 1. Pig-butchering: the long con
 
 Named after the grim practice of fattening a pig before slaughter, this is the costliest scam in crypto — billions lost worldwide every year. It is a slow, patient romance-and-investment fraud:

@@ -17,6 +17,8 @@ faqs:
 
 "Blockchain" is one of those words people use confidently at dinner parties without really understanding. By the end of this guide, you will understand it better than most of them. No jargon, no math degree required.
 
+> **Educational content only.** This is not financial advice.
+
 ## Start Here: The Shared Notebook
 
 Imagine a notebook that thousands of people around the world all hold copies of. Anyone can write a new entry (following strict rules), everyone can read every entry, but **nobody can erase or secretly alter past entries**. When a new page is added, every copy of the notebook updates simultaneously.

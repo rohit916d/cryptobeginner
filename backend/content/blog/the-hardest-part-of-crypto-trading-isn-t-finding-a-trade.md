@@ -21,6 +21,8 @@ Here is what almost nobody tells beginners: finding the trade was never the hard
 
 This article is about the real skill of trading: protecting your capital from yourself.
 
+> **Educational content only.** This is not financial advice. Crypto markets are volatile — never invest money you can't afford to lose.
+
 ## Why Finding Setups Is the Easy Part
 
 Think about it. A basic chart pattern takes an afternoon to learn. Exchanges will even hand you "top movers" lists. In a market as volatile as crypto, *something* always looks like an opportunity. If trading were only about spotting entries, everyone with a phone would be profitable.

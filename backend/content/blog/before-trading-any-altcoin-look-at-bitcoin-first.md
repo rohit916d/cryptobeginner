@@ -18,6 +18,8 @@ Here is a habit that separates beginners who survive from beginners who donate t
 
 It feels backwards. You want to trade Coin X, so why study Coin B? Because in crypto, Bitcoin is not just another coin. It is the weather system everything else flies through. Ignoring it is like planning a picnic without checking the sky.
 
+> **Educational content only.** This is not financial advice. Crypto markets are volatile — never invest money you can't afford to lose.
+
 ## Why Bitcoin Moves Everything
 
 Bitcoin is the largest cryptocurrency by far, usually accounting for roughly half of the total crypto market's value. That size gives it a gravitational pull on everything else:

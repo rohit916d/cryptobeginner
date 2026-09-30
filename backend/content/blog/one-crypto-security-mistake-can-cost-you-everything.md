@@ -21,6 +21,8 @@ In crypto, there is no bank to call. There is no "undo" button, no fraud departm
 
 The good news: almost every loss is preventable. Most victims are not hacked by geniuses; they are caught in a moment of hurry, curiosity, or misplaced trust. This guide explains the one mistake behind nearly all of them — trusting without verifying — and the simple habits that protect you from it.
 
+> **Educational content only.** This is not financial advice.
+
 ## Why Crypto Has No Safety Net
 
 When someone steals money from your bank account, the bank can often reverse the transaction. Banks are centralized: a single authority can step in and say "that transfer should not have happened."

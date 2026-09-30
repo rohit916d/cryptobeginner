@@ -19,6 +19,8 @@ You have heard the word "Bitcoin" a hundred times — on the news, in conversati
 
 This guide explains Bitcoin from zero, in plain language. No jargon, no assumptions. By the end, you will understand what Bitcoin is, how it works, and why so many people care about it.
 
+> **Educational content only.** This is not financial advice.
+
 ## Bitcoin in One Paragraph
 
 Bitcoin is **digital money that works without banks**. It is a currency — like rupees or dollars — but instead of being issued by a government and moved through banks, it runs on a global network of computers that anyone can join. You can send it to anyone, anywhere in the world, without asking permission from any company or government. There will only ever be 21 million bitcoins, and no one can print more.

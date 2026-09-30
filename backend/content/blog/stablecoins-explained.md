@@ -17,6 +17,8 @@ faqs:
 
 Bitcoin can move 10% in a single day. For someone who simply wants to send money to family abroad or receive payment for freelance work, that rollercoaster is a deal-breaker. Stablecoins were created to solve exactly this problem: they aim to combine crypto's speed and global reach with a steady, predictable value.
 
+> **Educational content only.** This is not financial advice.
+
 ## What is a stablecoin?
 
 A **stablecoin** is a cryptocurrency designed to hold a stable value — almost always by tracking the price of a traditional currency, usually the US dollar. One token is meant to be worth about one dollar, today, tomorrow, and next month.

@@ -19,6 +19,8 @@ When you create a crypto wallet, it shows you 12 or 24 ordinary English words â€
 
 Your **seed phrase** (also called a recovery phrase or backup phrase) is the most important concept in crypto self-custody. It is the master key from which everything else is derived. Understand it properly, and you are protected against the most common disasters in crypto. Neglect it, and nothing else you learn about security matters.
 
+> **Educational content only.** This is not financial advice.
+
 ## What Exactly Is a Seed Phrase?
 
 A seed phrase is a human-readable master key generated when you create a wallet. Behind the scenes, your wallet produces a large random number and converts it into 12 or 24 common English words drawn from a standardized list of 2,048 words (a standard called BIP-39, used across the industry).

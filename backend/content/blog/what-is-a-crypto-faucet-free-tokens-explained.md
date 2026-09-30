@@ -19,6 +19,8 @@ Free cryptocurrency for clicking a few buttons. If that sounds too good to be tr
 
 In this guide, we will cover what faucets are, why they were invented, how the legitimate ones work, and the very real risks hiding behind the "free crypto" promise.
 
+> **Educational content only.** This is not financial advice.
+
 ## What Is a Crypto Faucet?
 
 A crypto faucet is a website or app that dispenses tiny amounts of cryptocurrency to users who complete simple tasks. The name comes from the image of a dripping tap: instead of water, small drops of digital coins slowly accumulate in your account until you have enough to withdraw.

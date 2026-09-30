@@ -1,5 +1,5 @@
 ---
-title: "3 Things I'm Watching Before Taking a Crypto Trade Today"
+title: "3 Things to Check Before Taking Any Crypto Trade: A Beginner's Pre-Trade Routine"
 category: "Trading Basics"
 excerpt: "Crypto trading isn't about finding a trade every few minutes. Sometimes the best decision is simply waiting for a better setup"
 read_time: 5
@@ -17,6 +17,8 @@ faqs:
 Most beginners treat crypto trading like a slot machine: open the app, stare at charts, and jump into whatever is moving. Then they wonder why their balance keeps shrinking even when they "called the direction right" a few times.
 
 Here is the uncomfortable truth experienced traders learn: trading profitably is mostly about what you do *before* you click buy or sell. The trade itself takes seconds. The preparation is the actual skill. This guide walks through the three things worth checking before taking any crypto trade — a simple pre-trade routine that protects beginners from their own worst impulses.
+
+> **Educational content only.** This is not financial advice. Crypto markets are volatile — never invest money you can't afford to lose.
 
 ## 1. Where Bitcoin Stands Right Now
 

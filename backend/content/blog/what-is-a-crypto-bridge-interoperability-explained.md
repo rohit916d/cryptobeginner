@@ -21,6 +21,8 @@ For years, blockchains worked like isolated islands. If your funds were on Ether
 
 In this guide, you will learn what bridges are, how they move your assets, the different types that exist, and — most importantly — the risks every beginner should understand before touching one.
 
+> **Educational content only.** This is not financial advice.
+
 ## What Is a Crypto Bridge?
 
 A crypto bridge is a protocol (a set of rules enforced by code) that connects two different blockchain networks and lets value or data move between them.

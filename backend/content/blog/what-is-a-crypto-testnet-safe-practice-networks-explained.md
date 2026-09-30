@@ -19,6 +19,8 @@ The first time most beginners send a real crypto transaction, their hand shakes 
 
 Fortunately, there is a built-in safety net used by both developers and beginners: the **testnet**. Think of it as a full-scale flight simulator for crypto. Let us explore what it is, how it works, and how you can use it to practice with zero financial risk.
 
+> **Educational content only.** This is not financial advice.
+
 ## What Is a Crypto Testnet?
 
 A testnet (short for "test network") is an alternative blockchain that behaves like a real blockchain — same software, same rules, same wallet interface — but runs entirely separately. The key difference: coins on a testnet have **zero monetary value**.

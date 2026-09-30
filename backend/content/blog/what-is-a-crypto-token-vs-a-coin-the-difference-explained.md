@@ -19,6 +19,8 @@ Scroll through any crypto app and you will see thousands of assets — Bitcoin, 
 
 Let us clear this up with simple analogies.
 
+> **Educational content only.** This is not financial advice.
+
 ## What Is a Crypto Coin?
 
 A **coin** is the native currency of its own independent blockchain — a network built from scratch with its own validators or miners.

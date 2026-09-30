@@ -19,6 +19,8 @@ One of the first things beginners learn about blockchain is that it is **immutab
 
 This guide breaks down what chain reorganizations are, why they happen, and what they mean for your everyday transactions. No action is required from you in almost all cases — but knowing *why* will make you a calmer, more confident crypto user.
 
+> **Educational content only.** This is not financial advice.
+
 ## What Is a Chain Reorganization?
 
 A blockchain grows as computers around the world (nodes, miners, validators) agree on the next block of transactions to append to the chain. Normally they agree instantly. But the network spans the globe, and information takes time to travel.

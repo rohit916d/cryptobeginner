@@ -1,5 +1,5 @@
 ---
-title: "Top Crypto Coins to Watch: Bitcoin, Ethereum, Solana & XRP — A Beginner's Guide"
+title: "Bitcoin, Ethereum, Solana & XRP: A Beginner's Guide to Understanding Large-Cap Coins"
 category: Bitcoin
 excerpt: "How should beginners watch large-cap coins like BTC, ETH, SOL and XRP? A timeless guide to momentum, market structure, Bitcoin's anchor role and risk."
 read_time: 7
@@ -18,6 +18,8 @@ faqs:
 Newcomers to crypto often try to track dozens of coins at once - scrolling through endless green and red numbers, reacting to every pump. There is a calmer, smarter approach: learn to watch a small set of large, established coins deeply, and let them teach you how the whole market moves.
 
 This guide explains how beginners should think about watching Bitcoin, Ethereum, Solana, XRP, and BNB - what each one represents, why Bitcoin acts as the market's anchor, and how to observe momentum and market structure without getting burned.
+
+> **Educational content only.** This is not financial advice. Crypto markets are volatile — never invest money you can't afford to lose.
 
 ## Why Start with Large-Cap Coins?
 

@@ -1927,6 +1927,26 @@ async def auto_generate_content(request: Request):
     return result
 
 
+@api_router.post("/admin/sync-content")
+async def sync_content_now(request: Request):
+    """Trigger a repo-content sync on demand.
+
+    Lets the publishing pipeline make a newly pushed post go live within
+    seconds instead of waiting for a backend cold start (sync_repo_content
+    otherwise only runs on startup, and as a background task that serverless
+    platforms may freeze mid-run). Awaited inside the request so it always
+    completes. Authenticated with CRON_SECRET, same as /admin/auto-generate.
+    Safe to call often: the sync is idempotent.
+    """
+    if not CRON_SECRET:
+        raise HTTPException(500, "CRON_SECRET is not configured on the server")
+    auth_header = request.headers.get("Authorization", "")
+    if auth_header != f"Bearer {CRON_SECRET}":
+        raise HTTPException(401, "Unauthorized")
+    result = await sync_repo_content(db, logger)
+    return {"ok": True, "synced": result}
+
+
 # ----------------------------------------------------
 # ADMIN PANEL (auth + data endpoints)
 # ----------------------------------------------------

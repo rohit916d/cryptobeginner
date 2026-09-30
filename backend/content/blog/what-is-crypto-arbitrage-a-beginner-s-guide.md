@@ -21,6 +21,8 @@ The strategy of profiting from those gaps is called **arbitrage**. Understanding
 
 *This guide is educational only. It is not trading advice, and nothing here suggests you should attempt arbitrage.*
 
+> **Educational content only.** This is not financial advice. Crypto markets are volatile — never invest money you can't afford to lose.
+
 ## What Is Crypto Arbitrage?
 
 Crypto arbitrage means **buying a cryptocurrency where it is cheaper and selling it where it is more expensive, nearly simultaneously**, keeping the difference.

@@ -21,6 +21,8 @@ The tool that lets you read this public register is called a **block explorer**.
 
 In this guide, you will learn what a block explorer is, what you can find on one, and how to read a transaction page without feeling overwhelmed. No technical background needed.
 
+> **Educational content only.** This is not financial advice.
+
 ## What Is a Block Explorer?
 
 A block explorer is a website or app that lets you search through the recorded history of a blockchain. Because blockchains like Bitcoin and Ethereum are public by design, all of their data sits out in the open. The problem is that raw blockchain data looks like unreadable computer code. A block explorer translates that data into clean tables, charts, and search boxes that a normal human can understand.

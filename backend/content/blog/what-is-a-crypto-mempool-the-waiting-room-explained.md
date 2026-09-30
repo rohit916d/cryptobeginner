@@ -19,6 +19,8 @@ You press "send" on your wallet. The crypto leaves your balance. And then... not
 
 In almost every case, the answer is: it is sitting in the **mempool** — the blockchain's waiting room. Understanding this one concept explains nearly all "delayed transaction" mysteries and most of what beginners need to know about network fees. Let us walk through it.
 
+> **Educational content only.** This is not financial advice.
+
 ## What Is a Mempool?
 
 "Mempool" is short for **memory pool**. When you broadcast a transaction, it does not go straight onto the blockchain. First, it is relayed across the network of computers (nodes) that run the blockchain. Each node checks that the transaction is valid — that you actually own the funds and have not already spent them — and then places it in its mempool: a temporary holding area for transactions waiting to be confirmed.

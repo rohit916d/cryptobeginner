@@ -21,6 +21,8 @@ Dust is one of those small details that confuses beginners but is easy to unders
 
 > **Educational note:** This article explains a wallet concept only. It is not financial or security advice.
 
+> **Educational content only.** This is not financial advice.
+
 ## What Exactly Is Crypto Dust?
 
 Crypto dust is an amount of cryptocurrency so small that its market value is typically less than the transaction fee required to move or sell it. Imagine having 50 paise stuck in a digital piggy bank, except the piggy bank charges you ₹100 to open it. The money is technically there, but it is not practically usable.

@@ -17,6 +17,8 @@ faqs:
 
 The first time you open a crypto price chart, it can feel like being handed the cockpit controls of an aeroplane mid-flight. Flickering numbers, green and red bars marching across the screen, thin lines crossing each other like flight paths. It looks like a tool for experts only — but it isn't. A crypto chart is simply a picture of what buyers and sellers have been doing, and once you learn its basic vocabulary, you can read any chart on any exchange.
 
+> **Educational content only.** This is not financial advice. Crypto markets are volatile — never invest money you can't afford to lose.
+
 ## The headline numbers: what you see before the chart
 
 Most exchange apps and price sites show a summary strip above the chart. Here is what each number means:

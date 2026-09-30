@@ -21,6 +21,8 @@ The first time you look at a crypto wallet address, it looks like someone fell a
 
 Long, random, intimidating. But the concept behind it is something you already understand — it works a lot like an email address or a bank account number. Let us demystify it completely.
 
+> **Educational content only.** This is not financial advice.
+
 ## What Is a Crypto Wallet Address?
 
 A **wallet address** is a public destination on a blockchain where cryptocurrency can be sent. If someone wants to pay you in crypto, they need your address. If you want to pay someone, you need theirs.

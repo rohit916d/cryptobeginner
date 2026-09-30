@@ -19,6 +19,8 @@ Open any crypto wallet and you will find a long string of seemingly random lette
 
 Think of it as your email address, but for money. This guide explains what a public address is, how it relates to your private key, how address formats differ across blockchains, and how to use yours without making expensive mistakes.
 
+> **Educational content only.** This is not financial advice.
+
 ## What Is a Public Address?
 
 A public address is a cryptographic identifier derived from your wallet's public key through a one-way mathematical process called **hashing**. "One-way" is the key property: anyone can go from your keys to your address, but nobody can reverse the process to discover your private key from your address.
