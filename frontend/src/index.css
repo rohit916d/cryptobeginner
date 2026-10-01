@@ -481,3 +481,113 @@ html { scrollbar-color: #2A3242 #0B0E14; scrollbar-width: thin; }
 /* Hide scrollbar utility */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ---- Crypto Assistant chat widget ---- */
+.chat-launcher {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 50;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1A2100;
+    background: linear-gradient(180deg, #D9FF8A 0%, #C8F169 55%, #B4E04F 100%);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.4) inset,
+        0 10px 24px -8px rgba(200, 241, 105, 0.45);
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.chat-launcher:hover {
+    transform: translateY(-2px) scale(1.04);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.45) inset,
+        0 16px 32px -8px rgba(200, 241, 105, 0.55);
+}
+.chat-panel {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 50;
+    width: 22rem;
+    max-width: calc(100vw - 2rem);
+    overflow: hidden;
+    border-radius: 1rem;
+    background: #121722;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow:
+        0 24px 60px -12px rgba(0, 0, 0, 0.65),
+        0 0 0 1px rgba(200, 241, 105, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transform-origin: bottom right;
+    animation: chatIn 280ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes chatIn {
+    from { opacity: 0; transform: translateY(14px) scale(0.96); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.chat-bubble-bot,
+.chat-bubble-user {
+    display: inline-block;
+    max-width: 88%;
+    padding: 0.55rem 0.8rem;
+    border-radius: 0.8rem;
+    font-size: 0.83rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+.chat-bubble-bot {
+    background: #1B2130;
+    color: #E4E6EB;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom-left-radius: 0.25rem;
+}
+.chat-bubble-user {
+    background: linear-gradient(180deg, #D9FF8A 0%, #C8F169 100%);
+    color: #1A2100;
+    font-weight: 500;
+    border-bottom-right-radius: 0.25rem;
+}
+.chat-chip {
+    font-size: 0.72rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 9999px;
+    color: #C8F169;
+    background: rgba(200, 241, 105, 0.07);
+    border: 1px solid rgba(200, 241, 105, 0.22);
+    transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+.chat-chip:hover {
+    background: rgba(200, 241, 105, 0.14);
+    border-color: rgba(200, 241, 105, 0.45);
+    transform: translateY(-1px);
+}
+.typing-dots {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0.8rem 0.9rem;
+}
+.typing-dots span {
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+    background: #8D95A8;
+    animation: typingBounce 1.2s ease-in-out infinite;
+}
+.typing-dots span:nth-child(2) { animation-delay: 150ms; }
+.typing-dots span:nth-child(3) { animation-delay: 300ms; }
+@keyframes typingBounce {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+    30% { transform: translateY(-4px); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .chat-panel { animation: none; }
+    .chat-launcher:hover { transform: none; }
+    .typing-dots span { animation: none; opacity: 0.7; }
+    .chat-chip:hover { transform: none; }
+}
