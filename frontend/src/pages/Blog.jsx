@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { api } from "../lib/api";
 import { Clock, ArrowRight } from "lucide-react";
 import { useSEO, SITE_ORIGIN } from "../lib/seo";
+import Reveal from "../components/Reveal";
 
 export default function Blog() {
   const [posts, setPosts] = useState([]);
@@ -71,12 +72,11 @@ export default function Blog() {
           <div key={`blog-skeleton-${i}`} className="card-base p-6 h-72 animate-pulse" />
         ))}
         {!loading && filtered.map((p, idx) => (
+          <Reveal key={p.slug} delay={Math.min(idx, 8) * 60}>
           <Link
-            key={p.slug}
             to={`/blog/${p.slug}`}
             data-testid={`blog-card-${p.slug}`}
-            className="card-base overflow-hidden hover-lift fade-up group"
-            style={{ animationDelay: `${idx * 60}ms` }}
+            className="card-base overflow-hidden hover-lift group h-full block"
           >
             <div className="aspect-[16/10] bg-gradient-to-br from-lime-400/10 to-zinc-900 overflow-hidden">
               {p.cover_image && (
@@ -100,6 +100,7 @@ export default function Blog() {
               </div>
             </div>
           </Link>
+          </Reveal>
         ))}
       </div>
     </div>

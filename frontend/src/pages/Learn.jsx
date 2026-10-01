@@ -3,6 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { api } from "../lib/api";
 import { ArrowRight, BookOpen, Clock } from "lucide-react";
 import { useSEO, SITE_ORIGIN } from "../lib/seo";
+import Reveal from "../components/Reveal";
 
 const LEVELS = [
   { key: "beginner", label: "Beginner", desc: "Foundations: Bitcoin, blockchain, wallets, exchanges." },
@@ -86,12 +87,11 @@ export default function Learn() {
           <div key={`skeleton-${i}`} className="card-base p-6 h-44 animate-pulse" />
         ))}
         {!loading && lessons.map((l, idx) => (
+          <Reveal key={l.slug} delay={Math.min(idx, 8) * 60}>
           <Link
-            key={l.slug}
             to={`/learn/${l.slug}`}
             data-testid={`lesson-card-${l.slug}`}
-            className="card-base p-6 hover-lift fade-up group"
-            style={{ animationDelay: `${idx * 60}ms` }}
+            className="card-base p-6 hover-lift group h-full block"
           >
             <div className="flex items-center justify-between">
               <span className="label-eyebrow text-[#C8F169]/80">Lesson {l.order}</span>
@@ -107,6 +107,7 @@ export default function Learn() {
               Read lesson <ArrowRight size={13} />
             </div>
           </Link>
+          </Reveal>
         ))}
       </div>
 

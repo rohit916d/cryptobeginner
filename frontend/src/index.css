@@ -300,9 +300,32 @@
 }
 .fade-up { animation: fadeUp 600ms ease-out both; }
 
+/* Scroll-triggered reveal: fades + rises in when entering the viewport.
+   Paired with the <Reveal /> component (IntersectionObserver toggles .is-visible).
+   GPU-friendly: opacity + transform only. */
+.reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+        opacity 680ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 680ms cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+}
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Smooth anchor scrolling (hero "Explore Market" -> #market etc.) */
+html {
+    scroll-behavior: smooth;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .fade-up { animation: none; }
     .marquee-track { animation: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
 }
 
 /* ---- Block3D: rotating blockchain block, hero centerpiece ---- */

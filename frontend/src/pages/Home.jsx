@@ -6,6 +6,7 @@ import AdSlot, { AD_SLOTS } from "../components/AdSlot";
 import TiltCard from "../components/TiltCard";
 import MagneticButton from "../components/MagneticButton";
 import AnimatedCounter from "../components/AnimatedCounter";
+import Reveal from "../components/Reveal";
 
 const MarketStats = lazy(() => import("../components/MarketStats"));
 const CryptoTable = lazy(() => import("../components/CryptoTable"));
@@ -136,10 +137,12 @@ export default function Home() {
 
       {/* MARKET STATS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-2">
-        <div className="mb-6">
-          <div className="label-eyebrow">Market Overview</div>
-          <h2 className="text-2xl md:text-3xl font-bold text-white mt-1">Today in crypto</h2>
-        </div>
+        <Reveal>
+          <div className="mb-6">
+            <div className="label-eyebrow">Market Overview</div>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mt-1">Today in crypto</h2>
+          </div>
+        </Reveal>
         <Suspense fallback={<div>Loading...</div>}>
   <MarketStats />
 </Suspense>
@@ -147,11 +150,13 @@ export default function Home() {
 
       {/* WHY CRYPTO BEGINNER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+        <Reveal>
         <div className="mb-10 text-center max-w-2xl mx-auto">
           <div className="label-eyebrow justify-center flex">Why Crypto Beginner</div>
           <h2 className="text-2xl md:text-4xl font-bold text-white mt-2">Built for people who've never touched crypto</h2>
           <p className="mt-3 text-zinc-400">No hype, no price predictions, no jargon dumps — just clear explanations and real market context.</p>
         </div>
+        </Reveal>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {[
             { icon: GraduationCap, title: "Zero to fluent", desc: "Structured lessons that build on each other — start with \u201cwhat is a blockchain\u201d and end up confident." },
@@ -159,13 +164,15 @@ export default function Home() {
             { icon: TrendingUp, title: "Live market context", desc: "Real prices, market cap and dominance data sit alongside every lesson — theory meets the real thing." },
             { icon: Lock, title: "No financial advice", desc: "We teach concepts, not predictions. You'll never see \u201cbuy this coin now\u201d on this site." },
           ].map((f, i) => (
-            <TiltCard key={f.title} maxTilt={5} className="card-base p-6 hover-lift fade-up" style={{ animationDelay: `${i * 80}ms` }}>
+            <Reveal key={f.title} delay={i * 90}>
+            <TiltCard maxTilt={5} className="card-base p-6 hover-lift h-full">
               <div className="w-10 h-10 rounded-xl bg-[#C8F169]/10 flex items-center justify-center mb-4">
                 <f.icon size={18} className="text-[#C8F169]" />
               </div>
               <h3 className="text-white font-semibold">{f.title}</h3>
               <p className="text-sm text-zinc-400 mt-2 leading-relaxed">{f.desc}</p>
             </TiltCard>
+            </Reveal>
           ))}
         </div>
       </section>
@@ -194,16 +201,19 @@ export default function Home() {
 
       {/* LEARNING PATH CTA */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
+        <Reveal>
         <div className="mb-10">
           <div className="label-eyebrow">Choose a track</div>
           <h2 className="text-2xl md:text-4xl font-bold text-white mt-2">Where do you want to start?</h2>
         </div>
+        </Reveal>
         <div className="grid md:grid-cols-3 gap-5">
           {[
             { n: "01", icon: BookOpen, title: "Beginner", desc: "Bitcoin, blockchain, wallets, exchanges — start here.", to: "/learn?level=beginner", color: "from-lime-300/20 to-transparent" },
             { n: "02", icon: Layers, title: "Intermediate", desc: "DeFi, staking, smart contracts, NFTs, L1 vs L2.", to: "/learn?level=intermediate", color: "from-violet-400/20 to-transparent" },
             { n: "03", icon: ShieldCheck, title: "Security", desc: "Scams, phishing, wallet & seed phrase protection.", to: "/learn?level=security", color: "from-rose-400/20 to-transparent" },
-          ].map((t) => (
+          ].map((t, i) => (
+            <Reveal key={t.title} delay={i * 100}>
             <TiltCard
               as={Link}
               key={t.title}
@@ -227,12 +237,14 @@ export default function Home() {
                 </div>
               </div>
             </TiltCard>
+            </Reveal>
           ))}
         </div>
       </section>
 
       {/* RECOMMENDED EXCHANGES PROMO */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
+        <Reveal>
         <Link
           to="/recommended"
           data-testid="home-recommended-promo"
@@ -251,17 +263,20 @@ export default function Home() {
             View picks <ArrowRight size={14} />
           </span>
         </Link>
+        </Reveal>
       </section>
 
       {/* HOW YOU'LL LEARN */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-4">
+            <Reveal>
             <div className="label-eyebrow">The process</div>
             <h2 className="text-2xl md:text-4xl font-bold text-white mt-2">How you'll learn</h2>
             <p className="mt-3 text-zinc-400 max-w-sm leading-relaxed">
               Three steps, no fluff. Most people finish the beginner track in a weekend.
             </p>
+            </Reveal>
           </div>
           <div className="lg:col-span-8 space-y-4">
             {[
@@ -269,13 +284,15 @@ export default function Home() {
               { title: "Read bite-sized lessons", desc: "Each guide takes 5\u201310 minutes and builds on the last, with the dictionary a click away." },
               { title: "Check it against live markets", desc: "Apply what you learned on real, live prices and data — no simulations." },
             ].map((s, i) => (
-              <div key={s.title} className="flex gap-5 items-start card-base p-5 hover-lift">
+              <Reveal key={s.title} delay={i * 90}>
+              <div className="flex gap-5 items-start card-base p-5 hover-lift">
                 <div className="font-mono text-2xl text-[#C8F169]/60 font-bold w-10 shrink-0">{String(i + 1).padStart(2, "0")}</div>
                 <div>
                   <h3 className="text-white font-semibold">{s.title}</h3>
                   <p className="text-sm text-zinc-400 mt-1 leading-relaxed">{s.desc}</p>
                 </div>
               </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -283,6 +300,7 @@ export default function Home() {
 
       {/* FINAL CTA */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
+        <Reveal>
         <div className="relative overflow-hidden rounded-3xl glow-border card-base p-10 md:p-16 text-center">
           <div
             className="absolute inset-0 opacity-60 pointer-events-none"
@@ -306,6 +324,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </Reveal>
       </section>
     </>
   );

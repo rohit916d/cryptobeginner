@@ -1,6 +1,7 @@
 import { ExternalLink, ShieldCheck } from "lucide-react";
 import { useSEO, SITE_ORIGIN } from "../lib/seo";
 import { EXCHANGES } from "../lib/affiliates";
+import Reveal from "../components/Reveal";
 
 function PartnerCard({ item }) {
   return (
@@ -79,8 +80,10 @@ export default function Recommended() {
       <div>
         <h2 className="text-xl font-bold text-white mb-5">Exchanges — where to buy</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {EXCHANGES.map((ex) => (
-            <PartnerCard key={ex.id} item={ex} />
+          {EXCHANGES.map((ex, i) => (
+            <Reveal key={ex.id} delay={Math.min(i, 6) * 80}>
+              <PartnerCard item={ex} />
+            </Reveal>
           ))}
         </div>
       </div>
