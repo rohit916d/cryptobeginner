@@ -77,6 +77,18 @@ Before any altcoin trade, answer three questions:
 
 If Bitcoin is crashing through support — close the altcoin tab. The trade will still be there tomorrow, and so will your capital if you protect it today.
 
+## Correlation Is Not a Law
+
+"Look at Bitcoin first" works because altcoins *usually* follow Bitcoin — but "usually" is doing heavy lifting. Understanding *why* the correlation exists keeps you from treating it as a law of physics.
+
+The correlation has three engines, and each can weaken independently:
+
+1. **Shared liquidity.** The same traders, market makers, and funds trade both Bitcoin and altcoins. When they de-risk, they sell everything at once — correlation spikes toward 100%. But dedicated altcoin communities and separate liquidity pools are growing, slowly loosening this link.
+2. **Bitcoin-denominated thinking.** Many altcoins are still quoted and traded against Bitcoin pairs, mechanically tying their fate to it. As stablecoin and fiat pairs dominate more volume, this mechanical link fades.
+3. **Narrative gravity.** Crypto media frames every market move through Bitcoin. Sentiment contagion is real, but it is psychological — and psychology shifts. A major altcoin-specific event (a network upgrade, a regulatory decision) can and does decouple individual coins for days or weeks.
+
+What does this mean for your routine? Keep checking Bitcoin first — the base rates still favour it — but treat sharp divergences as *information*, not errors. When an altcoin rallies hard while Bitcoin falls, ask what the market knows that you do not, rather than assuming the altcoin "must" fall back in line. The rule protects you from storms; curiosity about the exceptions teaches you how markets evolve.
+
 ## The Bottom Line
 
 "Look at Bitcoin first" is one of the simplest edges in crypto trading, and it costs nothing. It will not make every trade win — nothing does — but it filters out an entire class of avoidable losses: the ones where the market was screaming "danger" and you were too focused on one coin to hear it.

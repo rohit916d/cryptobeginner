@@ -87,6 +87,23 @@ Most beginners find their "strategy" was mostly luck. That realisation — free 
 - **Treating it as a game.** If you would not do it with real money, doing it with fake money builds bad habits, not skill.
 - **Skipping to real money after one good week.** A week of luck is not a track record.
 
+## Graduating From Paper to Real — If Ever
+
+Paper trading has a finish line, and most beginners cross it too early or never define it. Here is an honest framework for the transition:
+
+**Signs you might be ready for tiny real positions:**
+- You followed your written rules for a full 30 days without improvising.
+- Your journal shows you can name your three most repeated mistakes — and you have a specific fix for each.
+- You are profitable *after* mentally subtracting realistic fees, slippage, and India's 30% tax on gains. If the strategy only works in a fee-free fantasy, it does not work.
+- You can describe your maximum acceptable loss per month in rupees — and you are genuinely comfortable losing it.
+
+**Rules for the first real-money phase:**
+- Start with an amount so small that losing all of it would annoy you but not hurt you. This is tuition, not investment.
+- Trade the *exact same* plan you paper traded. New strategy plus real money equals an expensive experiment.
+- Keep journaling. The first time real money is on the line, old discipline cracks — the journal is how you catch it.
+
+**And the valid alternative:** many people finish 30 days of paper trading and conclude active trading is not for them — too stressful, too time-consuming, too random. That is not failure. That is a free, accurate self-assessment, and it is one of the best outcomes paper trading can produce. Learning, holding long-term, or simply walking away are all respectable answers.
+
 ## The Big Picture
 
 Paper trading is a flight simulator for markets: it teaches you the controls, the procedures, and your own reactions — without the crash. Use it to learn mechanics, build discipline, and honestly assess whether active trading suits you at all.

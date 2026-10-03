@@ -78,6 +78,16 @@ Answer these in two minutes and you know more about "today's market" than most h
 
 *Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
 
+## A Two-Minute Worked Example
+
+Theory is nice; let us walk through a routine market read using our classroom example — Bitcoin steady near a key level, an altcoin outperforming.
+
+**Minute one — Bitcoin's backdrop.** Open the daily chart. Is Bitcoin above or below where it traded a week ago? Suppose it is roughly flat, bouncing between the same two levels for five days. That is a *range*, not a trend. In a range, breakouts fail often and mean-reversion wins — the market is coiling, waiting for a catalyst. Your takeaway: no aggressive directional bets; the next big move starts from a breakout, not from the middle.
+
+**Minute two — rotation and catalysts.** Check Bitcoin dominance: falling slowly while the altcoin rises. That confirms genuine rotation — risk appetite is expanding, not just one coin spiking. Then check the calendar: is there a CPI release or Fed meeting in the next 48 hours? If yes, today is a *positioning* day, not an *action* day — traders are placing bets ahead of the event, and much of today's "strength" may reverse on the news.
+
+**Your conclusion as a student:** "Market is in a holding pattern with healthy rotation, but a macro event is coming. No new trades today — I'll re-read the market after the event." Two minutes, zero trades, and you understood more than the headline gave you. Practise this daily for a month and market literacy becomes a habit, not an effort.
+
 ## The Bottom Line
 
 Daily market updates are useful as *weather reports*, not *travel orders*. Learn to read the layers — Bitcoin's backdrop, capital rotation, your own setup — and watch the five questions above instead of chasing every headline move. The traders who last are not the ones who react fastest to news; they are the ones who need the news the least, because they already have a plan.

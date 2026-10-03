@@ -19,6 +19,8 @@ Every week, thousands of Indians learn about crypto the painful way — through 
 
 This guide walks you through the seven scams that target Indian crypto users most often, why they work, and the concrete steps that keep you safe. No hype, no jargon — just a practical shield.
 
+> **Companion read:** scams also have a *delivery* side — the fake Google ads, WhatsApp "wrong numbers," and impersonator accounts scammers use to reach you. Learn to recognise those channels in [How Crypto Scammers Contact You](/blog/top-5-crypto-scams-to-avoid).
+
 > **Educational content only.** This is not financial advice. Scammers constantly invent new tricks — treat every unsolicited crypto offer, call, or message with suspicion, no matter how convincing it sounds.
 
 ## Scam #1: Fake Exchange Customer Support
@@ -135,7 +137,3 @@ Act fast — speed matters:
 Scammers don't hack blockchains — they hack human psychology: panic, greed, trust, and fear. Every scam in this list fails against a calm person who verifies independently and never shares secrets under pressure.
 
 Build three habits and you'll be safer than 95% of crypto users in India: keep your seed phrase and OTPs completely private, verify every support contact and app through official channels only, and treat guaranteed returns as proof of fraud. The crypto space rewards the patient and the careful — be both.
-
-## Frequently Asked Questions
-
-You've seen the scams; these are the questions beginners ask most after reading about them.

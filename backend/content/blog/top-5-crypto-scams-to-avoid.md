@@ -1,8 +1,8 @@
 ---
-title: "The Top 5 Crypto Scams Beginners Must Avoid"
+title: "How Crypto Scammers Contact You: 7 Channels and Tactics to Recognize"
 category: Security
-excerpt: "Crypto scams cost beginners crores every year. Learn the five most common traps and a simple safety routine."
-read_time: 6
+excerpt: "Scams don't start with a scam — they start with a message. Learn the 7 channels crypto scammers use to reach you, from fake Google ads to WhatsApp 'wrong numbers,' and how to shut each one down."
+read_time: 7
 author: Crypto Beginner Editorial Team
 cover_image: /covers/security.jpg
 created_at: "2026-06-27T14:42:56.269916+00:00"
@@ -15,76 +15,93 @@ faqs:
     answer: No. Legitimate exchanges and wallet companies never DM you first on Telegram, WhatsApp, or social media, and they never ask for your seed phrase or private keys. Always open support tickets yourself through the official site or app.
 ---
 
-Every market cycle brings the same unwelcome guest: a fresh wave of scams wearing new clothes. The technology changes, but the tricks are ancient — urgency, greed, trust, and confusion, weaponised against people who are still learning. Beginners are the favourite targets because they haven't yet built the reflexes to spot the patterns.
+Every scam has two halves: the *trick* and the *delivery*. Our companion guide — [7 Common Crypto Scams Targeting Indians](/blog/7-common-crypto-scams-targeting-indians) — covers the tricks: the fake support calls, the doubling schemes, the pig-butchering romances. This guide covers the other half: **how scammers reach you in the first place.**
 
-Here are the five scams doing the most damage right now, how each one works, and the red flags that give them away.
+That distinction matters. If you only memorise scam types, a new variation can still fool you. But scammers only have a handful of ways to make first contact — and once you recognise the *channels*, you can shut down almost any scam before learning which type it is. An unsolicited message about crypto is guilty until proven innocent.
 
-> **Educational content only.** This is not financial advice.
+> **Educational content only.** This is not financial advice. Scammers constantly invent new tricks — treat every unsolicited crypto offer, call, or message with suspicion, no matter how convincing it sounds.
 
-## 1. Pig-butchering: the long con
+## Channel 1: The "Wrong Number" WhatsApp or Telegram Message
 
-Named after the grim practice of fattening a pig before slaughter, this is the costliest scam in crypto — billions lost worldwide every year. It is a slow, patient romance-and-investment fraud:
+It starts innocently: "Hi, is this Rahul? Sorry, wrong number!" — followed by friendly small talk that somehow continues for days. Or a stranger adds you to a "crypto investment group" you never asked to join. In India, where WhatsApp is practically infrastructure, this is the single most common first contact.
 
-1. **Contact.** A stranger messages you — a "wrong number" on WhatsApp, a friendly profile on a dating app, a connection request on social media.
-2. **Trust.** Over days or weeks, they become your friend. They share photos, daily life, small talk. There is no mention of crypto at first.
-3. **The hook.** Casually, they mention how well their crypto "trading" is going — a relative or mentor taught them a secret strategy.
-4. **The platform.** They guide you to a professional-looking website or app. You deposit a small amount and watch it "grow." You may even be allowed a small withdrawal, to prove it's real.
-5. **The slaughter.** Encouraged by fake profits, you deposit more — sometimes your savings. Then withdrawals freeze. "Customer support" demands extra payments — taxes, verification fees, unlock charges — to release your money. Every payment disappears.
+**The psychology:** it bypasses your defences because it does not *feel* like a scam. Nobody is selling anything yet. They are building familiarity — sometimes for weeks — before crypto is ever mentioned. By then, you think of them as a friend, not a stranger.
 
-**Red flags:** unsolicited contact that turns romantic or friendly fast; investment advice from someone you met on a dating app; platforms you can't find reviewed anywhere independent; pressure to deposit more to "unlock" funds.
+**How to shut it down:** never continue a conversation with a wrong-number stranger who keeps chatting. Real wrong numbers apologise and disappear. Anyone steering small talk toward investments, "my uncle's trading strategy," or a great platform they use is running a script. Block, report, and never click their links.
 
-## 2. Fake airdrops: free tokens that cost you everything
+## Channel 2: Fake Google Search Ads for Support Numbers
 
-You open your wallet one day and find unfamiliar tokens you never bought. Exciting — free money? Attached is a link or instruction to "claim" them on a website. The moment you connect your wallet and approve the claim transaction, the site drains your real funds.
+You have a genuine problem — a stuck deposit, a locked account — so you search for the exchange's customer care number. The top result is an ad with the exchange's logo and a phone number. You call. A professional-sounding "executive" asks you to share your screen or an OTP to "verify" you.
 
-The tokens were never worth anything; they were bait. This works because it exploits curiosity and the fear of missing out.
+The ad was bought by scammers. They SEO-poison and advertise fake helplines for every major exchange, then harvest credentials from panicked callers.
 
-**The rule is simple:** never interact with tokens you didn't buy or earn. Don't click their links, don't try to sell them, don't visit their websites. Most wallets let you hide unknown tokens — use that feature and move on.
+**The psychology:** urgency plus authority. You are already stressed about your money, and the "official-looking" ad removes your last reason to doubt.
 
-## 3. Approval phishing: the signature you didn't read
+**How to shut it down:** never Google a support number — scammers buy the top results. Real Indian exchanges generally offer only ticket-based or in-app support, not inbound phone lines. Always open the official app or type the official website address yourself, and raise a ticket from inside. If someone who called *you* asks for an OTP, screen share, or "verification deposit," hang up immediately.
 
-This one is technical, so here is the plain-English version. Many crypto apps ask you to grant a **token approval** — permission for a smart contract to move your tokens on your behalf, like handing a valet your car keys. Legitimate apps need limited approvals to function.
+## Channel 3: Social Media Impersonation
 
-Scammers build fake versions of real sites (a decentralised exchange, an NFT mint, a "claim rewards" page) and trick you into signing an approval that gives their contract **unlimited** access to your tokens. Nothing happens immediately. Days or weeks later, they quietly empty your wallet.
+Fake accounts impersonating crypto founders, billionaires, and even official exchange handles reply to real posts, run "giveaway" livestreams with deepfaked video, and DM followers of crypto pages. On Instagram and YouTube, scammers clone popular finance creators — same profile photo, nearly identical handle — and promote "doubling" schemes in comments and DMs.
 
-**Red flags:** sites reached via links in DMs or ads rather than bookmarks; wallet pop-ups asking for "unlimited" or "infinite" approval amounts; transaction details you can't understand. **Defence:** read every signature prompt before approving, keep only small amounts in the wallet you use for experimenting, and periodically review and revoke old approvals using a reputable token-approval checker.
+**The psychology:** borrowed trust. Your brain has already decided the *real* person is credible, and the fake account rides that credibility for free. Deepfake videos have made this dramatically more convincing — seeing a familiar face say it short-circuits scepticism.
 
-## 4. Impersonation giveaways: "send 1, get 2 back"
+**How to shut it down:** check handles character by character (lookalike letters like "rn" for "m" are classic). Real giveaways from real companies happen on official channels with verifiable announcements — never via a DM asking you to send crypto first. And internalise the iron rule: **nobody legitimate doubles your crypto.** If that sentence is in the message, the message is a scam.
 
-Fake accounts impersonating famous figures — crypto founders, billionaires, even official exchange accounts — announce "giveaways": send some crypto to an address and receive double back. The accounts look verified; the videos look real (deepfakes are now common); the comments are full of bots claiming it worked.
+## Channel 4: Dating Apps and "Accidental" Friendships
 
-It is always fake. No legitimate person or company doubles your crypto. The oldest rule of the internet applies: **nobody gives away free money to strangers.**
+A friendly stranger on a dating app, a matrimonial site, or even LinkedIn. Great conversation, photos, daily check-ins. Weeks later, crypto comes up casually — their "mentor" taught them a strategy, and they want to share it with you. This is the delivery channel for pig-butchering scams, and it is devastating precisely because the contact feels personal, not commercial.
 
-India-specific twist: scammers also impersonate Indian exchange "support" — fake customer-care numbers on Google search ads, Telegram accounts named after real exchanges, WhatsApp "account managers." Real exchanges will never ask you to deposit crypto via chat or share your screen.
+**The psychology:** emotional trust transfers to financial trust. Victims consistently say the same thing afterwards: "I trusted *them*, so I trusted the platform." The scammer never has to be persuasive about crypto — the relationship does the persuading.
 
-## 5. Fake recruiters and "wallet test" jobs
+**How to shut it down:** apply one hard rule — **never invest through a platform introduced by someone you met online and have never met in person.** No exceptions, no matter how real the relationship feels. A genuine romantic interest will never steer you toward a trading website. If they do, the romance was the product and you were the customer.
 
-A "recruiter" contacts you about a work-from-home crypto job with excellent pay. The interview happens entirely on Telegram. Then comes a "test task": install this software, run this script, or connect your wallet to "prove you can use crypto tools." The software is malware that steals your keys; the wallet connection is a drainer.
+## Channel 5: Fake Recruiter and Job Outreach
 
-Variations include fake freelance gigs ("test our new wallet app") and paid "community manager" roles that are just covers for spreading scam links.
+A "recruiter" messages you about a work-from-home crypto job with excellent pay — on Telegram, WhatsApp, or even LinkedIn. The interview happens entirely in chat. Then comes a "test task": install this software, run this script, connect your wallet to "prove you can use crypto tools." The software is malware; the wallet connection is a drainer. Students and freshers hunting for remote income are prime targets.
 
-**Red flags:** recruitment that never leaves Telegram or WhatsApp; being asked to install software or run code as part of an interview; any job that wants access to your wallet, seed phrase, or screen-sharing during "training."
+**The psychology:** it exploits ambition instead of greed. You are not being offered free money — you are being offered *a job*, which feels respectable and safe. The malicious step is disguised as a normal hiring test.
 
-## Your 3-step safety routine
+**How to shut it down:** real hiring processes do not happen entirely on Telegram. No legitimate interview asks you to install software, run code, share your screen during "training," or connect a crypto wallet. If a job needs your seed phrase, wallet access, or an upfront "registration fee," it is not a job — it is a heist wearing a job's clothes.
 
-You don't need to become a cybersecurity expert. This short routine blocks the vast majority of attacks:
+## Channel 6: SMS and Email Phishing
 
-1. **Use a burner wallet for anything new.** Keep a separate wallet with small amounts for trying new sites, claims, and apps. Your main holdings live elsewhere and never touch experimental links.
-2. **Bookmark official URLs — never search for them.** Scammers buy search ads for fake versions of real exchanges and wallets. Type the address yourself or use a bookmark you created. This single habit defeats most phishing.
-3. **Read every signature before approving.** If your wallet shows a transaction you don't fully understand, reject it. Legitimate sites will explain what you're signing; scammers rely on you clicking through.
+"Your KYC is incomplete — verify within 24 hours or your account will be frozen." "Income Tax Department: unpaid crypto tax of ₹48,000 — pay now to avoid penalty." These messages weaponise Indian regulatory anxiety: since crypto tax rules (30% tax, 1% TDS) genuinely confuse people, threats about frozen accounts and tax raids feel plausible. The links lead to pixel-perfect clones of exchange login pages that harvest your credentials.
 
-Add two more non-negotiables: **never share your seed phrase** (the 12–24 word recovery phrase) with anyone, for any reason — no support agent, no "verification," no job — and enable two-factor authentication on every exchange account.
+**The psychology:** fear of authority plus a deadline. "24 hours" is there to stop you from thinking, asking a friend, or checking the official site.
 
-## If it already happened
+**How to shut it down:** government agencies and exchanges do not demand KYC, tax payments, or password resets via SMS links. Never tap links in unexpected messages — open the official app yourself and check for notifications there. When in doubt, call the helpline number printed on the *official website*, not the one in the message.
+
+## Channel 7: In-Wallet Surprises and Comment-Section Spam
+
+You open your wallet and find tokens you never bought, with a website attached telling you to "claim" them. Or every crypto YouTube video's comments are full of bots posting "I doubled my money with [link]." The tokens are worthless bait — interacting with the claim site drains your real funds. The comments are bot farms manufacturing social proof.
+
+**The psychology:** curiosity and FOMO. Free tokens feel like found money, and fifty comments saying "it worked for me" feel like evidence. Both are manufactured.
+
+**How to shut it down:** never interact with tokens you did not buy or earn — hide them in your wallet settings and move on. Treat every link in a comment section as hostile until proven otherwise. Real projects announce through official channels, not through wallet spam and comment bots.
+
+## The One Rule That Defeats Every Channel
+
+Seven channels, one defence: **never engage with inbound crypto contact — always initiate outbound through official routes.**
+
+- They messaged you? You did not ask. Ignore it.
+- They called you? Hang up and call the official number yourself.
+- They sent a link? Do not tap it. Type the address yourself or use your bookmark.
+- They added you to a group? Leave it.
+
+Scammers need *you* to take the first step — click, call back, reply, deposit. Every channel above dies the moment you refuse to play on their field. Make "I only ever contact support, never the reverse" a personal policy, and you become a very expensive target: scammers move on to easier ones.
+
+For the actual scam scripts — what they *say* once they have reached you — read our companion guide: [7 Common Crypto Scams Targeting Indians](/blog/7-common-crypto-scams-targeting-indians). Between the two guides, you will know both the delivery and the payload — which is more scam literacy than most victims ever had.
+
+## If Contact Already Turned Into Loss
 
 Act fast, but act smart:
 
 - **Stop all contact and all payments immediately.** Scammers often follow up demanding "release fees" — every rupee sent after the first is gone too.
-- **Beware recovery scams.** Anyone who contacts you offering to recover stolen crypto for an upfront fee is running a second scam on top of the first.
+- **Beware recovery scams.** Anyone offering to recover stolen crypto for an upfront fee is running a second scam on the first.
 - **Document everything.** Screenshot chats, transaction hashes, wallet addresses, and website URLs before anything gets deleted.
-- **Report it.** In India, file a complaint at cybercrime.gov.in or call the national helpline 1930. If bank transfers were involved, inform your bank as well. Recovery is unlikely, but reports help investigators connect cases.
+- **Report it.** In India, file a complaint at cybercrime.gov.in or call the national helpline 1930. If bank transfers were involved, inform your bank as well.
 
-## The mindset that keeps you safe
+## The Mindset That Keeps You Safe
 
 In crypto, healthy paranoia is a feature, not a flaw. Internalise these:
 

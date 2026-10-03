@@ -98,6 +98,18 @@ You want to swap ₹10,000 worth of Token A for Token B on a DEX. The interface 
 
 The third outcome *feels* annoying and *is* the win.
 
+## Slippage vs. Fees vs. Spread: Don't Mix Them Up
+
+Beginners often lump every cost into "fees," which makes it impossible to fix the right problem. Three different costs, three different fixes:
+
+- **Fees** are explicit charges you agree to upfront — the exchange's trading fee, the network's gas fee. They are quoted before you confirm, and you reduce them by choosing cheaper platforms, networks, and timing.
+- **Spread** is the gap between the best buy price and the best sell price *right now*. On liquid pairs it is tiny; on thin ones it is wide. You pay roughly half the spread every time you use a market order. You reduce it by trading liquid markets — or skipping the trade.
+- **Slippage** is the *unexpected* movement between quote and execution. Unlike fees and spread, it is not quoted in advance — it is the surprise. You reduce it with limit orders, tight tolerance, and patience.
+
+A painful trade usually involves all three stacking: a 0.5% exchange fee plus a 1% spread plus 3% slippage means 4.5% gone before the market even moves. Seeing the stack clearly is what turns "trading feels expensive" into "I know exactly which cost to attack." For Indian traders, remember there is a fourth layer — 1% TDS on transfers — making cost-awareness even more valuable.
+
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
 ## The Big Picture
 
 Slippage is the market charging you for immediacy and size in thin, fast-moving conditions. It is not a scam or a bug — it is structural. The defence is equally structural: limit orders, tight tolerance, liquid markets, and the patience to wait out chaos.

@@ -23,6 +23,8 @@ That short list of words is called a **seed phrase** — also known as a recover
 
 > **Educational content only.** This is not financial advice.
 
+> **Two guides, two jobs:** this guide is the *practical workflow* — backing up, storing, and recovering your seed phrase step by step. New to the concept? Start with [What is a Crypto Seed Phrase? A Beginner's Guide](/blog/what-is-a-crypto-seed-phrase-a-beginner-s-guide) for the fundamentals of what a seed phrase is and why it is the master key to your crypto.
+
 ## What Exactly Is a Seed Phrase?
 
 When you create a new non-custodial crypto wallet — an app where *you* control the keys, like MetaMask, Trust Wallet, or a hardware wallet — the software generates a master key for you. Instead of showing you a terrifying string of letters and numbers, it shows you something human-friendly: a sequence of 12 or 24 ordinary English words drawn from a standard global list. Words like "river," "lamp," or "seven."

@@ -88,6 +88,22 @@ Fees vary enormously by network design:
 
 For Indian users moving small amounts, fees deserve extra respect: a $2 fee is a rounding error on a ₹50,000 transfer but a 40% tax on a ₹400 one. If you are experimenting and learning, favour low-fee networks and quiet hours — your learning budget will stretch much further. (And remember: every transfer is a taxable event under India's crypto tax rules — another reason to keep records. Educational note, not tax advice.)
 
+## When a Transaction Gets Stuck
+
+Sooner or later, every beginner meets the dreaded "pending" transaction — sent hours ago, still unconfirmed. Here is what is happening and what to do.
+
+**Why it happens:** you bid a fee that was reasonable when you sent it, then demand spiked. Higher-bidding transactions keep jumping ahead of yours in the queue. Your transaction is not lost — it is waiting in the mempool, visible on any block explorer, simply outbid.
+
+**What NOT to do:** do not panic-send the same transaction again. If the first one eventually confirms, you may pay twice. And do not assume the money is gone — until a transaction confirms, nothing has moved.
+
+**What you can do:**
+- **Wait.** Most stuck transactions confirm when congestion eases, often within hours. For non-urgent transfers, patience is free and usually sufficient.
+- **Speed up.** Many wallets offer a "speed up" button, which rebroadcasts the same transaction with a higher fee. You pay the difference, but you jump the queue.
+- **Cancel (sometimes).** Some wallets let you cancel a pending transaction by sending a zero-value transaction to yourself with a higher fee, replacing the stuck one. This only works if the original has not confirmed yet — and it still costs a fee.
+- **Check a block explorer first.** Paste your transaction hash into the network's explorer to see its real status before taking any action. "Pending" means waiting; a dropped transaction means you are free to retry.
+
+The deeper lesson: stuck transactions are almost always a fee-bidding problem, which is why the habits in this guide — checking gas trackers, choosing the right speed tier, avoiding rush hours — prevent most of them before they happen.
+
 ## The Big Picture
 
 Gas fees are the toll that keeps the decentralised highway running — paying the independent operators who verify your transactions and secure the network. They rise and fall with demand, differ wildly between networks, and reward patient users who time their trips well.

@@ -76,6 +76,17 @@ Strip away the speculation, and blockchains remain one of the most interesting i
 
 Understanding it is its own reward — the way understanding how the internet works was rewarding in 2005, long before it ate the world. Curiosity is a good enough reason.
 
+## What "Learning Crypto" Actually Looks Like
+
+"Learn crypto" sounds enormous until you break it into a small, concrete plan. Here is a realistic four-week starter map — thirty minutes a day, zero rupees required:
+
+- **Week 1 — the money question.** What is money, really? Read one beginner explainer on Bitcoin and one on blockchain basics. Goal: be able to explain in two sentences why a digital file can have value. If you cannot explain it simply, you do not understand it yet — and that is fine; that is what Week 1 is for.
+- **Week 2 — wallets and keys.** Learn what public addresses, private keys, and seed phrases are. Install a free wallet app and explore it *without depositing anything*. Practise writing down a recovery phrase on paper. Goal: understand self-custody well enough to explain why "not your keys, not your coins" matters.
+- **Week 3 — scams and safety.** Study the common scam patterns — fake investment apps, phishing links, impersonation, "guaranteed returns" schemes. Read real Indian fraud case reports with a critical eye. Goal: spot the red flags in a scam message within seconds.
+- **Week 4 — the wider picture.** Skim what Ethereum, stablecoins, and DeFi are at a conceptual level. Try our [demo-trading simulator](/demo-trading) with virtual money. Goal: hold an informed opinion about whether crypto deserves a place in *your* learning, not anyone else's.
+
+Notice what is missing from this plan: no buying, no trading, no "portfolio." Learning and investing are separate activities, and the learning should come first — always.
+
 ## Where to Start (Free, No Investment Needed)
 
 - **Read** our [Learning Center](/learn) — structured tracks from absolute zero.

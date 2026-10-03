@@ -61,6 +61,27 @@ That catalyst is frequently macro: an inflation print, a Fed decision, a jobs re
 - **Confusing correlation with destiny.** "Rates are high so Bitcoin must fall" ignores that markets price in expectations *in advance*. By the time you read the headline, professionals positioned for it days ago.
 - **Ignoring the bigger picture for India.** For Indian holders, USD/INR moves add another layer: even if Bitcoin is flat in dollars, a weaker rupee changes your INR returns. Macro is global; your portfolio is local.
 
+## How Macro News Reaches Indian Crypto Holders
+
+If you hold crypto in India, global macro hits you through two channels, not one. The first is the dollar price of Bitcoin — the one every headline quotes. The second is the **rupee**.
+
+When U.S. inflation data surprises markets, the dollar often strengthens or weakens sharply. A stronger dollar usually pushes USD/INR higher, which means the rupee weakens. Here is why that matters: your portfolio is measured in rupees. If Bitcoin falls 2% in dollar terms but the rupee weakens 1% at the same time, your INR portfolio only falls about 1%. Currency moves cushion or amplify every crypto move, and beginners who track only the dollar price misread their own returns.
+
+There is a third, subtler channel: **local exchange pricing**. Indian exchanges sometimes trade at a small premium or discount to global prices, and that gap widens during volatile macro events when arbitrage slows down. On CPI days you may notice your exchange's price lagging or overshooting the global quote by a percent or two. That is normal market plumbing under stress — not a malfunction, and not an opportunity to chase without understanding the costs (fees, TDS, transfer times).
+
+*Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
+## A Simple Event-Week Routine
+
+You do not need a Bloomberg terminal. A beginner-friendly macro routine takes ten minutes a week:
+
+1. **Sunday evening:** check an economic calendar for the week's big releases (CPI, Fed meetings, major jobs data). Note the dates and times in IST.
+2. **Before each event:** decide in advance that you will *not* trade the release itself. Write it down if it helps — pre-commitment beats willpower.
+3. **After the event:** read one calm summary, not ten panicking ones. Ask: "Did this change anything about my 6-month plan?" The answer is almost always no.
+4. **Monthly:** review whether macro-driven dips tempted you to act or panic — and what that taught you about your own discipline.
+
+The goal is not to become an economist. It is to stop being surprised — because surprise is what turns a normal volatile day into a panic sell.
+
 ## The Bottom Line
 
 Bitcoin may be decentralized, but it still swims in the ocean of global macroeconomics — and U.S. inflation data is one of the strongest currents. You do not need to predict the next report. You need to understand *why* it moves markets, respect event-day volatility, and keep your strategy focused on what you can control: position size, patience, and continuous learning.

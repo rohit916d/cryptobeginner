@@ -21,6 +21,8 @@ Your **seed phrase** (also called a recovery phrase or backup phrase) is the mos
 
 > **Educational content only.** This is not financial advice.
 
+> **Two guides, two jobs:** this guide explains *what* a seed phrase is and why it matters. For the hands-on workflow — writing it down, storing copies, testing recovery, and what to do when things go wrong — see our companion guide: [What is a Crypto Seed Phrase? Backup & Recovery Explained](/blog/what-is-a-crypto-seed-phrase-backup-recovery-explained).
+
 ## What Exactly Is a Seed Phrase?
 
 A seed phrase is a human-readable master key generated when you create a wallet. Behind the scenes, your wallet produces a large random number and converts it into 12 or 24 common English words drawn from a standardized list of 2,048 words (a standard called BIP-39, used across the industry).
