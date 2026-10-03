@@ -85,3 +85,5 @@ Understanding it is its own reward — the way understanding how the internet wo
 No wallet required. No rupees required. Just curiosity — which, as it turns out, is the only real prerequisite.
 
 Continue with [our free beginner track](/learn) and give yourself the literacy that the next decade will assume you have.
+
+> **Educational content only.** This is not financial advice.

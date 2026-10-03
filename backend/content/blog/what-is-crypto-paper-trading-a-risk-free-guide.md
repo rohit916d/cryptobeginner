@@ -92,3 +92,5 @@ Most beginners find their "strategy" was mostly luck. That realisation — free 
 Paper trading is a flight simulator for markets: it teaches you the controls, the procedures, and your own reactions — without the crash. Use it to learn mechanics, build discipline, and honestly assess whether active trading suits you at all.
 
 Ready to practise? Try our [demo-trading simulator](/demo-trading) with a virtual balance at live prices — then continue with [our free beginner track](/learn) to master the fundamentals behind every trade.
+
+> **Educational content only.** This is not financial advice.

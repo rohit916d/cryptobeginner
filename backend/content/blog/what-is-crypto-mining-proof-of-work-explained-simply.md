@@ -94,3 +94,5 @@ Proof of Work's energy use is one of crypto's most debated topics. Two fair poin
 Crypto mining is the digital engine that lets strangers trust a shared ledger without trusting each other. It replaces the bank middleman with mathematics, cryptography, and an open competition — and pays for its own security with newly minted coins.
 
 Continue with [our free beginner track](/learn) to see how blocks, hashes, and wallets fit together into the full picture of how blockchain works.
+
+> **Educational content only.** This is not financial advice.
