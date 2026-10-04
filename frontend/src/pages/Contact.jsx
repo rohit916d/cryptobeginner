@@ -5,8 +5,8 @@ import { useSEO, SITE_ORIGIN } from "../lib/seo";
 
 export default function Contact() {
   useSEO({
-    title: "Contact Us",
-    description: "Get in touch with the Crypto Beginner team — feedback, content suggestions, partnerships.",
+    title: "Contact Crypto Beginner",
+    description: "Get in touch with the Crypto Beginner team — feedback, content suggestions and partnership queries. We read every message.",
     canonical: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : undefined,
   });
 

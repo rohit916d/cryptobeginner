@@ -12,8 +12,8 @@ export default function Blog() {
   const [loading, setLoading] = useState(true);
 
   useSEO({
-    title: "Crypto Blog",
-    description: "Beginner-friendly crypto articles on Bitcoin, blockchain, DeFi, scams, wallets and more.",
+    title: "Bitcoin, DeFi & Crypto Safety Guides",
+    description: "Beginner-friendly crypto guides for India — Bitcoin basics, blockchain, DeFi, wallets, NFTs, scams and taxes explained in plain English. No hype, no financial advice.",
     canonical: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : undefined,
     jsonLd: {
       "@type": "BreadcrumbList",

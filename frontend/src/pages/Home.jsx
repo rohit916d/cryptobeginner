@@ -15,7 +15,7 @@ const Block3DScene = lazy(() => import("../components/Block3DScene"));
 
 export default function Home() {
   useSEO({
-    title: "Crypto For Beginners in India — Learn Bitcoin & Blockchain",
+    title: "Crypto Basics for Beginners in India",
     description:
       "Crypto for beginners in India — learn Bitcoin, blockchain, wallets, DeFi and cryptocurrency from scratch with free, beginner-friendly guides and live market data.",
     keywords:

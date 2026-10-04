@@ -3,8 +3,8 @@ import { ShieldCheck, BookOpen, HeartHandshake } from "lucide-react";
 
 export default function About() {
   useSEO({
-    title: "About Us",
-    description: "Crypto Beginner is a free education platform helping beginners learn crypto safely — without hype or financial advice.",
+    title: "About Crypto Beginner",
+    description: "Crypto Beginner is a free education platform helping beginners in India learn crypto safely — without hype or financial advice.",
     canonical: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : undefined,
   });
 

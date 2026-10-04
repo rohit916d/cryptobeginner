@@ -14,11 +14,13 @@ export default function BlogDetail() {
   const navigate = useNavigate();
   const [post, setPost] = useState(null);
   const [notFound, setNotFound] = useState(false);
+  const [related, setRelated] = useState([]);
 
   useEffect(() => {
     let mounted = true;
     setPost(null);
     setNotFound(false);
+    setRelated([]);
     api.get(`/blog/${slug}`)
       .then((r) => {
         if (!mounted) return;
@@ -29,16 +31,40 @@ export default function BlogDetail() {
           return;
         }
         setPost(r.data);
+        // Related guides: same category first, then latest — for internal linking.
+        if (r.data?.category) {
+          api.get("/blog", { params: { category: r.data.category } })
+            .then((rr) => {
+              if (!mounted) return;
+              const list = (rr.data || []).filter((p) => p.slug !== r.data.slug).slice(0, 3);
+              if (list.length >= 3) { setRelated(list); return; }
+              // Backfill with latest posts if the category is thin.
+              api.get("/blog").then((lr) => {
+                if (!mounted) return;
+                const seen = new Set(list.map((p) => p.slug));
+                seen.add(r.data.slug);
+                for (const p of (lr.data || [])) {
+                  if (list.length >= 3) break;
+                  if (!seen.has(p.slug)) { seen.add(p.slug); list.push(p); }
+                }
+                setRelated(list);
+              }).catch(() => { if (mounted) setRelated(list); });
+            })
+            .catch(() => {});
+        }
       })
       .catch(() => { if (mounted) setNotFound(true); });
     return () => { mounted = false; };
   }, [slug, navigate]);
 
+  // Social crawlers and schema validators require absolute image URLs.
+  const absImage = (u) => (!u ? undefined : (u.startsWith("http") ? u : SITE_ORIGIN + u));
+
   useSEO({
     title: notFound ? "Article Not Found" : post?.title,
     description: post?.excerpt,
     canonical: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : undefined,
-    image: post?.cover_image,
+    image: absImage(post?.cover_image),
     type: "article",
     robots: notFound ? "noindex,follow" : "index,follow",
     jsonLd: post ? [
@@ -46,9 +72,16 @@ export default function BlogDetail() {
         "@type": "BlogPosting",
         headline: post.title,
         description: post.excerpt,
-        image: post.cover_image,
+        image: absImage(post.cover_image),
         author: { "@type": "Organization", name: post.author || "Crypto Beginner" },
+        publisher: {
+          "@type": "Organization",
+          name: "Crypto Beginner",
+          logo: { "@type": "ImageObject", url: SITE_ORIGIN + "/cryptobeginner-icon.png" },
+        },
         datePublished: post.created_at,
+        dateModified: post.updated_at || post.created_at,
+        mainEntityOfPage: { "@type": "WebPage", "@id": SITE_ORIGIN + `/blog/${post.slug}` },
       },
       {
         "@type": "BreadcrumbList",
@@ -126,6 +159,25 @@ export default function BlogDetail() {
       )}
 
       <AuthorBio author={post.author} date={formatDate(post.created_at)} />
+
+      {related.length > 0 && (
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold text-white mb-5">Related guides</h2>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {related.map((rp) => (
+              <Link key={rp.slug} to={`/blog/${rp.slug}`} className="card-base overflow-hidden hover-lift group block">
+                {rp.cover_image && (
+                  <img src={rp.cover_image} alt={rp.title} loading="lazy" className="w-full aspect-[16/9] object-cover" />
+                )}
+                <div className="p-4">
+                  <div className="text-[10px] uppercase tracking-wider text-[#C8F169] font-bold">{rp.category}</div>
+                  <div className="mt-1.5 text-sm text-white font-medium leading-snug group-hover:text-[#C8F169] transition-colors">{rp.title}</div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className="mt-8">
         <NewsletterSignup compact />

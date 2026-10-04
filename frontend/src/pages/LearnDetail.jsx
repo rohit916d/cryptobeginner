@@ -37,6 +37,14 @@ export default function LearnDetail() {
         description: lesson.summary,
         learningResourceType: "Lesson",
         educationalLevel: lesson.level,
+        author: { "@type": "Organization", name: "Crypto Beginner" },
+        publisher: {
+          "@type": "Organization",
+          name: "Crypto Beginner",
+          logo: { "@type": "ImageObject", url: SITE_ORIGIN + "/cryptobeginner-icon.png" },
+        },
+        datePublished: lesson.created_at,
+        dateModified: lesson.updated_at || lesson.created_at,
       },
       {
         "@type": "BreadcrumbList",

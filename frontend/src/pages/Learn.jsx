@@ -19,8 +19,8 @@ export default function Learn() {
   const [loading, setLoading] = useState(true);
 
   useSEO({
-    title: "Learning Center",
-    description: "Structured crypto learning paths for absolute beginners. Beginner, intermediate, and security tracks.",
+    title: "Learn Crypto Step by Step",
+    description: "Structured crypto learning paths for absolute beginners in India — beginner, intermediate and security tracks that build from zero to confident.",
     canonical: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : undefined,
     jsonLd: {
       "@type": "BreadcrumbList",
