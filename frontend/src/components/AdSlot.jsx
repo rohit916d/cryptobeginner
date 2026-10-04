@@ -1,11 +1,9 @@
 import { useEffect, useRef } from "react";
 
-// Set this once your Google AdSense account is approved — looks like
-// "ca-pub-1234567890123456" — via the REACT_APP_ADSENSE_CLIENT_ID env var.
-// Until it's set, this stays blank and AdSlot renders nothing, so it's
-// completely safe to leave placed in pages ahead of approval. Never
-// hardcode a publisher ID here before approval.
-export const ADSENSE_CLIENT_ID = process.env.REACT_APP_ADSENSE_CLIENT_ID || "";
+// Publisher ID provided by the site owner on 2026-10-04 (new AdSense account).
+// Env var REACT_APP_ADSENSE_CLIENT_ID still overrides this default when set.
+export const ADSENSE_CLIENT_ID =
+  process.env.REACT_APP_ADSENSE_CLIENT_ID || "ca-pub-9696382452739964";
 
 // Once you create ad units in AdSense ("Ads" > "By ad unit"), paste each
 // unit's slot id here. Leave blank and that placement just won't render.
