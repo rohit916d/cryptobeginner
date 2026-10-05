@@ -1615,16 +1615,16 @@ async def startup():
         except Exception as e:
             logger.exception(f"Slug dedupe failed: {e}")
 
-        async def _background_sync():
-            try:
-                await sync_repo_content(db, logger)
-            except Exception as e:
-                logger.exception(f"Content sync failed: {e}")
-
+        # Content sync runs in the FOREGROUND (with a timeout) because
+        # serverless functions freeze background tasks between requests:
+        # a fire-and-forget sync can be killed mid-run and silently skip
+        # posts (observed 2026-10-05: Web3 post never synced, served noindex).
         try:
-            asyncio.create_task(_background_sync())
+            await asyncio.wait_for(sync_repo_content(db, logger), timeout=50)
+        except asyncio.TimeoutError:
+            logger.warning("Content sync timed out; will retry on next cold start")
         except Exception as e:
-            logger.exception(f"Could not schedule content sync: {e}")
+            logger.exception(f"Content sync failed: {e}")
 
     except Exception as e:
 

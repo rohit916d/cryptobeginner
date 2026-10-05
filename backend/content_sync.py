@@ -1,7 +1,5 @@
 """Repo-managed content sync for Crypto Beginner.
 
-Redeploy trigger: 2026-10-05 (Web3 post sync).
-
 Blog posts and lessons live as Markdown files under backend/content/:
 
     backend/content/blog/<slug>.md
