@@ -81,6 +81,8 @@ As Bitcoin's price rises over long periods, pricing everyday things in BTC becom
 
 Some wallets and apps already default to sats display for this reason. If you ever see a balance like "1,250,000 sats," do not be intimidated — divide by 100 million and you get 0.0125 BTC. Or simpler: think of it as twelve and a half lakh sats, the way you would think of twelve and a half lakh paise as ₹12,500.
 
+For Indian beginners, the sats framing has a practical tax angle too: because every swap, sale, and spend is a taxable event under Indian law, thinking in sats makes it easier to track small transactions in a simple spreadsheet. You do not need special software to stay organised — just record the date, the number of sats moved, and the approximate INR value at that moment, the way you would record any paise-level expense.
+
 ## Common Beginner Confusions
 
 - **"Sats are a different coin."** No — sats *are* Bitcoin, just smaller units. Like paise are rupees.
