@@ -1,6 +1,56 @@
 {
   "redirects": [
     {
+      "source": "/blog/what-is-a-crypto-hard-fork-network-upgrades-explained-2",
+      "destination": "/blog/what-is-a-crypto-hard-fork-network-upgrades-explained",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-is-crypto-liquidity-a-beginner-s-guide-2",
+      "destination": "/blog/what-is-crypto-liquidity-a-beginner-s-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-is-crypto-slippage-a-beginner-s-guide-2",
+      "destination": "/blog/what-is-crypto-slippage-a-beginner-s-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-is-crypto-slippage-a-beginner-s-guide-3",
+      "destination": "/blog/what-is-crypto-slippage-a-beginner-s-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-is-crypto-dust-small-balances-explained-2",
+      "destination": "/blog/what-is-crypto-dust-small-balances-explained",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-is-a-crypto-whitepaper-a-beginner-s-guide-2",
+      "destination": "/blog/what-is-a-crypto-whitepaper-a-beginner-s-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-is-crypto-staking-earning-rewards-explained-2",
+      "destination": "/blog/what-is-crypto-staking-earning-rewards-explained",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-is-a-crypto-mempool-the-waiting-room-explained-2",
+      "destination": "/blog/what-is-a-crypto-mempool-the-waiting-room-explained",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-is-a-crypto-testnet-safe-practice-networks-explained-2",
+      "destination": "/blog/what-is-a-crypto-testnet-safe-practice-networks-explained",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-is-a-crypto-public-address-a-beginner-s-guide-2",
+      "destination": "/blog/what-is-a-crypto-public-address-a-beginner-s-guide",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "www.cryptobeginner.in" }],
       "destination": "https://cryptobeginner.in/:path*",
