@@ -130,3 +130,12 @@ Recovery is very unlikely. Blockchain transfers are usually irreversible, creato
 ## Conclusion
 
 A rug pull is not bad luck or normal market volatility — it is a planned exit built into who controls the liquidity, the supply, and the code. That is good news in one way: the warning signs exist before the exit happens, in anonymous teams, unlocked liquidity, concentrated holdings, and contracts nobody is allowed to examine. Slow down, run the five-minute check, and remember that a token you cannot verify is a token you can safely skip. There will always be another project; there is rarely a way back from a drained wallet.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [How to Spot a Crypto Ponzi Scheme: 10 Red Flags for Indians](https://cryptobeginner.in/blog/how-to-spot-crypto-ponzi-scheme-red-flags)
+- [What Is a Dusting Attack? Crypto Privacy Risk Explained](https://cryptobeginner.in/blog/what-is-a-dusting-attack-india-guide)
+- [Fake Crypto Apps & Telegram Scams: How Indians Stay Safe](https://cryptobeginner.in/blog/fake-crypto-apps-telegram-scams-india-guide)

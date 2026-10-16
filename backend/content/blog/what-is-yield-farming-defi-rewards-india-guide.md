@@ -109,3 +109,12 @@ Indian users should record the date, amount, and INR value of every deposit, rew
 ## Conclusion
 
 Yield farming is not a bank deposit with a crypto label. It is supplying assets to trading pools and lending markets in return for fees, interest, or incentive tokens, while carrying impermanent loss, smart contract, depeg, and scam risks yourself. For Indian beginners, the most valuable first skill is not finding the highest displayed APY. It is tracing exactly where a reward comes from, counting the full cost in INR, verifying the real contract, and keeping tax-ready records. If a yield cannot be explained in plain words, that is your answer: pause, research further, and let the opportunity pass until it can be.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What Is a Smart Contract? DeFi Code Explained Simply](https://cryptobeginner.in/blog/what-is-a-smart-contract-defi-explained-india-guide)
+- [What Is DeFi? Decentralized Finance Explained Simply](https://cryptobeginner.in/blog/what-is-defi-explained-without-jargon-india-guide)
+- [What is Crypto Staking? Earning Rewards Explained](https://cryptobeginner.in/blog/what-is-crypto-staking-earning-rewards-explained)

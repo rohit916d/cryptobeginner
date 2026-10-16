@@ -105,3 +105,12 @@ Hard forks sound dramatic, and sometimes they are. But at their core, they are s
 Continue with [our free beginner track](/learn) to keep building your foundation.
 
 *Educational content only. This guide does not constitute financial advice.*
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What is Crypto Gas? Network Fees Explained](https://cryptobeginner.in/blog/what-is-crypto-gas-network-fees-explained)
+- [What Is a Node in Crypto? Validators Explained Simply](https://cryptobeginner.in/blog/what-is-a-node-validators-india-guide)
+- [Layer 2 Networks Explained: Faster, Cheaper Crypto](https://cryptobeginner.in/blog/layer-2-networks-explained-india-guide)

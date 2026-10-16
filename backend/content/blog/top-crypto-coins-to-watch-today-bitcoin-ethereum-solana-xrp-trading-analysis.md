@@ -113,3 +113,12 @@ You can watch markets for months without risking a rupee - and you should. When 
 Pick three coins - Bitcoin plus two others - and watch them for a month using the framework above. Journal what you see. You will learn more about markets in those four weeks than from any amount of tips or predictions, because you will be training the one skill that actually compounds: clear observation.
 
 And when you are ready to go deeper - wallets, exchanges, security, market cycles - continue with [our free beginner track](/learn), built step by step for absolute beginners.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [Should You Invest in Bitcoin or Ethereum First? An Honest Comparison](https://cryptobeginner.in/blog/bitcoin-vs-ethereum-which-to-buy-first)
+- [Bitcoin vs Digital Gold in India: A Beginner Guide](https://cryptobeginner.in/blog/bitcoin-vs-digital-gold-india-guide)
+- [Bitcoin Halving Meaning: A Simple Guide for Indian Beginners](https://cryptobeginner.in/blog/bitcoin-halving-meaning-beginners-india)

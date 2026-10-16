@@ -145,3 +145,12 @@ An exchange shutting down doesn't delete your crypto from existence — the bloc
 The beginners who survive exchange failures best are the ones who never needed the exchange to survive: they kept trading balances small, moved the rest to their own wallets, kept independent records, and acted fast at the first sign of trouble.
 
 You can't control whether an exchange stays in business. You can control how much of your crypto depends on it. Start with our guide on [how to store crypto safely](/blog/how-to-store-crypto-safely-india-beginners-guide) and [how to create your first crypto wallet](/blog/how-to-create-your-first-crypto-wallet) — future you will be glad you did.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What Is a Dusting Attack? Crypto Privacy Risk Explained](https://cryptobeginner.in/blog/what-is-a-dusting-attack-india-guide)
+- [Fake Crypto Apps & Telegram Scams: How Indians Stay Safe](https://cryptobeginner.in/blog/fake-crypto-apps-telegram-scams-india-guide)
+- [What Is a Rug Pull? Red Flags Every Beginner Must Know](https://cryptobeginner.in/blog/what-is-a-rug-pull-red-flags-india-guide)

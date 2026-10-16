@@ -104,3 +104,12 @@ Crypto transfers are usually irreversible, so a wrong address or wrong network c
 ## Conclusion
 
 Self-custody is not a badge of honour or a race — it is a responsibility you take on when you are ready for it. Start small: set up a genuine wallet, protect the recovery phrase on paper, practise with a test transfer from your exchange, and keep clean records. Once that routine is second nature, holding your own keys stops feeling technical and simply becomes how you store crypto — with full control, and full accountability, in your own hands.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [How to Store Crypto Safely: The Complete Safety Playbook for Indians](https://cryptobeginner.in/blog/how-to-store-crypto-safely-india-beginners-guide)
+- [What is a Crypto Seed Phrase? A Beginner's Guide](https://cryptobeginner.in/blog/what-is-a-crypto-seed-phrase-a-beginner-s-guide)
+- [What is a Crypto Wallet Address? A Beginner's Guide](https://cryptobeginner.in/blog/what-is-a-crypto-wallet-address-a-beginner-s-guide)

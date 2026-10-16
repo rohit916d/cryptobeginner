@@ -98,3 +98,12 @@ No wallet required. No rupees required. Just curiosity — which, as it turns ou
 Continue with [our free beginner track](/learn) and give yourself the literacy that the next decade will assume you have.
 
 > **Educational content only.** This is not financial advice.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [How to Read a Crypto Chart (Beginner's Guide)](https://cryptobeginner.in/blog/how-to-read-a-crypto-chart)
+- [How Do Crypto Prices Get Value? Supply and Demand Basics](https://cryptobeginner.in/blog/how-do-crypto-prices-get-value-india-guide)
+- [What Are Governance Tokens? Voting Rights Explained](https://cryptobeginner.in/blog/what-are-governance-tokens-india-guide)

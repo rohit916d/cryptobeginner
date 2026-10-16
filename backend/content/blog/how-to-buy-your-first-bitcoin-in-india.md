@@ -128,3 +128,12 @@ Buying your first Bitcoin in India comes down to five steps: pick a reputable ex
 Start small, prioritise security over speed, and treat your first purchase as tuition — you're paying to learn how the system works. The knowledge you gain from actually going through the process is worth far more than the rupees involved.
 
 Ready for the next step? Learn [what Bitcoin actually is and how it works](/learn/what-is-bitcoin) so you understand what you now own.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [Bitcoin vs Digital Gold in India: A Beginner Guide](https://cryptobeginner.in/blog/bitcoin-vs-digital-gold-india-guide)
+- [Bitcoin Halving Meaning: A Simple Guide for Indian Beginners](https://cryptobeginner.in/blog/bitcoin-halving-meaning-beginners-india)
+- [What Is a Bitcoin Bridge? How BTC Moves to Other Networks](https://cryptobeginner.in/blog/what-is-a-bitcoin-bridge)

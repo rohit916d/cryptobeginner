@@ -141,3 +141,12 @@ A trading plan does not need to be perfect — it needs to exist, and it needs t
 The market will still be there tomorrow. Your job is to make sure your capital — and your discipline — survive long enough to learn it. A plan is how you give yourself that chance.
 
 **Next reads:** our guides on [reading crypto charts](/blog/how-to-read-a-crypto-chart), [paper trading](/blog/what-is-crypto-paper-trading-a-risk-free-guide), and [common scams to avoid](/blog/7-common-crypto-scams-targeting-indians) pair well with this one.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [Crypto Leverage Explained: Why Beginners Should Avoid It](https://cryptobeginner.in/blog/crypto-leverage-explained-why-beginners-should-avoid-it)
+- [What Is a Crypto ETF? What Indian Beginners Must Know](https://cryptobeginner.in/blog/what-is-a-crypto-etf-india-guide)
+- [Why Crypto Prices Swing So Much: Volatility Explained](https://cryptobeginner.in/blog/why-crypto-prices-swing-so-much-volatility-guide)

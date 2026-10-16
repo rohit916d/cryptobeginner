@@ -104,3 +104,12 @@ Developers use testnets for the same reason: before launching an app that handle
 Ready to go deeper? Continue with [our free beginner track](/learn) to learn about wallets, addresses, and staying safe.
 
 *Disclaimer: CryptoBeginner.in is an educational platform. This article is for learning purposes only and does not constitute financial or technical advice.*
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What Is Self-Custody? Taking Crypto Off Exchanges Safely](https://cryptobeginner.in/blog/what-is-self-custody-india-guide)
+- [How to Store Crypto Safely: The Complete Safety Playbook for Indians](https://cryptobeginner.in/blog/how-to-store-crypto-safely-india-beginners-guide)
+- [What is a Crypto Seed Phrase? A Beginner's Guide](https://cryptobeginner.in/blog/what-is-a-crypto-seed-phrase-a-beginner-s-guide)

@@ -118,3 +118,12 @@ A governance token is a ballot, not a share certificate: it lets holders vote on
 **Do I need governance tokens to use a DeFi app?** Usually not. Most decentralised apps let anyone swap, lend, or borrow without holding the governance token. The token is mainly needed if you want to vote on proposals or delegate your vote. Many beginners simply read proposals and follow vote results for free first.
 
 **Are governance token rewards or airdrops taxed in India?** Tokens received for free, including many airdrops, are generally treated as income at their value when received, and later transfers fall under India's crypto tax framework. Keep the date, quantity, and rupee value of anything you receive. Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What Are Wrapped Tokens? WBTC Explained for Beginners](https://cryptobeginner.in/blog/what-are-wrapped-tokens-wbtc-india-guide)
+- [What is a Crypto Faucet? Free Tokens Explained](https://cryptobeginner.in/blog/what-is-a-crypto-faucet-free-tokens-explained)
+- [What Is Impermanent Loss? Liquidity Risk Explained](https://cryptobeginner.in/blog/what-is-impermanent-loss-india-guide)

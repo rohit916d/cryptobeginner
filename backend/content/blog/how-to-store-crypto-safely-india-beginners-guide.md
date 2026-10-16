@@ -139,3 +139,12 @@ Begin with a reputable hot wallet and a tiny amount. Practice writing down and r
 > **Educational content only.** This is not financial advice. Crypto assets are volatile — never invest money you cannot afford to lose, and take security seriously from day one.
 
 **Next steps:** Learn how to create your first crypto wallet step by step, read our guide on the most common crypto scams targeting Indians, and understand how crypto tax works in India before you start moving larger amounts.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What Is Self-Custody? Taking Crypto Off Exchanges Safely](https://cryptobeginner.in/blog/what-is-self-custody-india-guide)
+- [What is a Crypto Seed Phrase? A Beginner's Guide](https://cryptobeginner.in/blog/what-is-a-crypto-seed-phrase-a-beginner-s-guide)
+- [What is a Crypto Wallet Address? A Beginner's Guide](https://cryptobeginner.in/blog/what-is-a-crypto-wallet-address-a-beginner-s-guide)

@@ -136,3 +136,12 @@ Treat any guarantee of returns as an automatic red flag. Legitimate crypto marke
 ### Can I get my money back from a crypto Ponzi scheme?
 
 Recovery is difficult because crypto transfers are generally irreversible and operators often vanish or move funds offshore. Still, file a report immediately with the National Cyber Crime Reporting Portal (cybercrime.gov.in) or call the 1930 helpline, and file a local police complaint. Acting fast helps authorities trace funds and may help in multi-victim cases where assets are frozen. Never pay a "recovery agent" who asks for upfront fees — that is a second scam.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [Fake Crypto Apps & Telegram Scams: How Indians Stay Safe](https://cryptobeginner.in/blog/fake-crypto-apps-telegram-scams-india-guide)
+- [What Is a Rug Pull? Red Flags Every Beginner Must Know](https://cryptobeginner.in/blog/what-is-a-rug-pull-red-flags-india-guide)
+- [Are Crypto Faucets Legit? How Indians Can Tell Real vs Scam](https://cryptobeginner.in/blog/are-crypto-faucets-legit-real-vs-scam)

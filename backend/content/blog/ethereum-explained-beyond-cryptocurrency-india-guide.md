@@ -108,3 +108,12 @@ Ethereum is generally considered riskier because it does more. Its value depends
 Ethereum explained in one line: Bitcoin digitised money; Ethereum digitised agreements and applications. ETH is the fuel and asset of that system, smart contracts are its engine, and gas is the price of using it. For an Indian beginner, you do not need to use DeFi, buy NFTs or run a validator to benefit from understanding this. You just need a clear mental model before hype — or fear — makes decisions for you.
 
 **Next steps:** Compare the two networks side by side in our guide on [Bitcoin vs Ethereum](/blog/bitcoin-vs-ethereum-which-to-buy-first), then read our explainer on [storing crypto safely](/blog/how-to-store-crypto-safely-india-beginners-guide) before you move any ETH off an exchange.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What Is Polygon? India's Own Blockchain, Explained Simply](https://cryptobeginner.in/blog/polygon-explained-india-blockchain-beginners-guide)
+- [Should You Invest in Bitcoin or Ethereum First? An Honest Comparison](https://cryptobeginner.in/blog/bitcoin-vs-ethereum-which-to-buy-first)
+- [Bitcoin, Ethereum, Solana & XRP: A Beginner's Guide to Understanding Large-Cap Coins](https://cryptobeginner.in/blog/top-crypto-coins-to-watch-today-bitcoin-ethereum-solana-xrp-trading-analysis)

@@ -111,3 +111,12 @@ Block explorers turn crypto from a black box into something you can inspect your
 Continue with [our free beginner track](/learn) to build on this foundation, starting with how wallets and addresses actually work.
 
 *Educational content only. This guide does not constitute financial advice.*
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What Is a Node in Crypto? Validators Explained Simply](https://cryptobeginner.in/blog/what-is-a-node-validators-india-guide)
+- [Layer 2 Networks Explained: Faster, Cheaper Crypto](https://cryptobeginner.in/blog/layer-2-networks-explained-india-guide)
+- [What Is Web3? The Internet's Next Chapter Explained Simply](https://cryptobeginner.in/blog/what-is-web3-internets-next-chapter-explained)

@@ -163,3 +163,12 @@ Most of the time, minutes. UPI transfers themselves are near-instant, and many e
 ## Your next step
 
 Once your INR is sitting in your exchange wallet, you're one step away from your first purchase — but don't rush it. Read our guide on [how to buy your first Bitcoin in India](/blog/how-to-buy-your-first-bitcoin-in-india) to understand order types before you place that first trade, and skim our [crypto exchange comparison](/blog/coindcx-vs-wazirx-vs-zebpay-india) if you haven't picked a platform yet. Start small, keep records, and let the learning compound.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [Crypto Exchange Fees Explained: How Exchanges Earn Money](https://cryptobeginner.in/blog/crypto-exchange-fees-explained-india)
+- [Crypto Leverage Explained: Why Beginners Should Avoid It](https://cryptobeginner.in/blog/crypto-leverage-explained-why-beginners-should-avoid-it)
+- [What Is a Crypto ETF? What Indian Beginners Must Know](https://cryptobeginner.in/blog/what-is-a-crypto-etf-india-guide)

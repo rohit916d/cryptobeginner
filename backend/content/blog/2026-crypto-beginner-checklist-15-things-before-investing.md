@@ -98,3 +98,12 @@ You don't have to complete all 15 in one day. A realistic pace: items 1–3 (kno
 Once you've worked through the checklist, your next steps are straightforward: start with a tiny amount to learn the mechanics, keep learning with our guides on wallets, fees, and tax filing, and revisit this checklist every few months — the rules of good practice don't change, but your situation and the market will.
 
 Crypto rewards the prepared and punishes the hasty. Doing these 15 things before investing won't guarantee returns — nothing can — but it will guarantee you're starting the way every sensible educator recommends: informed, secured, and in control of your own risk.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [Crypto Leverage Explained: Why Beginners Should Avoid It](https://cryptobeginner.in/blog/crypto-leverage-explained-why-beginners-should-avoid-it)
+- [What Is a Crypto ETF? What Indian Beginners Must Know](https://cryptobeginner.in/blog/what-is-a-crypto-etf-india-guide)
+- [Why Crypto Prices Swing So Much: Volatility Explained](https://cryptobeginner.in/blog/why-crypto-prices-swing-so-much-volatility-guide)

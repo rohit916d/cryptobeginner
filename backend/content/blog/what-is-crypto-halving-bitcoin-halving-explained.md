@@ -101,3 +101,12 @@ And one India-specific note: if you hold Bitcoin on an Indian exchange through a
 *Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
 
 Want to understand the mining process that halvings regulate? Continue with [our free beginner track](/learn), which explains mining, blocks, and supply from absolute zero.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [Bitcoin Halving Meaning: A Simple Guide for Indian Beginners](https://cryptobeginner.in/blog/bitcoin-halving-meaning-beginners-india)
+- [Bitcoin vs Digital Gold in India: A Beginner Guide](https://cryptobeginner.in/blog/bitcoin-vs-digital-gold-india-guide)
+- [What Is a Bitcoin Bridge? How BTC Moves to Other Networks](https://cryptobeginner.in/blog/what-is-a-bitcoin-bridge)

@@ -100,3 +100,12 @@ You will never need to compute a hash by hand. But understanding hashing gives y
 When someone asks "but who controls the blockchain?", part of the honest answer is: nobody controls it, and hashing is one of the main reasons nobody *needs* to.
 
 Curious how these hashed blocks get created and agreed upon in the first place? Continue with [our free beginner track](/learn), which explains mining, consensus, and the full journey of a transaction.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What is Blockchain Technology? A No-Jargon Guide](https://cryptobeginner.in/blog/what-is-blockchain-technology)
+- [What Is a Node in Crypto? Validators Explained Simply](https://cryptobeginner.in/blog/what-is-a-node-validators-india-guide)
+- [Layer 2 Networks Explained: Faster, Cheaper Crypto](https://cryptobeginner.in/blog/layer-2-networks-explained-india-guide)

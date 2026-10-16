@@ -104,3 +104,12 @@ Whatever you decide, remember the math of Indian crypto taxation: a flat **30% t
 The cheapest-looking coin in the market is often the most expensive mistake. Unit price is marketing; market cap is math. Growth potential comes from real usage, sound tokenomics, honest teams, and reasonable valuations — never from a low number on the price tag. Learn to evaluate coins this way and you become immune to an entire industry of hype.
 
 To build this evaluation skill properly, work through the structured lessons at [/learn](/learn) — they teach you how to read tokenomics, spot red flags, and think like a skeptic before you risk a single rupee.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What Is Solana? A Beginner's Guide to the Fast Blockchain](https://cryptobeginner.in/blog/solana-is-still-one-of-the-coins-i-m-watching-closely)
+- [Stablecoins Explained: USDT, USDC, and Beyond](https://cryptobeginner.in/blog/stablecoins-explained)
+- [What Is Crypto Market Cap? Why Price Alone Misleads](https://cryptobeginner.in/blog/what-is-crypto-market-cap-india-guide)

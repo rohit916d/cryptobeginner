@@ -124,3 +124,12 @@ Crypto leverage makes every price move matter many times more, both ways, while 
 **Can you lose all your money with crypto leverage?** Yes, you can lose your entire margin very quickly, sometimes within minutes during a sharp price move. If your account uses cross margin, losses can also draw on more of your account balance, so always read the platform terms before assuming your risk is limited to one deposit.
 
 **Is leveraged crypto trading available in India?** Features vary by platform and change over time. Some platforms offer margin or derivatives products, while spot buying is simpler and more common for beginners. Check whether a platform is registered with FIU-IND, read its current terms, and be extra careful with unknown offshore apps promoted through social media.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What Is a Crypto ETF? What Indian Beginners Must Know](https://cryptobeginner.in/blog/what-is-a-crypto-etf-india-guide)
+- [Why Crypto Prices Swing So Much: Volatility Explained](https://cryptobeginner.in/blog/why-crypto-prices-swing-so-much-volatility-guide)
+- [How Do Crypto Prices Get Value? Supply and Demand Basics](https://cryptobeginner.in/blog/how-do-crypto-prices-get-value-india-guide)

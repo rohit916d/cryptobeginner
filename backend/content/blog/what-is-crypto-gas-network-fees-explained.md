@@ -113,3 +113,12 @@ Gas is the price of using a decentralised computer that nobody owns and everybod
 The habits that matter most are simple — keep native coins for fees, time your transactions, choose the right network, and practise on cheap chains first. Master those, and gas will never surprise you again.
 
 Want to go deeper into how blockchains actually work under the hood? Continue with [our free beginner track](/learn), which builds from wallets and transactions up to the full picture.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What is a Crypto Hard Fork? Network Upgrades Explained](https://cryptobeginner.in/blog/what-is-a-crypto-hard-fork-network-upgrades-explained)
+- [What Is a Node in Crypto? Validators Explained Simply](https://cryptobeginner.in/blog/what-is-a-node-validators-india-guide)
+- [Layer 2 Networks Explained: Faster, Cheaper Crypto](https://cryptobeginner.in/blog/layer-2-networks-explained-india-guide)

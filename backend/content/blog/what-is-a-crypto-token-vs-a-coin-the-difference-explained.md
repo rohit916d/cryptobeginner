@@ -97,3 +97,12 @@ The reverse can happen too: a project may abandon its own chain and become a tok
 Keep building your foundation with [our free beginner track](/learn).
 
 *Disclaimer: CryptoBeginner.in is an educational platform. We do not provide financial advice. Understanding the technology is the best first step before interacting with any digital assets.*
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What is Crypto Burn? Understanding Token Supply Reduction](https://cryptobeginner.in/blog/what-is-crypto-burn-understanding-token-supply-reduction)
+- [What Is a Node in Crypto? Validators Explained Simply](https://cryptobeginner.in/blog/what-is-a-node-validators-india-guide)
+- [Layer 2 Networks Explained: Faster, Cheaper Crypto](https://cryptobeginner.in/blog/layer-2-networks-explained-india-guide)

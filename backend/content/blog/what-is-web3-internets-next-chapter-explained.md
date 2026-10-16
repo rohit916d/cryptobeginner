@@ -127,3 +127,12 @@ Web3 is best understood as an experiment in progress: an attempt to rebuild part
 As an Indian beginner, your edge isn't betting early on the right token. It's understanding the technology while everyone else is either hyping it or ignoring it. Learn the building blocks, try things with pocket money, protect your seed phrase like your life depends on it, and stay sceptical of anyone promising guaranteed returns in the name of Web3.
 
 Your next steps: read our plain-language guide to [DeFi](/blog/what-is-defi-explained-without-jargon-india-guide) to see Web3's most working use case in action, learn [how crypto wallets actually keep your assets safe](/blog/how-to-store-crypto-safely-india-beginners-guide), and bookmark our [scam red-flags checklist](/blog/how-to-spot-crypto-ponzi-scheme-red-flags) before you connect your wallet to anything.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What Is a Node in Crypto? Validators Explained Simply](https://cryptobeginner.in/blog/what-is-a-node-validators-india-guide)
+- [What is Crypto Mining? Proof of Work Explained Simply](https://cryptobeginner.in/blog/what-is-crypto-mining-proof-of-work-explained-simply)
+- [Layer 2 Networks Explained: Faster, Cheaper Crypto](https://cryptobeginner.in/blog/layer-2-networks-explained-india-guide)

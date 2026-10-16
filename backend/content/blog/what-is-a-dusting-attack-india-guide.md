@@ -100,3 +100,12 @@ A dusting attack is a privacy trick disguised as a tiny gift. The dust cannot st
 **What should I do if I receive mystery dust in my wallet?** Do nothing with it. Do not spend it, swap it, or send it anywhere, and do not visit any website or scan any code mentioned in the token name or transaction note. Leave the dust untouched, use your wallet's hide or coin-control features if available, and keep using fresh addresses for future receipts.
 
 **Can a dusting attack happen on an Indian exchange account?** Dusting mainly targets self-custody wallets with public addresses, because attackers send tiny amounts to thousands of addresses at once. Exchange accounts use shared deposit systems, so the tracking trick works poorly there, but unsolicited tokens can still appear in DeFi wallets connected to your exchange activity.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [Fake Crypto Apps & Telegram Scams: How Indians Stay Safe](https://cryptobeginner.in/blog/fake-crypto-apps-telegram-scams-india-guide)
+- [What Is a Rug Pull? Red Flags Every Beginner Must Know](https://cryptobeginner.in/blog/what-is-a-rug-pull-red-flags-india-guide)
+- [Crypto Faucets vs Airdrops: Which Is Worth Your Time?](https://cryptobeginner.in/blog/crypto-faucets-vs-airdrops-india-guide)

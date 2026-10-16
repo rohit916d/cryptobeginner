@@ -87,3 +87,12 @@ The goal is not to become an economist. It is to stop being surprised — becaus
 Bitcoin may be decentralized, but it still swims in the ocean of global macroeconomics — and U.S. inflation data is one of the strongest currents. You do not need to predict the next report. You need to understand *why* it moves markets, respect event-day volatility, and keep your strategy focused on what you can control: position size, patience, and continuous learning.
 
 Want to understand the forces behind crypto prices instead of just watching them? The structured lessons at [/learn](/learn) build your market literacy from the ground up — no economics degree required.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [Bitcoin vs Digital Gold in India: A Beginner Guide](https://cryptobeginner.in/blog/bitcoin-vs-digital-gold-india-guide)
+- [Bitcoin Halving Meaning: A Simple Guide for Indian Beginners](https://cryptobeginner.in/blog/bitcoin-halving-meaning-beginners-india)
+- [What Is a Bitcoin Bridge? How BTC Moves to Other Networks](https://cryptobeginner.in/blog/what-is-a-bitcoin-bridge)

@@ -95,3 +95,12 @@ Smart contracts sit in a grey area in India. The underlying agreement may be rec
 ### Do I pay tax when I use a smart contract in India?
 
 Using a contract itself is not a separate tax, but swapping, selling, or earning tokens through one is usually a taxable transfer of a virtual digital asset in India. Profits are generally taxed at 30% with 1% TDS on certain transactions, current as of September 2026. Keep records of every transaction.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What Is DeFi? Decentralized Finance Explained Simply](https://cryptobeginner.in/blog/what-is-defi-explained-without-jargon-india-guide)
+- [What Is Yield Farming? DeFi Rewards and Risks Explained](https://cryptobeginner.in/blog/what-is-yield-farming-defi-rewards-india-guide)
+- [What Is a DEX? Decentralized Exchanges Explained Simply](https://cryptobeginner.in/blog/what-is-a-dex-decentralized-exchanges-india-guide)

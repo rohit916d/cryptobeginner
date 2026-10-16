@@ -121,3 +121,12 @@ Crypto exchanges make money from trading fees, spreads, deposit and withdrawal c
 A useful rule of thumb: **the exchange always gets paid first.** Make sure what remains after its cut still makes your strategy worthwhile. If fees and spreads would eat a large share of a small trade, the trade is probably too small — or too frequent.
 
 *New to crypto? Start with our guides on [how to buy your first Bitcoin in India](/blog/how-to-buy-your-first-bitcoin-in-india) and [crypto tax in India explained](/blog/crypto-tax-india-30-percent-1-percent-tds), then build a [trading plan](/blog/how-to-create-a-crypto-trading-plan-beginners-guide) before placing your first order.*
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [Best Crypto Exchange for Beginners: What to Compare (India)](https://cryptobeginner.in/blog/best-crypto-exchange-for-beginners-india-guide)
+- [UPI to Crypto: How Indians Deposit INR on Exchanges](https://cryptobeginner.in/blog/upi-to-crypto-how-indians-deposit-inr-on-exchanges)
+- [CoinDCX vs WazirX vs ZebPay: Best Crypto Exchange for Indian Beginners](https://cryptobeginner.in/blog/coindcx-vs-wazirx-vs-zebpay-india)

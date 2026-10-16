@@ -94,3 +94,12 @@ What does this mean for your routine? Keep checking Bitcoin first — the base r
 "Look at Bitcoin first" is one of the simplest edges in crypto trading, and it costs nothing. It will not make every trade win — nothing does — but it filters out an entire class of avoidable losses: the ones where the market was screaming "danger" and you were too focused on one coin to hear it.
 
 Want to understand *why* Bitcoin leads the market, not just that it does? Work through the structured beginner lessons at [/learn](/learn), starting with what Bitcoin actually is and how the market fits together.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [Bitcoin vs Digital Gold in India: A Beginner Guide](https://cryptobeginner.in/blog/bitcoin-vs-digital-gold-india-guide)
+- [Bitcoin Halving Meaning: A Simple Guide for Indian Beginners](https://cryptobeginner.in/blog/bitcoin-halving-meaning-beginners-india)
+- [What Is a Bitcoin Bridge? How BTC Moves to Other Networks](https://cryptobeginner.in/blog/what-is-a-bitcoin-bridge)

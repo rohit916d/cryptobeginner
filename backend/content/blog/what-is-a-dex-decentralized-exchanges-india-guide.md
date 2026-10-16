@@ -107,3 +107,12 @@ The golden rules if you do try one: use a separate wallet with limited funds for
 - Start on a compliant CEX, learn wallets first, and only then experiment with DEXs using small amounts.
 
 **Next steps:** set up a self-custody wallet and learn how seed phrases work, then read our guide on gas fees so your first DEX swap doesn't surprise you with network costs. Decentralized trading rewards the prepared — and punishes the rushed.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What Is DeFi? Decentralized Finance Explained Simply](https://cryptobeginner.in/blog/what-is-defi-explained-without-jargon-india-guide)
+- [What Is a DAO? Decentralized Organizations Explained](https://cryptobeginner.in/blog/what-is-a-dao-india-guide)
+- [What Is a Smart Contract? DeFi Code Explained Simply](https://cryptobeginner.in/blog/what-is-a-smart-contract-defi-explained-india-guide)

@@ -156,3 +156,12 @@ Yes. Airdropped tokens are treated as virtual digital assets, and gains are taxe
 ### How can I tell if an airdrop is a scam?
 
 Any airdrop that asks you to send crypto first, pay an "activation fee," or share your seed phrase or private keys is a scam — real airdrops never ask for any of these. Also be wary of announcements from unverified social media accounts, websites with slightly misspelled names, and sites that demand wallet-connection approval before showing you any details.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [Are Crypto Faucets Legit? How Indians Can Tell Real vs Scam](https://cryptobeginner.in/blog/are-crypto-faucets-legit-real-vs-scam)
+- [What Is a Dusting Attack? Crypto Privacy Risk Explained](https://cryptobeginner.in/blog/what-is-a-dusting-attack-india-guide)
+- [Fake Crypto Apps & Telegram Scams: How Indians Stay Safe](https://cryptobeginner.in/blog/fake-crypto-apps-telegram-scams-india-guide)

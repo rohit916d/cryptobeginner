@@ -112,3 +112,12 @@ In crypto, healthy paranoia is a feature, not a flaw. Internalise these:
 Scammers study human psychology full-time; your defence is slowing down and following the routine above. The few seconds it takes to verify a link are the cheapest insurance in crypto.
 
 Continue with [our free beginner track](/learn) to learn wallet safety, exchange basics, and how to research projects before trusting them.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What Is a Dusting Attack? Crypto Privacy Risk Explained](https://cryptobeginner.in/blog/what-is-a-dusting-attack-india-guide)
+- [Fake Crypto Apps & Telegram Scams: How Indians Stay Safe](https://cryptobeginner.in/blog/fake-crypto-apps-telegram-scams-india-guide)
+- [What Is a Rug Pull? Red Flags Every Beginner Must Know](https://cryptobeginner.in/blog/what-is-a-rug-pull-red-flags-india-guide)

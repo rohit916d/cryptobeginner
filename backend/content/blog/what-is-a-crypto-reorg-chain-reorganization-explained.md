@@ -88,3 +88,12 @@ Understanding reorgs gives you something most beginners lack: a correct mental m
 Continue with [our free beginner track](/learn) to explore how blocks, confirmations, and consensus fit together.
 
 *Educational content only. This guide does not constitute financial advice.*
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What Is a Node in Crypto? Validators Explained Simply](https://cryptobeginner.in/blog/what-is-a-node-validators-india-guide)
+- [Layer 2 Networks Explained: Faster, Cheaper Crypto](https://cryptobeginner.in/blog/layer-2-networks-explained-india-guide)
+- [What Is Web3? The Internet's Next Chapter Explained Simply](https://cryptobeginner.in/blog/what-is-web3-internets-next-chapter-explained)

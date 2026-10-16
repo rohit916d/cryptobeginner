@@ -139,3 +139,12 @@ DYOR is not a one-time task — it is a habit. Every new coin, every new platfor
 Start small: pick one coin you already hold or are curious about, and run it through this checklist this week. You will be surprised how much you learn — and how many projects fail the test.
 
 Your next step: read our guide on [How to Spot a Crypto Ponzi Scheme](/blog/how-to-spot-crypto-ponzi-scheme-red-flags) to sharpen your red-flag detection, and keep the checklist above bookmarked.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What Is a Dusting Attack? Crypto Privacy Risk Explained](https://cryptobeginner.in/blog/what-is-a-dusting-attack-india-guide)
+- [Fake Crypto Apps & Telegram Scams: How Indians Stay Safe](https://cryptobeginner.in/blog/fake-crypto-apps-telegram-scams-india-guide)
+- [What Is a Rug Pull? Red Flags Every Beginner Must Know](https://cryptobeginner.in/blog/what-is-a-rug-pull-red-flags-india-guide)

@@ -98,3 +98,12 @@ In India, crypto transfers are not anonymous for tax purposes the way the techno
 Want to go further? Learn how addresses connect to private keys and seed phrases in [our free beginner track](/learn).
 
 *Disclaimer: This article is for educational purposes only and does not constitute financial advice.*
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What is a Crypto Hot Wallet vs Cold Wallet?](https://cryptobeginner.in/blog/what-is-a-crypto-hot-wallet-vs-cold-wallet)
+- [What is a Crypto Public Address? A Beginner's Guide](https://cryptobeginner.in/blog/what-is-a-crypto-public-address-a-beginner-s-guide)
+- [What Is Self-Custody? Taking Crypto Off Exchanges Safely](https://cryptobeginner.in/blog/what-is-self-custody-india-guide)

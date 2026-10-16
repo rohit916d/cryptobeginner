@@ -107,3 +107,12 @@ A transfer between your own wallets is generally not a sale, but you should stil
 ## Conclusion
 
 Keeping crypto tax records in India is a habit, not a project. Record every event with its date, INR value, fees and TDS; download exchange statements each year; document wallet moves yourself; and reconcile monthly so small gaps never grow into filing stress. When filing season arrives, you will work from clear records instead of old screenshots — and that calm is worth the few minutes each entry takes.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [KYC on Crypto Exchanges: Why India Requires Verification](https://cryptobeginner.in/blog/kyc-on-crypto-exchanges-india-guide)
+- [RBI vs Crypto: The Complete History of Regulation in India](https://cryptobeginner.in/blog/rbi-vs-crypto-history-regulation-india)
+- [Crypto Tax in India Explained: 30% Rule, 1% TDS & How to File in 2026](https://cryptobeginner.in/blog/crypto-tax-india-30-percent-1-percent-tds)

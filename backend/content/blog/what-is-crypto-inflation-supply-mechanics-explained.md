@@ -111,3 +111,12 @@ Crypto inflation is simply the rate at which new coins enter circulation — the
 The most useful habit: whenever a coin catches your interest, spend ten minutes on its supply mechanics before you spend ten seconds on its price chart. Design first, charts second.
 
 Want to see how supply schedules connect to mining and network security? Continue with [our free beginner track](/learn), which builds these concepts step by step from absolute zero.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What is Crypto Burn? Understanding Token Supply Reduction](https://cryptobeginner.in/blog/what-is-crypto-burn-understanding-token-supply-reduction)
+- [What Is a Node in Crypto? Validators Explained Simply](https://cryptobeginner.in/blog/what-is-a-node-validators-india-guide)
+- [Layer 2 Networks Explained: Faster, Cheaper Crypto](https://cryptobeginner.in/blog/layer-2-networks-explained-india-guide)

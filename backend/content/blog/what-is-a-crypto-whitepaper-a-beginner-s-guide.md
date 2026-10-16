@@ -104,3 +104,12 @@ The habit itself is the real prize. Every whitepaper you read makes the next one
 Continue your research skills in [our free beginner track](/learn).
 
 *Disclaimer: This article is for educational purposes only and does not constitute financial advice. Always do your own research before interacting with any cryptocurrency project.*
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What Is a Node in Crypto? Validators Explained Simply](https://cryptobeginner.in/blog/what-is-a-node-validators-india-guide)
+- [Layer 2 Networks Explained: Faster, Cheaper Crypto](https://cryptobeginner.in/blog/layer-2-networks-explained-india-guide)
+- [What Is Web3? The Internet's Next Chapter Explained Simply](https://cryptobeginner.in/blog/what-is-web3-internets-next-chapter-explained)

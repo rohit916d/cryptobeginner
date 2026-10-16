@@ -111,3 +111,12 @@ No one can reliably predict the exact start or end of a market cycle. A trend is
 
 **Do crypto taxes in India change in a bull or bear market?**
 No, the market phase does not change the tax rules. Profits from transferring crypto are generally taxed in India regardless of whether prices rose in a bull phase, and 1% TDS may apply on certain transactions. Keep INR records of every trade for filing.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What Is Crypto Market Cap? Why Price Alone Misleads](https://cryptobeginner.in/blog/what-is-crypto-market-cap-india-guide)
+- [Crypto Leverage Explained: Why Beginners Should Avoid It](https://cryptobeginner.in/blog/crypto-leverage-explained-why-beginners-should-avoid-it)
+- [What Is a Crypto ETF? What Indian Beginners Must Know](https://cryptobeginner.in/blog/what-is-a-crypto-etf-india-guide)

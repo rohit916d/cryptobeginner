@@ -95,3 +95,12 @@ India's 1% TDS applies to crypto transactions, and dust conversions technically 
 Crypto dust is a normal, mostly harmless side effect of using blockchains. Your own trading leftovers are nothing to worry about. The one thing to remember — and it is genuinely important — is to **never interact with dust you did not expect to receive**. That single habit defeats dusting attacks completely.
 
 If you want to understand the wallet mechanics behind all of this more deeply, continue with [our free beginner track](/learn), which explains addresses, transactions, and wallet safety step by step.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What Is Self-Custody? Taking Crypto Off Exchanges Safely](https://cryptobeginner.in/blog/what-is-self-custody-india-guide)
+- [How to Store Crypto Safely: The Complete Safety Playbook for Indians](https://cryptobeginner.in/blog/how-to-store-crypto-safely-india-beginners-guide)
+- [What is a Crypto Seed Phrase? A Beginner's Guide](https://cryptobeginner.in/blog/what-is-a-crypto-seed-phrase-a-beginner-s-guide)

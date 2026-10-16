@@ -89,3 +89,12 @@ Crypto faucets are best viewed as a museum exhibit: an interesting artifact from
 Continue with [our free beginner track](/learn) to build real, lasting crypto knowledge.
 
 *Educational content only. This guide does not constitute financial advice.*
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What Are Governance Tokens? Voting Rights Explained](https://cryptobeginner.in/blog/what-are-governance-tokens-india-guide)
+- [What Are Wrapped Tokens? WBTC Explained for Beginners](https://cryptobeginner.in/blog/what-are-wrapped-tokens-wbtc-india-guide)
+- [What Is Impermanent Loss? Liquidity Risk Explained](https://cryptobeginner.in/blog/what-is-impermanent-loss-india-guide)

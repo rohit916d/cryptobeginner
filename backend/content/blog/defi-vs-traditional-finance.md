@@ -96,3 +96,12 @@ If you experiment with DeFi, understand what you are signing up for:
 DeFi is a genuine innovation — open, global, always-on finance built on code. It is also unforgiving, complex, and full of traps for the unprepared. Traditional finance, for all its flaws, protects ordinary users in ways DeFi currently cannot. The smart beginner learns both, uses each where it fits, and never confuses "decentralized" with "safe."
 
 Want to understand the building blocks — wallets, blockchains, and smart contracts — before exploring DeFi? Start at [/learn](/learn) and build up step by step.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [How to Create Your First Crypto Wallet (Step-by-Step)](https://cryptobeginner.in/blog/how-to-create-your-first-crypto-wallet)
+- [What Is DeFi? Decentralized Finance Explained Simply](https://cryptobeginner.in/blog/what-is-defi-explained-without-jargon-india-guide)
+- [What Is Yield Farming? DeFi Rewards and Risks Explained](https://cryptobeginner.in/blog/what-is-yield-farming-defi-rewards-india-guide)

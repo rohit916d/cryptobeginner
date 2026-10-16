@@ -90,3 +90,12 @@ Your public address is your identity on the blockchain: shareable, permanent, an
 Continue with [our free beginner track](/learn) to learn about private keys, seed phrases, and wallet safety next.
 
 *Educational content only. This guide does not constitute financial advice.*
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What is a Crypto Wallet Address? A Beginner's Guide](https://cryptobeginner.in/blog/what-is-a-crypto-wallet-address-a-beginner-s-guide)
+- [What Is Self-Custody? Taking Crypto Off Exchanges Safely](https://cryptobeginner.in/blog/what-is-self-custody-india-guide)
+- [How to Store Crypto Safely: The Complete Safety Playbook for Indians](https://cryptobeginner.in/blog/how-to-store-crypto-safely-india-beginners-guide)

@@ -105,3 +105,12 @@ You do not need to master pools yet — just know the two systems exist. Central
 The order book is simply supply and demand made visible — every bid and ask, ranked and public. Once you can read it, you can see liquidity, judge spreads, and understand exactly why prices move the way they do.
 
 Continue with [our free beginner track](/learn) to build from market mechanics into wallets, exchanges, and staying safe.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What is Crypto Paper Trading? A Risk-Free Guide](https://cryptobeginner.in/blog/what-is-crypto-paper-trading-a-risk-free-guide)
+- [What is Crypto P2P Trading? A Beginner's Guide](https://cryptobeginner.in/blog/what-is-crypto-p2p-trading-a-beginner-s-guide)
+- [The Hardest Part of Crypto Trading Isn't Finding a Trade](https://cryptobeginner.in/blog/the-hardest-part-of-crypto-trading-isn-t-finding-a-trade)

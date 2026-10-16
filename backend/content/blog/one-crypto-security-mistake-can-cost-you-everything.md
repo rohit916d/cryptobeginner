@@ -94,3 +94,12 @@ You may not recover the funds, and it is better to know that honestly than to fa
 One moment of carelessness can cost you everything — but one minute of caution can save everything. Verify links, protect your seed phrase, and read before you sign. Those three habits will put you ahead of the vast majority of crypto users.
 
 Continue building your defenses with [our free beginner track](/learn), where the security lessons walk you through wallets, backups, and scam-spotting step by step.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What is Crypto Impersonation? A Beginner's Security Guide](https://cryptobeginner.in/blog/what-is-crypto-impersonation-a-beginner-s-security-guide)
+- [What Is a Dusting Attack? Crypto Privacy Risk Explained](https://cryptobeginner.in/blog/what-is-a-dusting-attack-india-guide)
+- [Fake Crypto Apps & Telegram Scams: How Indians Stay Safe](https://cryptobeginner.in/blog/fake-crypto-apps-telegram-scams-india-guide)

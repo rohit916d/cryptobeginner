@@ -153,3 +153,12 @@ The practical takeaway for beginners: factor the 30% tax into every decision. A 
 - Read our guide on [how crypto exchanges make money](/blog/how-crypto-exchanges-make-money-and-what-it-costs-you) to understand the fees eating into your returns alongside tax.
 
 *This article is for educational purposes only and is not tax or financial advice. Tax laws are complex and change over time — consult a qualified professional for advice specific to your situation.*
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [How to Keep Crypto Tax Records for Filing in India](https://cryptobeginner.in/blog/how-to-keep-crypto-records-india-tax-filing)
+- [KYC on Crypto Exchanges: Why India Requires Verification](https://cryptobeginner.in/blog/kyc-on-crypto-exchanges-india-guide)
+- [RBI vs Crypto: The Complete History of Regulation in India](https://cryptobeginner.in/blog/rbi-vs-crypto-history-regulation-india)

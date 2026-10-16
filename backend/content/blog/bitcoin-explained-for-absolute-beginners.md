@@ -100,3 +100,12 @@ If you want to learn by doing — with a tiny amount:
 Bitcoin is digital money without middlemen: a shared, unchangeable ledger secured by global computing power, with a fixed supply of 21 million. It is a genuine technological breakthrough — and also a volatile, risky asset surrounded by scams. Both things are true. Understanding it properly is the foundation of everything else in crypto.
 
 Ready for the next step? The free structured course at [/learn](/learn) takes you from this overview into wallets, exchanges, and staying safe — one short lesson at a time.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [Bitcoin vs Digital Gold in India: A Beginner Guide](https://cryptobeginner.in/blog/bitcoin-vs-digital-gold-india-guide)
+- [Bitcoin Halving Meaning: A Simple Guide for Indian Beginners](https://cryptobeginner.in/blog/bitcoin-halving-meaning-beginners-india)
+- [What Is a Bitcoin Bridge? How BTC Moves to Other Networks](https://cryptobeginner.in/blog/what-is-a-bitcoin-bridge)

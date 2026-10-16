@@ -96,3 +96,12 @@ Crypto mining is the digital engine that lets strangers trust a shared ledger wi
 Continue with [our free beginner track](/learn) to see how blocks, hashes, and wallets fit together into the full picture of how blockchain works.
 
 > **Educational content only.** This is not financial advice.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What Is a Node in Crypto? Validators Explained Simply](https://cryptobeginner.in/blog/what-is-a-node-validators-india-guide)
+- [What Is Web3? The Internet's Next Chapter Explained Simply](https://cryptobeginner.in/blog/what-is-web3-internets-next-chapter-explained)
+- [Layer 2 Networks Explained: Faster, Cheaper Crypto](https://cryptobeginner.in/blog/layer-2-networks-explained-india-guide)

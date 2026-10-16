@@ -89,3 +89,12 @@ In traditional banking, fraud has safety nets: you can freeze a card, dispute a 
 That sounds daunting, but notice something: every defence on the checklist above is free, takes seconds, and requires no technical skill. Skepticism is the cheapest security tool ever invented.
 
 Make security your first crypto skill, not an afterthought. Continue with [our free beginner track](/learn), which covers wallet safety, seed phrase protection, and scam awareness from absolute zero — before you put a single rupee at risk.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [One Crypto Security Mistake Can Cost You Everything](https://cryptobeginner.in/blog/one-crypto-security-mistake-can-cost-you-everything)
+- [What Is a Dusting Attack? Crypto Privacy Risk Explained](https://cryptobeginner.in/blog/what-is-a-dusting-attack-india-guide)
+- [Fake Crypto Apps & Telegram Scams: How Indians Stay Safe](https://cryptobeginner.in/blog/fake-crypto-apps-telegram-scams-india-guide)

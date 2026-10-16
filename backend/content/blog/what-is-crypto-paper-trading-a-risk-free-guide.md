@@ -111,3 +111,12 @@ Paper trading is a flight simulator for markets: it teaches you the controls, th
 Ready to practise? Try our [demo-trading simulator](/demo-trading) with a virtual balance at live prices — then continue with [our free beginner track](/learn) to master the fundamentals behind every trade.
 
 > **Educational content only.** This is not financial advice.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What is Crypto Order Book? The Trading Ledger Explained](https://cryptobeginner.in/blog/what-is-crypto-order-book-the-trading-ledger-explained)
+- [What is Crypto P2P Trading? A Beginner's Guide](https://cryptobeginner.in/blog/what-is-crypto-p2p-trading-a-beginner-s-guide)
+- [The Hardest Part of Crypto Trading Isn't Finding a Trade](https://cryptobeginner.in/blog/the-hardest-part-of-crypto-trading-isn-t-finding-a-trade)

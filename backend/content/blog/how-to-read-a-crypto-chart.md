@@ -109,3 +109,12 @@ A chart cannot tell you whether a project is legitimate, whether its technology 
 Charts stop being intimidating once you see them as organised history. Learn the vocabulary above and you will read any crypto chart with confidence.
 
 Continue with [our free beginner track](/learn) to build on these basics — from wallets and exchanges to staying safe.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [Why Everyone Should Learn the Basics of Crypto](https://cryptobeginner.in/blog/why-everyone-should-learn-crypto)
+- [What Is Tokenomics? How to Read Supply and Distribution](https://cryptobeginner.in/blog/what-is-tokenomics-supply-distribution-india-guide)
+- [How to Read a Crypto Market Day: A Beginner's Guide to Market Structure](https://cryptobeginner.in/blog/crypto-market-today-bitcoin-holds-64k-as-solana-takes-the-lead-what-traders-shou)

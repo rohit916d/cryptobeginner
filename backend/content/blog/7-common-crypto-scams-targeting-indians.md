@@ -137,3 +137,12 @@ Act fast — speed matters:
 Scammers don't hack blockchains — they hack human psychology: panic, greed, trust, and fear. Every scam in this list fails against a calm person who verifies independently and never shares secrets under pressure.
 
 Build three habits and you'll be safer than 95% of crypto users in India: keep your seed phrase and OTPs completely private, verify every support contact and app through official channels only, and treat guaranteed returns as proof of fraud. The crypto space rewards the patient and the careful — be both.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [Fake Crypto Apps & Telegram Scams: How Indians Stay Safe](https://cryptobeginner.in/blog/fake-crypto-apps-telegram-scams-india-guide)
+- [Are Crypto Faucets Legit? How Indians Can Tell Real vs Scam](https://cryptobeginner.in/blog/are-crypto-faucets-legit-real-vs-scam)
+- [How to Spot a Crypto Ponzi Scheme: 10 Red Flags for Indians](https://cryptobeginner.in/blog/how-to-spot-crypto-ponzi-scheme-red-flags)

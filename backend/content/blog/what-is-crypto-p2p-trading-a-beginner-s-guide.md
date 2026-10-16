@@ -97,3 +97,12 @@ A common myth is that P2P trades are "off the books." In India, crypto-to-crypto
 P2P trading is crypto at its most human — real people, real payment apps, real negotiation, with escrow as the referee. Used carefully on reputable platforms, it is a legitimate way to move between INR and crypto. Used carelessly, it is where beginners get burned.
 
 Continue with [our free beginner track](/learn) to learn how wallets, exchanges, and scam protection fit together.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What is Crypto Paper Trading? A Risk-Free Guide](https://cryptobeginner.in/blog/what-is-crypto-paper-trading-a-risk-free-guide)
+- [What is Crypto Order Book? The Trading Ledger Explained](https://cryptobeginner.in/blog/what-is-crypto-order-book-the-trading-ledger-explained)
+- [The Hardest Part of Crypto Trading Isn't Finding a Trade](https://cryptobeginner.in/blog/the-hardest-part-of-crypto-trading-isn-t-finding-a-trade)

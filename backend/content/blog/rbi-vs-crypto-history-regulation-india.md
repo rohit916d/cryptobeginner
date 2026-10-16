@@ -122,3 +122,12 @@ Uncertain — and that uncertainty is exactly why beginners should stay flexible
 ---
 
 The RBI-vs-crypto story is far from over. But if you know the history — the 2013 warning, the 2018 banking ban, the 2020 court reversal, the 2022 tax regime, and the 2023–24 compliance crackdown — every rule you meet as an Indian investor suddenly makes sense. Keep learning: read our guide on [crypto tax in India](/blog/crypto-tax-india-30-percent-1-percent-tds) next, so you know exactly what the 30% rule and 1% TDS mean for your money.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [How to Keep Crypto Tax Records for Filing in India](https://cryptobeginner.in/blog/how-to-keep-crypto-records-india-tax-filing)
+- [KYC on Crypto Exchanges: Why India Requires Verification](https://cryptobeginner.in/blog/kyc-on-crypto-exchanges-india-guide)
+- [Crypto Tax in India Explained: 30% Rule, 1% TDS & How to File in 2026](https://cryptobeginner.in/blog/crypto-tax-india-30-percent-1-percent-tds)

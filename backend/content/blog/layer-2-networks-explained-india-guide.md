@@ -96,3 +96,12 @@ Well-established Layer 2 networks inherit much of their security from the main b
 ### Do I pay tax when I use a Layer 2 network in India?
 
 Using a network itself is not a separate tax event, but selling or swapping crypto on any network can be taxable in India. Profits from transfers of virtual digital assets are generally taxed at 30% with 1% TDS on certain transactions, current as of September 2026. Keep records and verify the latest rules before filing.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [What Is a Node in Crypto? Validators Explained Simply](https://cryptobeginner.in/blog/what-is-a-node-validators-india-guide)
+- [What Is Web3? The Internet's Next Chapter Explained Simply](https://cryptobeginner.in/blog/what-is-web3-internets-next-chapter-explained)
+- [What Is an NFT? A Beginner's Guide With Indian Examples](https://cryptobeginner.in/blog/what-is-an-nft-beginners-guide-indian-examples)

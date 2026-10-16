@@ -122,3 +122,12 @@ A crypto SIP is a sensible *process* for a beginner: it replaces agonizing timin
 If you are new, the best use of a crypto SIP is as a learning tool with small amounts — master deposits, orders, fees, wallets, and tax records while the stakes are low. The habits you build at ₹500 a month are the same habits that protect serious money later.
 
 **Next steps:** Read our guide on [storing crypto safely](/blog/how-to-store-crypto-safely-india-beginners-guide) to learn what to do once your SIP balance grows, and our [crypto tax guide](/blog/crypto-tax-india-30-percent-1-percent-tds) so your small monthly buys do not become a filing headache.
+
+
+## Keep Learning
+
+If you found this guide useful, these related guides will help you go deeper:
+
+- [Crypto Leverage Explained: Why Beginners Should Avoid It](https://cryptobeginner.in/blog/crypto-leverage-explained-why-beginners-should-avoid-it)
+- [What Is a Crypto ETF? What Indian Beginners Must Know](https://cryptobeginner.in/blog/what-is-a-crypto-etf-india-guide)
+- [Why Crypto Prices Swing So Much: Volatility Explained](https://cryptobeginner.in/blog/why-crypto-prices-swing-so-much-volatility-guide)
