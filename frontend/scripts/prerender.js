@@ -268,6 +268,70 @@ ${relatedHtml}
 </main>`,
   });
 
+  /* ---------------- Learn lessons ---------------- */
+  const lessonsDir = postsDir ? path.join(path.dirname(postsDir), "lessons") : null;
+  const lessons = [];
+  if (lessonsDir && fs.existsSync(lessonsDir)) {
+    for (const file of fs.readdirSync(lessonsDir)) {
+      if (!file.endsWith(".md")) continue;
+      const slug = file.replace(/\.md$/, "");
+      const parsed = parsePost(fs.readFileSync(path.join(lessonsDir, file), "utf8"));
+      if (!parsed || !parsed.fm.title) continue;
+      lessons.push({ slug, ...parsed });
+    }
+  }
+  lessons.sort((a, b) => (a.fm.order || 99) - (b.fm.order || 99));
+  console.log(`[prerender] ${lessons.length} lessons found`);
+  for (const l of lessons) {
+    const url = `${ORIGIN}/learn/${l.slug}`;
+    const sameLevel = lessons.filter((q) => q.fm.level === l.fm.level);
+    const idx = sameLevel.findIndex((q) => q.slug === l.slug);
+    const next = idx >= 0 && idx < sameLevel.length - 1 ? sameLevel[idx + 1] : null;
+    writePage(tpl, path.join("learn", l.slug), {
+      title: `${l.fm.title} — Crypto Beginner`,
+      desc: l.fm.summary || "",
+      url,
+      bodyHtml: `<article class="max-w-3xl mx-auto px-4 sm:px-6 py-14 md:py-20">
+<p><a href="/learn" class="text-sm text-zinc-400">← Back to all lessons</a></p>
+<div class="text-xs font-bold uppercase tracking-[0.15em] text-[#C8F169]">${esc(l.fm.level || "")} lesson</div>
+<h1 class="mt-3 text-4xl md:text-5xl font-normal text-white tracking-tight leading-tight">${esc(l.fm.title)}</h1>
+<div class="mt-4 flex flex-wrap items-center gap-4 text-xs text-zinc-500"><span>${esc(l.fm.read_time || "")} min read</span><span>${esc(l.fm.author || "Crypto Beginner Editorial Team")}</span></div>
+<div class="prose-amber mt-10">${renderMarkdown(l.body)}</div>
+${
+  next
+    ? `<div class="mt-12"><h2 class="text-2xl font-bold text-white mb-4">Next lesson</h2><p><a href="/learn/${next.slug}">${esc(next.fm.title)}</a> — ${esc(next.fm.summary || "")}</p></div>`
+    : ""
+}
+</article>`,
+    });
+  }
+  if (lessons.length) {
+    const levels = [...new Set(lessons.map((l) => l.fm.level || "beginner"))];
+    const groups = levels
+      .map(
+        (lv) =>
+          `<h2 class="text-2xl font-bold text-white mt-10 mb-4" style="text-transform:capitalize">${esc(lv)} track</h2><ul class="space-y-3">${lessons
+            .filter((l) => (l.fm.level || "beginner") === lv)
+            .map(
+              (l) =>
+                `<li><a href="/learn/${l.slug}">${esc(l.fm.title)}</a> — ${esc(l.fm.summary || "")}</li>`
+            )
+            .join("")}</ul>`
+      )
+      .join("");
+    writePage(tpl, "learn", {
+      title: "Learn Crypto Step by Step — Crypto Beginner",
+      desc: "Structured crypto learning paths for absolute beginners in India — beginner, intermediate and security tracks that build from zero to confident.",
+      url: `${ORIGIN}/learn`,
+      bodyHtml: `<main class="max-w-3xl mx-auto px-4 sm:px-6 py-14 md:py-20">
+<h1 class="text-4xl md:text-5xl font-normal text-white tracking-tight">Learn crypto, step by step</h1>
+<p class="text-zinc-400 mt-4 leading-relaxed">Structured lessons for beginners in India — from what Bitcoin is, to wallets, security, taxes and DeFi. Free, in simple language, educational only.</p>
+${groups}
+</main>`,
+    });
+  }
+  console.log("[prerender] lesson pages written");
+
   /* ---------------- Static pages ---------------- */
   const legal = {
     privacy: {
@@ -364,17 +428,6 @@ ${relatedHtml}
 <p class="text-zinc-400 mt-2 leading-relaxed">You can disable cookies at any time in your browser settings. The site will still work; some convenience features may reset between visits.</p>
 <h2 class="text-xl font-bold text-white mt-8">More information</h2>
 <p class="text-zinc-400 mt-2 leading-relaxed">See our <a href="/privacy">Privacy Policy</a> for how we handle your information overall.</p>
-</main>`,
-    },
-    {
-      route: "learn",
-      title: "Learn Crypto Step by Step — Crypto Beginner",
-      desc: "Structured crypto learning tracks for Indian beginners: start with Bitcoin basics, then wallets, security, taxes and DeFi — at your own pace, free.",
-      body: `<main class="max-w-3xl mx-auto px-4 sm:px-6 py-14 md:py-20">
-<h1 class="text-4xl md:text-5xl font-normal text-white tracking-tight">Learn crypto, step by step</h1>
-<p class="text-zinc-400 mt-4 leading-relaxed">Our learning tracks take you from "what is Bitcoin?" to wallets, security, Indian crypto taxes and DeFi — in order, in simple language, completely free. Start with our most-read guides:</p>
-<ul class="mt-6 space-y-3">${postLinks(posts.slice(0, 8))}</ul>
-<p class="text-zinc-400 mt-6 leading-relaxed">Or browse the full <a href="/blog">blog</a> and the <a href="/dictionary">crypto dictionary</a>.</p>
 </main>`,
     },
     {
