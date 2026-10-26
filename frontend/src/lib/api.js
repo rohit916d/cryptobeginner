@@ -9,5 +9,7 @@ export const API = `${BACKEND_URL}/api`;
 
 export const api = axios.create({
   baseURL: API,
-  timeout: 15000,
+  // 30s: the backend can cold-start slowly, and a 15s timeout used to turn
+  // slow first loads into false "not found" pages (see BlogDetail/LearnDetail).
+  timeout: 30000,
 });

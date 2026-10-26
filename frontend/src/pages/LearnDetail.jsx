@@ -13,14 +13,27 @@ export default function LearnDetail() {
   const { slug } = useParams();
   const [lesson, setLesson] = useState(null);
   const [notFound, setNotFound] = useState(false);
+  const [loadError, setLoadError] = useState(false);
 
   useEffect(() => {
     let mounted = true;
     setLesson(null);
     setNotFound(false);
-    api.get(`/lessons/${slug}`)
-      .then((r) => { if (mounted) setLesson(r.data); })
-      .catch(() => { if (mounted) setNotFound(true); });
+    setLoadError(false);
+    const load = (attempt) => {
+      api.get(`/lessons/${slug}`)
+        .then((r) => { if (mounted) setLesson(r.data); })
+        .catch((err) => {
+          if (!mounted) return;
+          // Only a genuine 404 means the lesson does not exist. Timeouts,
+          // network errors and backend cold starts must NEVER mark the page
+          // noindex (Search Console: "Excluded by 'noindex' tag", 2026-10-26).
+          if (err?.response?.status === 404) { setNotFound(true); return; }
+          if (attempt < 1) { setTimeout(() => { if (mounted) load(attempt + 1); }, 2500); return; }
+          setLoadError(true);
+        });
+    };
+    load(0);
     return () => { mounted = false; };
   }, [slug]);
 
@@ -70,6 +83,15 @@ export default function LearnDetail() {
       <div className="max-w-3xl mx-auto px-4 py-32 text-center">
         <h1 className="text-2xl font-bold text-white">Lesson not found</h1>
         <Link to="/learn" className="mt-4 inline-block btn-secondary">Back to Learning Center</Link>
+      </div>
+    );
+  }
+  if (loadError) {
+    return (
+      <div className="max-w-3xl mx-auto px-4 py-32 text-center">
+        <h1 className="text-2xl font-bold text-white">This lesson could not be loaded</h1>
+        <p className="mt-3 text-zinc-400">Our server took too long to respond. Please try again in a moment.</p>
+        <button onClick={() => window.location.reload()} className="mt-6 btn-secondary">Retry</button>
       </div>
     );
   }

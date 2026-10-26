@@ -14,6 +14,7 @@ export default function BlogDetail() {
   const navigate = useNavigate();
   const [post, setPost] = useState(null);
   const [notFound, setNotFound] = useState(false);
+  const [loadError, setLoadError] = useState(false);
   const [related, setRelated] = useState([]);
 
   useEffect(() => {
@@ -21,6 +22,8 @@ export default function BlogDetail() {
     setPost(null);
     setNotFound(false);
     setRelated([]);
+    setLoadError(false);
+    const load = (attempt) => {
     api.get(`/blog/${slug}`)
       .then((r) => {
         if (!mounted) return;
@@ -53,7 +56,19 @@ export default function BlogDetail() {
             .catch(() => {});
         }
       })
-      .catch(() => { if (mounted) setNotFound(true); });
+      .catch((err) => {
+        if (!mounted) return;
+        // Only a genuine 404 means the article does not exist. A timeout,
+        // network error or backend cold start must NEVER mark the page
+        // noindex: Googlebot renders during cold starts, and a transient
+        // failure here used to exclude real posts from the index
+        // (Search Console: "Excluded by 'noindex' tag", 2026-10-26).
+        if (err?.response?.status === 404) { setNotFound(true); return; }
+        if (attempt < 1) { setTimeout(() => { if (mounted) load(attempt + 1); }, 2500); return; }
+        setLoadError(true);
+      });
+    };
+    load(0);
     return () => { mounted = false; };
   }, [slug, navigate]);
 
@@ -107,6 +122,15 @@ export default function BlogDetail() {
       <div className="max-w-3xl mx-auto px-4 py-32 text-center">
         <h1 className="text-2xl font-bold text-white">Article not found</h1>
         <Link to="/blog" className="mt-4 inline-block btn-secondary">Back to Blog</Link>
+      </div>
+    );
+  }
+  if (loadError) {
+    return (
+      <div className="max-w-3xl mx-auto px-4 py-32 text-center">
+        <h1 className="text-2xl font-bold text-white">This article could not be loaded</h1>
+        <p className="mt-3 text-zinc-400">Our server took too long to respond. Please try again in a moment.</p>
+        <button onClick={() => window.location.reload()} className="mt-6 btn-secondary">Retry</button>
       </div>
     );
   }
