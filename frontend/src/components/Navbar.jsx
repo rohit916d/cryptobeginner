@@ -73,7 +73,7 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden md:block">
-          <Link to="/learn" data-testid="nav-cta-start" className="btn-primary text-sm">
+          <Link to="/learn" data-testid="nav-cta-start" className="btn-primary text-sm whitespace-nowrap shrink-0">
             Start Learning
           </Link>
         </div>
