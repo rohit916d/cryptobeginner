@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-4 group w-fit">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#C8F169] to-[#9B87F5] flex items-center justify-center shadow-[0_0_18px_rgba(200,241,105,0.25)]">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#D9FF8A] via-[#C8F169] to-[#5EEAD4] flex items-center justify-center shadow-[0_0_18px_rgba(200,241,105,0.3)]">
                 <span className="text-[#0B0E14] font-black text-sm">C</span>
               </div>
               <span className="font-bold text-white">Crypto Beginner</span>

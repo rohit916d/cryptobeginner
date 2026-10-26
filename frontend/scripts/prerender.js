@@ -183,6 +183,14 @@ function main() {
       )
       .join("\n");
 
+  const homePostCards = (list) =>
+    list
+      .map(
+        (p) =>
+          `<li><a href="/blog/${p.slug}"><span class="guide-title">${esc(p.fm.title)}</span><span class="guide-excerpt">${esc(p.fm.excerpt || "")}</span></a></li>`
+      )
+      .join("\n");
+
   /* ---------------- Blog post pages ---------------- */
   for (const p of posts) {
     const url = `${ORIGIN}/blog/${p.slug}`;
@@ -471,19 +479,32 @@ ${groups}
   console.log("[prerender] static pages written");
 
   /* ---------------- Homepage ---------------- */
-  const homeBody = `<main class="max-w-6xl mx-auto px-4 sm:px-6 py-14 md:py-20">
-<h1 class="text-4xl md:text-5xl font-normal text-white tracking-tight leading-tight">Crypto For Beginners in India - Learn Bitcoin, Blockchain &amp; Wallets</h1>
-<p class="mt-4 text-zinc-400 leading-relaxed">Crypto Beginner is a free education site for India. Learn how Bitcoin and blockchain work, how to use wallets safely, how India's crypto tax rules (30% tax + 1% TDS) apply to you, and how to spot scams — in simple language, with no hype and no financial advice.</p>
-<nav class="mt-8"><ul class="space-y-2">
-<li><a href="/learn">Learn crypto step by step</a></li>
-<li><a href="/blog">Read the latest guides</a></li>
-<li><a href="/dictionary">Crypto dictionary</a></li>
-<li><a href="/demo-trading">Try the demo trading simulator</a></li>
-<li><a href="/recommended">Recommended platforms</a></li>
-<li><a href="/about">About us</a></li>
-</ul></nav>
-<h2 class="text-2xl font-bold text-white mt-12 mb-4">Latest guides</h2>
-<ul class="space-y-3">${postLinks(posts.slice(0, 12))}</ul>
+  const homeBody = `<main class="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-16">
+<section class="hero-shell">
+<span class="hero-chip"><span class="dot"></span> Free crypto education · Made for India</span>
+<h1 class="text-4xl md:text-6xl font-normal text-white tracking-tight leading-tight" style="margin-top:1.25rem">Crypto For Beginners in India — Learn <span class="brand-grad-text">Bitcoin, Blockchain &amp; Wallets</span></h1>
+<p class="mt-5 text-lg text-zinc-300 leading-relaxed" style="max-width:44rem">Crypto Beginner is a free education site for India. Learn how Bitcoin and blockchain work, how to use wallets safely, how India's crypto tax rules (30% tax + 1% TDS) apply to you, and how to spot scams — in simple language, with no hype and no financial advice.</p>
+<div class="mt-8" style="display:flex;flex-wrap:wrap;gap:0.75rem">
+<a href="/learn" class="btn-primary" style="display:inline-flex;align-items:center;text-decoration:none">Start learning free →</a>
+<a href="/blog" class="btn-secondary" style="display:inline-flex;align-items:center;text-decoration:none">Read the latest guides</a>
+</div>
+<div class="stat-band" style="margin-top:2rem">
+<div class="stat-item"><span class="stat-num">130+</span><span class="stat-label">Beginner guides</span></div>
+<div class="stat-item"><span class="stat-num teal">31</span><span class="stat-label">Structured lessons</span></div>
+<div class="stat-item"><span class="stat-num gold">3</span><span class="stat-label">Learning tracks</span></div>
+<div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Free, no paywall</span></div>
+</div>
+</section>
+<nav class="quick-links" style="margin-top:1.75rem" aria-label="Explore">
+<a href="/learn">Learn step by step</a>
+<a href="/blog">Latest guides</a>
+<a href="/dictionary">Crypto dictionary</a>
+<a href="/demo-trading">Demo trading simulator</a>
+<a href="/recommended">Recommended platforms</a>
+<a href="/about">About us</a>
+</nav>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-14 mb-5">Latest guides</h2>
+<ul class="guide-list">${homePostCards(posts.slice(0, 12))}</ul>
 <p class="mt-10 text-sm text-zinc-500">Educational content only. This is not financial advice. Crypto markets are volatile — never invest money you can't afford to lose.</p>
 </main>`;
   fs.writeFileSync(

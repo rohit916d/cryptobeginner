@@ -47,11 +47,15 @@ export default function Home() {
         <div className="absolute inset-0 ledger-rule-bg opacity-60" />
         <div
           className="absolute -top-40 right-[-10%] w-[560px] h-[560px] rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(200,241,105,0.06), transparent 65%)" }}
+          style={{ background: "radial-gradient(circle, rgba(200,241,105,0.13), transparent 65%)" }}
         />
         <div
           className="absolute bottom-[-15%] left-[-5%] w-[420px] h-[420px] rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(155,135,245,0.05), transparent 65%)" }}
+          style={{ background: "radial-gradient(circle, rgba(94,234,212,0.09), transparent 65%)" }}
+        />
+        <div
+          className="absolute bottom-[-30%] right-[15%] w-[380px] h-[380px] rounded-full pointer-events-none"
+          style={{ background: "radial-gradient(circle, rgba(245,193,105,0.07), transparent 65%)" }}
         />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 md:pt-28 md:pb-24">
@@ -80,8 +84,22 @@ export default function Home() {
 
               <div className="mt-10 flex flex-wrap gap-6 text-xs text-zinc-500">
                 <div className="flex items-center gap-2"><ShieldCheck size={14} className="text-[#C8F169]" /> No financial advice</div>
-                <div className="flex items-center gap-2"><BookOpen size={14} className="text-[#C8F169]" /> 15+ free lessons</div>
-                <div className="flex items-center gap-2"><Sparkles size={14} className="text-[#9B87F5]" /> Live market data</div>
+                <div className="flex items-center gap-2"><BookOpen size={14} className="text-[#5EEAD4]" /> 31 free lessons</div>
+                <div className="flex items-center gap-2"><Sparkles size={14} className="text-[#F5C169]" /> Live market data</div>
+              </div>
+
+              <div className="stat-band mt-8">
+                {[
+                  { n: "130+", l: "Beginner guides", c: "" },
+                  { n: "31", l: "Structured lessons", c: "teal" },
+                  { n: "3", l: "Learning tracks", c: "gold" },
+                  { n: "100%", l: "Free, no paywall", c: "" },
+                ].map((s) => (
+                  <div key={s.l} className="stat-item">
+                    <span className={`stat-num ${s.c}`}>{s.n}</span>
+                    <span className="stat-label">{s.l}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -126,9 +144,9 @@ export default function Home() {
       <div className="relative border-y border-white/5 bg-white/[0.015] overflow-hidden py-3 mb-14">
         <div className="marquee-track flex gap-10 whitespace-nowrap text-xs font-mono uppercase tracking-[0.2em] text-zinc-400">
           {[...Array(2)].flatMap((_, loopIdx) =>
-            ["Bitcoin", "Blockchain", "Wallets", "DeFi", "Security", "Web3", "NFTs", "Staking", "Ethereum", "Exchanges"].map((t) => (
+            ["Bitcoin", "Blockchain", "Wallets", "DeFi", "Security", "Web3", "NFTs", "Staking", "Ethereum", "Exchanges"].map((t, ti) => (
               <span key={`${loopIdx}-${t}`} className="flex items-center gap-2 shrink-0">
-                <span className="w-1 h-1 rounded-full bg-[#C8F169]" /> {t}
+                <span className="w-1 h-1 rounded-full" style={{ background: ["#C8F169", "#5EEAD4", "#F5C169"][ti % 3] }} /> {t}
               </span>
             ))
           )}
@@ -159,15 +177,18 @@ export default function Home() {
         </Reveal>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {[
-            { icon: GraduationCap, title: "Zero to fluent", desc: "Structured lessons that build on each other — start with \u201cwhat is a blockchain\u201d and end up confident." },
-            { icon: ShieldCheck, title: "Safety first", desc: "Dedicated modules on scams, phishing and seed-phrase security, covered before we even talk about investing." },
-            { icon: TrendingUp, title: "Live market context", desc: "Real prices, market cap and dominance data sit alongside every lesson — theory meets the real thing." },
-            { icon: Lock, title: "No financial advice", desc: "We teach concepts, not predictions. You'll never see \u201cbuy this coin now\u201d on this site." },
+            { icon: GraduationCap, accent: "#C8F169", title: "Zero to fluent", desc: "Structured lessons that build on each other — start with \u201cwhat is a blockchain\u201d and end up confident." },
+            { icon: ShieldCheck, accent: "#5EEAD4", title: "Safety first", desc: "Dedicated modules on scams, phishing and seed-phrase security, covered before we even talk about investing." },
+            { icon: TrendingUp, accent: "#F5C169", title: "Live market context", desc: "Real prices, market cap and dominance data sit alongside every lesson — theory meets the real thing." },
+            { icon: Lock, accent: "#9B87F5", title: "No financial advice", desc: "We teach concepts, not predictions. You'll never see \u201cbuy this coin now\u201d on this site." },
           ].map((f, i) => (
             <Reveal key={f.title} delay={i * 90}>
             <TiltCard maxTilt={5} className="card-base p-6 hover-lift h-full">
-              <div className="w-10 h-10 rounded-xl bg-[#C8F169]/10 flex items-center justify-center mb-4">
-                <f.icon size={18} className="text-[#C8F169]" />
+              <div
+                className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 border"
+                style={{ background: `${f.accent}1A`, borderColor: `${f.accent}38` }}
+              >
+                <f.icon size={18} style={{ color: f.accent }} />
               </div>
               <h3 className="text-white font-semibold">{f.title}</h3>
               <p className="text-sm text-zinc-400 mt-2 leading-relaxed">{f.desc}</p>
@@ -209,9 +230,9 @@ export default function Home() {
         </Reveal>
         <div className="grid md:grid-cols-3 gap-5">
           {[
-            { n: "01", icon: BookOpen, title: "Beginner", desc: "Bitcoin, blockchain, wallets, exchanges — start here.", to: "/learn?level=beginner", color: "from-lime-300/20 to-transparent" },
-            { n: "02", icon: Layers, title: "Intermediate", desc: "DeFi, staking, smart contracts, NFTs, L1 vs L2.", to: "/learn?level=intermediate", color: "from-violet-400/20 to-transparent" },
-            { n: "03", icon: ShieldCheck, title: "Security", desc: "Scams, phishing, wallet & seed phrase protection.", to: "/learn?level=security", color: "from-rose-400/20 to-transparent" },
+            { n: "01", icon: BookOpen, accent: "#C8F169", title: "Beginner", desc: "Bitcoin, blockchain, wallets, exchanges — start here.", to: "/learn?level=beginner", color: "from-lime-300/25 to-transparent" },
+            { n: "02", icon: Layers, accent: "#5EEAD4", title: "Intermediate", desc: "DeFi, staking, smart contracts, NFTs, L1 vs L2.", to: "/learn?level=intermediate", color: "from-teal-300/25 to-transparent" },
+            { n: "03", icon: ShieldCheck, accent: "#F5C169", title: "Security", desc: "Scams, phishing, wallet & seed phrase protection.", to: "/learn?level=security", color: "from-amber-300/25 to-transparent" },
           ].map((t, i) => (
             <Reveal key={t.title} delay={i * 100}>
             <TiltCard
@@ -225,14 +246,17 @@ export default function Home() {
               <div className={`absolute inset-0 bg-gradient-to-br ${t.color} opacity-50 group-hover:opacity-80 transition-opacity`} />
               <div className="relative">
                 <div className="flex items-center justify-between">
-                  <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
-                    <t.icon size={18} className="text-[#C8F169]" />
+                  <div
+                    className="w-10 h-10 rounded-xl border flex items-center justify-center"
+                    style={{ background: `${t.accent}1A`, borderColor: `${t.accent}38` }}
+                  >
+                    <t.icon size={18} style={{ color: t.accent }} />
                   </div>
-                  <span className="font-mono text-xs text-zinc-400">{t.n}</span>
+                  <span className="font-mono text-xs" style={{ color: t.accent }}>{t.n}</span>
                 </div>
                 <h3 className="text-2xl font-bold text-white mt-4">{t.title}</h3>
                 <p className="text-sm text-zinc-400 mt-2 leading-relaxed">{t.desc}</p>
-                <div className="mt-6 text-sm text-[#C8F169] inline-flex items-center gap-1">
+                <div className="mt-6 text-sm inline-flex items-center gap-1" style={{ color: t.accent }}>
                   Explore lessons <ArrowRight size={14} />
                 </div>
               </div>
@@ -303,8 +327,8 @@ export default function Home() {
         <Reveal>
         <div className="relative overflow-hidden rounded-3xl glow-border card-base p-10 md:p-16 text-center">
           <div
-            className="absolute inset-0 opacity-60 pointer-events-none"
-            style={{ background: "radial-gradient(700px circle at 50% 0%, rgba(200,241,105,0.12), transparent 60%)" }}
+            className="absolute inset-0 opacity-70 pointer-events-none"
+            style={{ background: "radial-gradient(700px circle at 50% 0%, rgba(200,241,105,0.17), transparent 60%), radial-gradient(500px circle at 85% 110%, rgba(94,234,212,0.1), transparent 60%), radial-gradient(420px circle at 10% 110%, rgba(245,193,105,0.08), transparent 60%)" }}
           />
           <div className="relative">
             <div className="label-eyebrow justify-center flex">Ready when you are</div>

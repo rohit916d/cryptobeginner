@@ -37,6 +37,8 @@
         --brand-ink: #1A2100;                /* dark text-on-chartreuse */
         --violet: #9B87F5;
         --violet-soft: #C4B8FA;
+        --gold: #F5C169;
+        --mint: #5EEAD4;
         --success: #33D17A;
         --danger: #FF4D6A;
     }
@@ -76,9 +78,9 @@
 }
 
 @layer components {
-    /* Signature gradient text — chartreuse into violet, ledger-ink style */
+    /* Signature gradient text — chartreuse into mint into gold, premium fintech sweep */
     .brand-grad-text {
-        background: linear-gradient(100deg, #C8F169 0%, #C8F169 40%, #9B87F5 100%);
+        background: linear-gradient(100deg, #D9FF8A 0%, #C8F169 34%, #5EEAD4 72%, #F5C169 105%);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -95,8 +97,8 @@
         -webkit-backdrop-filter: blur(16px);
     }
     .card-base {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.07);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+        border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: var(--radius);
         box-shadow:
             0 1px 1px rgba(0, 0, 0, 0.3),
@@ -105,8 +107,8 @@
         transition: background-color 240ms ease, border-color 240ms ease, box-shadow 240ms ease;
     }
     .card-base:hover {
-        background: rgba(255, 255, 255, 0.035);
-        border-color: rgba(200, 241, 105, 0.18);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02));
+        border-color: rgba(200, 241, 105, 0.3);
         box-shadow:
             0 1px 1px rgba(0, 0, 0, 0.3),
             0 20px 44px -16px rgba(0, 0, 0, 0.6),
@@ -161,6 +163,139 @@
     .gold-divider {
         height: 1px;
         background: linear-gradient(90deg, transparent, rgba(200, 241, 105, 0.35), rgba(155, 135, 245, 0.25), transparent);
+    }
+
+    /* ---- Landing hero shell (shared by the React hero accents and the
+       prerendered static homepage, so first paint already looks premium) ---- */
+    .hero-shell {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.5rem;
+        border: 1px solid rgba(200, 241, 105, 0.22);
+        background:
+            radial-gradient(640px circle at 10% -10%, rgba(200, 241, 105, 0.17), transparent 55%),
+            radial-gradient(520px circle at 90% 0%, rgba(94, 234, 212, 0.11), transparent 55%),
+            radial-gradient(460px circle at 50% 118%, rgba(245, 193, 105, 0.09), transparent 60%),
+            linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015));
+        box-shadow:
+            0 30px 60px -30px rgba(0, 0, 0, 0.7),
+            inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        padding: 2.5rem 1.25rem;
+    }
+    @media (min-width: 768px) {
+        .hero-shell { padding: 3.5rem 3rem; }
+    }
+    .hero-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.66rem;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #C8F169;
+        border: 1px solid rgba(200, 241, 105, 0.35);
+        background: rgba(200, 241, 105, 0.07);
+        border-radius: 9999px;
+        padding: 0.45rem 0.9rem;
+    }
+    .hero-chip .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 9999px;
+        background: #C8F169;
+        box-shadow: 0 0 10px rgba(200, 241, 105, 0.8);
+    }
+    .stat-band {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+    }
+    .stat-item {
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 0.85rem;
+        padding: 0.6rem 1rem;
+        min-width: 7.5rem;
+    }
+    .stat-item .stat-num {
+        font-family: "JetBrains Mono", monospace;
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: #C8F169;
+        line-height: 1.1;
+    }
+    .stat-item .stat-num.teal { color: #5EEAD4; }
+    .stat-item .stat-num.gold { color: #F5C169; }
+    .stat-item .stat-label {
+        display: block;
+        margin-top: 0.2rem;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.6rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #8D95A8;
+    }
+    .quick-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    .quick-links a {
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: #E4E6EB;
+        text-decoration: none;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 9999px;
+        padding: 0.45rem 0.95rem;
+        transition: border-color 200ms ease, background 200ms ease, transform 200ms ease;
+    }
+    .quick-links a:hover {
+        border-color: rgba(200, 241, 105, 0.45);
+        background: rgba(200, 241, 105, 0.07);
+        transform: translateY(-1px);
+    }
+    .guide-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 0.6rem;
+    }
+    @media (min-width: 768px) {
+        .guide-list { grid-template-columns: 1fr 1fr; }
+    }
+    .guide-list li a {
+        display: block;
+        height: 100%;
+        padding: 0.9rem 1.05rem;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 0.85rem;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012));
+        text-decoration: none;
+        transition: border-color 200ms ease, background 200ms ease, transform 200ms ease;
+    }
+    .guide-list li a:hover {
+        border-color: rgba(200, 241, 105, 0.35);
+        background: rgba(200, 241, 105, 0.05);
+        transform: translateY(-1px);
+    }
+    .guide-list .guide-title {
+        display: block;
+        color: #F4F6F8;
+        font-weight: 600;
+        font-size: 0.95rem;
+        line-height: 1.35;
+    }
+    .guide-list .guide-excerpt {
+        display: block;
+        margin-top: 0.3rem;
+        color: #8D95A8;
+        font-size: 0.8rem;
+        line-height: 1.5;
     }
     .hover-lift {
         transition: transform 240ms ease, box-shadow 240ms ease;
@@ -410,7 +545,7 @@ html {
     top: -20%;
     border-radius: 9999px;
     filter: blur(90px);
-    opacity: 0.16;
+    opacity: 0.22;
     animation: auroraDrift 22s ease-in-out infinite alternate;
 }
 .aurora-bg::before {
@@ -443,7 +578,7 @@ html {
     inset: -1px;
     border-radius: inherit;
     padding: 1px;
-    background: conic-gradient(from var(--glow-angle, 0deg), #C8F169, #9B87F5, #C8F169);
+    background: conic-gradient(from var(--glow-angle, 0deg), #C8F169, #5EEAD4, #F5C169, #9B87F5, #C8F169);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;

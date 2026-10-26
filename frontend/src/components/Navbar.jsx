@@ -35,13 +35,13 @@ export default function Navbar() {
       }`}
       style={
         scrolled
-          ? { borderBottom: "1px solid transparent", backgroundImage: "linear-gradient(#0B0E14E6, #0B0E14E6), linear-gradient(90deg, rgba(200,241,105,0.35), rgba(155,135,245,0.25))", backgroundOrigin: "border-box", backgroundClip: "padding-box, border-box" }
+          ? { borderBottom: "1px solid transparent", backgroundImage: "linear-gradient(#0B0E14E6, #0B0E14E6), linear-gradient(90deg, rgba(200,241,105,0.4), rgba(94,234,212,0.3), rgba(245,193,105,0.3))", backgroundOrigin: "border-box", backgroundClip: "padding-box, border-box" }
           : undefined
       }
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link to="/" data-testid="brand-logo" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#C8F169] to-[#9B87F5] flex items-center justify-center shadow-[0_0_18px_rgba(200,241,105,0.3)]">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#D9FF8A] via-[#C8F169] to-[#5EEAD4] flex items-center justify-center shadow-[0_0_18px_rgba(200,241,105,0.35)]">
             <span className="text-[#0B0E14] font-black text-sm">C</span>
           </div>
           <span className="font-bold text-white tracking-tight">Crypto Beginner</span>
