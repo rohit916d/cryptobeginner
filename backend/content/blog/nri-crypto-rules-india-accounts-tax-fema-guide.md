@@ -87,7 +87,7 @@ None of this means NRIs cannot touch crypto at all. It means the cross-border pa
 
 **Ignoring the other country's rules.** Your country of residence has its own crypto tax and reporting rules. Filing correctly in India but ignoring your home country's requirements — or the reverse — leaves you exposed in one place or the other.
 
-**Trusting "NRI crypto agents."** Scammers actively target NRIs with promises of special NRI crypto accounts, guaranteed returns or help moving money abroad through crypto. No legitimate exchange needs an agent to open your account, and anyone promising assured profits or a secret route around banking rules is running a scam. Report such approaches and do not share your documents, OTPs or wallet recovery phrases with anyone.
+**Trusting "NRI crypto agents."** Scammers actively target NRIs with promises of special NRI crypto accounts, assured profits or help moving money abroad through crypto. No legitimate exchange needs an agent to open your account, and anyone promising assured profits or a secret route around banking rules is running a scam. Report such approaches and do not share your documents, OTPs or wallet recovery phrases with anyone.
 
 **Losing access while abroad.** If your Indian mobile number lapses, your exchange account can become very hard to recover. Keep your registered mobile number active, store backup codes safely, and make sure your recovery email is one you can still access from abroad.
 
