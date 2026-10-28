@@ -94,4 +94,4 @@ Before your next trade, check: can you explain in one sentence why you are buyin
 
 Stop-loss and take-profit orders are among the simplest tools in crypto trading, and also among the most misunderstood. Used well, they turn vague hopes into concrete, pre-decided exits. Used poorly — tight stops, moved goalposts, blind faith in exact fills — they create a false sense of safety.
 
-Start small, learn how the order types behave on the exchange you actually use, and treat every triggered order as a lesson: did it do what you expected, and what would you change next time? That habit — plan, execute, review — matters far more than any single exit level. Next, read our guides on market versus limit orders and on creating a trading plan.
+Start small, learn how the order types behave on your exchange, and treat every triggered order as a lesson: did it do what you expected, and what would you change next time? That habit — plan, execute, review — matters far more than any single exit level. Next, read our guides on market versus limit orders and trading plans.
