@@ -84,6 +84,19 @@ If your goal is to understand crypto better, your time is far better spent on:
 
 And if your goal is to earn? Learn a skill, or invest time in understanding markets properly. Clicking through ad farms is neither.
 
+## Before You Claim: How to Verify a Faucet Is Legit
+
+The red flags above tell you what a scam looks like. This checklist is the other half: the positive proof a legitimate faucet can show you. Run through it *before* you claim anything — it takes about a minute.
+
+1. **You arrived from the source.** A real project links its faucet from its own official website or documentation. If you reached a faucet through a pop-up ad, a Telegram message, or a lookalike search result, close the tab and navigate from the project's official page instead.
+2. **It says plainly what the tokens are.** Legitimate educational and testnet faucets state openly that their tokens are for practice and worth nothing. A faucet that stays vague about what it's giving away — while hinting at big value — is telling on itself.
+3. **The terms are visible before you start.** Withdrawal threshold, any fee deducted, and roughly how long payouts take should all be readable up front. Honest faucets publish boring terms; scam faucets hide them behind "claim more to unlock details."
+4. **Other people have actually been paid.** Independent discussions — the project's official community channels, established forums — should contain ordinary users confirming real withdrawals. A faucet with no footprint outside its own website has not earned your time.
+5. **You can test it cheaply.** Use a fresh, empty wallet address and a throwaway email, claim the smallest amount, and try withdrawing as soon as the threshold allows. A legitimate faucet passes this test without drama. One that keeps moving the threshold, inventing new "verification steps," or demanding a deposit at the finish line has failed it — walk away, however close your balance looks.
+6. **It behaves like a teaching tool, not a casino.** No countdown pressure, no "double your balance" games, no prize wheels glued to the claim button. The more a faucet hurries and excites you, the less it is about giving you tokens.
+
+If a faucet passes all six checks, it is probably what it claims to be — a small, slow, mostly educational drip. If it fails even one, the drops are not worth the risk. Our companion guide on [whether crypto faucets are legit](/blog/are-crypto-faucets-legit-real-vs-scam) digs deeper into telling real faucets from scam ones.
+
 Crypto faucets are best viewed as a museum exhibit: an interesting artifact from crypto's early days that still has one legitimate modern use (testnets) and a large penumbra of low-value, sometimes risky imitations. Visit the museum, learn the lesson, and spend your energy where it actually compounds.
 
 Continue with [our free beginner track](/learn) to build real, lasting crypto knowledge.

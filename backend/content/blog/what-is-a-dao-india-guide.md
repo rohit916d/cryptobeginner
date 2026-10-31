@@ -137,3 +137,4 @@ If you found this guide useful, these related guides will help you go deeper:
 - [What Is a DEX? Decentralized Exchanges Explained Simply](https://cryptobeginner.in/blog/what-is-a-dex-decentralized-exchanges-india-guide)
 - [What Is DeFi? Decentralized Finance Explained Simply](https://cryptobeginner.in/blog/what-is-defi-explained-without-jargon-india-guide)
 - [What Are Governance Tokens? Voting Rights Explained](https://cryptobeginner.in/blog/what-are-governance-tokens-india-guide)
+- [What Is Web3? The Internet's Next Chapter Explained Simply](https://cryptobeginner.in/blog/what-is-web3-internets-next-chapter-explained)

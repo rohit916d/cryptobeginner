@@ -117,3 +117,4 @@ If you found this guide useful, these related guides will help you go deeper:
 - [What Is Polygon? India's Own Blockchain, Explained Simply](https://cryptobeginner.in/blog/polygon-explained-india-blockchain-beginners-guide)
 - [Should You Invest in Bitcoin or Ethereum First? An Honest Comparison](https://cryptobeginner.in/blog/bitcoin-vs-ethereum-which-to-buy-first)
 - [Bitcoin, Ethereum, Solana & XRP: A Beginner's Guide to Understanding Large-Cap Coins](https://cryptobeginner.in/blog/top-crypto-coins-to-watch-today-bitcoin-ethereum-solana-xrp-trading-analysis)
+- [What Is DeFi? Decentralized Finance Explained Simply](https://cryptobeginner.in/blog/what-is-defi-explained-without-jargon-india-guide)

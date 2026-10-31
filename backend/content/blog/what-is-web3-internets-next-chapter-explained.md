@@ -120,6 +120,22 @@ If you're curious, here's a safe, step-by-step way to get hands-on without riski
 
 **6. Keep records for tax.** Any tokens you earn or profits you make from Web3 activity count as crypto income in India — taxed at 30% with 1% TDS on transfers (rates current as of September 2026; verify the latest rules before filing). Screenshot your transactions; your future self will thank you.
 
+## Web3 Myths vs Reality: Cutting Through the Hype
+
+Social media has filled Web3 with half-truths that beginners absorb as facts. Here are the most common myths, corrected:
+
+**Myth 1: "Web3 is anonymous."** Reality: Web3 is *pseudonymous*, not anonymous. Your name isn't attached to your wallet address, but every transaction that address ever makes is public and permanent — anyone can follow the money trail with a free block explorer. And the moment you buy crypto through an Indian exchange, KYC links your real identity to your withdrawals anyway. Assume everything you do on a blockchain can be traced back to you.
+
+**Myth 2: "Owning a project's token means owning a share of the project."** Reality: in most cases, it doesn't. A typical token gives you no legal ownership of the company, no claim on its revenue, and no shareholder rights. Some governance tokens let you vote on proposals, but voting power and actual control are very different things. Read what a token actually entitles you to before assuming it behaves like a share — usually, it behaves like a coupon for an ecosystem, nothing more.
+
+**Myth 3: "Web3 is free to use."** Reality: nearly every meaningful action — swapping, minting, voting, even claiming a reward — costs a network fee, and on busy networks a single action can cost more than the reward you were claiming. "Free" Web3 offers that ignore fees are usually describing the signup, not the usage.
+
+**Myth 4: "If it's on the blockchain, it must be true and safe."** Reality: a blockchain guarantees that a record can't be quietly changed *after* it is written. It cannot check whether the record was honest in the first place. A scam token's transactions are recorded just as permanently and "trustlessly" as a legitimate one's. The ledger never lies about what happened — it also never promises that what happened was fair.
+
+**Myth 5: "Web3 will replace all the apps you use today."** Reality: the likely future is hybrid. Web2 apps win on speed, cost, and sheer convenience for most everyday tasks, and that won't reverse soon. Web3's genuine strengths — owning assets outright, moving value without a middleman, communities coordinating money openly — fit specific jobs, not every job. Expect the two to blend, not one to erase the other.
+
+Holding these five corrections in your head will filter out most of the hype you'll meet — from influencers, from project marketing, and from well-meaning friends alike.
+
 ## Conclusion: Understand Web3, Don't Worship or Dismiss It
 
 Web3 is best understood as an experiment in progress: an attempt to rebuild parts of the internet so users own what they create and use. Some of it will work — decentralised finance and digital ownership are already real. Some of it will fail — and the failures will be loud, expensive, and instructive.
