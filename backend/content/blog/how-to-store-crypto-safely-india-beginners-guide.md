@@ -130,6 +130,19 @@ Print this out — seriously. Work through it before your crypto holdings grow:
 
 If you can tick all ten, you are more secure than the vast majority of crypto users worldwide. Security is not a product you buy — it is a set of habits you build.
 
+## Your First Safe Setup: A Step-by-Step Plan
+
+Reading about storage is useful, but safety comes from actually setting things up in the right order. If you are starting today, follow this sequence:
+
+1. **Start where you bought.** Keep only a small learning amount on the exchange at first. Turn on two-factor authentication with an authenticator app (not SMS), set a unique password you use nowhere else, and switch on withdrawal address whitelisting if the exchange offers it.
+2. **Create your own wallet.** Install a well-known wallet app from the official app store listing only — never from a link in a message or ad. During setup, the app shows your seed phrase exactly once. Write it on paper immediately; do not screenshot it and do not type it into any website.
+3. **Test with a tiny amount.** Send the smallest transfer the network allows to your new wallet. Confirm it arrives, then practise restoring the wallet from your paper backup on a second device or after reinstalling the app. This five-minute test is the difference between hoping your backup works and knowing it does.
+4. **Move long-term holdings to cold storage.** Once the amount matters to you, transfer the long-term portion to a hardware wallet or another offline method, keeping only spending money in the hot wallet.
+5. **Make a second backup in a second place.** One paper backup burns, floods, or gets thrown away by accident. Store a second copy in a different physical location, and let one trusted family member know that a recovery plan exists and where the instructions are kept — without handing over the phrase itself.
+6. **Review every six months.** Check that your backups are still readable, your exchange security settings are on, and your storage still matches how much you now hold. Security is a habit, not a one-time setup.
+
+Most Indian users who lose crypto do not lose it to elite hackers — they lose it to skipped backups, phishing links, and funds left casually on exchanges. This plan protects you against all three.
+
 ## Final Thought
 
 Crypto gives you something no bank ever has: true ownership of your money. The price of that freedom is responsibility. But do not let the responsibility intimidate you — start small, build the habits above one at a time, and upgrade your setup as your holdings grow.

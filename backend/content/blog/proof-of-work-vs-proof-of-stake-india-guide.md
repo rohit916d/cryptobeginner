@@ -96,3 +96,4 @@ Proof of Work secures a blockchain with energy and hardware, making honesty the 
 - [What Is Crypto Mining? Proof of Work Explained](https://cryptobeginner.in/blog/what-is-crypto-mining-proof-of-work-explained-simply)
 - [What Is Crypto Staking?](https://cryptobeginner.in/blog/what-is-crypto-staking-earning-rewards-explained)
 - [What Is a Node? Validators Explained](https://cryptobeginner.in/blog/what-is-a-node-validators-india-guide)
+- [What is a Crypto Hard Fork? Network Upgrades Explained](https://cryptobeginner.in/blog/what-is-a-crypto-hard-fork-network-upgrades-explained)

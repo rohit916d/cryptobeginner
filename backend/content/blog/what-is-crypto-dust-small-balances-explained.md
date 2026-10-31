@@ -90,6 +90,18 @@ On Indian exchanges, look for these features under names like "Convert Small Bal
 
 India's 1% TDS applies to crypto transactions, and dust conversions technically count as transactions on some platforms. In practice, the amounts are so small that the tax impact is negligible — but it is worth knowing that "cleaning up" dust is not entirely free of paperwork. If you use a sweep feature, the transaction will appear in your exchange's tax report. Keep your records tidy from the start and this will never become a problem.
 
+## How to Check Your Wallets and Exchanges for Dust
+
+Finding your dust takes only a few minutes, and doing it once or twice a year keeps your wallets tidy and easier to audit at tax time:
+
+1. **Check your exchange balances page.** Most Indian exchanges show every asset you hold, including tiny leftovers from old trades. Sort by value — the smallest entries at the bottom are usually dust.
+2. **Review your wallet's token list.** In a self-custody wallet, scroll through the full asset list and enable any "hide small balances" view to see what has been cluttering the default screen. Note anything you do not recognise.
+3. **Separate your dust from stranger dust.** Dust from your own trades is expected and harmless. Tokens you never bought, especially ones with website names or "claim" messages in the token name, are a red flag — leave them completely untouched and never visit links they advertise.
+4. **Decide: convert, consolidate, or ignore.** If your exchange offers a small-balance conversion feature, compare the fee with the dust's value first. On self-custody wallets, moving dust usually costs more in network fees than the dust is worth, so ignoring it is often the smartest option.
+5. **Record what you find.** A one-line note — date, wallet, approximate dust value — makes your annual crypto tax filing in India far easier, because even tiny disposals can matter when you reconcile your records.
+
+The goal is not a perfectly empty wallet. It is knowing exactly what is sitting in your wallet and why — so nothing unknown ever surprises you.
+
 ## The Bottom Line
 
 Crypto dust is a normal, mostly harmless side effect of using blockchains. Your own trading leftovers are nothing to worry about. The one thing to remember — and it is genuinely important — is to **never interact with dust you did not expect to receive**. That single habit defeats dusting attacks completely.

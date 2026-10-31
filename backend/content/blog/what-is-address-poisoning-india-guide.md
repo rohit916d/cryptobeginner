@@ -135,3 +135,4 @@ Address poisoning needs no hacking and no password — only one careless copy-pa
 - [What Is a Dusting Attack? Crypto Privacy Risk Explained](https://cryptobeginner.in/blog/what-is-a-dusting-attack-india-guide)
 - [SIM Swap Attacks in Crypto: How Indians Lose OTP Access](https://cryptobeginner.in/blog/sim-swap-attacks-crypto-india-guide)
 - [What Is Self-Custody? Taking Crypto Off Exchanges Safely](https://cryptobeginner.in/blog/what-is-self-custody-india-guide)
+- [What is Crypto Dust? Small Balances Explained](https://cryptobeginner.in/blog/what-is-crypto-dust-small-balances-explained)

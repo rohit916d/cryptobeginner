@@ -107,6 +107,20 @@ Continue with [our free beginner track](/learn) to keep building your foundation
 *Educational content only. This guide does not constitute financial advice.*
 
 
+## Hard Fork vs Soft Fork: A Side-by-Side Comparison
+
+Beginners often mix these two terms up, so here is the difference at a glance:
+
+| Feature | Hard Fork | Soft Fork |
+|---|---|---|
+| Backward compatible? | No — old software cannot follow the new rules | Yes — old software still accepts new transactions |
+| Can it split the chain? | Yes, if part of the community refuses to upgrade | No — one chain continues |
+| Who must upgrade? | Everyone who wants to stay on the upgraded chain | Only block producers strictly need to; others are strongly encouraged |
+| What holders receive | If the chain splits, balances exist on both chains | Nothing new — the same coin continues |
+| Well-known example | Bitcoin Cash splitting from Bitcoin (2017) | SegWit activation on Bitcoin (2017) |
+
+In short: a soft fork tightens the rules in a way older software can still live with, while a hard fork changes the rules so completely that the network must choose a side. When you read that a network has a "major upgrade" scheduled, it is usually a planned, agreed hard fork — routine maintenance, not a community war. The dramatic splits make headlines, but they are the exception, not the rule.
+
 ## Keep Learning
 
 If you found this guide useful, these related guides will help you go deeper:
