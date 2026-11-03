@@ -66,7 +66,7 @@ Fake collections and wash trading are the headline scams, but three more traps c
 
 **Free NFT and airdrop bait.** A message promises a free NFT worth thousands of rupees — all you need to do is connect your wallet and claim it. The claim transaction is the trap: it may approve the scammer to transfer your existing tokens, or the "free" NFT itself may be a worthless token whose only purpose is to get you to visit a phishing site. Genuine projects do sometimes give away NFTs, but they announce them on their official channels, not through random direct messages.
 
-**Pump groups on Telegram and WhatsApp.** A group admin announces that a particular NFT collection is "about to explode" and urges members to buy now. The admin and their inner circle already bought in cheap and sell into the rush they created. This is the NFT version of the pump-and-dump pattern seen in small crypto tokens. If a tip arrives with urgency, secrecy, and a promise of quick gains, treat it as a sales pitch, not information.
+**Pump groups on Telegram and WhatsApp.** A group admin announces that a particular NFT collection is "about to explode" and urges members to rush in and buy immediately. The admin and their inner circle already bought in cheap and sell into the rush they created. This is the NFT version of the pump-and-dump pattern seen in small crypto tokens. If a tip arrives with urgency, secrecy, and a promise of quick gains, treat it as a sales pitch, not information.
 
 ## A 5-Minute Safety Check Before Buying Any NFT
 
