@@ -1,7 +1,7 @@
 ---
 title: "Vitalik Buterin Devcon 8 Keynote: AI Security Warning"
 category: "Security"
-excerpt: "Vitalik Buterin's Devcon 8 keynote in Mumbai warned AI security is tilting toward domination — and made the case for open, verifiable security for Indian crypto users."
+excerpt: "Vitalik Buterin's Devcon 8 keynote in Mumbai warned AI security is tilting toward domination — and made the case for open, verifiable security for Indian users."
 read_time: 10
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/security.jpg"
