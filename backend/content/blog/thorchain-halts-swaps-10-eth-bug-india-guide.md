@@ -1,7 +1,7 @@
 ---
 title: "THORChain Halts Swaps After 10 ETH Bug: India Guide"
 category: "DeFi"
-excerpt: "A 10 ETH refund error after an Ethereum reorganisation halted THORChain swaps on 10 networks and delayed Binance-hack laundering. What happened, and what it means."
+excerpt: "A 10 ETH refund error after an Ethereum reorganisation halted THORChain swaps on 10 networks and delayed Binance-hack laundering. What happened, explained."
 read_time: 10
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/defi.jpg"
