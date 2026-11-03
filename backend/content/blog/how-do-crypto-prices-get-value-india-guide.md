@@ -93,6 +93,22 @@ Third, remember the India-specific costs and rules that sit around the market pr
 
 Fourth, use UPI and INR deposits carefully and calmly. The ease of depositing through UPI on Indian exchanges makes it tempting to react instantly to a moving price. Supply and demand will still be there tomorrow. A pause to understand why a price is moving is a beginner's strongest protection against buying purely because a chart is rising.
 
+## Five Numbers to Check Before You Trust Any Price
+
+Knowing that price is just the last agreed trade is a good start, but it leaves a practical question: when you see a number on an exchange screen, how do you judge whether it means anything? These five numbers, all visible on exchange and data sites, give you a much clearer picture than the price alone.
+
+**1. Circulating supply vs total supply.** Check how many coins exist today and how many can exist in total. If only a small fraction is circulating, large future releases can change the supply side of the balance later. Price multiplied by circulating supply gives market capitalisation, which is far more useful for comparing two coins than comparing their per-coin prices.
+
+**2. 24-hour traded volume.** Volume tells you how much of the coin actually changed hands recently. A coin with a rising price but almost no volume is being moved by very few trades — its price is fragile. Consistently high volume means many buyers and sellers agree the price area is real enough to trade in.
+
+**3. The spread on the INR pair.** Compare the highest buy price and the lowest sell price on the Indian exchange you use. A tight spread means active competition between buyers and sellers. A wide spread — common on small tokens with thin INR pairs — means you overpay to enter and under-receive when you exit, whatever the headline price says.
+
+**4. How many exchanges list it, and where.** A coin traded on several established platforms, including regulated Indian exchanges, has many independent pools of buyers and sellers keeping its price honest. A coin that trades on one obscure overseas venue has a price that a handful of people can push around.
+
+**5. Who holds the supply.** On public blockchains you can check whether the top few wallets hold a small share or most of the supply. Heavy concentration means a few holders deciding to sell can overwhelm all the buyers at once — a supply risk no price chart warns you about.
+
+None of these numbers tells you what a coin is "really" worth, and none predicts where its price goes next. What they do is separate a deep, honestly traded market from a thin, easily moved one. For a beginner, that distinction matters more than the price itself: a price you can verify is information, while a price floating on almost no trading is closer to a rumour.
+
 ## Frequently Asked Questions
 
 ### How do crypto prices get their value if there is no company behind them?

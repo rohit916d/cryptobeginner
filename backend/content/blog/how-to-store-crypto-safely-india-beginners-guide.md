@@ -25,7 +25,7 @@ This is the guide that goes beyond "hot vs cold" definitions. It is a practical 
 
 Everything in crypto storage comes down to one idea: **whoever holds the private keys controls the coins.** Your coins live on the blockchain; your wallet is really a keychain.
 
-When you buy crypto on an Indian exchange like CoinDCX, WazirX, ZebPay, or CoinSwitch, the exchange holds the private keys. Your balance is essentially an IOU — the exchange owes you crypto and promises to hand it over when you withdraw. This is called **custodial** storage, and it is convenient. But it concentrates risk: if the exchange gets hacked, freezes withdrawals, or goes under, your funds are caught in the mess.
+When you buy crypto on an Indian exchange like CoinDCX, WazirX, ZebPay, or CoinSwitch, the exchange holds the private keys. Your balance is essentially an IOU — the exchange owes you crypto and promises to hand it over when you withdraw. This is called **custodial** storage, and it is convenient. But it concentrates risk: if the exchange gets hacked, freezes withdrawals, or goes under, your funds are caught in the mess. Our guide on [what happens to your crypto if an exchange shuts down](https://cryptobeginner.in/blog/what-happens-to-your-crypto-if-exchange-shuts-down) explains how that process unfolds, stage by stage.
 
 India saw this play out dramatically in 2024, when WazirX suffered a major hack and users faced months of uncertainty around withdrawals and restructuring. The lesson was not that all exchanges are unsafe — it was that **any funds you leave on an exchange are funds you have delegated control over.** For a learning amount, that is a reasonable trade-off. For serious savings, it is not.
 
@@ -86,7 +86,7 @@ Some crypto will always sit on exchanges — funds you are actively trading, INR
 2. **Use a strong, unique password and a password manager.** Never reuse passwords across sites.
 3. **Enable withdrawal whitelisting** if your exchange offers it. This means withdrawals can only go to addresses you have pre-approved, with a waiting period for new ones — so even if someone hijacks your login, they cannot send funds to their own address.
 4. **Withdraw to your own wallet promptly.** Do not treat the exchange as a savings account. Move funds to self-custody once you are done trading, especially larger amounts.
-5. **Check FIU-IND registration.** India's Financial Intelligence Unit requires crypto exchanges serving Indians to register. Prefer platforms that are registered and compliant — it is a basic legitimacy signal, not a guarantee, but it matters.
+5. **Check FIU-IND registration.** India's Financial Intelligence Unit requires crypto exchanges serving Indians to register. Prefer platforms that are registered and compliant — it is a basic legitimacy signal, not a guarantee, but it matters. Our step-by-step guide on [how to check if an exchange is FIU-registered](https://cryptobeginner.in/blog/how-to-check-if-exchange-is-fiu-registered-india-guide) shows exactly how to verify the claim yourself.
 6. **Be extra careful with emails.** Exchanges are heavily impersonated. Never click login links from emails; type the exchange's address yourself or use a bookmark. Check the sender's domain carefully — one letter off means phishing.
 
 ## Phishing and Social Engineering: The Real Enemy in India

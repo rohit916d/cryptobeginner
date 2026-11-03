@@ -80,7 +80,7 @@ This isn't meant to frighten you — it's meant to set expectations. Keeping fun
 
 India's crypto landscape adds some specific wrinkles worth understanding.
 
-**Registration, not insurance.** Crypto exchanges serving Indian users are expected to register with FIU-IND (the Financial Intelligence Unit of India) and comply with anti-money-laundering rules. That registration is about compliance and reporting — it does *not* guarantee your funds or insure deposits. A registered exchange can still fail.
+**Registration, not insurance.** Crypto exchanges serving Indian users are expected to [register with FIU-IND](https://cryptobeginner.in/blog/how-to-check-if-exchange-is-fiu-registered-india-guide) (the Financial Intelligence Unit of India) and comply with anti-money-laundering rules. That registration is about compliance and reporting — it does *not* guarantee your funds or insure deposits. A registered exchange can still fail.
 
 **Your tax obligations don't disappear.** If you traded or sold crypto before the shutdown, the tax liability on those transactions still exists. India's crypto tax framework — 30% tax on gains and 1% TDS on transfers — applies based on what you *did*, not on whether you later got your money out.
 
@@ -126,6 +126,22 @@ If an exchange you use announces a shutdown or freezes withdrawals, here's what 
 4. **File a claim if proceedings begin.** Insolvency processes have claim deadlines. Missing the deadline can mean getting nothing even if funds are recovered later. Watch for official administrator notices.
 5. **Report to authorities if fraud is suspected.** In India, that can mean filing a complaint with the cybercrime portal (cybercrime.gov.in) and consulting a legal professional experienced in financial disputes.
 6. **Preserve your tax records.** As noted above, your tax obligations on past trades survive the shutdown. Organised records make this manageable instead of miserable.
+
+## A Simple Monthly Routine That Keeps You Ready
+
+Everything in the previous section is crisis behaviour — what to do once trouble is already public. A small monthly routine, done while things are calm, makes that crisis list far less painful if you ever need it. None of it takes more than a few minutes.
+
+**Download your records.** Once a month, export your trade history, deposit and withdrawal history, and any tax report your exchange offers, and save the files somewhere the exchange cannot take with it — your own computer or cloud storage. If the app ever goes dark, these files are your proof of what you held and what you did, for both insolvency claims and your Indian tax filing.
+
+**Screenshot your balances.** A dated screenshot or PDF of your holdings page takes ten seconds and can settle disputes about what your account showed on a given day. It is not legal proof on its own, but combined with your exported statements it builds a clear picture.
+
+**Review your security settings.** Check that authenticator-based two-factor authentication is still on, review which devices and API keys have account access, and remove anything you do not recognise. Shutdowns are not the only risk; accounts get compromised quietly too.
+
+**Skim the exchange's official announcements.** Platforms usually publish maintenance schedules, policy changes, and proof-of-reserves reports on their official blog or notices page. A monthly glance keeps you aware of changes — a new legal entity name, a changed withdrawal policy — that matter before they become emergencies.
+
+**Reconsider what is sitting there.** Ask one plain question: if this exchange froze withdrawals tomorrow, how much would I stand to lose, and am I comfortable with that number? If the answer has quietly grown because prices moved or you deposited more, move the excess to your own wallet while moving it is easy.
+
+The point of the routine is not anxiety — it is the opposite. Users who keep their own records, know their balances, and hold most of their crypto in wallets they control do not need to panic when an exchange wobbles, because their exposure was already capped by habit. Preparation done monthly, in calm conditions, is what turns a potential disaster into an inconvenience.
 
 ## Frequently Asked Questions
 

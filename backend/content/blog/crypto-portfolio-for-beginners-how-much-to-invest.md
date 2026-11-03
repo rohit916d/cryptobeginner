@@ -95,7 +95,7 @@ How often? Monthly or quarterly reviews are plenty for beginners. And an India-s
 
 ## The Review Habit: Monthly, Not Hourly
 
-The final piece of portfolio thinking is the least technical: decide *when* you look. Beginners who check prices every hour experience every dip as an emergency and every rally as a signal to buy more — the exact opposite of a plan.
+The final piece of portfolio thinking is the least technical: decide *when* you look. Beginners who check prices every hour experience every dip as an emergency and every rally as a signal to buy more — the exact opposite of a plan. It also helps to understand [how crypto prices get their value](https://cryptobeginner.in/blog/how-do-crypto-prices-get-value-india-guide) in the first place: dips look different once you know a price is simply the latest meeting point of buyers and sellers, not a verdict on a project.
 
 A healthier rhythm that many long-term investors describe:
 

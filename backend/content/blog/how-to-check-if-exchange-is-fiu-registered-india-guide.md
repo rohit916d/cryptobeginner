@@ -87,7 +87,7 @@ If two or more of these appear, treat the platform as unverified, whatever its h
 This is the part beginners most often get wrong, so it deserves to be stated plainly:
 
 - **It is not a SEBI licence.** Crypto exchanges in India are not regulated by SEBI the way stockbrokers are. FIU registration is an anti-money laundering registration, not a markets licence.
-- **It is not a safety guarantee.** Registration says nothing about whether the platform is well-run, solvent, or secure. A registered platform can still be hacked, mismanaged, or shut down.
+- **It is not a safety guarantee.** Registration says nothing about whether the platform is well-run, solvent, or secure. A registered platform can still be hacked, mismanaged, or [shut down](https://cryptobeginner.in/blog/what-happens-to-your-crypto-if-exchange-shuts-down).
 - **It is not deposit insurance.** Unlike bank deposits, which carry DICGC insurance up to a limit, crypto held on an exchange has no equivalent government-backed insurance in India.
 - **It does not make crypto itself regulated.** The Finance Ministry has repeatedly cautioned that crypto assets remain unregulated as an asset class in India, with no regulatory recourse for losses from such transactions.
 
@@ -128,6 +128,23 @@ Before you deposit on any exchange, run through this list:
 - [ ] No red flags: no "government-guaranteed" claims, no pressure tactics, no hidden identity
 
 If every box is ticked, you have done the verification a careful beginner should do. If any box fails, pause and investigate before trusting the platform with your money.
+
+## Recheck Every Few Months: Registration Status Can Change
+
+One detail beginners often miss: the FIU check is not a one-time task you finish before your first deposit and then forget. A platform's compliance position can change after you have already started using it, and your earlier verification only describes the day you did it.
+
+There are several ways the picture can shift. FIU-IND issues new compliance and enforcement notices over time, and a platform that was quiet last year can appear in one this year. Platforms also change from the inside: companies get acquired, operating entities are restructured, brand names are sold, and banking partners come and go. Each of those changes can quietly alter which legal entity actually holds your funds and whether that entity is the one that was registered. A platform can also drift — KYC steps get quietly relaxed, TDS stops appearing in statements, INR withdrawals start routing through unfamiliar partners. None of these changes arrives with a personal notification to you.
+
+A simple rhythm protects you without much effort:
+
+- **Before any large deposit,** rerun the quick version of the check: legal name, compliance page, and a search for recent enforcement news mentioning the platform.
+- **Every few months,** repeat Step 3 and search FIU-IND's recent announcements for the platform's legal entity name, not just its brand.
+- **Watch everyday signals,** not just official ones: sudden changes to KYC requirements, TDS disappearing from your trade statements, new deposit methods replacing normal bank transfers, or the app vanishing from an app store are all reasons to recheck immediately.
+- **Trust official sources over commentary.** Social media posts and sponsored articles about a platform's status are often outdated or paid for. Government press releases and the platform's own legal pages are slower, but they are the sources that count.
+
+If a recheck turns up something worrying — a non-compliance notice, a blocked website, a legal entity you no longer recognise — the calm response is the right one. Stop depositing fresh funds, withdraw what you can to your own wallet or a platform you have verified, and save your complete transaction records before anything else changes. You do not need to predict whether the platform will fix its position; you only need your own exposure to be small while the question is open.
+
+Think of registration the way you think of a vehicle's fitness certificate: necessary, meaningful, and dated. It tells you the platform passed a compliance check at a point in time. Your job as a user is simply to make sure the certificate you are relying on is still the current one.
 
 ## Frequently Asked Questions
 

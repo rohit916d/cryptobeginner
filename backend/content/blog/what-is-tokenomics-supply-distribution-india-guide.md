@@ -19,7 +19,7 @@ faqs:
 
 Tokenomics is the first thing to understand before you judge any crypto token by its price. Tokenomics simply means the economics built into a token: how many tokens exist, how they were created, who holds them, and how more tokens will enter the market over time. Two tokens can trade at very different prices and still represent very different things once you look at their supply.
 
-Many beginners in India start by asking, "This token costs only a few rupees, is it cheap?" That question feels natural, but price alone tells you almost nothing. A token priced at ₹2 with billions of units in circulation is not automatically cheaper than a token priced much higher with a very small supply. Tokenomics gives you the missing numbers, so you can compare projects fairly and spot supply risks that marketing pages rarely highlight.
+Many beginners in India start by asking, "This token costs only a few rupees, is it cheap?" That question feels natural, but price alone tells you almost nothing. A token priced at ₹2 with billions of units in circulation is not automatically cheaper than a token priced much higher with a very small supply. Tokenomics gives you the missing numbers, so you can compare projects fairly and spot supply risks that marketing pages rarely highlight. If the price side itself is still fuzzy, our explainer on [how crypto prices get their value](https://cryptobeginner.in/blog/how-do-crypto-prices-get-value-india-guide) covers the supply-and-demand basics behind every quote.
 
 > **Educational content only.** This is not financial advice. Crypto markets are volatile — never invest money you can't afford to lose.
 
