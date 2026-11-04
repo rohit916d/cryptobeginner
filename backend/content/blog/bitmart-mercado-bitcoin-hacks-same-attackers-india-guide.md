@@ -1,7 +1,7 @@
 ---
 title: "BitMart and Mercado Bitcoin Hacks: Same Attackers?"
 category: "Security"
-excerpt: "BitMart and Mercado Bitcoin were both hacked on 2 November, with blockchain data linking the two attacks. What is proven, what is not, and what Indian users should do."
+excerpt: "BitMart and Mercado Bitcoin were both hacked on 2 November, with on-chain data linking the attacks. What is proven, what is not, and what Indian users should do."
 read_time: 10
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/security.jpg"
