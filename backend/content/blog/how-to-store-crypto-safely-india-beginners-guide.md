@@ -154,6 +154,20 @@ Begin with a reputable hot wallet and a tiny amount. Practice writing down and r
 **Next steps:** Learn how to create your first crypto wallet step by step, read our guide on the most common crypto scams targeting Indians, and understand how crypto tax works in India before you start moving larger amounts.
 
 
+## The 10-Minute Monthly Safety Check
+
+Good storage habits are not a one-time setup; they drift if nobody checks them. Once a month, give your crypto the same ten minutes you might give a bank statement. This short routine catches most problems while they are still small.
+
+**Minutes 1–3: Verify your backups.** Pick up your seed phrase backup and confirm it is complete, readable and still stored where you expect — dry, private and away from cameras and visitors. If you use an extra passphrase or a second backup copy, confirm both are in place. Never type the phrase into a phone or computer "just to check" — reading the physical copy is enough.
+
+**Minutes 3–5: Check exchange login alerts.** Open your exchange app and review recent login history and security alerts. Look for devices, locations or times you do not recognise, and change your password immediately if anything looks unfamiliar. Confirm that two-factor authentication is still switched on.
+
+**Minutes 5–8: Review connected apps and dApps.** Wallets accumulate permissions over time — sites you connected once and forgot about. Open your wallet's connected-sites list and disconnect anything you no longer use. Old token approvals can linger too, so revoke approvals for apps you have stopped trusting.
+
+**Minutes 8–10: Update your authenticator and apps.** Make sure your authenticator app's recovery method is stored safely, and install pending updates for your wallet and exchange apps. Updates often patch exactly the security holes that scammers rely on.
+
+Ten minutes, once a month. That small habit is what keeps the careful setup described in this guide actually working.
+
 ## Keep Learning
 
 If you found this guide useful, these related guides will help you go deeper:

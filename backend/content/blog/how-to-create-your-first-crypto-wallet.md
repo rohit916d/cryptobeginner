@@ -74,7 +74,7 @@ This protects the wallet on your device. Use something unique — not your phone
 
 ### Step 5: Receive a Small Test Amount
 
-Find your wallet's **receive address** (a long string starting with characters like "1", "3", "bc1" for Bitcoin). Send a tiny test amount first — from your exchange account, withdraw the minimum to this address. Wait for it to arrive. Only then consider larger amounts.
+Find your wallet's **receive address** (a long string starting with characters like "1", "3", "bc1" for Bitcoin). Send a tiny test amount first — from your exchange account, withdraw the minimum to this address. Wait for it to arrive. Only then consider larger amounts. Test transfers and small purchases also tend to leave behind tiny leftover balances over time — our explainer on [crypto dust and small balances](/blog/what-is-crypto-dust-small-balances-explained) covers why they appear and what, if anything, to do about them.
 
 **Triple-check the address and the network.** Crypto sent to the wrong address or wrong blockchain network is unrecoverable. Copy-paste (never retype), verify the first and last characters, and start every new destination with a test transaction.
 

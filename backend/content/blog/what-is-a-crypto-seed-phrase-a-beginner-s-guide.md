@@ -55,6 +55,8 @@ Do this the *first* time you create any wallet, before depositing meaningful fun
 
 Store your backup like you would property deeds or jewellery — because financially, that is what it is.
 
+A seed phrase is only one part of staying safe, though — our complete guide on [how to store crypto safely in India](/blog/how-to-store-crypto-safely-india-beginners-guide) covers the wallets, devices and everyday habits that protect everything else you own.
+
 ## The Never-Ever List
 
 These rules have no exceptions:

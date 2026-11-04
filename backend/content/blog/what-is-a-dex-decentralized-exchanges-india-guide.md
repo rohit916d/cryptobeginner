@@ -39,7 +39,7 @@ The first widely used DEX, Uniswap, launched in 2018 on Ethereum, and today DEXs
 | Token variety | Limited to listed coins | Thousands, including brand-new tokens |
 | Trading halt risk | Exchange can freeze withdrawals | No company can freeze the protocol |
 
-The most important row in that table is "who holds your crypto." On a CEX, you trust a company. On a DEX, you trust code — and your own ability to keep your wallet secure.
+The most important row in that table is "who holds your crypto." On a CEX, you trust a company. On a DEX, you trust code — and your own ability to keep your wallet secure. That same trust question sits at the heart of the wider [DeFi vs traditional finance](/blog/defi-vs-traditional-finance) comparison, which weighs custody, cost and consumer protection across both systems.
 
 ## How a DEX Trade Actually Works (Step by Step)
 

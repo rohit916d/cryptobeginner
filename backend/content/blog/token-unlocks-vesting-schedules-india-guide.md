@@ -104,6 +104,18 @@ Before buying any token with locked supply still outstanding, run through this s
 
 If you cannot answer most of these questions, you do not yet understand the token's supply story — and that is a good reason to pause, research more, or choose a simpler asset while you learn.
 
+## Where to Check Unlock Dates Before They Hit
+
+Knowing that unlocks matter is only half the skill; the other half is knowing where the dates actually live. Three sources, used together, cover almost every project.
+
+**Token unlock calendars.** Several free websites track upcoming unlocks across hundreds of projects, listing the date, the amount and the category of recipient. These calendars are the fastest way to scan the next few weeks — but treat them as a starting point, because they occasionally lag behind schedule changes that projects announce themselves.
+
+**The project's own documents.** The tokenomics page and the whitepaper are the primary sources. Look for the allocation chart (how much went to the team, investors, treasury and community), the vesting terms (cliff length and release pattern), and the total supply set against the circulating supply. If the documents are vague about dates or percentages, that vagueness is itself information worth weighing.
+
+**Exchange announcements.** When a large unlock approaches, exchanges sometimes publish notices, and projects usually announce schedule changes on their official channels. Cross-checking an announcement against a calendar catches most errors before they cost you.
+
+Whatever the source, note four things every time: the unlock date; the size of the release compared with the current circulating supply (a release equal to 2% of supply is very different from one equal to 25%); who receives the tokens — team members and early investors historically sell more readily than community reward pools; and whether the release is a one-off cliff or part of a steady monthly pattern. Written down like this, an unlock stops being a surprise and becomes just another dated fact in your research.
+
 ## Conclusion
 
 Token unlocks and vesting schedules are not exotic insider knowledge. They are the public timetable of a token's future supply, and they explain a surprising amount of what happens in crypto markets: why some tokens stay scarce for years while others quietly inflate, why certain dates bring volatility, and why a low unit price can be misleading.

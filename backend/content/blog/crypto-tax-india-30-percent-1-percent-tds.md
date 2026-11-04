@@ -143,6 +143,8 @@ India's crypto tax framework is widely considered punitive, and the industry has
 
 The practical takeaway for beginners: factor the 30% tax into every decision. A trade that looks profitable before tax can look very different after. Keep records from day one — it's far easier than reconstructing a year's trades in March.
 
+Trading on a properly registered platform makes that record-keeping far easier, so before you trust any platform with your money, use our checklist on [how to check if an exchange is FIU-registered](/blog/how-to-check-if-exchange-is-fiu-registered-india-guide).
+
 *Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
 
 ## Next Steps

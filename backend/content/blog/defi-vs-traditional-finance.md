@@ -98,6 +98,16 @@ DeFi is a genuine innovation — open, global, always-on finance built on code. 
 Want to understand the building blocks — wallets, blockchains, and smart contracts — before exploring DeFi? Start at [/learn](/learn) and build up step by step.
 
 
+## A Simple Test: Which One Fits a Beginner's First Step?
+
+Abstract comparisons are hard to act on, so try one concrete test. Imagine you want to set aside a small amount — say ₹5,000 — somewhere it can sit while you learn. Run that single use case through both systems and watch what changes.
+
+**In traditional finance**, you would use a bank account or another regulated product. Your money is held by an institution in your name, records are kept for you, and if something goes wrong — a wrong transfer, a compromised account — there is a support desk, a complaints process and, for bank deposits, insurance up to a defined limit. The trade-offs are paperwork, fixed hours for some services, and returns that may not keep up with inflation.
+
+**In DeFi**, the same ₹5,000 would sit in a wallet you control, interacting with a smart contract. There is no account opening, and the position can be created at midnight on a Sunday. But custody is entirely yours: lose the seed phrase or approve a malicious contract, and there is no support desk, no reversal and no insurance. The code does exactly what it does, whether or not that matches what you expected.
+
+Neither column declares a winner — they describe different responsibilities. A useful beginner question is not "which system is better?" but "am I ready to be my own bank for this amount?" If the honest answer is "not yet", learning through traditional products while studying how DeFi works is a perfectly sensible path. The same test works for payments, borrowing or trading — and the custody and recourse questions are always the ones that reveal the real difference.
+
 ## Keep Learning
 
 If you found this guide useful, these related guides will help you go deeper:

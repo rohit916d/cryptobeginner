@@ -31,7 +31,7 @@ Here is the key point beginners often miss: a phishing site does not need to hac
 
 ## The Five Phishing Stories Aimed at Indians
 
-Scammers reuse a small set of stories because they work. If a message matches one of these, slow down before doing anything.
+Scammers reuse a small set of stories because they work. If a message matches one of these, slow down before doing anything. These stories belong to a wider pattern, too — our roundup of the [7 common crypto scams targeting Indians](/blog/7-common-crypto-scams-targeting-indians) shows the other tricks doing the rounds.
 
 **1. "Your KYC will expire."** The message claims your account will be frozen unless you re-verify your PAN or Aadhaar immediately. Real Indian exchanges do ask for KYC, but they do so inside their app, not through an emailed link demanding documents on a deadline. This story works because KYC is genuinely mandatory in India, so the threat feels plausible.
 

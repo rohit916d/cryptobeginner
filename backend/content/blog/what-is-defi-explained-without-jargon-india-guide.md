@@ -35,6 +35,8 @@ A smart contract is like a vending machine. The rules are built in advance: put 
 
 That one analogy explains most of DeFi. The vending machine is fast, open and impartial. It is also rigid, unforgiving of mistakes, and only as safe as the person who built and stocked it.
 
+If you would like the two systems placed side by side — custody, costs and consumer protection included — our comparison of [DeFi vs traditional finance](/blog/defi-vs-traditional-finance) lays them out plainly.
+
 ## The Four Things People Actually Do in DeFi
 
 Almost every DeFi app you will hear about does one of four jobs:

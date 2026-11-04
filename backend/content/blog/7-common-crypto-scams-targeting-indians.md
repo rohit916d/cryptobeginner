@@ -139,6 +139,18 @@ Scammers don't hack blockchains — they hack human psychology: panic, greed, tr
 Build three habits and you'll be safer than 95% of crypto users in India: keep your seed phrase and OTPs completely private, verify every support contact and app through official channels only, and treat guaranteed returns as proof of fraud. The crypto space rewards the patient and the careful — be both.
 
 
+## Scam Red Flags Indians Reported Most in 2026
+
+Beyond the seven scams above, four patterns kept appearing in reports from Indian victims through 2026. Each one is defeated by a single habit — learn the habit, and the pattern loses its power.
+
+**Fake "support" calls.** A caller claiming to be from your exchange says your account is "under review" and asks for an OTP or a screen-share to "verify" you. Real exchanges do not phone users to ask for OTPs. **The habit:** hang up, then open the official app yourself and check for alerts there — never continue a conversation that the other side started.
+
+**Screen-sharing app traps.** Victims are persuaded to install a remote-access app for "KYC help" or "refund processing", giving the scammer a live view of their banking and exchange apps — including OTPs as they arrive. **The habit:** never install any app at a stranger's request, and treat any request to share your screen as an automatic stop.
+
+**Telegram doubling schemes.** Groups promise to "double" any crypto sent to a wallet address, sometimes showing screenshots of other people supposedly being paid. The rare small payout, when it happens at all, is bait funded by later victims. **The habit:** any scheme where you must send crypto first in order to receive more back is a scam — every time, without exception.
+
+**Fake exchange apps.** Lookalike apps, spread through download links rather than official stores, copy a real exchange's design and simply keep whatever users deposit. **The habit:** install finance apps only from the official app-store listing of the real company, reached through the exchange's own website — never through a link somebody sent you.
+
 ## Keep Learning
 
 If you found this guide useful, these related guides will help you go deeper:

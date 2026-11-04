@@ -69,7 +69,7 @@ For Indian beginners, this check is especially practical. Many promotions on Tel
 
 Early team members and investors usually do not receive all their tokens on day one. Instead, their tokens are locked for a period, then released gradually. This is called vesting. A cliff is an initial waiting period before any tokens unlock. After the cliff, tokens may unlock monthly or quarterly over one to four years, though schedules differ by project.
 
-An unlock is simply the date when previously locked tokens become tradable. Large unlocks increase the amount of supply that could be sold. Again, that does not predict direction — holders may keep, stake, or sell — but a calendar of upcoming unlocks is public information you should not ignore. Many data sites maintain unlock calendars. Add checking that calendar to your research routine, the same way you would check fees before depositing INR via UPI on an exchange.
+An unlock is simply the date when previously locked tokens become tradable. Large unlocks increase the amount of supply that could be sold. Again, that does not predict direction — holders may keep, stake, or sell — but a calendar of upcoming unlocks is public information you should not ignore. Many data sites maintain unlock calendars. Add checking that calendar to your research routine, the same way you would check fees before depositing INR via UPI on an exchange. For the full method — cliffs, release sizes and who receives the tokens — our guide to [token unlocks and vesting schedules](/blog/token-unlocks-vesting-schedules-india-guide) walks through it step by step.
 
 ## Inflation, Burning, and Why Supply Changes
 

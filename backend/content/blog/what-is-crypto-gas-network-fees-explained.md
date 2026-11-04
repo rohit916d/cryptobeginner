@@ -115,6 +115,32 @@ The habits that matter most are simple — keep native coins for fees, time your
 Want to go deeper into how blockchains actually work under the hood? Continue with [our free beginner track](/learn), which builds from wallets and transactions up to the full picture.
 
 
+## Gas Fee, Network Fee, Transaction Cost: Are They Different?
+
+Beginners often meet three different labels — gas fee, network fee and transaction cost — and reasonably wonder whether they are three separate charges added together. They are not. In most situations, all three names describe the same underlying cost: the amount you pay the network to process and record your transaction. The difference is mainly about which angle you are looking from.
+
+"Gas fee" is the term used on Ethereum and similar networks. Gas measures the computational work your transaction needs, and the gas fee is that work multiplied by the current price of gas. When you see a gas fee quoted in gwei, you are seeing the network's internal pricing system at work.
+
+"Network fee" is the broader, plain-language term. Every blockchain charges something for using its shared space, whether the network calls it gas or not. Bitcoin users pay a network fee (often just called a miner fee or transaction fee), even though Bitcoin does not use the word gas at all.
+
+"Transaction cost" is the widest label of all — your total cost of getting a transaction done. On an exchange withdrawal screen, for example, the fee shown may bundle the network's charge with the exchange's own handling margin, which is why exchange withdrawal fees are often noticeably higher than what the network itself charged.
+
+So when you compare costs, do not add the three terms together. Ask one simple question instead: what is the total amount leaving my wallet for this action? Whether the screen calls it gas, a network fee or a transaction cost, that total is what you actually pay.
+
+## How to Pay Less Gas: 5 Practical Habits
+
+You cannot control a network's fee market, but you can control when and how you use it. These five habits regularly save Indian users real money, especially on smaller transactions, where fees bite hardest.
+
+**1. Transact in quieter hours.** Network fees rise when many people compete for block space at the same time. Late nights and early mornings (Indian time) are often calmer on global networks like Ethereum than busy weekday evenings. If a transfer is not urgent, waiting a few hours can cut the fee noticeably.
+
+**2. Use Layer 2 networks where they fit.** Layer 2 networks built on top of Ethereum process transactions in batches and typically charge a small fraction of mainnet gas. For routine transfers and swaps, they are often the single biggest saving available.
+
+**3. Batch your actions.** Every separate transaction pays its own fee. Approving a token, swapping and moving funds in three separate trips costs more than planning the same work in fewer steps. Before you start, list what you need to do and combine whatever you safely can.
+
+**4. Check a gas tracker before sending.** Free gas tracker websites show current fee levels and whether they are rising or falling. A thirty-second check tells you whether this is a cheap moment or an expensive one.
+
+**5. Prefer low-fee networks for small transfers.** Sending a small amount on a high-fee network can cost a large share of the transfer itself. For small, routine movements, a lower-fee network may make more sense — but remember that networks differ in security, decentralisation and exchange support. A cheaper network is not automatically a safer one, so check that your exchange and wallet fully support it before you send anything.
+
 ## Keep Learning
 
 If you found this guide useful, these related guides will help you go deeper:
