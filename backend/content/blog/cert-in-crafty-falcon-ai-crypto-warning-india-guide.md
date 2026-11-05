@@ -1,7 +1,7 @@
 ---
 title: "CERT-In: CRAFTY FALCON AI Attacks Target India Crypto"
 category: "Security"
-excerpt: "CERT-In's 4 November advisory names AI-assisted actor CRAFTY FALCON and warns crypto exchanges are now explicitly in its sights."
+excerpt: "CERT-In's 4 November advisory names AI-assisted actor CRAFTY FALCON and warns crypto exchanges are now explicitly in its sights — what Indian users should know."
 read_time: 10
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/security.jpg"
