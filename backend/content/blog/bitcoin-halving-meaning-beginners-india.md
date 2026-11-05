@@ -105,7 +105,7 @@ The halving sits at the intersection of several ideas worth understanding as you
 - **Monetary policy** — the difference between code-enforced rules and central-bank decisions.
 - **Market psychology** — how a predictable technical event still generates unpredictable excitement.
 
-If any of those words are new to you, that is fine — each has its own beginner-friendly guide on this site. The halving is a great lens for learning them, because it is concrete: something specific happens, on a specific schedule, for a specific reason.
+If any of those words are new to you, that is fine — each has its own beginner-friendly guide on this site. The halving is a great lens for learning them, because it is concrete: something specific happens, on a specific schedule, for a specific reason. And if you have not yet gone through a first, small practice purchase, our step-by-step guide to [buying your first Bitcoin in India](https://cryptobeginner.in/blog/how-to-buy-your-first-bitcoin-in-india) walks through the process — and the safety routine that should follow it.
 
 ## The Bottom Line
 

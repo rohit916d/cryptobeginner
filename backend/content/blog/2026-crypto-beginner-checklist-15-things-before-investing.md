@@ -100,6 +100,18 @@ Once you've worked through the checklist, your next steps are straightforward: s
 Crypto rewards the prepared and punishes the hasty. Doing these 15 things before investing won't guarantee returns — nothing can — but it will guarantee you're starting the way every sensible educator recommends: informed, secured, and in control of your own risk.
 
 
+## After the Checklist: Your First 30 Days
+
+Ticking all 15 boxes is the preparation — what you do over the following month decides whether it becomes a lasting habit. A simple rhythm works well for most beginners:
+
+**Week 1: make the practice purchase.** If your plan allows it, make one small purchase purely to run the mechanics end to end — deposit, buy, and a test withdrawal to your own wallet. Treat this as a rehearsal, not a result: the goal is to discover every screen, fee, and delay while the amount is small enough that a mistake costs almost nothing.
+
+**Weeks 2–3: start a learning journal.** One page is enough. Write down what you bought, why, what the fees were, and anything that surprised you. Beginners who keep even this minimal record tend to make calmer decisions, because their reasoning was written down before prices moved — not reconstructed emotionally afterwards.
+
+**Week 4: reconcile your records.** Compare your journal against your exchange's transaction history and the tax records from item 3. Fix anything missing while the details are still fresh. This ten-minute habit is what makes the 30% tax and 1% TDS paperwork manageable later, instead of a year-end scramble.
+
+**Ongoing: schedule a quarterly re-check.** Every three months, re-run the security half of this checklist — items 4 to 8 — and skim Parts 3 and 4 to confirm your money plan and your platform still fit your situation. Regulations change, exchanges change, and your own finances change. The checklist is a review tool, not a one-time ceremony.
+
 ## Keep Learning
 
 If you found this guide useful, these related guides will help you go deeper:

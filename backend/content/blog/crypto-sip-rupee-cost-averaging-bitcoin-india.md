@@ -98,7 +98,7 @@ If you decide the approach fits your temperament, here is how most beginners set
 6. **Set a review date.** Decide in advance — say, every six months — to review whether the SIP still fits your finances. Do not review it every day.
 7. **Keep records.** Export your transaction history monthly. Your future self, filing taxes, will thank you.
 
-A word on security: exchange SIPs keep your crypto on the exchange. For small learning amounts that is acceptable, but as balances grow, learn about moving crypto to your own wallet — our guide on storing crypto safely covers hot vs cold wallets in detail.
+A word on security: exchange SIPs keep your crypto on the exchange. For small learning amounts that is acceptable, but as balances grow, learn about moving crypto to your own wallet — our guide on storing crypto safely covers hot vs cold wallets in detail. And if you have never bought on an exchange at all, start with our guide to [buying your first Bitcoin in India](https://cryptobeginner.in/blog/how-to-buy-your-first-bitcoin-in-india) — a recurring buy builds on exactly the same account, KYC, and deposit steps as a one-time purchase.
 
 ## Crypto SIP vs Lump Sum: The Short Version
 

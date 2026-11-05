@@ -141,7 +141,7 @@ Reading about storage is useful, but safety comes from actually setting things u
 5. **Make a second backup in a second place.** One paper backup burns, floods, or gets thrown away by accident. Store a second copy in a different physical location, and let one trusted family member know that a recovery plan exists and where the instructions are kept — without handing over the phrase itself.
 6. **Review every six months.** Check that your backups are still readable, your exchange security settings are on, and your storage still matches how much you now hold. Security is a habit, not a one-time setup.
 
-Most Indian users who lose crypto do not lose it to elite hackers — they lose it to skipped backups, phishing links, and funds left casually on exchanges. This plan protects you against all three.
+Most Indian users who lose crypto do not lose it to elite hackers — they lose it to skipped backups, phishing links, and funds left casually on exchanges. This plan protects you against all three. Storage is one part of being ready, though — our [2026 crypto beginner checklist](https://cryptobeginner.in/blog/2026-crypto-beginner-checklist-15-things-before-investing) covers the other things to have in place, from account security to tax records, before you put money in.
 
 ## Final Thought
 

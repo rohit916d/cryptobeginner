@@ -136,6 +136,18 @@ Social media has filled Web3 with half-truths that beginners absorb as facts. He
 
 Holding these five corrections in your head will filter out most of the hype you'll meet — from influencers, from project marketing, and from well-meaning friends alike.
 
+## What Actually Happens When You "Connect Wallet" to an App?
+
+Sooner or later, every Web3 beginner faces a button that says "Connect Wallet" — and understandably hesitates. Does the app now have your money? The honest answer is no. But the steps that come *after* connecting are where the real danger lives, so it helps to separate three actions that apps deliberately blur together.
+
+**Connecting** simply shares your wallet's public address with the app — the equivalent of telling a website your username. The app can see that address and, because blockchains are public, the balances and transaction history attached to it. It cannot move anything. Connecting alone never spends your crypto.
+
+**Signing a message** is the second step many apps ask for: your wallet shows you a snippet of text and asks you to sign it. This proves you own the address, rather like signing a form. A plain message signature costs nothing and moves nothing — but read what you are signing. A "signature" request that is actually a disguised transaction approval is a known phishing trick, so if the text looks like gibberish or mentions granting permissions, stop and close it.
+
+**Approving a token spend** is the step that deserves real caution. Some apps ask for permission to spend a specific token from your wallet — sometimes a limited amount, sometimes an unlimited one. A legitimate decentralised exchange needs a limited approval to complete a swap. A scam site asks for an unlimited approval and quietly drains that token later, even after you have closed the tab. This is why experienced users approve the smallest amount a task needs, and periodically review and revoke old permissions with a reputable permissions-checking tool.
+
+The habit to build is simple: connect freely, sign carefully, approve rarely. And whenever a wallet request surprises you, close it and re-read the app's official documentation before trying again. Nothing legitimate in Web3 punishes you for taking five extra minutes.
+
 ## Conclusion: Understand Web3, Don't Worship or Dismiss It
 
 Web3 is best understood as an experiment in progress: an attempt to rebuild parts of the internet so users own what they create and use. Some of it will work — decentralised finance and digital ownership are already real. Some of it will fail — and the failures will be loud, expensive, and instructive.

@@ -91,7 +91,7 @@ This is the part beginners most often get wrong, so it deserves to be stated pla
 - **It is not deposit insurance.** Unlike bank deposits, which carry DICGC insurance up to a limit, crypto held on an exchange has no equivalent government-backed insurance in India.
 - **It does not make crypto itself regulated.** The Finance Ministry has repeatedly cautioned that crypto assets remain unregulated as an asset class in India, with no regulatory recourse for losses from such transactions.
 
-Registration is a necessary first filter, not a sufficient reason to trust a platform with your money. Combine it with the usual safety habits: a strong unique password, authenticator-based two-factor authentication, withdrawal address whitelisting, and keeping only trading funds on an exchange.
+Registration is a necessary first filter, not a sufficient reason to trust a platform with your money. Combine it with the usual safety habits: a strong unique password, authenticator-based two-factor authentication, withdrawal address whitelisting, and keeping only trading funds on an exchange. It also helps to know how this legal registration differs from industry self-regulation — our guide to [India's new crypto self-regulatory body](https://cryptobeginner.in/blog/bwa-crypto-self-regulatory-body-india-guide) explains what the BWA-SRB can and cannot do.
 
 ## Registered vs Unregistered: A Quick Comparison
 

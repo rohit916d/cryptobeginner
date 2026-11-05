@@ -92,6 +92,7 @@ As of October 2026, India's crypto framework is a patchwork, not a single law:
 - **No dedicated crypto law.** Parliament has still not passed a crypto-specific statute. A September 2026 Parliamentary panel hearing on virtual digital assets drew headlines, but no legislation has emerged.
 - **Taxation continues unchanged.** The Union Budget 2026 left the 30% tax and 1% TDS intact. (The Income Tax Act, 2025, which took effect April 1, 2026, carries these provisions forward.)
 - **FIU-IND registration is the operating licence.** By mid-2026, around 54 Virtual Digital Asset Service Providers were registered — domestic exchanges like CoinDCX, CoinSwitch, WazirX, ZebPay, and Mudrex, plus offshore names that complied.
+- **Industry self-regulation arrives.** In October 2026, the Bharat Web3 Association launched a self-regulatory body for the VDA sector — a voluntary standards effort by the industry, not a new law. Our explainer on [India's new crypto self-regulatory body](/blog/bwa-crypto-self-regulatory-body-india-guide) breaks down what it covers and where its powers stop.
 - **RBI's stance is unchanged.** It still opposes any legal-tender status for private crypto, remains hostile to private stablecoins, and wants crypto walled off from the banking and payments system.
 - **SEBI is in the picture.** Discussion of a multi-regulator model has surfaced: SEBI overseeing tokens that behave like securities and exchange-like activity, the RBI handling monetary and cross-border aspects, and the Finance Ministry keeping tax policy.
 

@@ -104,6 +104,18 @@ Buying Bitcoin isn't free, but the costs are modest:
 
 Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.
 
+## After You Buy: A Simple Safety Routine for the First Week
+
+The purchase itself takes a minute. What actually protects you is the short routine that follows it — most first-time losses in India happen after buying, not during it.
+
+**Confirm the transaction yourself.** Your exchange history will show the buy: the date, the amount of BTC, the INR you paid, and the fee. Save a screenshot. If you later move the Bitcoin to your own wallet, the withdrawal produces a transaction ID (a long code). Paste that ID into a public block explorer — a website that displays live blockchain records — and confirm the transfer reached your wallet address. Checking this yourself, instead of trusting a "success" notification, takes two minutes and removes all doubt.
+
+**Do a test withdrawal before any large one.** If you plan to move a meaningful amount off the exchange, first send the smallest amount the network allows, confirm it arrives in your wallet, and only then send the rest. A wrong address or the wrong network on a full withdrawal is irreversible; the same mistake on a test transfer costs a few rupees and teaches you the process safely.
+
+**Start your tax record the same day.** Note the date, the INR amount, the quantity of BTC, and the exchange's name in a simple spreadsheet or notebook. India taxes crypto gains at 30%, with 1% TDS on many transfers (rates current as of September 2026 — verify the latest rules before filing), and reconstructing a year of trades afterwards is far harder than writing one line today.
+
+**Expect phishing that follows a first purchase.** New buyers are prime targets for fake "your account is locked" emails, "KYC re-verification" links, and social-media support accounts offering help. Your exchange will never ask for your password, an OTP, or your seed phrase to "unlock" anything. If a message creates urgency, ignore the link inside it and open the exchange app directly instead.
+
 ## 5 Mistakes First-Time Buyers Should Avoid
 
 1. **Investing money you need soon.** Bitcoin is volatile. Only use money you won't need for months or years.

@@ -25,7 +25,7 @@ If you have spent any time reading about crypto, you have probably met the word 
 
 Every word in "decentralized finance" matters. *Finance* because it does jobs banks do. *Decentralized* because no single company sits in the middle: the rules are written into programs called **smart contracts** that live on networks like Ethereum, and anyone with a crypto wallet can use them directly.
 
-Notice what is missing: no account opening form, no branch, no officer approving your request. Also missing, as we will see: no helpline, no fraud reversal and no insurance if something breaks. Both halves of that sentence are the real definition of DeFi.
+Notice what is missing: no account opening form, no branch, no officer approving your request. Also missing, as we will see: no helpline, no fraud reversal and no insurance if something breaks. Both halves of that sentence are the real definition of DeFi. DeFi is also one piece of a bigger shift in how the internet itself may work — if the term is new to you, our explainer on [what Web3 is and how it differs from today's internet](/blog/what-is-web3-internets-next-chapter-explained) is the right place to start.
 
 ## Think of DeFi Like a Vending Machine
 

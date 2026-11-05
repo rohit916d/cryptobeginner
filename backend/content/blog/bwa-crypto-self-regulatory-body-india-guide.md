@@ -82,6 +82,18 @@ Because headlines can overstate a launch like this, it is worth being precise ab
 
 **It does not bind non-members.** The guidelines are voluntary and apply to BWA members. A firm that is not a member is not covered by them at all. When you see an exchange claim to follow SRB standards, it is worth checking whether it is actually a member and what, specifically, it claims to follow.
 
+## Self-Regulation vs Government Regulation: The Difference in Practice
+
+The distinction between an SRB and a government regulator can sound abstract, so consider a concrete situation: an exchange freezes a user's withdrawal and gives no clear explanation.
+
+If the exchange is a BWA member, the SRB route works through pressure, not power. You complain to the exchange first; if the complaint stays unresolved, the SRB's grievance framework is meant to let the industry body review how the firm handled it. The SRB can ask the member for an explanation, recommend corrective action, and — at the strongest end — publish the failure or remove the firm from membership. That reputational pressure is real. But notice what is missing: the SRB cannot order a refund, levy a fine with legal force, or freeze the exchange's assets.
+
+Now put the same complaint in front of a government authority. FIU-IND acts under anti-money-laundering law: it has previously directed app stores to block non-compliant offshore exchanges, and it can penalise registered entities that break their obligations. A court can order assets frozen or returned. Those powers exist because a statute grants them — and the SRB has no statute behind it.
+
+So how should a beginner actually use BWA membership when choosing an exchange? Treat it as a secondary, positive signal — never the main one. The legal floor is FIU-IND registration: an exchange serving Indian users must be registered as a reporting entity, and you can verify that yourself. Membership of an industry body, on top of that registration, suggests the firm is willing to be measured against published standards on listings, marketing and complaint handling. That is worth something. But a member exchange can still be hacked, can still fail as a business, and can still leave users waiting. Self-regulation can raise the floor of industry behaviour; it does not remove the underlying risk.
+
+This suggests a simple order of checks: FIU registration first, the platform's own security practices second (2FA, withdrawal controls, a clear incident history), and published standards or industry membership third. If a platform advertises the third while failing the first, the marketing is doing the work that regulation should be doing — which is exactly the kind of claim the SRB says it wants to clean up.
+
 ## What Should Indian Beginners Watch For Next?
 
 The launch is the easy part. What will decide whether the BWA-SRB matters is what happens next:

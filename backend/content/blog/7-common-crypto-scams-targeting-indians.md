@@ -136,7 +136,7 @@ Act fast — speed matters:
 
 Scammers don't hack blockchains — they hack human psychology: panic, greed, trust, and fear. Every scam in this list fails against a calm person who verifies independently and never shares secrets under pressure.
 
-Build three habits and you'll be safer than 95% of crypto users in India: keep your seed phrase and OTPs completely private, verify every support contact and app through official channels only, and treat guaranteed returns as proof of fraud. The crypto space rewards the patient and the careful — be both.
+Build three habits and you'll be safer than 95% of crypto users in India: keep your seed phrase and OTPs completely private, verify every support contact and app through official channels only, and treat guaranteed returns as proof of fraud. The crypto space rewards the patient and the careful — be both. For the full preparation routine, work through our [2026 beginner checklist of 15 things to do before investing](https://cryptobeginner.in/blog/2026-crypto-beginner-checklist-15-things-before-investing) — recognising scams is only one part of it.
 
 
 ## Scam Red Flags Indians Reported Most in 2026
