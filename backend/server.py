@@ -1349,9 +1349,12 @@ async def blogs(category: Optional[str] = None):
     if category:
         query["category"] = category
 
+    # List view: exclude content AND faqs — faqs alone added ~300 KB to this
+    # payload (229 posts), which made blog/home data load slowly on mobile.
+    # The detail endpoint /blog/{slug} still returns the full document.
     data = await db.blog.find(
         query,
-        {"_id": 0, "content": 0}
+        {"_id": 0, "content": 0, "faqs": 0}
     ).sort(
         "created_at",
         -1
