@@ -1,7 +1,7 @@
 ---
 title: "ED Searches CoinDCX and Delta Exchange: FEMA Explained"
 category: "Regulation"
-excerpt: "ED searched CoinDCX and Delta Exchange over alleged FEMA violations, with INR deposits said to be routed offshore via USDT. What the agency alleged — and what it means for you."
+excerpt: "ED searched CoinDCX and Delta Exchange over alleged FEMA violations — INR deposits said to be routed offshore via USDT. What the agency alleged, and what it means for you."
 read_time: 9
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/regulation.jpg"
