@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { X as XIcon, ArrowUpRight } from "lucide-react";
+import { X as XIcon, Instagram, AtSign, ArrowUpRight } from "lucide-react";
 import NewsletterSignup from "./NewsletterSignup";
 
 export default function Footer() {
@@ -21,18 +21,44 @@ export default function Footer() {
             <p className="text-sm text-zinc-400 max-w-sm leading-relaxed">
               Beginner-friendly crypto education. Learn the basics safely, without hype, predictions, or financial advice.
             </p>
-            <a
-              href="https://twitter.com/Cryptobegin_ner"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-testid="footer-social-x"
-              className="mt-5 inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-zinc-500 hover:text-[#C8F169] transition-colors group"
-            >
-              <span className="w-8 h-8 rounded-lg border border-white/10 bg-white/[0.02] flex items-center justify-center group-hover:border-[#C8F169]/40 transition-colors">
-                <XIcon size={14} />
-              </span>
-              @Cryptobegin_ner
-            </a>
+            <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3">
+              <a
+                href="https://twitter.com/Cryptobegin_ner"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="footer-social-x"
+                className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-zinc-500 hover:text-[#C8F169] transition-colors group"
+              >
+                <span className="w-8 h-8 rounded-lg border border-white/10 bg-white/[0.02] flex items-center justify-center group-hover:border-[#C8F169]/40 transition-colors">
+                  <XIcon size={14} />
+                </span>
+                @Cryptobegin_ner
+              </a>
+              <a
+                href="https://www.instagram.com/cryptobeginner.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="footer-social-instagram"
+                className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-zinc-500 hover:text-[#C8F169] transition-colors group"
+              >
+                <span className="w-8 h-8 rounded-lg border border-white/10 bg-white/[0.02] flex items-center justify-center group-hover:border-[#C8F169]/40 transition-colors">
+                  <Instagram size={14} />
+                </span>
+                @cryptobeginner.in
+              </a>
+              <a
+                href="https://www.threads.com/@cryptobeginner.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="footer-social-threads"
+                className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-zinc-500 hover:text-[#C8F169] transition-colors group"
+              >
+                <span className="w-8 h-8 rounded-lg border border-white/10 bg-white/[0.02] flex items-center justify-center group-hover:border-[#C8F169]/40 transition-colors">
+                  <AtSign size={14} />
+                </span>
+                @cryptobeginner.in
+              </a>
+            </div>
             <p className="mt-6 text-xs text-zinc-400">
               © {new Date().getFullYear()} Crypto Beginner · cryptobeginner.in · Educational content only — not financial advice.
             </p>
