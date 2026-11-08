@@ -1,7 +1,7 @@
 ---
 title: "What Is a Crypto Mining Pool? Shared Mining Explained"
 category: "Bitcoin"
-excerpt: "Crypto mining pools let small miners combine computing power and share rewards. Learn how pools work, payout methods, fees, and risks Indian beginners should know."
+excerpt: "Crypto mining pools let miners combine computing power and share rewards. Learn how pools work, payout methods, fees, and risks Indian beginners should know."
 read_time: 8
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/bitcoin.jpg"
