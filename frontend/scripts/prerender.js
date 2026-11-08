@@ -179,7 +179,7 @@ function main() {
     list
       .map(
         (p) =>
-          `<li><a href="/blog/${p.slug}">${esc(p.fm.title)}</a> — ${esc(p.fm.excerpt || "")}</li>`
+          `<li><a href="/blog/${p.slug}/">${esc(p.fm.title)}</a> — ${esc(p.fm.excerpt || "")}</li>`
       )
       .join("\n");
 
@@ -187,13 +187,13 @@ function main() {
     list
       .map(
         (p) =>
-          `<li><a href="/blog/${p.slug}"><span class="guide-title">${esc(p.fm.title)}</span><span class="guide-excerpt">${esc(p.fm.excerpt || "")}</span></a></li>`
+          `<li><a href="/blog/${p.slug}/"><span class="guide-title">${esc(p.fm.title)}</span><span class="guide-excerpt">${esc(p.fm.excerpt || "")}</span></a></li>`
       )
       .join("\n");
 
   /* ---------------- Blog post pages ---------------- */
   for (const p of posts) {
-    const url = `${ORIGIN}/blog/${p.slug}`;
+    const url = `${ORIGIN}/blog/${p.slug}/`;
     const contentHtml = renderMarkdown(p.body);
     const faqs = Array.isArray(p.fm.faqs) ? p.fm.faqs : [];
     const faqHtml = faqs.length
@@ -268,7 +268,7 @@ ${relatedHtml}
   writePage(tpl, "blog", {
     title: "Crypto Blog for Beginners in India — Crypto Beginner",
     desc: "Beginner-friendly crypto guides for India: Bitcoin, wallets, taxes, security, DeFi and scams — explained in simple language, with new guides every week.",
-    url: `${ORIGIN}/blog`,
+    url: `${ORIGIN}/blog/`,
     bodyHtml: `<main class="max-w-6xl mx-auto px-4 sm:px-6 py-14 md:py-20">
 <h1 class="text-4xl md:text-5xl font-normal text-white tracking-tight">Crypto guides for beginners in India</h1>
 <p class="mt-4 text-zinc-400">Original, educational guides on Bitcoin, blockchain, wallets, crypto taxes in India, security and scams — written in simple language. Educational content only, not financial advice.</p>
@@ -291,7 +291,7 @@ ${relatedHtml}
   lessons.sort((a, b) => (a.fm.order || 99) - (b.fm.order || 99));
   console.log(`[prerender] ${lessons.length} lessons found`);
   for (const l of lessons) {
-    const url = `${ORIGIN}/learn/${l.slug}`;
+    const url = `${ORIGIN}/learn/${l.slug}/`;
     const sameLevel = lessons.filter((q) => q.fm.level === l.fm.level);
     const idx = sameLevel.findIndex((q) => q.slug === l.slug);
     const next = idx >= 0 && idx < sameLevel.length - 1 ? sameLevel[idx + 1] : null;
@@ -307,7 +307,7 @@ ${relatedHtml}
 <div class="prose-amber mt-10">${renderMarkdown(l.body)}</div>
 ${
   next
-    ? `<div class="mt-12"><h2 class="text-2xl font-bold text-white mb-4">Next lesson</h2><p><a href="/learn/${next.slug}">${esc(next.fm.title)}</a> — ${esc(next.fm.summary || "")}</p></div>`
+    ? `<div class="mt-12"><h2 class="text-2xl font-bold text-white mb-4">Next lesson</h2><p><a href="/learn/${next.slug}/">${esc(next.fm.title)}</a> — ${esc(next.fm.summary || "")}</p></div>`
     : ""
 }
 </article>`,
@@ -322,7 +322,7 @@ ${
             .filter((l) => (l.fm.level || "beginner") === lv)
             .map(
               (l) =>
-                `<li><a href="/learn/${l.slug}">${esc(l.fm.title)}</a> — ${esc(l.fm.summary || "")}</li>`
+                `<li><a href="/learn/${l.slug}/">${esc(l.fm.title)}</a> — ${esc(l.fm.summary || "")}</li>`
             )
             .join("")}</ul>`
       )
@@ -330,7 +330,7 @@ ${
     writePage(tpl, "learn", {
       title: "Learn Crypto Step by Step — Crypto Beginner",
       desc: "Structured crypto learning paths for absolute beginners in India — beginner, intermediate and security tracks that build from zero to confident.",
-      url: `${ORIGIN}/learn`,
+      url: `${ORIGIN}/learn/`,
       bodyHtml: `<main class="max-w-3xl mx-auto px-4 sm:px-6 py-14 md:py-20">
 <h1 class="text-4xl md:text-5xl font-normal text-white tracking-tight">Learn crypto, step by step</h1>
 <p class="text-zinc-400 mt-4 leading-relaxed">Structured lessons for beginners in India — from what Bitcoin is, to wallets, security, taxes and DeFi. Free, in simple language, educational only.</p>
@@ -384,7 +384,7 @@ ${groups}
     writePage(tpl, slug, {
       title: `${data.title} — Crypto Beginner`,
       desc: data.description,
-      url: `${ORIGIN}/${slug}`,
+      url: `${ORIGIN}/${slug}/`,
       bodyHtml: `<main class="max-w-3xl mx-auto px-4 sm:px-6 py-14 md:py-20"><h1 class="text-4xl md:text-5xl font-normal text-white tracking-tight">${esc(
         data.title
       )}</h1>${data.sections
@@ -472,7 +472,7 @@ ${groups}
     writePage(tpl, s.route, {
       title: s.title,
       desc: s.desc,
-      url: `${ORIGIN}/${s.route}`,
+      url: `${ORIGIN}/${s.route}/`,
       bodyHtml: s.body,
     });
   }

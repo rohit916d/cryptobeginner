@@ -21,6 +21,18 @@ Buying your first Bitcoin can feel intimidating. Charts, jargon, scary headlines
 
 Before we start: this is an educational guide, not financial advice. Bitcoin's price is volatile — it can rise or fall sharply, and you should never invest money you can't afford to lose.
 
+## Quick Answer: How to Buy Bitcoin in India in 5 Steps
+
+If you only have a minute, here is the whole process:
+
+1. **Pick an FIU-registered exchange** (an Indian crypto app that follows India's registration rules).
+2. **Sign up and finish KYC** with your PAN and Aadhaar — usually approved within a day.
+3. **Deposit rupees** with UPI or bank transfer (most apps accept as little as ₹100).
+4. **Buy Bitcoin** — search for BTC, enter the rupee amount, and confirm the order.
+5. **Secure it** — turn on two-factor authentication, and for larger amounts move it to your own wallet.
+
+The rest of this guide walks through each step slowly, including the costs, the tax rules, and the mistakes to avoid.
+
 ## What You Need Before You Begin
 
 You only need three things:
@@ -92,6 +104,16 @@ After buying, your Bitcoin sits in your exchange account. For a small first purc
 - **Hardware wallet** — a physical device (like a USB stick) that stores your keys offline. The safest option for larger holdings.
 
 Whatever you choose, follow this golden rule: **never share your seed phrase** (the 12 or 24 recovery words) with anyone — not exchange support, not a "helpful" stranger on Telegram, not anyone. Anyone with your seed phrase can take your Bitcoin.
+
+## How Much Money Do You Need to Start in India?
+
+Far less than most people think. You do **not** need to buy a whole Bitcoin — Bitcoin is divisible into 100 million tiny units called satoshis, so you can start with a small amount:
+
+- **Minimum deposit:** most Indian exchanges accept UPI deposits from about ₹100.
+- **A sensible first learning amount:** many beginners start with ₹500–₹1,000 purely to learn the process — small enough that a price swing doesn't hurt, large enough to make the steps feel real.
+- **Why small is smart:** your first purchase is really a lesson. You are learning how deposits, orders, fees, and withdrawals work. Treat any amount you cannot afford to lose as too much.
+
+Remember that every sale or transfer also has tax implications in India — a flat 30% tax on profits plus 1% TDS on transfers, as per the rules current in 2026. Keep records of every purchase from day one; you will thank yourself at tax time.
 
 ## Understanding the Costs
 

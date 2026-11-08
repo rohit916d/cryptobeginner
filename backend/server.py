@@ -1480,18 +1480,18 @@ async def sitemap():
 
     static_urls = [
         ("/", "1.0", "daily"),
-        ("/learn", "0.9", "weekly"),
-        ("/demo-trading", "0.9", "weekly"),
-        ("/recommended", "0.8", "monthly"),
-        ("/dictionary", "0.8", "weekly"),
-        ("/blog", "0.8", "daily"),
-        ("/real-trading", "0.7", "monthly"),
-        ("/about", "0.5", "monthly"),
-        ("/contact", "0.5", "monthly"),
-        ("/privacy", "0.2", "yearly"),
-        ("/terms", "0.2", "yearly"),
-        ("/disclaimer", "0.2", "yearly"),
-        ("/cookie-policy", "0.2", "yearly"),
+        ("/learn/", "0.9", "weekly"),
+        ("/demo-trading/", "0.9", "weekly"),
+        ("/recommended/", "0.8", "monthly"),
+        ("/dictionary/", "0.8", "weekly"),
+        ("/blog/", "0.8", "daily"),
+        ("/real-trading/", "0.7", "monthly"),
+        ("/about/", "0.5", "monthly"),
+        ("/contact/", "0.5", "monthly"),
+        ("/privacy/", "0.2", "yearly"),
+        ("/terms/", "0.2", "yearly"),
+        ("/disclaimer/", "0.2", "yearly"),
+        ("/cookie-policy/", "0.2", "yearly"),
     ]
 
     lessons = await db.lessons.find(
@@ -1537,7 +1537,7 @@ async def sitemap():
     for lesson in lessons:
         xml += f"""
 <url>
-<loc>{base}/learn/{lesson["slug"]}</loc>
+<loc>{base}/learn/{lesson["slug"]}/</loc>
 <lastmod>{_lastmod(lesson)}</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
@@ -1547,7 +1547,7 @@ async def sitemap():
     for blog in blogs:
         xml += f"""
 <url>
-<loc>{base}/blog/{blog["slug"]}</loc>
+<loc>{base}/blog/{blog["slug"]}/</loc>
 <lastmod>{_lastmod(blog)}</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>

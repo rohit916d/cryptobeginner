@@ -21,6 +21,14 @@ Web3 is, at its core, a proposed new version of the internet — one where users
 
 > **Educational content only.** This is not financial advice. Web3 involves crypto tokens, experimental apps, and real scams — never put in money you can't afford to lose, and learn before you spend.
 
+## Web3 Explained in Simple Words (The 30-Second Version)
+
+**Web3 meaning, in one line:** Web3 is the idea of an internet where you *own* your account, your data, and your digital things — instead of a big company owning them for you.
+
+Think of it like this. On today's internet (Web2), your photos live on Instagram's servers, your money lives in a bank's database, and your game items live inside the game company's system. If the company bans your account or shuts down, those things are gone. In Web3, those same things are recorded on a public blockchain and controlled by *your* wallet — a kind of digital key that only you hold. No single company can delete your balance or lock you out.
+
+That is all "Web3 explained" really comes down to: **read (Web1) → read and write (Web2) → read, write and own (Web3)**. Everything else in this guide — wallets, tokens, DAOs, NFTs — is just the machinery that tries to make that ownership idea work, with real benefits and real risks.
+
 ## Web1, Web2, Web3: A 60-Second History of the Internet
 
 To understand Web3, you need the two versions that came before it.

@@ -123,3 +123,5 @@ If you found this guide useful, these related guides will help you go deeper:
 - [How to Keep Crypto Tax Records for Filing in India](https://cryptobeginner.in/blog/how-to-keep-crypto-records-india-tax-filing)
 - [RBI vs Crypto: The Complete History of Regulation in India](https://cryptobeginner.in/blog/rbi-vs-crypto-history-regulation-india)
 - [Crypto Tax in India Explained: 30% Rule, 1% TDS & How to File in 2026](https://cryptobeginner.in/blog/crypto-tax-india-30-percent-1-percent-tds)
+- [How to Buy Your First Bitcoin in India: A Step-by-Step Guide for 2026](https://cryptobeginner.in/blog/how-to-buy-your-first-bitcoin-in-india)
+

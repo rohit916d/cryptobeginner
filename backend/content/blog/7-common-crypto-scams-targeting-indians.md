@@ -1,7 +1,7 @@
 ---
-title: "7 Common Crypto Scams Targeting Indians (And How to Avoid Them)"
+title: "7 Common Crypto Scams in India (And How to Avoid Them)"
 category: "Security"
-excerpt: "From fake exchange support calls to Telegram doubling schemes, crypto scams in India are getting smarter. Learn the 7 most common scams targeting Indian investors and the exact steps to protect yourself."
+excerpt: "Fake exchange support calls, Telegram doubling schemes, pig-butchering and fake mining apps — the 7 most common crypto scams in India explained, with the exact warning signs and steps to protect yourself."
 read_time: 8
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/security.jpg"
