@@ -1562,6 +1562,85 @@ async def sitemap():
     )
 
 # ----------------------------------------------------
+# RSS FEED
+# ----------------------------------------------------
+
+@app.get("/feed.xml")
+async def rss_feed():
+    from email.utils import format_datetime as _fmt_dt
+
+    base = "https://cryptobeginner.in"
+
+    def _esc(s):
+        return (
+            str(s or "")
+            .replace("&", "&amp;")
+            .replace("<", "&lt;")
+            .replace(">", "&gt;")
+        )
+
+    def _parse_dt(val):
+        if val is None:
+            return None
+        if hasattr(val, "strftime"):
+            dt = val
+        else:
+            try:
+                dt = datetime.fromisoformat(str(val).replace("Z", "+00:00"))
+            except Exception:
+                return None
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc)
+
+    blogs = await db.blog.find(
+        {},
+        {"slug": 1, "title": 1, "excerpt": 1, "category": 1,
+         "created_at": 1, "updated_at": 1}
+    ).to_list(500)
+
+    items = []
+    for b in blogs:
+        dt = _parse_dt(b.get("created_at")) or _parse_dt(b.get("updated_at"))
+        items.append((dt, b))
+    items.sort(key=lambda x: x[0] or datetime.min.replace(tzinfo=timezone.utc),
+               reverse=True)
+    items = items[:30]
+
+    now_rfc = _fmt_dt(datetime.now(timezone.utc))
+
+    xml = '<?xml version="1.0" encoding="UTF-8"?>'
+    xml += '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">'
+    xml += "<channel>"
+    xml += "<title>Crypto Beginner — Crypto Guides for India</title>"
+    xml += f"<link>{base}/</link>"
+    xml += f'<atom:link href="{base}/feed.xml" rel="self" type="application/rss+xml"/>'
+    xml += ("<description>Beginner-friendly crypto guides for India: Bitcoin, "
+            "taxes, wallets, safety and regulation, explained in simple words.</description>")
+    xml += "<language>en-IN</language>"
+    xml += f"<lastBuildDate>{now_rfc}</lastBuildDate>"
+
+    for dt, b in items:
+        link = f"{base}/blog/{b['slug']}/"
+        pub = _fmt_dt(dt) if dt else now_rfc
+        xml += "<item>"
+        xml += f"<title>{_esc(b.get('title'))}</title>"
+        xml += f"<link>{link}</link>"
+        xml += f'<guid isPermaLink="true">{link}</guid>'
+        xml += f"<pubDate>{pub}</pubDate>"
+        if b.get("category"):
+            xml += f"<category>{_esc(b.get('category'))}</category>"
+        xml += f"<description>{_esc(b.get('excerpt') or b.get('title'))}</description>"
+        xml += "</item>"
+
+    xml += "</channel></rss>"
+
+    return Response(
+        content=xml,
+        media_type="application/rss+xml"
+    )
+
+# ----------------------------------------------------
 # STARTUP
 # ----------------------------------------------------
 
