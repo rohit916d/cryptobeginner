@@ -151,6 +151,21 @@ Beyond the seven scams above, four patterns kept appearing in reports from India
 
 **Fake exchange apps.** Lookalike apps, spread through download links rather than official stores, copy a real exchange's design and simply keep whatever users deposit. **The habit:** install finance apps only from the official app-store listing of the real company, reached through the exchange's own website — never through a link somebody sent you.
 
+## Real Cases: What Crypto Fraud Cost Victims in 2026
+
+These are not hypothetical warnings. Each case below was reported by Indian enforcement agencies or established blockchain investigators during 2026, and each one maps to a scam type explained above:
+
+| Case (2026) | What happened | Amount involved |
+|---|---|---|
+| ED arrests, Chennai | Enforcement Directorate action against a large crypto fraud network operating across states | ~₹400 crore |
+| iPhone "DarkSword" theft wave | Malware targeting iPhones quietly drained crypto wallets over a single month | ~₹38 crore |
+| AP CID crypto fraud case | Andhra Pradesh CID investigation into an investment-style crypto fraud | ~₹15 crore |
+| Binance theft funds trace | Investigators tracking stolen exchange funds found most of the money still sitting in attacker wallets, not cashed out | ~$3.11 billion unrecovered |
+
+Read the detailed explainers: [ED's ₹400 crore Chennai crypto fraud case](https://cryptobeginner.in/blog/ed-chennai-400-crore-crypto-fraud-arrests-india-guide), [the DarkSword iPhone theft wave](https://cryptobeginner.in/blog/iphone-crypto-theft-darksword-india-guide), and [where the stolen Binance crypto is now](https://cryptobeginner.in/blog/where-is-stolen-binance-crypto-now-india-guide).
+
+The pattern across every case is the same: the victims were not careless people. They were rushed, flattered, or frightened at the right moment. The red flags above are how you slow that moment down.
+
 ## Keep Learning
 
 If you found this guide useful, these related guides will help you go deeper:
