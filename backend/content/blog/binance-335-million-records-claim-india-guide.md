@@ -1,7 +1,7 @@
 ---
 title: "Binance 335 Million Records Claim: Scam or Real Breach?"
 category: "Security"
-excerpt: "A seller claims 335.9 million Binance user records are for sale for $900,000. Binance and CZ call it a scam. What the claim is, and what Indian users should check now."
+excerpt: "A seller claims 335.9 million Binance records are for sale for $900,000. Binance and CZ call it a scam. What the claim is, and what Indian users should check."
 read_time: 10
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/security.jpg"
