@@ -116,5 +116,6 @@ For the ordinary Indian user, the message is reassuring rather than alarming, pr
 ## Keep Learning
 
 - [How to Check If an Exchange Is FIU-Registered in India](/blog/how-to-check-if-exchange-is-fiu-registered-india-guide)
+- [Crypto Cards in India: RBI Scrutiny Explained for Beginners](/blog/crypto-cards-india-rbi-scrutiny-guide)
 - [NRI Crypto Rules in India: Accounts, Tax and FEMA Guide](/blog/nri-crypto-rules-india-accounts-tax-fema-guide)
 - [CoinDCX Hack Explained: What Happened, Are Funds Safe?](/blog/coindcx-hack-explained-what-happened-india-guide)

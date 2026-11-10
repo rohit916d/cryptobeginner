@@ -108,6 +108,20 @@ It is worth noting that crypto cards are not a purely Indian phenomenon. Globall
 
 That global growth is precisely why Indian regulators are unlikely to ignore the issue. If stablecoin cards become a routine way to spend money worldwide, the question for India becomes whether to build a regulated route for them, block them, or leave them in the grey zone they currently occupy. No answer to that question has been announced. For now, the only confirmed facts are the scrutiny itself, the reported access blocks, and the provider-side issuance restrictions — not a new law, not a ban, and not an approval.
 
+## Before You Use Any Crypto Card in India: A 7-Point Safety Checklist
+
+Interest in crypto cards spikes every time they are in the news — and scammers know it. Fake card sellers, copycat apps, and "activation agents" appear within days of every headline. If you ever come across a crypto card offer — an ad, a Telegram message, a reseller — run through this checklist before doing anything at all:
+
+1. **Check who issues the card.** If the issuer is not an Indian bank or an FIU-IND registered platform, no Indian regulator protects your balance, and your only remedy is the foreign provider's own support desk.
+2. **Treat "no KYC" as a warning, not a feature.** Programmes advertising limited identity checks are advertising exactly what regulators are examining. Weak KYC also means weak account recovery if anything goes wrong.
+3. **Verify the provider only on its official website.** Fake card sites and apps copy real brands pixel for pixel. Never download an app or enter card details through a link a stranger sent you.
+4. **Never pay anyone with your seed phrase or private keys.** No legitimate card provider needs them, ever. Anyone asking is running a theft, not a signup.
+5. **If you use one, load the minimum and test small.** Treat the balance as money you could lose access to overnight — because access blocks for Indian users have already happened this month.
+6. **Keep records from the very first transaction.** Date, coin spent, amount, and the rupee value at the time. Our guide on [how to keep crypto records for India tax filing](/blog/how-to-keep-crypto-records-india-tax-filing/) shows a simple format that works.
+7. **Assume every spend is taxable, and know your exit.** A card payment is a disposal of crypto, so gains are taxed at 30% even when no TDS was deducted anywhere. And before loading funds, know exactly how you would withdraw the balance if the provider restricted Indian users tomorrow.
+
+If an offer fails even one of these checks, the safe decision is to walk away. A genuine payment tool never needs urgency, secrecy, or a stranger's referral link to work.
+
 ## Frequently Asked Questions
 
 ### Are crypto cards legal in India?

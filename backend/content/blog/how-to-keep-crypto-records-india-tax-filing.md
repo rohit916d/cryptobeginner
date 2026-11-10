@@ -115,4 +115,5 @@ If you found this guide useful, these related guides will help you go deeper:
 
 - [KYC on Crypto Exchanges: Why India Requires Verification](https://cryptobeginner.in/blog/kyc-on-crypto-exchanges-india-guide)
 - [RBI vs Crypto: The Complete History of Regulation in India](https://cryptobeginner.in/blog/rbi-vs-crypto-history-regulation-india)
+- [Crypto Cards in India: RBI Scrutiny Explained for Beginners](https://cryptobeginner.in/blog/crypto-cards-india-rbi-scrutiny-guide)
 - [Crypto Tax in India Explained: 30% Rule, 1% TDS & How to File in 2026](https://cryptobeginner.in/blog/crypto-tax-india-30-percent-1-percent-tds)
