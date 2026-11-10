@@ -1,7 +1,7 @@
 ---
 title: "Pay With Crypto Using UPI QR Codes in India: How It Works"
 category: "Regulation"
-excerpt: "Pay any Indian shop with crypto by scanning its UPI QR code — The Economic Times reported the goat.cash route on 10 November. How it works, and the grey zone around it."
+excerpt: "Pay any Indian shop with crypto by scanning its UPI QR code — The Economic Times reported the goat.cash route on 10 November. How it works and the grey zone."
 read_time: 10
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/regulation.jpg"
