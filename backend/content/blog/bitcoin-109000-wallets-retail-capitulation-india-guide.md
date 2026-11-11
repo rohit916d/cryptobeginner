@@ -1,7 +1,7 @@
 ---
 title: "Bitcoin Loses 109,000 Wallets: Retail Capitulation Explained"
 category: "Bitcoin"
-excerpt: "Bitcoin lost about 109,000 non-empty wallets since 16 October, Santiment reports. What the number measures, what capitulation means, and what it means for Indian holders."
+excerpt: "Santiment reports Bitcoin lost about 109,000 non-empty wallets since 16 October. What the number measures, what capitulation means, and the India angle."
 read_time: 10
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/bitcoin.jpg"
