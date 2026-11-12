@@ -17,7 +17,11 @@ export function useSEO({
   robots = "index,follow"
 }) {
   useEffect(() => {
-    const fullTitle = title ? `${title} — Crypto Beginner` : "Crypto Beginner — Learn Crypto From Zero";
+    const fullTitle = title
+      ? title.includes("Crypto Beginner")
+        ? title
+        : `${title} — Crypto Beginner`
+      : "Crypto Beginner — Crypto for Beginners in India";
     document.title = fullTitle;
 
     const setMeta = (name, content, attr = "name") => {

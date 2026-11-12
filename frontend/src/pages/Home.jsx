@@ -15,26 +15,33 @@ const Block3DScene = lazy(() => import("../components/Block3DScene"));
 
 export default function Home() {
   useSEO({
-    title: "Crypto Basics for Beginners in India",
+    title: "Crypto Beginner — Crypto for Beginners in India",
     description:
-      "Crypto for beginners in India — learn Bitcoin, blockchain, wallets, DeFi and cryptocurrency from scratch with free, beginner-friendly guides and live market data.",
+      "India's free crypto beginner guide: learn Bitcoin, blockchain, wallets, crypto tax (30% + 1% TDS) and scam safety in simple language. No hype, no financial advice.",
     keywords:
-      "crypto for beginners, crypto beginner guide india, learn bitcoin india, cryptocurrency, blockchain, web3, defi, bitcoin guide, crypto education, wallets, ethereum",
+      "crypto beginner, crypto for beginners, cryptocurrency for beginners, crypto beginner india, crypto beginners guide, learn bitcoin india, cryptocurrency, blockchain, web3, defi, bitcoin guide, crypto education, wallets, ethereum",
     canonical: typeof window !== "undefined" ? SITE_ORIGIN + window.location.pathname : undefined,
     image: "https://cryptobeginner.in/cryptobeginner-icon.png",
     jsonLd: [
       {
         "@type": "WebSite",
         name: "Crypto Beginner",
+        alternateName: ["CryptoBeginner", "cryptobeginner.in"],
         description: "Beginner-friendly crypto education platform.",
         url: typeof window !== "undefined" ? SITE_ORIGIN : "",
       },
       {
         "@type": "Organization",
         name: "Crypto Beginner",
+        alternateName: ["CryptoBeginner", "cryptobeginner.in"],
         url: typeof window !== "undefined" ? SITE_ORIGIN : "",
         logo: typeof window !== "undefined" ? SITE_ORIGIN + "/cryptobeginner-icon.png" : "",
         description: "Free, beginner-friendly education platform for learning cryptocurrency, Bitcoin, and blockchain.",
+        sameAs: [
+          "https://x.com/Cryptobegin_ner",
+          "https://www.instagram.com/cryptobeginner.in",
+          "https://www.threads.com/@cryptobeginner.in",
+        ],
       },
     ],
   });
@@ -66,12 +73,12 @@ export default function Home() {
                 ENTRY 001 · GENESIS LESSON
               </div>
               <h1 className="mt-5 text-5xl sm:text-6xl lg:text-7xl font-normal tracking-tight leading-[0.98]">
-                <span className="text-white">Learn Crypto</span>
+                <span className="text-white">Crypto Beginner</span>
                 <br />
-                <span className="brand-grad-text italic">For Beginners.</span>
+                <span className="brand-grad-text italic">For Beginners in India.</span>
               </h1>
               <p className="mt-6 text-lg text-zinc-400 max-w-xl leading-relaxed">
-                Simple crypto education for complete beginners in India. Bitcoin, blockchain, wallets, scams, security — all explained without jargon, hype, or financial advice.
+                Crypto for beginners in India — simple crypto education for complete beginners. Bitcoin, blockchain, wallets, scams, security — all explained without jargon, hype, or financial advice.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <MagneticButton as={Link} to="/learn" data-testid="hero-cta-start" className="btn-primary inline-flex items-center gap-2">
@@ -171,8 +178,17 @@ export default function Home() {
         <Reveal>
         <div className="mb-10 text-center max-w-2xl mx-auto">
           <div className="label-eyebrow justify-center flex">Why Crypto Beginner</div>
-          <h2 className="text-2xl md:text-4xl font-bold text-white mt-2">Built for people who've never touched crypto</h2>
+          <h2 className="text-2xl md:text-4xl font-bold text-white mt-2">Crypto for beginners in India — built for people who've never touched crypto</h2>
           <p className="mt-3 text-zinc-400">No hype, no price predictions, no jargon dumps — just clear explanations and real market context.</p>
+          <p className="mt-3 text-zinc-400">Crypto Beginner (cryptobeginner.in) is a free learning site made for India. If you are a complete crypto beginner, start with the basics — what cryptocurrency is, how Bitcoin and blockchain work, and how wallets keep your coins safe — then learn India's crypto rules: 30% tax, 1% TDS, FIU-registered exchanges and scam safety. Every guide is written for beginners, in simple language.</p>
+          <p className="mt-4 text-sm text-zinc-400">
+            Start here:{" "}
+            <Link to="/blog/2026-crypto-beginner-checklist-15-things-before-investing" className="text-[#C8F169] hover:underline">2026 Crypto Beginner Checklist</Link>
+            {" · "}
+            <Link to="/blog/how-to-buy-your-first-bitcoin-in-india" className="text-[#C8F169] hover:underline">How to Buy Your First Bitcoin in India</Link>
+            {" · "}
+            <Link to="/blog/7-common-crypto-scams-targeting-indians" className="text-[#C8F169] hover:underline">7 Common Crypto Scams in India</Link>
+          </p>
         </div>
         </Reveal>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">

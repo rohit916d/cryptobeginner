@@ -482,8 +482,8 @@ ${groups}
   const homeBody = `<main class="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-16">
 <section class="hero-shell">
 <span class="hero-chip"><span class="dot"></span> Free crypto education · Made for India</span>
-<h1 class="text-4xl md:text-6xl font-normal text-white tracking-tight leading-tight" style="margin-top:1.25rem">Crypto For Beginners in India — Learn <span class="brand-grad-text">Bitcoin, Blockchain &amp; Wallets</span></h1>
-<p class="mt-5 text-lg text-zinc-300 leading-relaxed" style="max-width:44rem">Crypto Beginner is a free education site for India. Learn how Bitcoin and blockchain work, how to use wallets safely, how India's crypto tax rules (30% tax + 1% TDS) apply to you, and how to spot scams — in simple language, with no hype and no financial advice.</p>
+<h1 class="text-4xl md:text-6xl font-normal text-white tracking-tight leading-tight" style="margin-top:1.25rem">Crypto Beginner — <span class="brand-grad-text">Crypto for Beginners in India</span></h1>
+<p class="mt-5 text-lg text-zinc-300 leading-relaxed" style="max-width:44rem">Crypto Beginner is India's free crypto guide for beginners. Learn how Bitcoin and blockchain work, how to use wallets safely, how India's crypto tax rules (30% tax + 1% TDS) apply to you, and how to spot scams — in simple language, with no hype and no financial advice.</p>
 <div class="mt-8" style="display:flex;flex-wrap:wrap;gap:0.75rem">
 <a href="/learn" class="btn-primary" style="display:inline-flex;align-items:center;text-decoration:none">Start learning free →</a>
 <a href="/blog" class="btn-secondary" style="display:inline-flex;align-items:center;text-decoration:none">Read the latest guides</a>
@@ -503,6 +503,11 @@ ${groups}
 <a href="/recommended">Recommended platforms</a>
 <a href="/about">About us</a>
 </nav>
+<section style="margin-top:2.5rem">
+<h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Crypto for Beginners in India — Start Learning From Zero</h2>
+<p class="text-zinc-400 leading-relaxed">Crypto Beginner (cryptobeginner.in) is a free learning site made for India. If you are a complete crypto beginner, start with the basics — what cryptocurrency is, how Bitcoin and blockchain work, and how wallets keep your coins safe — then learn India's crypto rules: 30% tax, 1% TDS, FIU-registered exchanges and scam safety. Every guide is written for beginners, in simple language, with no hype and no financial advice.</p>
+<p class="text-zinc-400 leading-relaxed" style="margin-top:0.75rem">Start here: <a href="/blog/2026-crypto-beginner-checklist-15-things-before-investing/">2026 Crypto Beginner Checklist</a> · <a href="/blog/how-to-buy-your-first-bitcoin-in-india/">How to Buy Your First Bitcoin in India</a> · <a href="/blog/7-common-crypto-scams-targeting-indians/">7 Common Crypto Scams in India</a> · <a href="/learn/">Learn crypto step by step</a></p>
+</section>
 <h2 class="text-2xl md:text-3xl font-bold text-white mt-14 mb-5">Latest guides</h2>
 <ul class="guide-list">${homePostCards(posts.slice(0, 12))}</ul>
 <p class="mt-10 text-sm text-zinc-500">Educational content only. This is not financial advice. Crypto markets are volatile — never invest money you can't afford to lose.</p>
@@ -510,8 +515,8 @@ ${groups}
   fs.writeFileSync(
     tplPath,
     buildPage(tpl, {
-      title: "Crypto For Beginners in India — Crypto Beginner",
-      desc: "Crypto for beginners in India — learn Bitcoin, blockchain, wallets, DeFi and security with free, beginner-friendly guides. No hype, no financial advice.",
+      title: "Crypto Beginner — Crypto for Beginners in India",
+      desc: "India's free crypto beginner guide: learn Bitcoin, blockchain, wallets, crypto tax (30% + 1% TDS) and scam safety in simple language. No hype, no financial advice.",
       url: `${ORIGIN}/`,
       bodyHtml: homeBody,
     })
