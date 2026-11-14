@@ -115,6 +115,7 @@ Continue with [our free beginner track](/learn) to learn how transactions, walle
 
 If you found this guide useful, these related guides will help you go deeper:
 
+- [What is Crypto Gas? Network Fees Explained — the complete guide](https://cryptobeginner.in/blog/what-is-crypto-gas-network-fees-explained)
 - [What is Crypto Paper Trading? A Risk-Free Guide](https://cryptobeginner.in/blog/what-is-crypto-paper-trading-a-risk-free-guide)
 - [What is Crypto Order Book? The Trading Ledger Explained](https://cryptobeginner.in/blog/what-is-crypto-order-book-the-trading-ledger-explained)
 - [What is Crypto P2P Trading? A Beginner's Guide](https://cryptobeginner.in/blog/what-is-crypto-p2p-trading-a-beginner-s-guide)

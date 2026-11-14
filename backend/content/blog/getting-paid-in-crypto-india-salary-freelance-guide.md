@@ -1,7 +1,7 @@
 ---
 title: "Getting Paid in Crypto in India: Salary & Freelance Guide"
 category: "Regulation"
-excerpt: "Can you get salary or freelance pay in crypto in India? Learn how crypto payments work, converting to INR, tax basics, and checks to make before you accept one."
+excerpt: "How do freelancers in India actually get paid in crypto? Step by step: receiving payment, converting to INR, the tax rules, and safety checks to do first."
 read_time: 8
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/regulation.jpg"

@@ -155,6 +155,16 @@ Congratulations — you now own Bitcoin. Here's a sensible path forward:
 - **Consider a regular plan.** Some investors buy a small fixed amount monthly (similar to a SIP in mutual funds) to average out price swings. This is called rupee-cost averaging.
 - **Stay sceptical.** The crypto space attracts scammers. Verify everything, trust nothing that sounds too good to be true.
 
+## Buying, Investing, or Trading Bitcoin? Clearing Up the Wording
+
+Beginners searching online meet the same process described with three different words — buying, investing, and trading — and often wonder whether each one needs a different method. It does not. The mechanical steps are identical in every case: an account on an exchange, KYC, a rupee deposit, and an order. What changes is the intention behind the purchase, and it helps to be honest with yourself about which one is yours.
+
+**Buying** simply means acquiring Bitcoin, usually for the first time, to understand how it works. If you are following the five steps in this guide, this is you. **Investing** describes buying with a long time horizon — months or years — where short-term price moves matter less than understanding the asset. The process is the same; only the patience required is greater, and so is the importance of the tax records and safe storage covered above.
+
+**Trading** is different in kind, not just in wording. It means buying and selling frequently to profit from short price movements. That activity demands far more skill, time, and emotional control, most beginners who attempt it lose money, and every sale is a taxable event with 1% TDS applied. Nothing in this beginner guide is a preparation for active trading, and there is no shortcut around that learning curve.
+
+So whichever phrase brought you here — how to buy, purchase, invest in, or get Bitcoin in India — the safe starting point is the same small first purchase, made slowly, on a verified platform, with your records kept from day one.
+
 ## The Bottom Line
 
 Buying your first Bitcoin in India comes down to five steps: pick a reputable exchange, complete KYC, deposit rupees via UPI, place a buy order, and store your Bitcoin thoughtfully. The whole process can take under an hour.

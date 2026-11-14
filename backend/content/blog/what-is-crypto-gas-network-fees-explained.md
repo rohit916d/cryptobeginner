@@ -20,6 +20,12 @@ Why should moving *your own* digital assets cost you money? The answer is more i
 
 > **Educational note:** This guide explains a blockchain concept only. It is not financial advice.
 
+## Quick Answer: What Are Gas Fees in Crypto?
+
+Gas fees are the small payments every blockchain charges to process a transaction — sending crypto, swapping a token, or using a decentralised app. "What is gas in crypto", "what is a gas fee" and "how do gas fees work" are all the same question with different wording: gas measures the computing work your transaction needs, and the gas fee is what you pay for that work, in the network's own coin.
+
+Three facts answer most beginner confusion. First, the fee goes to the network's validators, not to your wallet app or exchange. Second, the amount is not fixed — it rises when the network is busy and falls when it is quiet, which is why the same transfer can cost very little one hour and much more the next. Third, almost every blockchain charges some version of this fee, whether it calls it gas, a network fee, or a transaction cost. The rest of this guide explains how the calculation works and how beginners in India can keep these costs low.
+
 ## What Exactly Is Gas?
 
 Think of a blockchain as a giant shared computer that thousands of people use simultaneously. Every time you ask this computer to do something — send coins, swap tokens, mint a digital collectible — you are requesting computational work from the network's validators (or miners, on older networks).

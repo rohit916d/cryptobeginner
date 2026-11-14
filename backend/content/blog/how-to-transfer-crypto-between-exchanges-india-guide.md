@@ -129,3 +129,4 @@ To transfer crypto between exchanges safely, the whole skill is preparation: con
 - [What Is Self-Custody? Taking Crypto Off Exchanges Safely](https://cryptobeginner.in/blog/what-is-self-custody-india-guide)
 - [What Is Address Poisoning? Lookalike Address Scam Guide](https://cryptobeginner.in/blog/what-is-address-poisoning-india-guide)
 - [Crypto Exchange Fees Explained: How Exchanges Earn Money](https://cryptobeginner.in/blog/crypto-exchange-fees-explained-india)
+- [What is Crypto Gas? Network Fees Explained](https://cryptobeginner.in/blog/what-is-crypto-gas-network-fees-explained)

@@ -1,7 +1,7 @@
 ---
 title: "How to Store Crypto Safely: The Complete Safety Playbook for Indians"
 category: "Wallets"
-excerpt: "Learn how to store crypto safely in India — the 3-bucket wallet system, seed phrase backups, hardware wallets, and the scams to avoid. A practical security guide."
+excerpt: "The safest way to hold crypto in India — for individuals and companies alike: the 3-bucket wallet system, hardware wallets, seed-phrase backups and scam checks."
 read_time: 8
 author: "Crypto Beginner Editorial Team"
 cover_image: "/covers/wallets.jpg"
@@ -153,6 +153,12 @@ Begin with a reputable hot wallet and a tiny amount. Practice writing down and r
 
 **Next steps:** Learn how to create your first crypto wallet step by step, read our guide on the most common crypto scams targeting Indians, and understand how crypto tax works in India before you start moving larger amounts.
 
+
+## What If a Company or a Team Holds Crypto?
+
+Small companies, startups, and trading teams in India sometimes hold crypto for business reasons, and the safest setup for them builds on the same principles — with one crucial upgrade: no single person should control the funds alone. A multisignature (multisig) wallet, which needs approvals from two or more people before any transfer, removes that single point of failure and protects the business if one person leaves, loses a device, or is targeted by a scammer.
+
+Add three business habits on top: keep the company's holdings in wallets fully separate from anyone's personal wallets, maintain a written record of who holds which key or device, and review access whenever a team member exits. Our guide to [what a multisig wallet is and how it works](https://cryptobeginner.in/blog/what-is-a-multisig-wallet-india-guide) explains the setup in detail. The goal is identical to personal storage — no single mistake, theft, or absence should be able to empty the wallet.
 
 ## The 10-Minute Monthly Safety Check
 
