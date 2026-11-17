@@ -1,7 +1,7 @@
 ---
 title: "Trezor Skladon Breach: 27,000 Orders Exposed, India Guide"
 category: "Security"
-excerpt: "Trezor says shipping partner Skladon was breached, exposing names, phones and home addresses for about 27,000 hardware wallet orders. What Indian buyers must know."
+excerpt: "Trezor says shipping partner Skladon was breached, exposing names, phones and home addresses for 27,000 hardware wallet orders. What Indian buyers must know."
 read_time: 10
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/security.jpg"
