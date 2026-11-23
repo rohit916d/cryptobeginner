@@ -135,3 +135,9 @@ For Indian beginners, Ordinals are best treated as a learning topic, not a start
 Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.
 
 Your next step is simple: open a Bitcoin block explorer, look up any recent inscription transaction, and see the data for yourself. Understanding how it works is worth far more than owning one.
+
+## Keep Learning
+
+- [What is Crypto Satoshis? Small Bitcoin Units Explained](/blog/what-is-crypto-satoshis-small-bitcoin-units-explained/) — explains what crypto satoshis is and why it matters
+- [What Is a Bitcoin Bridge? How BTC Moves to Other Networks](/blog/what-is-a-bitcoin-bridge/) — explains what a bitcoin bridge is and why it matters
+- [What is Crypto Halving? Bitcoin Halving Explained](/blog/what-is-crypto-halving-bitcoin-halving-explained/) — explains what crypto halving is and why it matters

@@ -148,3 +148,9 @@ Yes, and this is the biggest risk. Anyone can generate a different address that 
 ### Do vanity addresses cost anything in India?
 
 Generating one yourself with free software costs nothing except time and electricity, but finding a long custom prefix can take hours or days of computing. If you pay a service to generate one, you pay their fee — and you should never share your private key with anyone. There is no special Indian tax rule for vanity addresses; the usual 30% tax on crypto gains and 1% TDS on transfers still apply.
+
+## Keep Learning
+
+- [What is a Crypto Wallet Address? A Beginner's Guide](/blog/what-is-a-crypto-wallet-address-a-beginner-s-guide/) — explains what a crypto wallet address is and why it matters
+- [What is a Crypto Public Address? A Beginner's Guide](/blog/what-is-a-crypto-public-address-a-beginner-s-guide/) — explains what a crypto public address is and why it matters
+- [What Is a Paper Wallet? Old Crypto Storage Explained](/blog/what-is-a-paper-wallet-india-guide/) — explains what a paper wallet is and why it matters

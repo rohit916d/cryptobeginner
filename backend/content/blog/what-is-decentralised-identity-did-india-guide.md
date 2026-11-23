@@ -140,3 +140,9 @@ Decentralised identity is a simple idea with far-reaching consequences: instead 
 But the idea is ahead of the reality. In India, Aadhaar and the India Stack already handle most everyday identity needs, there is no official DID system, and very few services accept DIDs today. The technology is worth learning about, and worth watching as pilots grow into real services — but it is not something to rush into, pay for, or store important documents in yet.
 
 The best next step is a small one. Read about how verifiable credentials work, try a reputable DID wallet with nothing valuable at stake, and set up recovery before you store anything that matters. When real services in India start accepting DIDs, you will already understand the tool — and the risks — well enough to use it safely.
+
+## Keep Learning
+
+- [What Is Decentralised Storage? IPFS Explained for Beginners](/blog/what-is-decentralised-storage-ipfs-india-guide/) — explains what decentralised storage is and why it matters
+- [What is a Crypto Block Explorer? A Beginner's Guide](/blog/what-is-a-crypto-block-explorer-a-beginner-s-guide/) — explains what a crypto block explorer is and why it matters
+- [What Is Data Availability? Why Blockchains Need It](/blog/what-is-data-availability-india-guide/) — explains what data availability is and why it matters

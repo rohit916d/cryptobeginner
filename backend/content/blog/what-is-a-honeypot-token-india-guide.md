@@ -122,3 +122,9 @@ A few habits help over the long term. Use exchanges registered with FIU-IND in I
 A honeypot token is a simple trap dressed up as an opportunity: easy to buy, impossible to sell, with a price chart designed to pull in the next wave of buyers. The code makes the rules, and the code is public — which means the trap is checkable before you put in a single rupee. Verify the contract, check the sell tax and owner controls, look at the holders and the liquidity, and confirm that ordinary people have actually been able to sell.
 
 In crypto, the most expensive lesson is usually the one you learn after losing money. With honeypots, you can learn it for free — right here, before you buy. The next time a "guaranteed" new token appears in your WhatsApp or Telegram, run the five-minute check, and if anything looks wrong, walk away. There will always be another token. Your money, once trapped, will not come back.
+
+## Keep Learning
+
+- [What Is a Crypto Airdrop? Free Tokens & Scam Warnings](/blog/what-is-a-crypto-airdrop-free-tokens-scam-warnings/) — explains what a crypto airdrop is and why it matters
+- [Are Crypto Faucets Legit? How Indians Can Tell Real vs Scam](/blog/are-crypto-faucets-legit-real-vs-scam/) — a beginner-friendly guide to are crypto faucets legit
+- [NFT Scams Explained: Fake Collections and Wash Trading](/blog/nft-scams-fake-collections-wash-trading-india-guide/) — a beginner-friendly guide to nft scams explained

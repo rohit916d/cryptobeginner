@@ -91,3 +91,9 @@ Above all, be scam-aware. Grieving families are targeted with fake support accou
 ## Conclusion
 
 Crypto inheritance in India comes down to one sentence: your family's legal right means little without planned access, and planned access means little if it destroys your security today. You do not need a complicated structure to fix this — an inventory without secrets, a separate sealed access letter, one informed trusted person, tidy records, and a yearly review cover most beginner situations. Do it while it feels unnecessary. That is exactly when it is easiest to do well.
+
+## Keep Learning
+
+- [What is a Crypto Seed Phrase? A Beginner's Guide](/blog/what-is-a-crypto-seed-phrase-a-beginner-s-guide/) — explains what a crypto seed phrase is and why it matters
+- [What Is a Paper Wallet? Old Crypto Storage Explained](/blog/what-is-a-paper-wallet-india-guide/) — explains what a paper wallet is and why it matters
+- [How to Choose a Crypto Wallet App: A Beginner's Guide](/blog/how-to-choose-a-crypto-wallet-app-india-guide/) — shows you how to choose a crypto wallet app, step by step

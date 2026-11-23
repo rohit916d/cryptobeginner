@@ -144,3 +144,9 @@ A bull trap is a false breakout upward that reverses and falls. A bear trap is a
 You cannot avoid traps completely, and anyone who claims they can is selling you something. What you can do is reduce their cost: wait for confirmation, check trading volume, look at longer timeframes, avoid leverage, keep positions small, and never invest money you cannot afford to lose. Combined with good records for India's tax rules, these habits turn crypto's most common beginner mistake into a manageable, even useful, part of learning the market.
 
 *Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
+
+## Keep Learning
+
+- [Bull Market vs Bear Market: Crypto Cycles Explained](/blog/bull-market-vs-bear-market-crypto-cycles-guide/) — compares bull market vs bear market so you can choose with confidence
+- [What Is a Crypto On-Ramp and Off-Ramp? India Guide](/blog/what-is-a-crypto-on-ramp-and-off-ramp-india-guide/) — explains what a crypto on-ramp and off-ramp is and why it matters
+- [What Are Crypto Futures? Contracts and Risks Explained](/blog/what-are-crypto-futures-explained-india-guide/) — explains what crypto futures are and why they matter

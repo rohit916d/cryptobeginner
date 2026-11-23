@@ -140,3 +140,9 @@ You can start online through the National Cybercrime Reporting Portal, which acc
 Being scammed is not a personal failure — these operations are professional, patient, and designed to fool careful people. What you control now is the response: stop the payments, save the evidence, file on cybercrime.gov.in, call 1930, inform your bank and exchange, and keep every reference number in one place. Then warn others — a short message to friends or family about the exact trick used can prevent the same fraud from finding its next victim.
 
 If you are new to crypto and want to avoid the next trap before it starts, read our guides on common scams targeting Indians and on spotting fake crypto apps and Telegram groups. The best outcome of a bad experience is becoming the person in your circle who recognises the pattern first.
+
+## Keep Learning
+
+- [What is Crypto Impersonation? A Beginner's Security Guide](/blog/what-is-crypto-impersonation-a-beginner-s-security-guide/) — explains what crypto impersonation is and why it matters
+- [What Is a 51% Attack? Blockchain Security Explained](/blog/what-is-a-51-percent-attack-india-guide/) — explains what a 51% attack is and why it matters
+- [What Is Address Poisoning? Lookalike Address Scam Guide](/blog/what-is-address-poisoning-india-guide/) — explains what address poisoning is and why it matters

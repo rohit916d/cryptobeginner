@@ -140,3 +140,9 @@ In almost all cases, no. Crypto transactions are irreversible, and once tokens l
 ### How do I check if my wallet has dangerous approvals?
 
 Open a token-approval checker such as Revoke.cash or the token approvals page on Etherscan, connect your wallet in read-only mode, and review every approval. Any approval to an unknown contract, or an unlimited approval to a site you no longer use, should be revoked. Make this a monthly habit — it takes two minutes and can save your entire wallet.
+
+## Keep Learning
+
+- [What Is Address Poisoning? Lookalike Address Scam Guide](/blog/what-is-address-poisoning-india-guide/) — explains what address poisoning is and why it matters
+- [Clipboard Hijacking in Crypto: Malware That Swaps Addresses](/blog/clipboard-hijacking-crypto-malware-swaps-addresses/) — a beginner-friendly guide to clipboard hijacking in crypto
+- [Secure Crypto Exchange Account: Complete 2FA Checklist](/blog/how-to-secure-crypto-exchange-account-india-guide/) — a beginner-friendly guide to secure crypto exchange account

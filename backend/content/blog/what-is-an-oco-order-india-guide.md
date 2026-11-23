@@ -159,3 +159,9 @@ An OCO order is a simple, useful planning tool: one limit order to take a profit
 But it is still only a plan. It cannot guarantee your exit price, it cannot protect you from a fast crash, and it cannot make a trade profitable. Used with realistic prices, liquid pairs, and a clear understanding of its limits, an OCO is a solid part of a beginner's toolkit. Used as a "set and forget" safety net, it can give a false sense of security.
 
 Start by understanding the two orders inside it, practise with small amounts, and keep records of every trade. The best trading tool is still the one between your ears — and it works best when the plan was written before the market started moving.
+
+## Keep Learning
+
+- [What Is a Trailing Stop Order? Beginner's Guide India](/blog/what-is-a-trailing-stop-order-india-guide/) — explains what a trailing stop order is and why it matters
+- [Market Order vs Limit Order: Crypto Orders Explained](/blog/market-order-vs-limit-order-india-guide/) — compares market order vs limit order so you can choose with confidence
+- [What Is a Bid-Ask Spread? The Hidden Cost in Every Trade](/blog/what-is-a-bid-ask-spread-india-guide/) — explains what a bid-ask spread is and why it matters

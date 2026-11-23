@@ -114,3 +114,9 @@ Yes, some well-known projects are battle-tested by years of use, but a brand-new
 A smart contract audit is a professional safety inspection for the code that handles your crypto. It catches bugs, exposes risky design choices, and gives you a public report to read before you trust a project. But it is a snapshot, not a shield — it cannot guarantee safety, stop a dishonest team, or protect you from fake websites and social-media scams.
 
 For an Indian beginner, the habit that matters is simple: before you use a new project, spend five minutes checking its audit, verifying the contract address, and reading the unresolved findings. That small habit separates people who learn from other people's mistakes from people who pay for their own.
+
+## Keep Learning
+
+- [How to Verify a Token Contract Address Before Buying](/blog/how-to-verify-token-contract-address-india-guide/) — shows you how to verify a token contract address before buying, step by step
+- [What Is a Smart Contract? DeFi Code Explained Simply](/blog/what-is-a-smart-contract-defi-explained-india-guide/) — explains what a smart contract is and why it matters
+- [How to Use a Crypto Faucet Safely: Step-by-Step Guide](/blog/how-to-use-crypto-faucet-safely-india-guide/) — shows you how to use a crypto faucet safely, step by step

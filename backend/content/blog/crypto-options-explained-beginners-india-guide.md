@@ -159,3 +159,9 @@ The biggest risk is losing your entire premium quickly, because options have an 
 Crypto options are contracts with deadlines: calls profit from rises, puts profit from falls, and both cost a premium that can be lost entirely. Their defining feature — expiry — means time decay works against the buyer every single day. For Indian beginners, the honest summary is simple: understand options, respect their risks, and be deeply sceptical of anyone selling them as an easy path to profit. The most valuable option you own is the right to say no.
 
 *Next step: if you want to go deeper into trading basics, read our guides on market vs limit orders and stop-loss orders — both explain tools that are far more relevant to a beginner than options.*
+
+## Keep Learning
+
+- [What Are Crypto Futures? Contracts and Risks Explained](/blog/what-are-crypto-futures-explained-india-guide/) — explains what crypto futures are and why they matter
+- [What Is a Trailing Stop Order? Beginner's Guide India](/blog/what-is-a-trailing-stop-order-india-guide/) — explains what a trailing stop order is and why it matters
+- [What Is a Crypto On-Ramp and Off-Ramp? India Guide](/blog/what-is-a-crypto-on-ramp-and-off-ramp-india-guide/) — explains what a crypto on-ramp and off-ramp is and why it matters

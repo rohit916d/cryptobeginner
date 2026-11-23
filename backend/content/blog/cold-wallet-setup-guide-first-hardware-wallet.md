@@ -87,3 +87,9 @@ Setup is not the end. Keep the app and firmware updated through the official app
 ## Conclusion
 
 A careful first setup takes under an hour: buy officially, verify the device, set a PIN, write the phrase offline, confirm your address on the device screen, and prove the route with a small test transfer. Do those six things patiently and you have built the foundation of genuine self-custody. Next, revisit how self-custody differs from leaving funds on an exchange, and keep tax records updated from the first transfer.
+
+## Keep Learning
+
+- [What is a Crypto Hot Wallet vs Cold Wallet?](/blog/what-is-a-crypto-hot-wallet-vs-cold-wallet/) — explains the difference between crypto hot wallet and cold wallet
+- [What Is a Paper Wallet? Old Crypto Storage Explained](/blog/what-is-a-paper-wallet-india-guide/) — explains what a paper wallet is and why it matters
+- [What Is a Watch-Only Wallet? Track Crypto Without Risk](/blog/what-is-a-watch-only-wallet-india-guide/) — explains what a watch-only wallet is and why it matters

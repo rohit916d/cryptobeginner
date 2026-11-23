@@ -111,3 +111,9 @@ Trading volume counts how many contracts changed hands during a period, while op
 ### Should Indian beginners trade crypto futures based on open interest?
 
 Open interest is an educational metric, not a trading strategy, and futures trading carries extra risks such as leverage and liquidation that beginners should understand fully before considering it. In India, crypto derivatives also sit in a complicated regulatory and tax picture, so check whether a platform is FIU-IND registered, keep complete records, and remember that gains on virtual digital assets are taxed at 30% with 1% TDS rules that may apply. Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.
+
+## Keep Learning
+
+- [What Is a Trading Pair? BTC/INR Explained for Beginners](/blog/what-is-a-trading-pair-india-guide/) — explains what a trading pair is and why it matters
+- [How to Create a Crypto Trading Plan (Even as a Beginner)](/blog/how-to-create-a-crypto-trading-plan-beginners-guide/) — shows you how to create a crypto trading plan (even as a beginner), step by step
+- [What Are Crypto Futures? Contracts and Risks Explained](/blog/what-are-crypto-futures-explained-india-guide/) — explains what crypto futures are and why they matter

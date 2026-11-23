@@ -147,3 +147,9 @@ Soulbound tokens take the familiar idea of an NFT and remove the ability to trad
 That makes them genuinely useful for credentials and identity, and genuinely risky when it comes to wallet loss and privacy. They are not investments, they are not a shortcut to income, and they do not replace official documents in India.
 
 If you remember one thing, let it be this: a soulbound token's value is the trust in its issuer, not the token itself. Collect credentials from projects you trust, keep your recovery phrase safe, and never pay a stranger for a token that was designed to be free.
+
+## Keep Learning
+
+- [What Is an ERC-20 Token? Token Standards Explained](/blog/what-is-erc-20-token-standards-india-guide/) — explains what an erc-20 token is and why it matters
+- [What Is a Gas Token? Paying Fees With Tokens Explained](/blog/what-is-a-gas-token-india-guide/) — explains what a gas token is and why it matters
+- [What Are Governance Tokens? Voting Rights Explained](/blog/what-are-governance-tokens-india-guide/) — explains what governance tokens are and why they matter

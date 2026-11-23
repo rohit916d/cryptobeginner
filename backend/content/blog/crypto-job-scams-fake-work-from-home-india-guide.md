@@ -136,3 +136,9 @@ A few habits make you a much harder target:
 ## Conclusion
 
 Crypto work-from-home scams succeed because they sell exactly what job seekers want: easy, flexible, well-paid remote work. The defence is equally simple and absolute: a real employer pays you; it never charges you to start. Learn the playbook, run the 10-minute check on every unsolicited offer, and report anything suspicious on cybercrime.gov.in or 1930. The few minutes you spend verifying an offer can save you — and the people you warn — from losing far more.
+
+## Keep Learning
+
+- [Fake Crypto Apps & Telegram Scams: How Indians Stay Safe](/blog/fake-crypto-apps-telegram-scams-india-guide/) — a beginner-friendly guide to fake crypto apps & telegram scams
+- [NFT Scams Explained: Fake Collections and Wash Trading](/blog/nft-scams-fake-collections-wash-trading-india-guide/) — a beginner-friendly guide to nft scams explained
+- [Phishing Emails & Fake Exchange Sites: India Safety Guide](/blog/phishing-emails-fake-exchange-websites-india-guide/) — a beginner-friendly guide to phishing emails & fake exchange sites

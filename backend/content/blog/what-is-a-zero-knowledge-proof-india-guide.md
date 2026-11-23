@@ -126,3 +126,9 @@ Yes. The most common real-world use is in zk-rollups, a type of Layer 2 network 
 ### Does using zero-knowledge privacy technology affect crypto tax in India?
 
 No. Privacy technology does not change your tax obligations. If you earn profits from virtual digital assets, India's 30% tax and the 1% TDS on transfers apply regardless of whether the transaction used zero-knowledge proofs. Keep records of all your transactions as normal. Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.
+
+## Keep Learning
+
+- [What Is the Blockchain Trilemma? A Beginner's Guide](/blog/what-is-the-blockchain-trilemma-india-guide/) — explains what the blockchain trilemma is and why it matters
+- [What is a Crypto Mempool? The Waiting Room Explained](/blog/what-is-a-crypto-mempool-the-waiting-room-explained/) — explains what a crypto mempool is and why it matters
+- [What Are Sidechains? How Blockchains Scale, Explained](/blog/what-are-sidechains-india-guide/) — explains what sidechains are and why they matter

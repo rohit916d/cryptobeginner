@@ -137,3 +137,9 @@ A genuine gift involves no payment in return, so it is generally not treated as 
 ### Does 1% TDS apply when you gift crypto?
 
 The 1% TDS under Section 194S applies to payments made for the transfer of a VDA — that is, when someone pays for crypto. A gift has no payment or consideration, so TDS generally does not apply to the gift itself. TDS typically enters the picture later, when the receiver sells the gifted crypto for consideration, usually through an Indian exchange. Record the gift's date and value so the later sale is easy to report.
+
+## Keep Learning
+
+- [NRI Crypto Rules in India: Accounts, Tax and FEMA Guide](/blog/nri-crypto-rules-india-accounts-tax-fema-guide/) — a beginner-friendly guide to nri crypto rules in india
+- [How to Keep Crypto Tax Records for Filing in India](/blog/how-to-keep-crypto-records-india-tax-filing/) — shows you how to keep crypto tax records for filing in india, step by step
+- [Crypto Tax Notices in India: Beginner's Guide 2026](/blog/crypto-tax-notices-india-beginners-guide/) — a beginner-friendly guide to crypto tax notices in india

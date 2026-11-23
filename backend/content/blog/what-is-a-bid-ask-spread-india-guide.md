@@ -135,3 +135,9 @@ Spreads are narrow where trading is busy and competitive, because many buyers an
 ### Can beginners reduce the cost of the bid-ask spread?
 
 Yes, partly. Checking the order book before trading, preferring liquid pairs, using limit orders instead of market orders, and avoiding trades during wild price swings all help keep spread costs down. You cannot eliminate the spread entirely — it exists in every market — but you can avoid the situations where it is widest, and you should always count it alongside the trading fee when judging the true cost of a trade.
+
+## Keep Learning
+
+- [What Is Crypto Trading Volume in India? Full Guide](/blog/what-is-crypto-trading-volume-india-guide/) — explains what crypto trading volume in india is and why it matters
+- [What Is a Crypto On-Ramp and Off-Ramp? India Guide](/blog/what-is-a-crypto-on-ramp-and-off-ramp-india-guide/) — explains what a crypto on-ramp and off-ramp is and why it matters
+- [What Is a Trading Pair? BTC/INR Explained for Beginners](/blog/what-is-a-trading-pair-india-guide/) — explains what a trading pair is and why it matters

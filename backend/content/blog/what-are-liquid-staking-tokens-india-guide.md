@@ -139,3 +139,9 @@ If you are considering a liquid staking token, run through this checklist first:
 Liquid staking tokens solve a real problem: they let you earn staking rewards without locking your crypto away. That flexibility has made them one of DeFi's most popular building blocks. But every layer of convenience adds a layer of risk — smart-contract bugs, depeg events, validator problems, and scams all sit between you and your funds.
 
 For Indian beginners, the sensible approach is to learn the basics first: understand regular staking, use registered exchanges for buying and selling, keep careful tax records, and only explore LSTs with small amounts once you can explain the risks in your own words. Liquid does not mean risk-free — it just means you can exit faster when things go wrong, and that only helps if you are watching.
+
+## Keep Learning
+
+- [What Is Airdrop Farming? Free Tokens and the Risks](/blog/what-is-airdrop-farming-india-guide/) — explains what airdrop farming is and why it matters
+- [What Are Governance Tokens? Voting Rights Explained](/blog/what-are-governance-tokens-india-guide/) — explains what governance tokens are and why they matter
+- [What is a Crypto Faucet? Free Tokens Explained](/blog/what-is-a-crypto-faucet-free-tokens-explained/) — explains what a crypto faucet is and why it matters

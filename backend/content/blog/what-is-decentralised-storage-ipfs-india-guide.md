@@ -121,3 +121,9 @@ Decentralised storage through IPFS is a genuinely useful idea: files found by wh
 The next time a project tells you its data is decentralised, you now know the question that matters most: who is actually keeping the copies, and for how long? Answer that, and you will see past the buzzword to the real design underneath. For a beginner in India, that single habit — asking who holds the copy — is worth more than memorising any technical term.
 
 Start with reading and exploring through a gateway, keep personal files off public networks, and build your understanding one concept at a time. That is how decentralised storage stops being a mystery and becomes one more tool you can judge for yourself.
+
+## Keep Learning
+
+- [What Is Decentralised Identity (DID)? A Beginner's Guide](/blog/what-is-decentralised-identity-did-india-guide/) — explains what decentralised identity (did) is and why it matters
+- [Read a Token Contract on a Block Explorer: Beginner Guide](/blog/how-to-read-a-token-contract-on-a-block-explorer-guide/) — a beginner-friendly guide to read a token contract on a block explorer
+- [What Is a Node in Crypto? Validators Explained Simply](/blog/what-is-a-node-validators-india-guide/) — explains what a node in crypto is and why it matters

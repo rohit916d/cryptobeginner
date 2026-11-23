@@ -108,3 +108,9 @@ Use this checklist every time you exit, and the process stays boring in the best
 Exiting crypto safely in India comes down to three habits: sell on a registered Indian exchange, withdraw to a bank account that matches your KYC name, and keep clean records for tax filing. The process takes minutes once you have done it once, but the first exit deserves patience — a test withdrawal, a fee check and a look at the tax implications before you press sell.
 
 The money you take out of crypto is only truly yours once it is sitting in your bank account with the tax accounted for. Plan the exit with the same care you planned the entry, and you will avoid the mistakes that catch most beginners.
+
+## Keep Learning
+
+- [UPI to Crypto: How Indians Deposit INR on Exchanges](/blog/upi-to-crypto-how-indians-deposit-inr-on-exchanges/) — a beginner-friendly guide to upi to crypto
+- [What Is an OCO Order? One-Cancels-the-Other Explained](/blog/what-is-an-oco-order-india-guide/) — explains what an oco order is and why it matters
+- [What Is a Crypto Market Maker? Liquidity Explained](/blog/what-is-a-crypto-market-maker-india-guide/) — explains what a crypto market maker is and why it matters

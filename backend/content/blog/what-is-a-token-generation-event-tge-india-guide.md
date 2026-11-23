@@ -123,3 +123,9 @@ Tokens received for free, such as through an airdrop linked to a TGE, are genera
 ## The Bottom Line
 
 A token generation event is the day a project's tokens come into existence — a technical milestone, not a promise of value. The useful questions to ask are boring ones: what is the contract address, who holds the supply, when does it unlock, and where is the liquidity? If a project cannot answer those clearly, or if the only thing around its TGE is hype and countdown posts, you have learned everything you need to know. In crypto, the safest move is often the least exciting one: watch, verify, and decide slowly.
+
+## Keep Learning
+
+- [What Is a Crypto Token Buyback? A Beginner's Guide](/blog/what-is-a-crypto-token-buyback-india-guide/) — explains what a crypto token buyback is and why it matters
+- [Token Unlocks and Vesting Schedules Explained Simply](/blog/token-unlocks-vesting-schedules-india-guide/) — a beginner-friendly guide to token unlocks and vesting schedules explained simply
+- [What Is Tokenomics? How to Read Supply and Distribution](/blog/what-is-tokenomics-supply-distribution-india-guide/) — explains what tokenomics is and why it matters

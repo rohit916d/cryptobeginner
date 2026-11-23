@@ -112,3 +112,9 @@ Yes, in general TDS under Section 194S is deducted on the consideration received
 ## Conclusion
 
 In India, crypto losses cannot be set off against crypto gains and cannot be carried forward — each gain is taxed at 30% on its own, with only its purchase cost deductible, and 1% TDS applies on sale consideration. Once you accept that simple, strict rule, filing becomes easier to organise: report every transfer in Schedule VDA, keep rupee records for each one, match your TDS credits, and verify the current rules before you file. For your next step, read our guides to Schedule VDA and to keeping crypto tax records, so the record habit is in place long before the filing deadline arrives.
+
+## Keep Learning
+
+- [How to Keep Crypto Tax Records for Filing in India](/blog/how-to-keep-crypto-records-india-tax-filing/) — shows you how to keep crypto tax records for filing in india, step by step
+- [Schedule VDA Explained: Where Crypto Goes in Your ITR](/blog/schedule-vda-explained-india-itr-guide/) — a beginner-friendly guide to schedule vda explained
+- [Crypto Advance Tax in India: Quarterly Payments Explained](/blog/crypto-advance-tax-india-quarterly-payments-guide/) — a beginner-friendly guide to crypto advance tax in india

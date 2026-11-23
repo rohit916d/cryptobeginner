@@ -142,3 +142,9 @@ A trailing stop order is a simple idea with real power: it follows the price up 
 But it is not magic. It cannot guarantee a sale price, it can exit too early in a volatile market, and every triggered sale is a taxable event. The traders who get the most from trailing stops are the ones who set the distance wide enough for normal swings, use the tool only where it fits, and remember that no order replaces understanding what they own and why.
 
 If you are new to order types, start with the basics — a fixed stop-loss and a take-profit order — and add trailing stops only after you have seen how they behave on a small trade. Learn the tool before trusting it with a large position.
+
+## Keep Learning
+
+- [What Is an OCO Order? One-Cancels-the-Other Explained](/blog/what-is-an-oco-order-india-guide/) — explains what an oco order is and why it matters
+- [Market Order vs Limit Order: Crypto Orders Explained](/blog/market-order-vs-limit-order-india-guide/) — compares market order vs limit order so you can choose with confidence
+- [Stop-Loss and Take-Profit Orders: A Beginner's Guide](/blog/stop-loss-take-profit-orders-india-guide/) — a beginner-friendly guide to stop-loss and take-profit orders

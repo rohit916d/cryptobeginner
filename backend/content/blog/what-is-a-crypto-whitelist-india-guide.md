@@ -177,3 +177,9 @@ Yes, and fake whitelists are one of the most common traps targeting beginners in
 ### Do I have to pay to join a crypto whitelist?
 
 Usually not. Most legitimate whitelists are free — you earn a spot by completing simple tasks, holding a related token, joining a community, or winning a raffle. Some projects charge a small participation fee or require holding a token, but you should be very cautious of any whitelist that demands an upfront payment to a personal wallet address. If payment is involved, check the project's official channels first, and never pay through a link shared in a random group or direct message.
+
+## Keep Learning
+
+- [How to Use a Crypto Faucet Safely: Step-by-Step Guide](/blog/how-to-use-crypto-faucet-safely-india-guide/) — shows you how to use a crypto faucet safely, step by step
+- [What Is a Crypto Airdrop? Free Tokens & Scam Warnings](/blog/what-is-a-crypto-airdrop-free-tokens-scam-warnings/) — explains what a crypto airdrop is and why it matters
+- [What Is a Honeypot Token? The Buy-Only Trap Explained](/blog/what-is-a-honeypot-token-india-guide/) — explains what a honeypot token is and why it matters

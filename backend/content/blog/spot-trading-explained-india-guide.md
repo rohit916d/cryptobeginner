@@ -130,3 +130,9 @@ Spot trading is generally simpler and carries fewer ways to lose money suddenly,
 ### Do I pay tax on spot crypto trades in India?
 
 Yes. In India, gains from selling crypto are taxed at a flat 30% under the virtual digital asset rules, and a 1% TDS usually applies when you sell on an Indian exchange. Moving crypto between your own wallets is not a sale, but selling for INR is. Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.
+
+## Keep Learning
+
+- [How to Create a Crypto Trading Plan (Even as a Beginner)](/blog/how-to-create-a-crypto-trading-plan-beginners-guide/) — shows you how to create a crypto trading plan (even as a beginner), step by step
+- [What Is a Trading Pair? BTC/INR Explained for Beginners](/blog/what-is-a-trading-pair-india-guide/) — explains what a trading pair is and why it matters
+- [What Is Crypto Trading Volume in India? Full Guide](/blog/what-is-crypto-trading-volume-india-guide/) — explains what crypto trading volume in india is and why it matters

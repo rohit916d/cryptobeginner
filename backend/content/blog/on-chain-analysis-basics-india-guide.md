@@ -102,3 +102,9 @@ On-chain analysis is not a crystal ball. It is a public ledger, and learning to 
 The most valuable sentence on-chain data can give a beginner is not a signal to buy or to sell. It is this: "Let me check that claim against the record myself." That habit — checking before believing — protects you far beyond any single chart.
 
 **Next step:** Open a block explorer, look up one of your own past transactions, and practise reading its details.
+
+## Keep Learning
+
+- [How to Read Crypto News Without FUD and FOMO Traps](/blog/how-to-read-crypto-news-without-fud-fomo-india-guide/) — shows you how to read crypto news without fud and fomo traps, step by step
+- [What Are Crypto Index Funds? Basket Investing Explained](/blog/what-are-crypto-index-funds-india-guide/) — explains what crypto index funds are and why they matter
+- [What Is Tokenomics? How to Read Supply and Distribution](/blog/what-is-tokenomics-supply-distribution-india-guide/) — explains what tokenomics is and why it matters

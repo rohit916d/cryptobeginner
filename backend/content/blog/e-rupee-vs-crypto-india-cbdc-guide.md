@@ -102,3 +102,9 @@ No such rule follows automatically. A CBDC gives the RBI a digital form of the r
 ## Conclusion
 
 The e-Rupee vs crypto question has a clean answer once the labels are clear. The e-Rupee is India's own currency in digital form: RBI-issued, legal tender, stable at par with cash, and free of crypto tax because it is the rupee itself. Crypto assets are privately created, decentralised, volatile virtual digital assets that Indians can buy through registered exchanges but that carry market risk and a strict 30% tax with 1% TDS on transfers. Keep that distinction in mind, use only official bank channels for any CBDC wallet, and read our guides to crypto tax and Schedule VDA next if you hold any virtual digital assets at all.
+
+## Keep Learning
+
+- [How to Keep Crypto Tax Records for Filing in India](/blog/how-to-keep-crypto-records-india-tax-filing/) — shows you how to keep crypto tax records for filing in india, step by step
+- [What Are Stablecoin Reserves? How USDT & USDC Back Pegs](/blog/what-are-stablecoin-reserves-india-guide/) — explains what stablecoin reserves are and why they matter
+- [Algorithmic Stablecoins Explained: Why Pegs Can Fail](/blog/what-is-an-algorithmic-stablecoin-india-guide/) — a beginner-friendly guide to algorithmic stablecoins explained

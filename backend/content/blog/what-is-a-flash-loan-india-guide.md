@@ -111,3 +111,9 @@ For the lender, they are relatively safe because a failed repayment reverses the
 A flash loan is one of DeFi's cleverest ideas: a loan with no collateral, made possible by the rule that a blockchain transaction either fully succeeds or fully reverses. That design powers legitimate uses like arbitrage, collateral swaps, and refinancing — but it also demands technical skill, carries smart contract and price-manipulation risks, and attracts scams aimed at beginners.
 
 For Indian beginners, the right takeaway is understanding, not action. Learn how flash loans work, recognise the scams that misuse the name, keep clean records of any DeFi activity for tax purposes, and leave actual flash loan use to the day — if it ever comes — when you can read the code yourself.
+
+## Keep Learning
+
+- [What Is a DEX Aggregator? Best Swap Prices Explained](/blog/what-is-a-dex-aggregator-india-guide/) — explains what a dex aggregator is and why it matters
+- [What Is Airdrop Farming? Free Tokens and the Risks](/blog/what-is-airdrop-farming-india-guide/) — explains what airdrop farming is and why it matters
+- [What Is DeFi? Decentralized Finance Explained Simply](/blog/what-is-defi-explained-without-jargon-india-guide/) — explains what defi is and why it matters

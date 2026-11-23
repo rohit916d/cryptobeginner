@@ -130,3 +130,9 @@ On-ramps and off-ramps are the doors of the crypto world. The on-ramp is how you
 Before you deposit a single rupee anywhere, check the platform's FIU-IND registration, read its fee schedule, test a small deposit, and confirm how withdrawals work. Then start small, keep records of every movement, and treat every new platform with the same caution you would give a new bank.
 
 Your next step is simple: pick one registered Indian exchange, complete your KYC, and make one small test deposit. Once you have seen the full loop — rupees in, crypto bought, crypto sold, rupees back in your bank — you will understand on-ramps and off-ramps far better than any article can teach you.
+
+## Keep Learning
+
+- [What Is Crypto Trading Volume in India? Full Guide](/blog/what-is-crypto-trading-volume-india-guide/) — explains what crypto trading volume in india is and why it matters
+- [How to Create a Crypto Trading Plan (Even as a Beginner)](/blog/how-to-create-a-crypto-trading-plan-beginners-guide/) — shows you how to create a crypto trading plan (even as a beginner), step by step
+- [How to Track a Crypto Portfolio in India: Apps & Safety](/blog/how-to-track-crypto-portfolio-india-apps-sheets-safety/) — shows you how to track a crypto portfolio in india, step by step

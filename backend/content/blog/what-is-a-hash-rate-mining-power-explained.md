@@ -131,3 +131,9 @@ Hash rate is the speedometer of a Proof of Work blockchain: the number of guesse
 For a beginner in India, the most useful thing hash rate gives you is context: when you read that a network's hash rate rose or fell, you now know what actually changed, why it matters for security, and — just as importantly — what it does not mean for prices. You do not need to mine, rent hash rate, or watch the chart daily. Understanding the number is enough, and it is one more piece of the puzzle in learning how crypto actually works.
 
 If you found this guide useful, the natural next step is learning how mining itself works — our guides on crypto mining and Proof of Work, and on how hashing secures a blockchain, explain the two ideas this one builds on.
+
+## Keep Learning
+
+- [What is Crypto Mining? Proof of Work Explained Simply](/blog/what-is-crypto-mining-proof-of-work-explained-simply/) — explains what crypto mining is and why it matters
+- [What is a Crypto Whitepaper? A Beginner's Guide](/blog/what-is-a-crypto-whitepaper-a-beginner-s-guide/) — explains what a crypto whitepaper is and why it matters
+- [What Is a Crypto Mining Pool? Shared Mining Explained](/blog/what-is-a-crypto-mining-pool-india-guide/) — explains what a crypto mining pool is and why it matters

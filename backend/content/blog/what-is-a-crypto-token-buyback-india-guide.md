@@ -140,3 +140,9 @@ Look for three things: a public announcement naming the amount and the wallet us
 ### Are token buybacks taxed in India?
 
 Buybacks do not change how your own trades are taxed. If you sell tokens during or after a buyback, the usual Indian rules apply: gains are taxed at a flat 30% and 1% TDS may apply on the sale. Tax rules can change, so verify the latest rules before filing.
+
+## Keep Learning
+
+- [What Is a Token Generation Event (TGE)? India Guide](/blog/what-is-a-token-generation-event-tge-india-guide/) — explains what a token generation event (tge) is and why it matters
+- [Token Unlocks and Vesting Schedules Explained Simply](/blog/token-unlocks-vesting-schedules-india-guide/) — a beginner-friendly guide to token unlocks and vesting schedules explained simply
+- [What Is Tokenomics? How to Read Supply and Distribution](/blog/what-is-tokenomics-supply-distribution-india-guide/) — explains what tokenomics is and why it matters

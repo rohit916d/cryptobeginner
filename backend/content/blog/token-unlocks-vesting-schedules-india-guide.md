@@ -123,3 +123,9 @@ Token unlocks and vesting schedules are not exotic insider knowledge. They are t
 For beginners, the habit matters more than any single unlock date. Before you buy, spend ten minutes on the schedule: who holds locked tokens, when they unlock, and how much supply that adds. Combine that with the basics you already know — secure storage, scam awareness, and careful record-keeping — and you will be making decisions with far more information than most newcomers.
 
 Next, you may want to read our guides on tokenomics and how to read a crypto whitepaper, which cover the wider supply story and the documents where vesting schedules live. Understanding unlocks is one piece of doing your own research properly — and it is a piece you can now check for yourself, every time.
+
+## Keep Learning
+
+- [What Is a Crypto Token Buyback? A Beginner's Guide](/blog/what-is-a-crypto-token-buyback-india-guide/) — explains what a crypto token buyback is and why it matters
+- [What Is a Token Generation Event (TGE)? India Guide](/blog/what-is-a-token-generation-event-tge-india-guide/) — explains what a token generation event (tge) is and why it matters
+- [What Is Tokenomics? How to Read Supply and Distribution](/blog/what-is-tokenomics-supply-distribution-india-guide/) — explains what tokenomics is and why it matters

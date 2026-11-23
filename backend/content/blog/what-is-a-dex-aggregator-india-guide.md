@@ -100,3 +100,9 @@ An aggregator cannot find liquidity that does not exist, protect you from a fall
 A DEX aggregator is a price-comparison and routing tool for decentralised exchanges: it searches many pools at once, splits your trade when that helps, and executes everything in one transaction — often beating any single DEX. For Indians who already hold crypto in their own wallets, it is a useful tool for on-chain swaps.
 
 But it is a tool, not a safety net: the same risks as any DeFi interaction — contract bugs, fake websites, unlimited approvals, MEV, slippage — apply here too. Use established aggregators, verify every address, approve only what you need, start small, and keep records for tax purposes. The best price is only a good deal if the trade itself is safe.
+
+## Keep Learning
+
+- [What Is a DEX? Decentralized Exchanges Explained Simply](/blog/what-is-a-dex-decentralized-exchanges-india-guide/) — explains what a dex is and why it matters
+- [What is Crypto Staking? Earning Rewards Explained](/blog/what-is-crypto-staking-earning-rewards-explained/) — explains what crypto staking is and why it matters
+- [What Is a Smart Contract? DeFi Code Explained Simply](/blog/what-is-a-smart-contract-defi-explained-india-guide/) — explains what a smart contract is and why it matters

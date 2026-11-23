@@ -97,3 +97,9 @@ No. Copying a whale is risky because you do not know their full plan, their entr
 ## The Bottom Line
 
 A crypto whale is a large holder whose trades can move prices — nothing more mysterious than that. The danger for beginners is not whales themselves, but the stories told about them: that they know something you do not, that their next move is predictable, or that following them is a shortcut to profits. None of that is true. The transaction is public; the intention is not. Treat whale activity as background noise: interesting, sometimes informative, never a trading instruction. Your decisions should rest on your own research, your own risk tolerance, and amounts you can genuinely afford to lose.
+
+## Keep Learning
+
+- [What Are Crypto Futures? Contracts and Risks Explained](/blog/what-are-crypto-futures-explained-india-guide/) — explains what crypto futures are and why they matter
+- [What Is a Crypto ETF? What Indian Beginners Must Know](/blog/what-is-a-crypto-etf-india-guide/) — explains what a crypto etf is and why it matters
+- [What Are ICOs and IDOs? Crypto Token Sales Explained](/blog/what-are-icos-and-idos-india-guide/) — explains what icos and idos are and why they matter

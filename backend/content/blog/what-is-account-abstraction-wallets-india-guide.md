@@ -143,3 +143,9 @@ No, you cannot pay gas fees in rupees directly, because gas is a network fee pai
 ### Is an account abstraction wallet safer than a normal wallet?
 
 It can be, because it adds protections like spending limits, session keys, and social recovery that a basic wallet does not have. But it also adds a smart contract between you and your funds, and any smart contract can contain bugs. Safety depends on whether the wallet's contracts are audited, whether you understand the recovery setup, and whether you keep your sign-in devices secure. No wallet type removes the need for careful habits.
+
+## Keep Learning
+
+- [What Is a Vanity Address? Custom Crypto Addresses Explained](/blog/what-is-a-vanity-address-india-guide/) — explains what a vanity address is and why it matters
+- [What Is a Private Key? The Secret Behind Your Crypto](/blog/what-is-a-private-key-india-guide/) — explains what a private key is and why it matters
+- [What Is a Multisig Wallet? Shared Security Explained](/blog/what-is-a-multisig-wallet-india-guide/) — explains what a multisig wallet is and why it matters

@@ -153,3 +153,9 @@ No, although both provide liquidity. A market maker is usually a professional fi
 ### Can a market maker manipulate crypto prices?
 
 Legitimate market making is regulated activity on reputable exchanges, but manipulation does happen in unregulated corners of crypto — fake volume, wash trading and spoofed orders are real risks, especially on small exchanges and low-volume tokens. That is why beginners should stick to well-known, FIU-IND registered exchanges in India, check real trading activity, and never trust a project just because someone claims it has a market maker.
+
+## Keep Learning
+
+- [Market Order vs Limit Order: Crypto Orders Explained](/blog/market-order-vs-limit-order-india-guide/) — compares market order vs limit order so you can choose with confidence
+- [Bull Market vs Bear Market: Crypto Cycles Explained](/blog/bull-market-vs-bear-market-crypto-cycles-guide/) — compares bull market vs bear market so you can choose with confidence
+- [What Is a Trading Pair? BTC/INR Explained for Beginners](/blog/what-is-a-trading-pair-india-guide/) — explains what a trading pair is and why it matters

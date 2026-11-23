@@ -111,3 +111,9 @@ Keep these records for several years after filing. A notice can arrive long afte
 ## Conclusion: One Row Per Transfer, Records First
 
 Schedule VDA is not as scary as it looks. It is simply a per-transfer register: when you bought, when you transferred, what it cost, and what you received. Gather your exchange and wallet records first, enter each transfer honestly, check that TDS credits match your official statements, and remember that losses cannot cancel gains. Do that, and the crypto section of your ITR becomes routine paperwork instead of a last-day panic. If your situation involves foreign exchanges, gifts, mining, or business trading, take this guide as orientation and get advice for your specific facts before filing.
+
+## Keep Learning
+
+- [How to Keep Crypto Tax Records for Filing in India](/blog/how-to-keep-crypto-records-india-tax-filing/) — shows you how to keep crypto tax records for filing in india, step by step
+- [Crypto Tax Notices in India: Beginner's Guide 2026](/blog/crypto-tax-notices-india-beginners-guide/) — a beginner-friendly guide to crypto tax notices in india
+- [Crypto Gift Tax in India: Rules Beginners Must Know](/blog/crypto-gift-tax-india-rules-beginners/) — a beginner-friendly guide to crypto gift tax in india

@@ -136,3 +136,9 @@ Stablecoin reserves are the foundation under USDT and USDC. USDT's reserves are 
 For an Indian beginner, the practical takeaway is not to pick a "winner" between USDT and USDC. It is to treat every stablecoin as a product with real risks, check the reserves before holding a meaningful amount, keep your records clean for tax filing, and remember that a token holding its peg today is not the same as money in your bank account.
 
 Use stablecoins for what they are good at — moving value between exchanges, holding a steady balance while you learn, and converting back to INR through a registered exchange. And whenever the amount grows large enough to matter, take five minutes to check the reserves behind it. That small habit is the difference between trusting a promise and verifying one.
+
+## Keep Learning
+
+- [What Is a Stablecoin Depeg? Why Pegs Break Explained](/blog/what-is-a-stablecoin-depeg-india-guide/) — explains what a stablecoin depeg is and why it matters
+- [Algorithmic Stablecoins Explained: Why Pegs Can Fail](/blog/what-is-an-algorithmic-stablecoin-india-guide/) — a beginner-friendly guide to algorithmic stablecoins explained
+- [What Is Proof of Reserves? How Exchanges Prove Funds](/blog/what-is-proof-of-reserves-india-guide/) — explains what proof of reserves is and why it matters

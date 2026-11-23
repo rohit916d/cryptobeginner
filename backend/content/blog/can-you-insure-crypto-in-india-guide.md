@@ -163,3 +163,9 @@ The sensible approach today is to assume your crypto is uninsured, act according
 - Check an exchange's FIU-IND registration, security features, and proof of reserves before trusting it — these matter more than any insurance claim in an ad.
 
 Crypto insurance is a useful idea whose time has not fully arrived for Indian individuals. Until it does, the best policy you can buy is the one you build yourself: careful habits, repeated every time you touch your crypto.
+
+## Keep Learning
+
+- [What Is a Dusting Attack? Crypto Privacy Risk Explained](/blog/what-is-a-dusting-attack-india-guide/) — explains what a dusting attack is and why it matters
+- [Secure Crypto Exchange Account: Complete 2FA Checklist](/blog/how-to-secure-crypto-exchange-account-india-guide/) — a beginner-friendly guide to secure crypto exchange account
+- [What Is a 51% Attack? Blockchain Security Explained](/blog/what-is-a-51-percent-attack-india-guide/) — explains what a 51% attack is and why it matters

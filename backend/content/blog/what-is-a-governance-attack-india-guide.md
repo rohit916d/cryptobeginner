@@ -160,3 +160,9 @@ For beginners, the practical lesson is simple. Before trusting a project with yo
 - Warning signs include no timelock, low quorum, concentrated holdings, and rushed proposals.
 - Good defences include vote locking, timelocks, high quorums, and multisig guardrails.
 - If you hold governance tokens, check the project's voting rules before you trust it — and keep tax records for any gains or losses.
+
+## Keep Learning
+
+- [What Are Governance Tokens? Voting Rights Explained](/blog/what-are-governance-tokens-india-guide/) — explains what governance tokens are and why they matter
+- [What Is a Honeypot Token? The Buy-Only Trap Explained](/blog/what-is-a-honeypot-token-india-guide/) — explains what a honeypot token is and why it matters
+- [What Is Airdrop Farming? Free Tokens and the Risks](/blog/what-is-airdrop-farming-india-guide/) — explains what airdrop farming is and why it matters

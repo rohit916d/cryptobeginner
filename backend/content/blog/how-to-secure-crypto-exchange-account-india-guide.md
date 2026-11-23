@@ -120,3 +120,9 @@ If an INR transfer looks fraudulent, report it promptly through your bank and on
 ## Conclusion
 
 Securing your account is not advanced trading knowledge — it is basic hygiene that takes less than an hour. A unique password, an authenticator app, safely stored backup codes, withdrawal locks and monthly session reviews will protect a beginner far better than any market tip. Work through the checklist today for every exchange and email account you use, test your login afterwards, and repeat the review every few months. Your future self, trying to file taxes or make a calm withdrawal, will be glad you did.
+
+## Keep Learning
+
+- [Phishing Emails & Fake Exchange Sites: India Safety Guide](/blog/phishing-emails-fake-exchange-websites-india-guide/) — a beginner-friendly guide to phishing emails & fake exchange sites
+- [What Is a Wallet Drainer? How One Click Empties Crypto](/blog/what-is-a-wallet-drainer-india-guide/) — explains what a wallet drainer is and why it matters
+- [What Is a Crypto Airdrop? Free Tokens & Scam Warnings](/blog/what-is-a-crypto-airdrop-free-tokens-scam-warnings/) — explains what a crypto airdrop is and why it matters

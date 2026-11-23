@@ -128,3 +128,9 @@ In most cases the sale is final. NFT trades on a blockchain are usually irrevers
 An NFT marketplace is a useful tool, not a shortcut to profit. It is where digital collectibles are listed, priced, and traded — and where the real work of a buyer happens before the purchase, in verification, not after it. Understand what a listing actually includes, add up the full cost, verify the collection from its official source, and keep records for tax. If you do those things, you can explore NFT marketplaces with your eyes open. If you skip them, the marketplace will happily sell you something worthless — and there is usually no refund.
 
 Start by browsing, not buying. Open a marketplace, read a few listings, compare contract addresses, and practise the checklist with no money at stake. When — and only when — you understand each step, a small first purchase with money you can afford to lose is a reasonable way to learn by doing.
+
+## Keep Learning
+
+- [What Is an NFT? A Beginner's Guide With Indian Examples](/blog/what-is-an-nft-beginners-guide-indian-examples/) — explains what an nft is and why it matters
+- [What is Crypto Burn? Understanding Token Supply Reduction](/blog/what-is-crypto-burn-understanding-token-supply-reduction/) — explains what crypto burn is and why it matters
+- [Read a Token Contract on a Block Explorer: Beginner Guide](/blog/how-to-read-a-token-contract-on-a-block-explorer-guide/) — a beginner-friendly guide to read a token contract on a block explorer

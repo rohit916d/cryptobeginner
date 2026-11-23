@@ -118,3 +118,9 @@ The fourth mistake is forgetting small amounts. Airdrops, rewards, tiny leftover
 Tracking a crypto portfolio in India is not about fancy tools. It is about knowing, at any moment, what you own, what you paid, and what it is worth — and having the records to back that up when tax season arrives. Start with your exchange dashboard, add a simple spreadsheet, and only reach for a tracker app if your holdings are spread across enough places to justify it. Keep your seed phrase private, use read-only connections, and update your records weekly. Your future self, staring at a tax return in March, will be grateful.
 
 Your next step is simple: open a spreadsheet today, list every crypto transaction you can remember, and mark down what you paid in INR. That one page becomes the foundation of everything else.
+
+## Keep Learning
+
+- [Crypto Portfolio for Beginners: How to Think About It](/blog/crypto-portfolio-for-beginners-how-much-to-invest/) — a beginner-friendly guide to crypto portfolio for beginners
+- [How to Exit Crypto in India: Sell Safely & Withdraw INR](/blog/how-to-exit-crypto-in-india-sell-safely-withdraw-inr/) — shows you how to exit crypto in india, step by step
+- [How to Create a Crypto Trading Plan (Even as a Beginner)](/blog/how-to-create-a-crypto-trading-plan-beginners-guide/) — shows you how to create a crypto trading plan (even as a beginner), step by step

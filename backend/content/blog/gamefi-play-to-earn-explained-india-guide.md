@@ -127,3 +127,9 @@ Crypto earnings in India are generally taxed at a flat 30% on gains, with 1% TDS
 GameFi is genuinely interesting technology: true ownership of game items, player-run marketplaces, and new ways for skilled or dedicated players to be rewarded. But it is not a reliable way to earn money, and it is not a shortcut around the usual crypto risks. The games that last will be the ones that are fun first and rewarding second — where players stay because they enjoy playing, not because they are waiting for a payout.
 
 If you try GameFi, go in as a gamer with a budget and a stop rule, not as an investor chasing returns. Play free games first, understand where rewards come from, keep your gaming wallet separate, and record everything for tax time. The best outcome is a game you enjoy that occasionally pays a little back — and the worst outcome, spending money you needed on a game that disappears, is entirely avoidable with a little patience.
+
+## Keep Learning
+
+- [What Are Liquid Staking Tokens? A Beginner's Guide India](/blog/what-are-liquid-staking-tokens-india-guide/) — explains what liquid staking tokens are and why they matter
+- [What Is a Governance Attack? Crypto Voting Hijack Explained](/blog/what-is-a-governance-attack-india-guide/) — explains what a governance attack is and why it matters
+- [What Is a DAO Treasury? How Crypto Projects Manage Funds](/blog/what-is-a-dao-treasury-india-guide/) — explains what a dao treasury is and why it matters

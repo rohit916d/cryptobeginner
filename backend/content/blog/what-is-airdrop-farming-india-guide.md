@@ -122,3 +122,9 @@ If the goal is to earn from crypto, the safer foundations come first: understand
 Airdrop farming is real, and some people have received meaningful rewards from it. But the activity sits at the intersection of speculation, high fees, and heavy scam exposure. The projects owe you nothing, the rules can change without notice, and a single careless click can cost more than any airdrop will ever pay.
 
 If you try it, farm like a careful learner, not like a gambler: one separate wallet, small funds, official links only, every approval read twice, and records kept from the start. And if a farming opportunity ever asks you to pay for "guaranteed" rewards, share your seed phrase, or rush before a countdown ends — walk away. That is not an airdrop. That is the scam.
+
+## Keep Learning
+
+- [What Are Liquid Staking Tokens? A Beginner's Guide India](/blog/what-are-liquid-staking-tokens-india-guide/) — explains what liquid staking tokens are and why they matter
+- [What Is Yield Farming? DeFi Rewards and Risks Explained](/blog/what-is-yield-farming-defi-rewards-india-guide/) — explains what yield farming is and why it matters
+- [What Is DeFi? Decentralized Finance Explained Simply](/blog/what-is-defi-explained-without-jargon-india-guide/) — explains what defi is and why it matters

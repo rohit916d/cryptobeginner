@@ -78,3 +78,9 @@ Instead, verify facts from primary sources: the issuer's announcements, your exc
 A stablecoin depeg is a reminder that "stable" describes a design goal, not a guarantee. Small wobbles are normal and self-correcting; serious depegs happen when confidence in reserves, redemptions, collateral, or the mechanism breaks down. Know which design your stablecoin uses, check the peg and redemption channel before trusting it with meaningful money, keep records for tax purposes, and never treat a token's name or intended value as its actual price.
 
 Run the five-minute peg check on any stablecoin you already hold — before a crisis, rather than during one. Next, read our guides on stablecoins, proof of reserves, and checking whether an exchange is FIU-registered in India.
+
+## Keep Learning
+
+- [Algorithmic Stablecoins Explained: Why Pegs Can Fail](/blog/what-is-an-algorithmic-stablecoin-india-guide/) — a beginner-friendly guide to algorithmic stablecoins explained
+- [What Are Stablecoin Reserves? How USDT & USDC Back Pegs](/blog/what-are-stablecoin-reserves-india-guide/) — explains what stablecoin reserves are and why they matter
+- [What Is Airdrop Farming? Free Tokens and the Risks](/blog/what-is-airdrop-farming-india-guide/) — explains what airdrop farming is and why it matters

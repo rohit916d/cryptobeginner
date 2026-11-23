@@ -97,3 +97,9 @@ You do not need to understand the mathematics to use Bitcoin safely. You only ne
 Double spending is the problem of spending the same digital money twice, and it held digital cash back for decades because files are trivially easy to copy. Bitcoin solved it with a public ledger that the whole network maintains, an ordering rule that picks one payment when two conflict, and a proof-of-work cost that makes rewriting history impractical. Confirmations are simply the visible form of that security, growing stronger with every block.
 
 For your own crypto journey in India, the takeaways are practical: wait for confirmations before treating a payment as final, never trust a screenshot of a pending transfer, and treat anyone promising to double your coins as a scammer. If you want to go deeper, your next reads could be how blockchain consensus works, what a transaction confirmation really means, and how to verify a deposit on a block explorer before you act on it.
+
+## Keep Learning
+
+- [What Is a Bitcoin Bridge? How BTC Moves to Other Networks](/blog/what-is-a-bitcoin-bridge/) — explains what a bitcoin bridge is and why it matters
+- [What Are Bitcoin Ordinals? NFTs on Bitcoin Explained](/blog/what-are-bitcoin-ordinals-india-guide/) — explains what bitcoin ordinals are and why they matter
+- [What is Crypto Satoshis? Small Bitcoin Units Explained](/blog/what-is-crypto-satoshis-small-bitcoin-units-explained/) — explains what crypto satoshis is and why it matters

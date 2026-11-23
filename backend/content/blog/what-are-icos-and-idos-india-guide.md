@@ -150,3 +150,9 @@ Yes. Tokens bought in an early sale can lose most or all of their value if the p
 ICOs and IDOs are how new crypto projects raise money by selling tokens before they are listed. IDOs are more transparent than the old ICO model, but the underlying risk is the same: you are paying for a promise, not a proven product. Most new tokens lose value, scams are common, and in India there is no regulator to protect you if things go wrong.
 
 For a beginner, the right move is almost always the same: learn the basics, use registered Indian exchanges, keep careful records, and stay away from early token sales until you can read a project — its team, its code, its token distribution, and its vesting schedule — well enough to judge it for yourself. In crypto, patience is not just a virtue. It is the cheapest form of protection you have.
+
+## Keep Learning
+
+- [What Is a Token Generation Event (TGE)? India Guide](/blog/what-is-a-token-generation-event-tge-india-guide/) — explains what a token generation event (tge) is and why it matters
+- [What Is Tokenomics? How to Read Supply and Distribution](/blog/what-is-tokenomics-supply-distribution-india-guide/) — explains what tokenomics is and why it matters
+- [What Is a Crypto Token Buyback? A Beginner's Guide](/blog/what-is-a-crypto-token-buyback-india-guide/) — explains what a crypto token buyback is and why it matters

@@ -139,3 +139,9 @@ And remember the oldest rule in this space: if a stranger online promises you ea
 Fake crypto influencers are not a small problem in India — they are one of the main ways beginners first meet crypto, and one of the main ways they lose money. The pattern is consistent: hidden payment, guaranteed returns, urgency, and a referral link. The defence is equally consistent: look for disclosure, check the risks, verify the claim elsewhere, and never let a creator's enthusiasm substitute for your own research.
 
 You do not need to stop following crypto creators. You need to change what you follow them for. Learn the concepts from the honest educators, ignore the tips from the promoters, and let your own five-minute check — not someone else's countdown — decide when your money moves.
+
+## Keep Learning
+
+- [Crypto Job Scams in India: Fake Work-From-Home Offers](/blog/crypto-job-scams-fake-work-from-home-india-guide/) — a beginner-friendly guide to crypto job scams in india
+- [NFT Scams Explained: Fake Collections and Wash Trading](/blog/nft-scams-fake-collections-wash-trading-india-guide/) — a beginner-friendly guide to nft scams explained
+- [Fake Crypto Apps & Telegram Scams: How Indians Stay Safe](/blog/fake-crypto-apps-telegram-scams-india-guide/) — a beginner-friendly guide to fake crypto apps & telegram scams

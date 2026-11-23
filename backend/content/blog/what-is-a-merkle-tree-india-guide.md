@@ -94,3 +94,9 @@ Tax note: crypto tax rules can change — the 30% rate and 1% TDS described on t
 A Merkle tree is a simple idea with an outsized payoff: hash every item, pair the fingerprints upward, and let one small root stand for the whole set. From that root comes the ability to prove a single transaction belongs to a block using only a handful of fingerprints, which is what lets phone wallets stay light, lets block headers stay small, and lets exchanges offer user-verifiable proof of reserves.
 
 For your own crypto journey, you do not need to compute a single hash. You only need the mental model: leaves at the bottom, one root at the top, and a short proof connecting the two. With that picture in mind, you can understand why a wallet can verify without downloading everything, why tampering with a block is immediately visible, and why impressive-sounding technical claims still deserve the same sceptical question as any other pitch — show me the proof. If you want to go deeper, natural next reads are how block headers work, what a light wallet actually checks, and how proof-of-reserves reports should (and should not) be read before you trust an exchange with your funds.
+
+## Keep Learning
+
+- [What Is Sharding? How Blockchains Split to Scale Faster](/blog/what-is-sharding-blockchain-scaling-explained/) — explains what sharding is and why it matters
+- [What is a Crypto Reorg? Chain Reorganization Explained](/blog/what-is-a-crypto-reorg-chain-reorganization-explained/) — explains what a crypto reorg is and why it matters
+- [What Is Data Availability? Why Blockchains Need It](/blog/what-is-data-availability-india-guide/) — explains what data availability is and why it matters

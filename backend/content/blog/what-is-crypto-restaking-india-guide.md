@@ -159,3 +159,9 @@ Restaking happens on global DeFi platforms, not on Indian exchanges, and there i
 Crypto restaking is a clever idea: reuse the security that stakers already provide, and let new services borrow it instead of building their own from scratch. For the crypto ecosystem, it can make launching new services cheaper and faster. For an individual beginner, though, it is an advanced topic with real risks — slashing under multiple rule sets, smart-contract bugs, operator failures, and reward tokens that can lose value.
 
 The right way to approach restaking is as a subject to study, not a shortcut to extra income. Learn how staking works first, understand what slashing means, and only then look at restaking with the safety checklist in this guide. If the risks feel unclear, that is your answer for now: stay with plain staking, keep your records clean, and revisit restaking when you can explain its risks as clearly as its rewards.
+
+## Keep Learning
+
+- [What Is DeFi? Decentralized Finance Explained Simply](/blog/what-is-defi-explained-without-jargon-india-guide/) — explains what defi is and why it matters
+- [What Is Total Value Locked (TVL)? A DeFi Guide for Beginners](/blog/what-is-total-value-locked-tvl-india-guide/) — explains what total value locked (tvl) is and why it matters
+- [What is Crypto Staking? Earning Rewards Explained](/blog/what-is-crypto-staking-earning-rewards-explained/) — explains what crypto staking is and why it matters

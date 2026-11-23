@@ -124,3 +124,9 @@ They are closely linked but not identical. Your private key is a long string of 
 
 **Does my exchange keep my private key?**
 On most Indian exchanges, yes — the exchange holds the private keys and you log in with a password. That is convenient, but it means the exchange, not you, technically controls the crypto. If you want full control, you can withdraw your crypto to a wallet where you hold the private key yourself. That is called self-custody, and it comes with full responsibility for keeping the key safe.
+
+## Keep Learning
+
+- [What Is a Public Key? How Crypto Addresses Are Made](/blog/what-is-a-public-key-india-guide/) — explains what a public key is and why it matters
+- [What Is Account Abstraction? Simpler Wallets Explained](/blog/what-is-account-abstraction-wallets-india-guide/) — explains what account abstraction is and why it matters
+- [How to Choose a Crypto Wallet App: A Beginner's Guide](/blog/how-to-choose-a-crypto-wallet-app-india-guide/) — shows you how to choose a crypto wallet app, step by step

@@ -106,3 +106,9 @@ On tax, treat ERC-20 tokens like any other crypto: profits on sale or transfer f
 ## Conclusion
 
 ERC-20 is not a coin and not a recommendation — it is a rulebook. It defines how fungible tokens on Ethereum record balances, move between addresses, and grant spending permissions, so that wallets, exchanges, and apps can all work with them in the same way. For an Indian beginner, the practical takeaways are small but powerful: identify tokens by contract address, always match the network on both sides, respect approvals, keep ETH for gas, and keep records for tax. Practise opening any token's contract address on a block explorer — that five-minute habit protects you far more than any tip in a chat group.
+
+## Keep Learning
+
+- [What Is a Gas Token? Paying Fees With Tokens Explained](/blog/what-is-a-gas-token-india-guide/) — explains what a gas token is and why it matters
+- [What Are Soulbound Tokens? Non-Transferable Tokens](/blog/what-are-soulbound-tokens-india-guide/) — explains what soulbound tokens are and why they matter
+- [What Is the Ethereum Virtual Machine? A Beginner's Guide](/blog/what-is-ethereum-virtual-machine-india-guide/) — explains what the ethereum virtual machine is and why it matters

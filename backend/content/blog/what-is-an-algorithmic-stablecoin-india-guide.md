@@ -103,3 +103,9 @@ They carry more risk than reserve-backed stablecoins like USDT or USDC, because 
 ### Why did the TerraUSD (UST) stablecoin collapse?
 
 UST was an algorithmic stablecoin backed by the LUNA token. In May 2022, a large wave of selling pushed UST below its one-dollar peg, and the mechanism that was supposed to restore the peg by minting more LUNA instead flooded the market with new LUNA tokens. Confidence collapsed, both tokens lost almost all their value within days, and the episode became the clearest real-world lesson that an algorithmic peg can fail when demand disappears.
+
+## Keep Learning
+
+- [What Are Stablecoin Reserves? How USDT & USDC Back Pegs](/blog/what-are-stablecoin-reserves-india-guide/) — explains what stablecoin reserves are and why they matter
+- [What Is a Stablecoin Depeg? Why Pegs Break Explained](/blog/what-is-a-stablecoin-depeg-india-guide/) — explains what a stablecoin depeg is and why it matters
+- [What Are Liquid Staking Tokens? A Beginner's Guide India](/blog/what-are-liquid-staking-tokens-india-guide/) — explains what liquid staking tokens are and why they matter

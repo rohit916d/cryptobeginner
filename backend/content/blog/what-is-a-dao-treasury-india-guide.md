@@ -129,3 +129,9 @@ If any step fails — no address published, all funds in one token, spending wit
 A DAO treasury is a crypto project's shared bank account, run in public by code and community votes instead of by a bank and a board. When it works well, it is one of the most transparent ways to fund a project: anyone can see the balance, the income and the spending. When it works badly — low voter turnout, concentrated holdings, weak signers or unread proposals — it becomes a single point of failure that can sink a project.
 
 For beginners, the treasury is best used as a research tool. Before you trust a project, check its treasury the way you would check a company's finances: where the money comes from, what it holds, how it is spent, and who actually controls it. A project with a diversified treasury, public proposals and real voter participation is a healthier bet than one with a huge balance and nobody watching it. And remember the golden rule of DAO treasuries: the money belongs to the project, not to you — anyone promising you a share of it is selling you something that does not exist.
+
+## Keep Learning
+
+- [What Is a DAO? Decentralized Organizations Explained](/blog/what-is-a-dao-india-guide/) — explains what a dao is and why it matters
+- [What Is Airdrop Farming? Free Tokens and the Risks](/blog/what-is-airdrop-farming-india-guide/) — explains what airdrop farming is and why it matters
+- [What Are Governance Tokens? Voting Rights Explained](/blog/what-are-governance-tokens-india-guide/) — explains what governance tokens are and why they matter

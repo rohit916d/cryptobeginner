@@ -144,3 +144,9 @@ A public key is the bridge between your secret and the world. It is derived from
 You will rarely see a public key in daily use, and you never need to memorise one. What you do need is the mental model: the private key signs, the public key verifies, and the address receives. Hold that picture in your head, keep the private half secret, and the rest of crypto's key system falls into place.
 
 If you want to go deeper, your next reads are the private key guide and the wallet address guide — together, the three posts cover the complete key system every crypto owner should understand.
+
+## Keep Learning
+
+- [What is a Crypto Public Address? A Beginner's Guide](/blog/what-is-a-crypto-public-address-a-beginner-s-guide/) — explains what a crypto public address is and why it matters
+- [What Is a Private Key? The Secret Behind Your Crypto](/blog/what-is-a-private-key-india-guide/) — explains what a private key is and why it matters
+- [What Is a Multisig Wallet? Shared Security Explained](/blog/what-is-a-multisig-wallet-india-guide/) — explains what a multisig wallet is and why it matters

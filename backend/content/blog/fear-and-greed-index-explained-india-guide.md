@@ -122,3 +122,9 @@ No. The index is a sentiment gauge built from past and current market data, not 
 The Fear and Greed Index is best understood as a mirror, not a map. It shows you what the crypto crowd is feeling, and that reflection is valuable precisely because crowd emotion so often drives bad decisions. Use it to pause when you feel rushed, to question tips that arrive during euphoric phases, and to remember that a market-wide mood says nothing about any single project's worth.
 
 For Indian beginners, the sensible next step is simple: add the index to your routine as a five-second emotional check, keep building your understanding of how crypto works, and let research — not mood — drive your decisions.
+
+## Keep Learning
+
+- [What Are Crypto Index Funds? Basket Investing Explained](/blog/what-are-crypto-index-funds-india-guide/) — explains what crypto index funds are and why they matter
+- [What Is a Crypto On-Ramp and Off-Ramp? India Guide](/blog/what-is-a-crypto-on-ramp-and-off-ramp-india-guide/) — explains what a crypto on-ramp and off-ramp is and why it matters
+- [What Is a Liquidity Pool? How AMM Pools Work in India](/blog/what-is-a-liquidity-pool-india-guide/) — explains what a liquidity pool is and why it matters

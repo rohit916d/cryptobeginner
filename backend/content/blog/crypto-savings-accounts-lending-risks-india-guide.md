@@ -121,3 +121,9 @@ Crypto income is generally taxed at a flat 30% under India's virtual digital ass
 ### What is the difference between a crypto savings account and a bank savings account?
 
 A bank savings account holds a regulated deposit, usually protected by deposit insurance up to a limit, and you can generally withdraw on demand. A crypto savings account is not a deposit at all — it is a lending or yield product where your coins are put to work and your return depends on borrowers, markets, and code. That is why the advertised rate can look much higher, and why the downside can be much larger too.
+
+## Keep Learning
+
+- [What Is Yield Farming? DeFi Rewards and Risks Explained](/blog/what-is-yield-farming-defi-rewards-india-guide/) — explains what yield farming is and why it matters
+- [What Is Crypto Restaking? Reusing Staked Assets Explained](/blog/what-is-crypto-restaking-india-guide/) — explains what crypto restaking is and why it matters
+- [What Is a DEX? Decentralized Exchanges Explained Simply](/blog/what-is-a-dex-decentralized-exchanges-india-guide/) — explains what a dex is and why it matters

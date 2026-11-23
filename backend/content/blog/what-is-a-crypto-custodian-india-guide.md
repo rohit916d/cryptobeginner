@@ -115,3 +115,9 @@ If a platform's custody claims cannot be verified in five minutes of checking, d
 ## The Bottom Line
 
 A crypto custodian is a professional safekeeper: a company that holds private keys for exchanges, funds, and large holders using cold storage, multi-signature controls, audits, and insurance. Custodians make institutional crypto possible, but they do not make crypto risk-free. For Indian beginners, the practical lesson is narrower: know who holds the keys behind your exchange balance, keep only trading amounts with any third party, learn self-custody before moving larger holdings, and keep records for tax filing.
+
+## Keep Learning
+
+- [How to Choose a Crypto Wallet App: A Beginner's Guide](/blog/how-to-choose-a-crypto-wallet-app-india-guide/) — shows you how to choose a crypto wallet app, step by step
+- [What Is Self-Custody? Taking Crypto Off Exchanges Safely](/blog/what-is-self-custody-india-guide/) — explains what self-custody is and why it matters
+- [What Is a Watch-Only Wallet? Track Crypto Without Risk](/blog/what-is-a-watch-only-wallet-india-guide/) — explains what a watch-only wallet is and why it matters

@@ -96,3 +96,9 @@ Act quickly, even though recovery is unlikely. First, stop all contact with the 
 NFT scams succeed because they borrow trust: the trust of a famous name, the trust of a busy-looking marketplace, or the trust of a friendly message. Fake collections fake the product, and wash trading fakes the demand — but both leave footprints on the blockchain that anyone can check. Start from official links, compare contract addresses, look at who is really trading, and never let urgency override verification. In the NFT world, the most valuable skill is not spotting the next big collection — it is recognising the traps before they cost you money.
 
 *Next step: if you are new to NFTs generally, read our beginner's guide to what an NFT is, then practise the checks above on a well-known collection without buying anything. The habit is free to build and expensive to skip.*
+
+## Keep Learning
+
+- [What Is a Honeypot Token? The Buy-Only Trap Explained](/blog/what-is-a-honeypot-token-india-guide/) — explains what a honeypot token is and why it matters
+- [Crypto Job Scams in India: Fake Work-From-Home Offers](/blog/crypto-job-scams-fake-work-from-home-india-guide/) — a beginner-friendly guide to crypto job scams in india
+- [Fake Crypto Apps & Telegram Scams: How Indians Stay Safe](/blog/fake-crypto-apps-telegram-scams-india-guide/) — a beginner-friendly guide to fake crypto apps & telegram scams

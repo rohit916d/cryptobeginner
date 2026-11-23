@@ -123,3 +123,9 @@ Crypto trading volume answers a simple question: how much trading actually happe
 Build the habit now, while you are learning: before every trade, glance at the pair's 24-hour volume, compare it with another source if anything looks odd, and ask whether the market is busy enough for your order size. It takes ten seconds, and it is one of the cheapest forms of protection in crypto.
 
 The next step is to open your exchange app and practise reading volume on a pair you already know — not to trade, just to observe. Watch how volume changes through the day, how it behaves when prices move, and how different pairs of the same coin compare. That quiet observation will teach you more about real markets than any single article can.
+
+## Keep Learning
+
+- [How to Create a Crypto Trading Plan (Even as a Beginner)](/blog/how-to-create-a-crypto-trading-plan-beginners-guide/) — shows you how to create a crypto trading plan (even as a beginner), step by step
+- [What Is a Trading Pair? BTC/INR Explained for Beginners](/blog/what-is-a-trading-pair-india-guide/) — explains what a trading pair is and why it matters
+- [Spot Trading Explained: Buying Crypto You Actually Own](/blog/spot-trading-explained-india-guide/) — a beginner-friendly guide to spot trading explained

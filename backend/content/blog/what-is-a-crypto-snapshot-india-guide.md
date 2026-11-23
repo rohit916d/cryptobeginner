@@ -137,3 +137,9 @@ A crypto snapshot is a photograph of a blockchain at one moment in time, and tha
 That simplicity is also the defence against snapshot scams. Any message that asks you to connect your wallet, pay a fee, or share secret information to "join" a snapshot is contradicting how snapshots work. The picture was already taken — or it was never real in the first place.
 
 For Indian beginners, the sensible approach is the boring one: use products you understand, hold assets for reasons you can explain, keep records of anything you receive, and treat every snapshot announcement as a rumour until the project's official channels confirm it. The snapshot will take care of itself. Your job is to stay safe while it does.
+
+## Keep Learning
+
+- [What Is MEV? How Transaction Ordering Affects Indians](/blog/what-is-mev-transaction-ordering-india-guide/) — explains what mev is and why it matters
+- [What is a Crypto Reorg? Chain Reorganization Explained](/blog/what-is-a-crypto-reorg-chain-reorganization-explained/) — explains what a crypto reorg is and why it matters
+- [What is a Crypto Hard Fork? Network Upgrades Explained](/blog/what-is-a-crypto-hard-fork-network-upgrades-explained/) — explains what a crypto hard fork is and why it matters

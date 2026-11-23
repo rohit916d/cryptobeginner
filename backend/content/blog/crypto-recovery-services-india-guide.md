@@ -147,3 +147,9 @@ Act fast: save all transaction IDs, wallet addresses and screenshots, stop commu
 ### How can I tell a real recovery expert from a scammer?
 
 A legitimate investigator or lawyer will never demand an upfront fee in crypto, never guarantee results, and will explain exactly what they can and cannot do. Scammers do the opposite: they guarantee recovery, demand payment in crypto or gift cards, use fake reviews and stolen logos, and pressure you to decide quickly. When in doubt, walk away.
+
+## Keep Learning
+
+- [What Is a Crypto Airdrop? Free Tokens & Scam Warnings](/blog/what-is-a-crypto-airdrop-free-tokens-scam-warnings/) — explains what a crypto airdrop is and why it matters
+- [What Is a 51% Attack? Blockchain Security Explained](/blog/what-is-a-51-percent-attack-india-guide/) — explains what a 51% attack is and why it matters
+- [What Is a Rug Pull? Red Flags Every Beginner Must Know](/blog/what-is-a-rug-pull-red-flags-india-guide/) — explains what a rug pull is and why it matters

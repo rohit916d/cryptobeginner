@@ -126,3 +126,9 @@ Two practical points matter. First, every altcoin sale is a taxable event in Ind
 An altcoin is simply any cryptocurrency that is not Bitcoin — a category so broad that it includes some of the most useful technology in crypto and some of its worst scams. The label tells you nothing about quality, safety, or future value. What matters is the purpose of the specific coin, who controls it, how transparent it is, and whether you can explain why it exists.
 
 For a beginner in India, the sensible approach is to learn first and act slowly. Understand Bitcoin, understand how exchanges and taxes work, and treat every altcoin as a separate question to research — not as a lottery ticket. The crypto market rewards patience and punishes hype, and the best first step with altcoins is often no step at all until you genuinely understand what you are looking at.
+
+## Keep Learning
+
+- [Before Trading Any Altcoin, Look at Bitcoin First](/blog/before-trading-any-altcoin-look-at-bitcoin-first/) — a beginner-friendly guide to before trading any altcoin, look at bitcoin first
+- [What Are Bitcoin Ordinals? NFTs on Bitcoin Explained](/blog/what-are-bitcoin-ordinals-india-guide/) — explains what bitcoin ordinals are and why they matter
+- [What Is a Bitcoin Bridge? How BTC Moves to Other Networks](/blog/what-is-a-bitcoin-bridge/) — explains what a bitcoin bridge is and why it matters

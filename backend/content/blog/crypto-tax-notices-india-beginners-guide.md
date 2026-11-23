@@ -125,3 +125,9 @@ The goal is not to fear the notice system, but to stay organised enough that a n
 ---
 
 *Tax rules and department procedures change over time. This guide explains the basics for beginners and was current as of September 2026. For advice about your own notice or return, speak to a qualified tax professional.*
+
+## Keep Learning
+
+- [How to Keep Crypto Tax Records for Filing in India](/blog/how-to-keep-crypto-records-india-tax-filing/) — shows you how to keep crypto tax records for filing in india, step by step
+- [Crypto Gift Tax in India: Rules Beginners Must Know](/blog/crypto-gift-tax-india-rules-beginners/) — a beginner-friendly guide to crypto gift tax in india
+- [Crypto Advance Tax in India: Quarterly Payments Explained](/blog/crypto-advance-tax-india-quarterly-payments-guide/) — a beginner-friendly guide to crypto advance tax in india

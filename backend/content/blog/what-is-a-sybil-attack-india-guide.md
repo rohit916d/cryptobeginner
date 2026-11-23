@@ -144,3 +144,9 @@ Airdrops are meant to reward genuine early users, so projects check for Sybil be
 A Sybil attack works because blockchains count identities, and identities are cheap. The defence — for networks and for you — is to add cost, history, or verification before trusting a crowd. For networks, that means proof of work, proof of stake, and behaviour analysis. For you, it means a simpler rule: popularity is not proof.
 
 Next time a token, vote, or airdrop looks overwhelmingly popular, pause and ask one question: is this a crowd, or one actor wearing many masks? That single question will save you from most Sybil traps — and from the FOMO they are designed to create. For your next step, read our guides on how to do your own research before buying any crypto and how to spot fake crypto apps and Telegram groups targeting Indians.
+
+## Keep Learning
+
+- [What Is a Dusting Attack? Crypto Privacy Risk Explained](/blog/what-is-a-dusting-attack-india-guide/) — explains what a dusting attack is and why it matters
+- [What Is a 51% Attack? Blockchain Security Explained](/blog/what-is-a-51-percent-attack-india-guide/) — explains what a 51% attack is and why it matters
+- [What Is a Crypto Airdrop? Free Tokens & Scam Warnings](/blog/what-is-a-crypto-airdrop-free-tokens-scam-warnings/) — explains what a crypto airdrop is and why it matters

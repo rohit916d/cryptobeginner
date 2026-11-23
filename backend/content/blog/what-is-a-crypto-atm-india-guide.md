@@ -110,3 +110,9 @@ Crypto ATM fees are typically much higher than exchange fees, often in the range
 ### What is the safest way to buy crypto in India instead of an ATM?
 
 Use a FIU-IND registered Indian exchange such as CoinDCX, WazirX or ZebPay, complete KYC, and deposit INR through UPI or a bank transfer. Keep records of every transaction, because crypto gains are taxed at a flat 30% and a 1% TDS applies to transfers. Never pay cash to a stranger or a machine you cannot verify.
+
+## Keep Learning
+
+- [What Is a Bitcoin Bridge? How BTC Moves to Other Networks](/blog/what-is-a-bitcoin-bridge/) — explains what a bitcoin bridge is and why it matters
+- [What Is the Lightning Network? Faster Bitcoin Payments](/blog/what-is-the-lightning-network-india-guide/) — explains what the lightning network is and why it matters
+- [What Are Bitcoin Ordinals? NFTs on Bitcoin Explained](/blog/what-are-bitcoin-ordinals-india-guide/) — explains what bitcoin ordinals are and why they matter

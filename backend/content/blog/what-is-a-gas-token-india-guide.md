@@ -124,3 +124,9 @@ Normally no — the network only accepts its native token as gas. Some newer wal
 A gas token is the fuel that makes a blockchain transaction move. On every major network it is the native coin — ETH, POL, BNB, SOL, or AVAX — and without a small amount of it, even a wallet full of other tokens cannot transact. The old refund-style gas tokens, CHI and GST2, are history after Ethereum's 2021 upgrade, but the core idea has not changed: networks charge for their resources, and the gas token is how you pay.
 
 For Indian beginners, the practical rule is simple. Before you move tokens anywhere, check which network you are using, make sure you hold a little of its gas token, and keep a record of what you paid. That one habit turns "insufficient funds for gas" from a confusing dead end into a problem you never meet.
+
+## Keep Learning
+
+- [What Is an ERC-20 Token? Token Standards Explained](/blog/what-is-erc-20-token-standards-india-guide/) — explains what an erc-20 token is and why it matters
+- [What Is the Ethereum Virtual Machine? A Beginner's Guide](/blog/what-is-ethereum-virtual-machine-india-guide/) — explains what the ethereum virtual machine is and why it matters
+- [What Are Soulbound Tokens? Non-Transferable Tokens](/blog/what-are-soulbound-tokens-india-guide/) — explains what soulbound tokens are and why they matter

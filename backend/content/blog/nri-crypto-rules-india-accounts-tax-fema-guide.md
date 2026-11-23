@@ -108,3 +108,9 @@ If you are an NRI considering crypto, work through this checklist in order:
 NRI crypto rules in India are not a single clear permission or prohibition — they are a patchwork of exchange policies, tax rules and foreign exchange regulations that are still evolving. Indian exchanges may or may not accept you, the 30% tax and 1% TDS framework applies to Indian crypto gains with complications around residence and double taxation, and FEMA adds a layer of caution to any cross-border movement of funds.
 
 That complexity is not a reason to panic, but it is a reason to be methodical: confirm your status, read the terms, use your own accounts and legitimate banking channels, keep thorough records, and get professional advice before large transactions. Crypto rewards patience and good record-keeping far more than speed — and for NRIs, that is doubly true, because the paperwork is what keeps you safe in two countries at once.
+
+## Keep Learning
+
+- [Crypto Gift Tax in India: Rules Beginners Must Know](/blog/crypto-gift-tax-india-rules-beginners/) — a beginner-friendly guide to crypto gift tax in india
+- [How to Keep Crypto Tax Records for Filing in India](/blog/how-to-keep-crypto-records-india-tax-filing/) — shows you how to keep crypto tax records for filing in india, step by step
+- [Crypto Tax in India Explained: 30% Rule, 1% TDS & How to File in 2026](/blog/crypto-tax-india-30-percent-1-percent-tds/) — a beginner-friendly guide to crypto tax in india explained

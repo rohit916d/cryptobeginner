@@ -113,3 +113,9 @@ In theory, any proof-of-work blockchain can be attacked if someone controls a ma
 ## Conclusion: Size Is a Security Feature
 
 A 51% attack works because blockchains trust the majority, and a majority can be bought — but only at a price that rises with the network's size. That is why the biggest networks are the hardest to attack and why tiny networks deserve extra caution. For you, the rule is simple: prefer large, well-established networks, use reputable exchanges, wait for confirmations, and keep your private keys safe. Those four habits protect you from the exotic risk of a majority attack and from the everyday risks that are far more likely to reach you. For your next step, read our guides on how to do your own research before buying any crypto and how to spot a crypto Ponzi scheme.
+
+## Keep Learning
+
+- [What Is a Sybil Attack? Fake Identities Explained in Crypto](/blog/what-is-a-sybil-attack-india-guide/) — explains what a sybil attack is and why it matters
+- [What Is a Dusting Attack? Crypto Privacy Risk Explained](/blog/what-is-a-dusting-attack-india-guide/) — explains what a dusting attack is and why it matters
+- [What Is a Wallet Drainer? How One Click Empties Crypto](/blog/what-is-a-wallet-drainer-india-guide/) — explains what a wallet drainer is and why it matters

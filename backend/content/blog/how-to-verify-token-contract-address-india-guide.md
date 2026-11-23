@@ -136,3 +136,9 @@ On the project's official website, its official documentation, or its verified s
 ### Does verifying the contract address guarantee a token is safe?
 
 No. Verification only proves you are looking at the genuine token, not a lookalike copy. The real project can still be risky, its price can still fall sharply, and its contract can still contain features you do not understand. Treat verification as a necessary first check, never as a safety certificate.
+
+## Keep Learning
+
+- [What Is Address Poisoning? Lookalike Address Scam Guide](/blog/what-is-address-poisoning-india-guide/) — explains what address poisoning is and why it matters
+- [What Is a Honeypot Token? The Buy-Only Trap Explained](/blog/what-is-a-honeypot-token-india-guide/) — explains what a honeypot token is and why it matters
+- [Read a Token Contract on a Block Explorer: Beginner Guide](/blog/how-to-read-a-token-contract-on-a-block-explorer-guide/) — a beginner-friendly guide to read a token contract on a block explorer

@@ -146,3 +146,9 @@ A liquidity pool is a clever solution to a real problem: it lets decentralised e
 But clever does not mean safe. Impermanent loss, smart-contract bugs, fake pools and rug pulls make liquidity pools one of the riskier corners of crypto — a place where the losses are real, the reversals are impossible, and no Indian regulator or insurer stands behind you. For most Indian beginners, the right move is simply to understand the concept, as you now do, and to keep your actual buying on a registered exchange with UPI deposits, proper records and an amount you can afford to lose.
 
 If this guide helped, the natural next reads are our explainers on decentralised exchanges, yield farming and impermanent loss — together, they complete the picture of how DeFi actually works, risks included.
+
+## Keep Learning
+
+- [What Is a Smart Contract? DeFi Code Explained Simply](/blog/what-is-a-smart-contract-defi-explained-india-guide/) — explains what a smart contract is and why it matters
+- [What Is a Flash Loan? DeFi Borrowing Explained Simply](/blog/what-is-a-flash-loan-india-guide/) — explains what a flash loan is and why it matters
+- [What Is Airdrop Farming? Free Tokens and the Risks](/blog/what-is-airdrop-farming-india-guide/) — explains what airdrop farming is and why it matters

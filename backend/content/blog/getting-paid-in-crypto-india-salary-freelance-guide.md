@@ -132,3 +132,9 @@ A stablecoin is usually the lower-risk choice for pay because it is designed to 
 Getting paid in crypto in India is possible, and for some freelancers and global employees it is genuinely convenient. But it is not a like-for-like replacement for a bank salary: the value can move, the tax picture has two layers, conversion costs eat into your pay, and no bank can undo a mistake. The people who do it well share three habits — a written agreement before work starts, records kept from the first payment, and a prompt conversion plan for the money they need in rupees.
 
 If you are considering your first crypto-paid project, start small: one client, one clearly tradeable asset, a test payment, and a professional tax check. That cautious first step teaches you the real workflow without putting a month's income at risk. For your next step, read our guides on how to keep crypto records for India's tax filing and how to check if an exchange is FIU-registered in India.
+
+## Keep Learning
+
+- [How to Keep Crypto Tax Records for Filing in India](/blog/how-to-keep-crypto-records-india-tax-filing/) — shows you how to keep crypto tax records for filing in india, step by step
+- [How to Check If an Exchange Is FIU-Registered in India](/blog/how-to-check-if-exchange-is-fiu-registered-india-guide/) — shows you how to check if an exchange is fiu-registered in india, step by step
+- [Crypto Gift Tax in India: Rules Beginners Must Know](/blog/crypto-gift-tax-india-rules-beginners/) — a beginner-friendly guide to crypto gift tax in india
