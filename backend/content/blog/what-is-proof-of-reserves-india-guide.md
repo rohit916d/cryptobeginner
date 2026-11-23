@@ -120,3 +120,9 @@ No. A full audit reviews finances, liabilities, controls, and compliance over a 
 Proof of reserves turned an exchange's promise — "your coins are safe with us" — into something customers can partially check for themselves. The strongest reports publish wallet addresses anyone can inspect, total customer liabilities through a privacy-preserving Merkle tree, repeat the exercise regularly, and carry an independent attestation. The weakest are one-time screenshots with no liabilities and no way to verify.
 
 As a beginner in India, your next steps are simple: prefer FIU-registered platforms, spend five minutes reading their latest reserves report with the checklist above, verify one wallet address yourself, keep your own transaction records for taxes, and stay aware that no report removes the volatility and platform risks of crypto itself. Understanding what a report proves — and what it quietly leaves unproven — is exactly the kind of quiet, unglamorous skill that protects beginners far better than any market tip.
+
+## Keep Learning
+
+- [How to Store Crypto Safely: The Complete Safety Playbook for Indians](/blog/how-to-store-crypto-safely-india-beginners-guide/) — the habits that protect your coins beyond any exchange report
+- [What Happens to Your Crypto If an Exchange Shuts Down?](/blog/what-happens-to-your-crypto-if-exchange-shuts-down/) — what really happens to your balance if a platform fails
+- [What is a Crypto Hot Wallet vs Cold Wallet?](/blog/what-is-a-crypto-hot-wallet-vs-cold-wallet/) — the difference between keeping coins online and storing them offline

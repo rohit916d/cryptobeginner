@@ -107,3 +107,9 @@ Finally, beware of Indian-targeted scams that misuse TVL language. Messages prom
 Total Value Locked is a useful first glance at a DeFi protocol — a rough measure of how much users have entrusted to it. It becomes dangerous only when it is treated as proof of safety, quality, or future returns, which it is not. Prices inflate it, double counting swells it, and reward campaigns can rent it temporarily.
 
 The careful beginner's habit is simple: note the TVL, then look past it — at the trend, the token mix, the users, the audits, and the risks. That five-minute habit will protect you far better than any single number on a dashboard ever could.
+
+## Keep Learning
+
+- [What Is DeFi? Decentralized Finance Explained Simply](/blog/what-is-defi-explained-without-jargon-india-guide/) — the world of protocols that TVL is used to measure
+- [What is Crypto Staking? Earning Rewards Explained](/blog/what-is-crypto-staking-earning-rewards-explained/) — one of the main ways crypto gets locked into protocols
+- [What Is a DEX? Decentralized Exchanges Explained Simply](/blog/what-is-a-dex-decentralized-exchanges-india-guide/) — the most common type of DeFi protocol you will see TVL figures for

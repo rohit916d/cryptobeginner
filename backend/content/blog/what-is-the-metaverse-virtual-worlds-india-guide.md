@@ -189,3 +189,9 @@ Some people earn by selling virtual items, creating experiences or trading virtu
 4. **Stay sceptical.** If a metaverse opportunity sounds too good to be true, it almost certainly is.
 
 Virtual worlds are best enjoyed as what they are today: a new kind of social space and game, not a shortcut to wealth. Explore them with curiosity, protect your money, and you will get the fun without the regret.
+
+## Keep Learning
+
+- [What Is an NFT? A Beginner's Guide With Indian Examples](/blog/what-is-an-nft-beginners-guide-indian-examples/) — the tokens behind virtual land and items in blockchain worlds
+- [What Is Web3? The Internet's Next Chapter Explained Simply](/blog/what-is-web3-internets-next-chapter-explained/) — the bigger idea that blockchain-based virtual worlds sit inside
+- [What is a Crypto Hot Wallet vs Cold Wallet?](/blog/what-is-a-crypto-hot-wallet-vs-cold-wallet/) — wallet basics to learn before connecting one to any virtual world

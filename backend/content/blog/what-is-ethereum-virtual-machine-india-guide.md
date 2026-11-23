@@ -96,3 +96,9 @@ The Ethereum Virtual Machine is the invisible engine under one of the largest pa
 As a next step, if you use a wallet app, open its network-switching menu and look at the list of EVM-compatible chains. Notice how your address stays the same while the network — and its fee token — changes. That one observation captures the core idea of this entire guide: one engine, many networks, and you in control of which one you use.
 
 For your next reads on this site: how smart contracts work, what Layer 2 networks are, and how to transfer crypto between exchanges safely. Each one builds directly on what you just learned.
+
+## Keep Learning
+
+- [What Is a Smart Contract? DeFi Code Explained Simply](/blog/what-is-a-smart-contract-defi-explained-india-guide/) — the self-running code that the EVM executes, in plain words
+- [Layer 2 Networks Explained: Faster, Cheaper Crypto](/blog/layer-2-networks-explained-india-guide/) — how networks built on top of Ethereum cut fees and speed things up
+- [What is Crypto Gas? Network Fees Explained](/blog/what-is-crypto-gas-network-fees-explained/) — why every EVM transaction charges a fee and how that fee is set

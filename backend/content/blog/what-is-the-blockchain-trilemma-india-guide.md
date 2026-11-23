@@ -134,3 +134,9 @@ For a beginner in India, the trilemma is less a technical puzzle and more a prac
 Keep learning one concept at a time. The trilemma connects to almost everything else in crypto — wallets, exchanges, Layer 2 networks, and even scams — so understanding it now will make every future topic easier.
 
 **Next step:** Read our guides on Layer 2 networks and sharding to see how developers are working around the trilemma in practice, and revisit the Bitcoin and Ethereum explainers to see how the two biggest networks made their choices.
+
+## Keep Learning
+
+- [Layer 2 Networks Explained: Faster, Cheaper Crypto](/blog/layer-2-networks-explained-india-guide/) — the most popular workaround for the scalability corner of the triangle
+- [What Is Sharding? How Blockchains Split to Scale Faster](/blog/what-is-sharding-blockchain-scaling-explained/) — how splitting a network into pieces stretches the trilemma
+- [Proof of Work vs Proof of Stake: Consensus Explained](/blog/proof-of-work-vs-proof-of-stake-india-guide/) — the security choices behind the trilemma's second corner

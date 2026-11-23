@@ -125,3 +125,9 @@ You cannot eliminate it, but you can reduce exposure: keep slippage sensible, av
 MEV is a hidden layer of cost in decentralised finance, created not by fees or taxes but by the order in which transactions are arranged. For most Indian beginners who buy crypto with INR on a centralised exchange, it is background knowledge rather than a daily concern. The moment you start swapping on decentralised exchanges, though, it becomes practical: your pending trade is public, and someone may profit from its position in the queue.
 
 The defence is unglamorous but effective. Understand what slippage means, respect low-liquidity warnings, check every confirmation screen, and ignore anyone promising effortless MEV profits. Blockchains are transparent by design, and that transparency cuts both ways. Knowing how transaction ordering works means you can use decentralised exchanges with your eyes open — and keep more of every trade for yourself.
+
+## Keep Learning
+
+- [What is a Crypto Mempool? The Waiting Room Explained](/blog/what-is-a-crypto-mempool-the-waiting-room-explained/) — where pending transactions sit in public view before they are confirmed
+- [What is Crypto Slippage? A Beginner's Guide](/blog/what-is-crypto-slippage-a-beginner-s-guide/) — why the price you actually get can differ from the price you saw
+- [What Is a DEX? Decentralized Exchanges Explained Simply](/blog/what-is-a-dex-decentralized-exchanges-india-guide/) — how on-chain swaps work, which is exactly where MEV happens

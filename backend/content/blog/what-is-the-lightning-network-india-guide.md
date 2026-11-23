@@ -127,3 +127,9 @@ It is generally considered safe when used carefully, but it is not risk-free. Yo
 The Lightning Network solves Bitcoin's biggest everyday problem: speed and cost. By moving payments into channels and settling only the final result on the blockchain, it turns a ten-minute transaction into a two-second one, and a variable fee into a tiny one. It is not a separate coin, not an investment, and not a replacement for Bitcoin itself — it is Bitcoin, made practical for small payments.
 
 For an Indian beginner, the sensible path is simple: learn how Bitcoin works first, buy a small amount on a registered exchange if you choose to, and try Lightning with a modest amount in a wallet you trust. Keep your main holdings in secure storage, keep records for tax, and never trust anyone promising free money through Lightning. If you follow those basics, you will understand one of the most important technologies in Bitcoin — not from reading about it, but from using it.
+
+## Keep Learning
+
+- [Bitcoin Explained for Absolute Beginners](/blog/bitcoin-explained-for-absolute-beginners/) — the base layer that Lightning is built on, explained from zero
+- [What is Crypto Gas? Network Fees Explained](/blog/what-is-crypto-gas-network-fees-explained/) — the on-chain fees that Lightning payments are designed to avoid
+- [What is a Crypto Hot Wallet vs Cold Wallet?](/blog/what-is-a-crypto-hot-wallet-vs-cold-wallet/) — where small spending balances and long-term holdings each belong
