@@ -26,6 +26,19 @@ const CONTENT = {
       ["Changes", "We may update these terms at any time. Continued use of the site constitutes acceptance."],
     ],
   },
+  "editorial-policy": {
+    title: "Editorial Policy",
+    description: "How Crypto Beginner researches, writes, fact-checks and corrects its crypto guides for Indian beginners.",
+    sections: [
+      ["Who writes our content", "Crypto Beginner is founded and edited by Rohit Prajapati. Every guide is researched, written and reviewed by our editorial team under his direction, and published under an accountable byline — never anonymously."],
+      ["How we research", "We start from primary sources wherever possible: official project documentation, regulator and government notices (including the RBI, SEBI and FIU-IND), exchange announcements, and reputable industry research. News-led articles are cross-checked against at least two independent sources before publishing."],
+      ["Original content only", "Every article on this site is written from scratch for Indian beginners. We never copy, translate or spin other websites' articles, and we never present anyone else's work as our own."],
+      ["Fact-checking and updates", "Figures, tax rules and platform details are checked at the time of writing. When facts change — a tax rule is amended, an exchange changes its policy — we update the article. If you spot an error, email hello@cryptobeginner.in and we will correct it."],
+      ["No financial advice", "Our content explains how things work; it never tells you what to buy or sell. We do not publish price predictions, coin picks, or guaranteed-return claims. Crypto is a high-risk asset class — always do your own research and consult a qualified professional before investing."],
+      ["Affiliate and sponsored content", "Some services listed on our Recommendations page are affiliate partners. Those links carry a clear disclosure on the page and are marked as sponsored links; partners never pay to influence our guides, and educational articles are never paid placements."],
+      ["Corrections", "If we make a mistake, we fix it in the article itself. Reader corrections are always welcome at hello@cryptobeginner.in."],
+    ],
+  },
   disclaimer: {
     title: "Disclaimer",
     description: "Important: Crypto Beginner provides educational content only, not financial advice.",
@@ -50,7 +63,7 @@ export default function LegalPage({ slug }) {
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-14 md:py-20" data-testid={`legal-${slug}`}>
-      <div className="label-eyebrow">Legal</div>
+      <div className="label-eyebrow">{slug === "editorial-policy" ? "About" : "Legal"}</div>
       <h1 className="mt-3 text-4xl md:text-5xl font-normal text-white tracking-tight">{data.title}</h1>
       <p className="mt-4 text-zinc-400">{data.description}</p>
       <p className="mt-2 text-xs text-zinc-400 font-mono">Last updated: September 2026</p>

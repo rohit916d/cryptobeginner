@@ -88,7 +88,7 @@ export default function BlogDetail() {
         headline: post.title,
         description: post.excerpt,
         image: absImage(post.cover_image),
-        author: { "@type": "Organization", name: post.author || "Crypto Beginner" },
+        author: { "@type": "Person", name: "Rohit Prajapati", jobTitle: "Founder & Editor", url: SITE_ORIGIN + "/about" },
         publisher: {
           "@type": "Organization",
           name: "Crypto Beginner",

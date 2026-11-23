@@ -235,7 +235,7 @@ ${relatedHtml}
           "@type": "BlogPosting",
           headline: p.fm.title,
           description: p.fm.excerpt || "",
-          author: { "@type": "Organization", name: p.fm.author || "Crypto Beginner Editorial Team" },
+          author: { "@type": "Person", name: "Rohit Prajapati", jobTitle: "Founder & Editor", url: `${ORIGIN}/about/` },
           datePublished: p.fm.created_at || undefined,
           image: p.fm.cover_image ? ORIGIN + p.fm.cover_image : undefined,
           mainEntityOfPage: url,
@@ -367,6 +367,19 @@ ${groups}
         ["Changes", "We may update these terms at any time. Continued use of the site constitutes acceptance."],
       ],
     },
+    "editorial-policy": {
+      title: "Editorial Policy",
+      description: "How Crypto Beginner researches, writes, fact-checks and corrects its crypto guides for Indian beginners.",
+      sections: [
+        ["Who writes our content", "Crypto Beginner is founded and edited by Rohit Prajapati. Every guide is researched, written and reviewed by our editorial team under his direction, and published under an accountable byline — never anonymously."],
+        ["How we research", "We start from primary sources wherever possible: official project documentation, regulator and government notices (including the RBI, SEBI and FIU-IND), exchange announcements, and reputable industry research. News-led articles are cross-checked against at least two independent sources before publishing."],
+        ["Original content only", "Every article on this site is written from scratch for Indian beginners. We never copy, translate or spin other websites' articles, and we never present anyone else's work as our own."],
+        ["Fact-checking and updates", "Figures, tax rules and platform details are checked at the time of writing. When facts change — a tax rule is amended, an exchange changes its policy — we update the article. If you spot an error, email hello@cryptobeginner.in and we will correct it."],
+        ["No financial advice", "Our content explains how things work; it never tells you what to buy or sell. We do not publish price predictions, coin picks, or guaranteed-return claims. Crypto is a high-risk asset class — always do your own research and consult a qualified professional before investing."],
+        ["Affiliate and sponsored content", "Some services listed on our Recommendations page are affiliate partners. Those links carry a clear disclosure on the page and are marked as sponsored links; partners never pay to influence our guides, and educational articles are never paid placements."],
+        ["Corrections", "If we make a mistake, we fix it in the article itself. Reader corrections are always welcome at hello@cryptobeginner.in."],
+      ],
+    },
     disclaimer: {
       title: "Disclaimer",
       description: "Important: Crypto Beginner provides educational content only, not financial advice.",
@@ -410,6 +423,8 @@ ${groups}
 <p class="text-zinc-400 mt-2 leading-relaxed">Step-by-step beginner guides, a structured learning track, a plain-English crypto dictionary, a risk-free demo trading simulator, and new blog guides every week — all written by the Crypto Beginner Editorial Team.</p>
 <h2 class="text-xl font-bold text-white mt-8">Our editorial standards</h2>
 <p class="text-zinc-400 mt-2 leading-relaxed">Every article is 100% original, carries a clear educational disclaimer, and is reviewed against our quality checklist before publishing. We never publish price predictions, coin picks, or guaranteed-return claims. Nothing on this site is financial advice.</p>
+<h2 class="text-xl font-bold text-white mt-8">Who runs Crypto Beginner</h2>
+<p class="text-zinc-400 mt-2 leading-relaxed">Crypto Beginner is founded and edited by Rohit Prajapati, who started the site after watching people around him lose money to crypto scams and confusing, hype-driven advice. He directs the editorial team and reviews every guide before it is published. Read our <a href="/editorial-policy">Editorial Policy</a> to see how we research and fact-check our content.</p>
 <h2 class="text-xl font-bold text-white mt-8">Contact</h2>
 <p class="text-zinc-400 mt-2 leading-relaxed">Questions or corrections: hello@cryptobeginner.in — or use our <a href="/contact">contact page</a>.</p>
 </main>`,

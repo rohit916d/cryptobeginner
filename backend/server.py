@@ -1492,6 +1492,7 @@ async def sitemap():
         ("/terms/", "0.2", "yearly"),
         ("/disclaimer/", "0.2", "yearly"),
         ("/cookie-policy/", "0.2", "yearly"),
+        ("/editorial-policy/", "0.2", "yearly"),
     ]
 
     lessons = await db.lessons.find(

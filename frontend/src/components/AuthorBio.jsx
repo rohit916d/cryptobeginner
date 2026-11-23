@@ -5,8 +5,8 @@ import { User } from "lucide-react";
  * a named editorial entity with a clear review process, instead of an
  * anonymous byline.
  */
-export default function AuthorBio({ author, date }) {
-  const name = author || "Crypto Beginner Editorial Team";
+export default function AuthorBio({ date }) {
+  const name = "Rohit Prajapati";
   return (
     <div className="card-base p-6 mt-12">
       <div className="flex items-start gap-4">
@@ -16,10 +16,12 @@ export default function AuthorBio({ author, date }) {
         <div>
           <div className="text-[11px] uppercase tracking-[0.15em] text-zinc-500 font-bold">Written by</div>
           <div className="text-white font-semibold mt-0.5">{name}</div>
+          <div className="text-xs text-zinc-500 mt-0.5">Founder &amp; Editor, Crypto Beginner</div>
           <p className="text-sm text-zinc-400 mt-2 leading-relaxed">
-            The Crypto Beginner editorial team researches and fact-checks every guide before
-            publishing. We explain crypto in plain language, never give financial advice, and
-            update articles when the facts change.
+            Rohit founded Crypto Beginner to explain crypto in plain language for Indian
+            beginners. Every guide is researched and fact-checked by our editorial team under
+            his direction before publishing. We never give financial advice, and we update
+            articles when the facts change. See our Editorial Policy for how we work.
             {date ? <> This article was published on <span className="text-zinc-300">{date}</span>.</> : null}
           </p>
         </div>

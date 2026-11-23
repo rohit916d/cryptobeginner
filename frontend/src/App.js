@@ -60,6 +60,10 @@ function App() {
                 element={<LegalPage slug="disclaimer" />}
               />
               <Route
+                path="/editorial-policy"
+                element={<LegalPage slug="editorial-policy" />}
+              />
+              <Route
                 path="/cookie-policy"
                 element={<CookiePolicy />}
               />

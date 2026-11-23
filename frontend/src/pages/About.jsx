@@ -1,5 +1,6 @@
 import { useSEO, SITE_ORIGIN } from "../lib/seo";
 import { ShieldCheck, BookOpen, HeartHandshake } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function About() {
   useSEO({
@@ -30,6 +31,14 @@ export default function About() {
             <p className="mt-2 text-sm text-zinc-400 leading-relaxed">{v.body}</p>
           </div>
         ))}
+      </div>
+
+      <div className="mt-14 card-base p-7">
+        <div className="text-[11px] uppercase tracking-[0.15em] text-zinc-500 font-bold">Founder &amp; Editor</div>
+        <h2 className="mt-2 text-xl font-bold text-white">Rohit Prajapati</h2>
+        <p className="mt-3 text-zinc-400 leading-relaxed">
+          Rohit founded Crypto Beginner after watching people around him lose money to crypto scams and confusing, hype-driven advice. He directs the editorial team, reviews every guide before it is published, and oversees corrections and reader feedback. Read our <Link to="/editorial-policy" className="text-[#C8F169] hover:underline">Editorial Policy</Link> to see how we research and fact-check our content.
+        </p>
       </div>
 
       <div className="mt-14 card-base p-7">
