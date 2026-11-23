@@ -81,6 +81,28 @@ Mostly **professional firms running automated systems**: co-located servers, dir
 
 For a beginner, the realistic takeaway is not "I should do this" but "this is why prices across exchanges stay roughly in sync."
 
+## A Worked Example: Where the Apparent Profit Actually Goes
+
+Abstract warnings about fees are easy to nod at and forget, so let us walk through one realistic cross-exchange trade, rupee by rupee, and watch a healthy-looking price gap shrink.
+
+Imagine that at 11:02 AM, Bitcoin trades at ₹84,00,000 on Exchange A and ₹84,42,000 on Exchange B — a gap of ₹42,000, roughly 0.5%. A beginner watching both screens might see easy money. Now follow an arbitrageur who tries to capture it with ₹8,40,000 of capital (about 0.1 BTC):
+
+| Step | What happens | Cost |
+| --- | --- | --- |
+| Buy on Exchange A | 0.1 BTC purchased at the lower price | Trading fee ~0.2% = ₹1,680 |
+| Withdraw BTC | Exchange A charges a fixed network/withdrawal fee | ~₹850 |
+| Wait for confirmations | 20–40 minutes pass; the gap on B is already narrowing | Price risk, not a fee |
+| Sell on Exchange B | Price has slipped to ₹84,20,000 by the time the coins arrive | Trading fee ~0.2% = ₹1,684 |
+| Tax layer (India) | The sale is a taxable transfer; 1% TDS applies on the sale value | ~₹8,420 deducted as TDS |
+
+Gross gap captured: about ₹20,000 (the price moved during the transfer, so only part of the original ₹42,000 gap survived). Visible costs: roughly ₹4,200 in fees, plus ₹8,420 held back as TDS that must be reconciled at tax-filing time. What looked like a ₹42,000 opportunity became a modest, uncertain remainder — and that is in a scenario where nothing went wrong. If Exchange B's price had fallen below Exchange A's during the transfer window, the same steps would have produced a loss.
+
+Three lessons hide inside this example. First, **the transfer is the trade**: the minutes your coins spend in transit are when the gap lives or dies, which is why professionals pre-position funds on both exchanges instead of transferring at all. Second, **percentages deceive**: a 0.5% gap sounds large until you list every percentage and fixed fee stacked against it. Third, **record-keeping is part of the cost**: dozens of such trades create dozens of taxable events that someone has to document.
+
+If you want to understand the price screens in this example more deeply, our guide to [the crypto order book](https://cryptobeginner.in/blog/what-is-crypto-order-book-the-trading-ledger-explained/) explains where those bid and ask prices come from, and our walkthrough of [how to transfer crypto between exchanges](https://cryptobeginner.in/blog/how-to-transfer-crypto-between-exchanges-india-guide/) shows exactly what happens during that critical transfer window.
+
+One final detail in the table deserves attention: the TDS line. It is not a fee you lose forever — it is tax deducted at source that is credited against your final tax liability when you file. But it still leaves your account today, shrinks the capital available for the next trade, and only comes back through the filing process. Beginners modelling arbitrage on a spreadsheet almost never include it, which is one more reason their paper profits look better than real ones.
+
 ## What Beginners Should Learn From Arbitrage
 
 Even if you never place an arbitrage trade, the concept teaches you:

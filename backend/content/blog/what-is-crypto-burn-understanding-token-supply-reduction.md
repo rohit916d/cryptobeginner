@@ -80,6 +80,28 @@ Traditional companies sometimes do **buybacks** — purchasing their own stock t
 
 **"All burns are equal."** A project burning 1% of supply from fee revenue is very different from a team burning 40% of unsold tokens after a failed sale. Context determines meaning — always ask *what* was burned, *why*, and *whose* tokens they were.
 
+## Burns in Practice: Three Patterns Behind the Headlines
+
+When a burn appears in crypto news, it usually follows one of three patterns. Recognising which pattern you are looking at tells you far more than the headline number of coins destroyed.
+
+**Pattern 1: The scheduled programme burn.** Some projects commit in advance to burning a fixed amount, or a fixed share of fees or revenue, every quarter. These are routine supply management — predictable, announced in calendars, and verifiable afterwards. The educational point is not the burn itself but the discipline: the project publishes the burn address and the transaction, so anyone can confirm the coins really left circulation.
+
+**Pattern 2: The fee burn built into the protocol.** On some networks, a portion of every transaction fee is automatically burned by the code itself — no committee, no press release. Here the burn rate rises and falls with network usage: busy weeks destroy more, quiet weeks less. When you read that a network "became deflationary this month," this mechanism is almost always what the article means: fee burns temporarily exceeded new issuance.
+
+**Pattern 3: The one-off cleanup burn.** A team burns unsold tokens from a launch, or coins sent to the wrong place, or an allocation it has decided to retire. These are housekeeping events. They can be perfectly legitimate, but they change nothing about the project's product, users, or revenue — a distinction headlines often blur.
+
+To keep the three mechanisms straight, it helps to compare a burn with its two closest cousins:
+
+| Mechanism | What actually happens | Are the coins gone forever? | Who decides? |
+| --- | --- | --- | --- |
+| Burn | Coins sent to an unspendable address | Yes | Project, protocol code, or community vote |
+| Buyback | Project purchases coins on the open market | No — the project still holds them | Project treasury |
+| Lock / vesting | Coins are frozen by contract until a future date | No — they return later | Smart contract schedule |
+
+The middle row is the one that traps beginners: a buyback sounds like a burn in a headline, but the coins can be sold again later. A burn cannot be undone by anyone — that permanence is precisely what makes the burn address worth checking yourself, as the earlier section showed. If you are still building your foundation, our explainer on [a crypto token vs. a coin](https://cryptobeginner.in/blog/what-is-a-crypto-token-vs-a-coin-the-difference-explained/) clarifies what kind of asset is being burned, and our guide to [reading a token contract on a block explorer](https://cryptobeginner.in/blog/how-to-read-a-token-contract-on-a-block-explorer-guide/) shows you where supply figures live on-chain.
+
+A last word on scale, because burn headlines love big numbers. "Ten billion coins burned" sounds dramatic until you learn the total supply was ten trillion — a 0.1% change wearing a very loud headline. Always convert a burn into a percentage of total supply, and then ask the follow-up question that actually matters: does the remaining supply schedule still include future unlocks or new issuance that quietly replaces what was burned? A burn only tightens supply if nothing refills the bucket behind it.
+
 ## A Beginner's Checklist for Evaluating Burn News
 
 When you see a burn announcement, run through these questions:

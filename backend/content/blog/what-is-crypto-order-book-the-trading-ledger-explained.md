@@ -100,6 +100,29 @@ You do not need to master pools yet — just know the two systems exist. Central
 3. **Chasing the flicker.** Prices move constantly; beginners often panic-buy after watching numbers jump. The book rewards patience, not speed.
 4. **Confusing the "price" with your price.** The quoted market price is the *last* trade's price — your trade may execute at a different one.
 
+## A Worked Example: Reading a Real Order Book in Sixty Seconds
+
+Let us put the theory on one small screen. Here is a simplified order book for a BTC/INR pair on an Indian exchange, frozen at one moment:
+
+| Asks (sellers) | Price (₹) | Bids (buyers) |
+| --- | --- | --- |
+| 0.85 BTC | 84,15,000 | |
+| 0.40 BTC | 84,10,000 | |
+| 0.25 BTC | 84,06,000 | |
+| | **84,05,000** | 0.30 BTC |
+| | **84,02,000** | 0.55 BTC |
+| | **83,98,000** | 1.20 BTC |
+
+**Second 0–15: Find the spread.** The best ask is ₹84,05,000 and the best bid is ₹84,02,000 — a spread of ₹3,000, or about 0.036%. That is a tight, healthy spread: crossing it costs little. On an illiquid pair the same calculation might show 0.5% or more, an instant loss the moment you buy at market and look at the sell price.
+
+**Second 15–35: Add up the depth near the price.** On the ask side, the first three levels hold 1.5 BTC in total. A market buy of 0.2 BTC would be filled entirely at ₹84,05,000. A market buy of 2 BTC would chew through all three levels and finish at a worse price — that slippage is visible *before* you trade, if you bother to look.
+
+**Second 35–50: Spot the walls.** The 1.20 BTC bid at ₹83,98,000 is much larger than its neighbours. It might be one patient buyer, or several orders stacked at a round psychological level. Either way, it tells you where meaningful buying interest is sitting right now — information a plain price chart hides completely.
+
+**Second 50–60: Choose your order type with the book, not against it.** With a tight spread and deep book, a market order is cheap and safe. With a wide spread, a limit order placed inside the gap lets other traders come to you. The book just told you which situation you are in; the only mistake is not asking it.
+
+Practise this sixty-second routine on any live exchange screen — no trade required — until it becomes as automatic as checking a price tag. For what happens when traders exploit the tiny differences *between* different exchanges' books, continue with our guide to [crypto arbitrage](https://cryptobeginner.in/blog/what-is-crypto-arbitrage-a-beginner-s-guide/), and for the other half of every trade's cost, our breakdown of [crypto exchange fees in India](https://cryptobeginner.in/blog/crypto-exchange-fees-explained-india/) shows what the exchange itself charges on top.
+
 ## The Big Picture
 
 The order book is simply supply and demand made visible — every bid and ask, ranked and public. Once you can read it, you can see liquidity, judge spreads, and understand exactly why prices move the way they do.

@@ -87,6 +87,25 @@ Whether you are receiving your first crypto from an Indian exchange like CoinDCX
 - **Ignoring the memo/tag field.** Some exchanges require a memo or destination tag *in addition* to the address. Forgetting it can mean your deposit never gets credited.
 - **Assuming "sent" means "received."** Transactions need network confirmations. Check the transaction on a block explorer rather than panicking after two minutes.
 
+## Address Formats Across Networks: A Comparison Table
+
+One reason addresses confuse beginners is that they do not all look alike — each blockchain family developed its own format, and the opening characters are your fastest clue about which network an address belongs to.
+
+| Network family | Typical address starts with | Example shape | Watch out for |
+| --- | --- | --- | --- |
+| Bitcoin (older format) | 1 | 1A1zP1… (long string) | Still valid, but higher fees |
+| Bitcoin (SegWit) | 3 or bc1q | bc1qxy2k… | Widely supported; lower fees |
+| Bitcoin (Taproot) | bc1p | bc1p5d7r… | Newest format; check wallet support |
+| Ethereum and EVM chains | 0x | 0x742d35… | Same address works on many EVM networks |
+| Solana | Base58 string, no prefix | DYw8jCTf… | Looks "random" — no checksum prefix to spot |
+| XRP | r | rEb8TK3g… | Often needs a destination tag as well |
+
+Two rows of this table deserve extra attention. The **Ethereum row** explains a trap that catches many Indian beginners: because the same 0x address exists on Ethereum, BNB Chain, Polygon, and other EVM networks simultaneously, sending a token "to your address" on the wrong network leaves it sitting on a chain your wallet is not currently displaying. The funds are usually recoverable by switching networks — but the panic in between is entirely avoidable by confirming the network, not just the address, before every send.
+
+The **XRP row** points at the opposite problem: some networks and most exchange deposit addresses pair the address with a memo or destination tag. The address alone is not the complete instruction there — omit the tag and an exchange cannot tell whose deposit arrived.
+
+The practical habit that covers every row: before sending, read the first four characters of the address and name the network out loud. If the format does not match the network you intended, stop. That five-second check catches an entire category of losses that no support team can undo. For the deeper distinction between the address you share and the keys you never share, continue with our guide to [the crypto public address](https://cryptobeginner.in/blog/what-is-a-crypto-public-address-a-beginner-s-guide/), and for the system that makes these addresses possible at all, our explainer on [blockchain technology](https://cryptobeginner.in/blog/what-is-blockchain-technology/) is the natural next step.
+
 ## Addresses and Taxes: A Quick India Note
 
 In India, crypto transfers are not anonymous for tax purposes the way the technology might suggest. Indian exchanges report transactions, and the 30% tax on crypto gains plus 1% TDS on transfers apply regardless of which wallet addresses you use. Moving crypto between your own wallets is not a taxable event by itself, but selling or swapping generally is. Keep records of your addresses and transactions — your future self (and your chartered accountant) will thank you.

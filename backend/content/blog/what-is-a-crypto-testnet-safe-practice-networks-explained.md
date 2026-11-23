@@ -91,6 +91,20 @@ Note: testnet names change over time — networks get deprecated and replaced (f
 
 Developers use testnets for the same reason: before launching an app that handles real money, they deploy it to a testnet and hammer it with thousands of test transactions. Exchanges and wallet teams also test upgrades there first. When you practice on a testnet, you are using the same professional-grade safety process the industry itself relies on.
 
+## A Practice Session You Can Copy: Your First Testnet Hour
+
+Reading about testnets helps; spending one structured hour on one helps far more. Here is a complete beginner practice session you can copy exactly, using any major testnet your wallet supports.
+
+**Exercise 1 — Set up and fund (10 minutes).** Create a fresh wallet (or a separate account inside your existing wallet app) that you will use only for practice. Switch its network to the testnet, then visit the network's faucet and claim test coins. Watch them arrive. You have just practised the single most skipped beginner skill: deliberately choosing a network instead of accepting whatever the app opened on.
+
+**Exercise 2 — Send to yourself (10 minutes).** Copy your own testnet address, send a small amount of test coins to it, and then find the transaction on the testnet's block explorer. Read every field: sender, receiver, amount, fee, block number, confirmations. On the explorer, a real transfer and a test transfer look identical — which is exactly the point. The reading skill transfers one-to-one to mainnet.
+
+**Exercise 3 — Break something safely (15 minutes).** Deliberately set an absurdly low fee and watch the transaction sit pending. Then try the wallet's speed-up or cancel option if it offers one. On a testnet, this experiment costs nothing and teaches you the stuck-transaction playbook calmly, instead of during a mainnet panic with real money frozen mid-flight.
+
+**Exercise 4 — Use one real application (25 minutes).** Connect your practice wallet to a testnet version of a decentralised exchange or lending app. Make a small swap. Approve a token spending permission and then revoke it. Notice every signature request the app makes and read it before approving — building the habit of reading prompts while the money is fake is what protects you when it is not.
+
+By the end of the hour you will have chosen networks, moved funds, read an explorer, handled a stuck transaction, and signed (and revoked) real permissions — the five core wallet skills — at a total cost of zero rupees. When you later create a wallet for real use, our step-by-step guide to [creating your first crypto wallet](https://cryptobeginner.in/blog/how-to-create-your-first-crypto-wallet/) walks the mainnet version, and our explainer on [crypto gas and network fees](https://cryptobeginner.in/blog/what-is-crypto-gas-network-fees-explained/) will make the fee screens you met in Exercise 3 fully intelligible.
+
 ## Common Questions and Misconceptions
 
 **"Will practicing on a testnet teach me to trade?"** No — and that is not the point. Testnets teach you *mechanics*: how wallets, addresses, transactions, and fees work. Trading skill is a separate (and much riskier) topic.

@@ -94,6 +94,18 @@ For Indian beginners, the sats framing has a practical tax angle too: because ev
 
 Compare this with traditional assets. You cannot easily buy ₹100 worth of a prime Mumbai apartment. But Bitcoin's divisibility means global, neutral digital money is accessible to a student with a ₹500 budget and a billionaire alike. That radical accessibility is not a side effect — it is core to what makes Bitcoin interesting as *money*, not just as an investment.
 
+## Thinking in Sats: A ₹1,000 Worked Example
+
+Let us make sats concrete with simple, round, deliberately illustrative numbers. Suppose — purely for easy arithmetic, not as a price claim — that 1 BTC costs exactly ₹1,00,00,000 (one crore). Since one bitcoin contains 100,000,000 sats, each sat is worth exactly ₹0.10 at that price, and each rupee buys 10 sats.
+
+Now follow a ₹1,000 purchase through that lens. ₹1,000 buys 10,000 sats — written in bitcoin terms as 0.0001 BTC. Both numbers describe the identical holding, but notice how differently they feel. "0.0001 BTC" looks like a rounding error and tempts people to say they "don't own any Bitcoin." "10,000 sats" is a countable stack you can watch grow — which is precisely why many wallets and Indian exchanges now let you display your balance in sats, and why small regular purchases are often described as "stacking sats."
+
+The fee side teaches the second half of the lesson. If sending that balance on-chain one day costs, say, 800 sats in network fees, you can immediately see the fee is 8% of a 10,000-sat holding — painfully expensive — but only 0.08% of a 1,000,000-sat holding. Same network, same fee in sats, completely different economics depending on the size of your stack. This is why experienced users batch withdrawals instead of moving small amounts repeatedly, and why tiny on-chain balances sometimes cost more to move than they are worth.
+
+A word of discipline about the example itself: the ₹1 crore price was chosen to make the maths clean, and Bitcoin's real price will be different on any day you read this — higher or lower, the *method* never changes. Rupees divided by the current price of one bitcoin, multiplied by 100,000,000, always gives you your sats. Learn the method once and no price level can confuse you again.
+
+If you are starting from absolute zero, our guide to [Bitcoin explained for absolute beginners](https://cryptobeginner.in/blog/bitcoin-explained-for-absolute-beginners/) builds the foundation this unit sits on, and our walkthrough of [how to buy your first Bitcoin in India](https://cryptobeginner.in/blog/how-to-buy-your-first-bitcoin-in-india/) shows how a first purchase — however small in sats — actually happens step by step.
+
 ## The Big Picture
 
 Satoshis turn Bitcoin from an intimidating headline number into something you can actually use and understand: small, divisible, and accessible. Next time someone says "Bitcoin is too expensive," you will know the truth — nobody needs a whole one.

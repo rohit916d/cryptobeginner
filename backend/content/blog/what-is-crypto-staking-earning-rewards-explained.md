@@ -94,6 +94,24 @@ If you ever explore staking after learning the basics:
 4. Never stake money you might need soon — lock-ups and volatility do not mix with emergency funds.
 5. Track rewards for taxes from day one.
 
+## Common Mistakes Beginners Make With Staking
+
+Most staking losses do not come from the technology failing. They come from a handful of avoidable decisions made in the first enthusiastic week. Watch for these:
+
+**Chasing the highest advertised percentage.** A very high reward rate is a question, not a gift. It may be paid in a token whose own supply inflates rapidly, funded by a temporary promotion, or offered by a platform taking risks you cannot see. Ask where the yield comes from before asking how big it is — if nobody can explain the source in one sentence, treat the number as marketing, not income.
+
+**Ignoring the unbonding period.** Many networks impose a waiting period — days or weeks — between asking to unstake and actually receiving your coins, during which you earn nothing and cannot sell. Beginners discover this at the worst possible moment: when the price is falling and they want out. Always find the unbonding period before you stake, not after.
+
+**Staking everything in one place.** One validator can be slashed; one platform can freeze withdrawals; one app can be compromised. Splitting stakes across a small number of reputable options is less convenient and considerably safer — the same diversification instinct that applies everywhere else in finance.
+
+**Forgetting that rewards are taxable events.** In India, staking rewards are generally treated as income when received, and selling later can attract the 30% VDA tax with 1% TDS mechanics on transfers. Beginners who stake small amounts across many wallets often create a record-keeping tangle worth more in accounting time than the rewards themselves. A simple spreadsheet — date, asset, amount, INR value at receipt — prevents that.
+
+**Confusing "staking" with any product that uses the word.** Some platforms label lending, or even pure promotional payouts, as "staking." Real staking secures a proof-of-stake network through validators, as described earlier in this guide. If a product cannot name the network and validator involved, it is something else wearing staking's clothes.
+
+**Staking money with a deadline.** Rent, fees, and emergency funds do not belong in a lock-up. Volatility plus unbonding periods means staked money is, for practical purposes, money you cannot reach — plan accordingly.
+
+For the tax side in full, our guide to [crypto tax in India — the 30% tax and 1% TDS](https://cryptobeginner.in/blog/crypto-tax-india-30-percent-1-percent-tds/) is the essential companion read, and our comparison of [DeFi vs. traditional finance](https://cryptobeginner.in/blog/defi-vs-traditional-finance/) puts staking in the wider landscape of ways crypto holders are offered returns.
+
 ## The Big Picture
 
 Staking is elegant: it turns passive holders into active guardians of the network, replacing electricity with economic commitment. The rewards are real, but so are the lock-ups, the slashing, the volatility, and the tax paperwork. Understand the full picture first — then decide if it fits your learning journey.

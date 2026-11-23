@@ -79,6 +79,26 @@ Your address is public, and everything it has ever done is visible on a block ex
 
 That link gets created the moment you complete KYC on an exchange, post the address publicly, or use it for something tied to your identity. From then on, anyone can trace that address's activity. There is nothing inherently wrong with this — it is how transparent blockchains work — but you should make the linkage consciously, not accidentally.
 
+## A Worked Example: Receiving a Payment, Step by Step
+
+Theory becomes much clearer when you follow one real receipt from start to finish. Imagine your cousin in Dubai is returning ₹20,000 to you as USDT, and you want it in your own wallet rather than on an exchange.
+
+**Step 1 — Pick the network together, out loud.** You both agree on the same network before anything moves (for USDT this might be one of several networks it exists on). Most lost transfers are born right here, in a network mismatch nobody discussed.
+
+**Step 2 — Copy your address from the wallet itself.** You open your wallet, tap Receive, select the exact network you agreed on, and copy the address the app shows for that network. You never type it by hand and never reuse an address from an old screenshot — wallets can generate fresh addresses, and screenshots go stale.
+
+**Step 3 — Share it through a second channel and confirm the ends.** You send the address by message, and your cousin reads back the first six and last six characters before sending. This ten-second habit defeats clipboard-hijacking malware, which silently swaps copied addresses for an attacker's.
+
+**Step 4 — Send a small test first.** Because this is a new sender–receiver pair, your cousin first sends a tiny amount. You watch it arrive in your wallet and confirm the balance changed. Only then does the main amount move, using the exact same address and network.
+
+**Step 5 — Verify independently on a block explorer.** You paste your address (never your seed phrase) into a public block explorer and see the incoming transaction with its confirmations. This is the receipt neither of you has to take on trust — the network itself published it.
+
+**Step 6 — Log it.** You note the date, asset, network, amount, and approximate INR value in your records file. Thirty seconds now saves hours during tax season, when you will be glad every receipt is organised.
+
+Notice what never happened in this flow: you never shared anything secret, you never trusted a screenshot, and you never rushed. For the companion view of the same ritual, read our guide to [what a crypto wallet address is](https://cryptobeginner.in/blog/what-is-a-crypto-wallet-address-a-beginner-s-guide/), and if your amounts grow over time, our explainer on [self-custody](https://cryptobeginner.in/blog/what-is-self-custody-india-guide/) covers how to take fuller control of your own wallets safely.
+
+One more habit separates careful receivers from lucky ones: after the main amount lands, take a screenshot of the *explorer page* — not just the wallet balance — and save it with your log entry. Wallet apps change, phones get replaced, and exchange histories get pruned, but the block explorer record is permanent and independently checkable by you, your CA, or anyone auditing the transfer later.
+
 ## Addresses and Taxes in India
 
 Because every receipt to your address is permanently recorded, your addresses effectively form an audit trail. India's 30% tax on crypto gains and 1% TDS on transfers make clean records valuable. Consider maintaining a simple log: date, address used, asset, amount, and approximate INR value. If questions ever arise, the blockchain already has the receipts — your job is simply to organize them.

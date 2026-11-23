@@ -84,6 +84,20 @@ Yes — and it is a well-known rite of passage. Some projects start as tokens to
 
 The reverse can happen too: a project may abandon its own chain and become a token on a larger network. The labels describe *technical reality right now*, not permanent identity.
 
+## A Worked Example: Sending a Coin and Sending a Token
+
+The coin–token distinction stops being trivia the first time you send both. Follow two transfers out of the same wallet on the Ethereum network and watch where they differ.
+
+**Transfer 1 — sending the coin.** You send 0.05 ETH to a friend. The network fee (gas) is paid in ETH itself, deducted automatically from the same balance you are sending from. One asset, one balance, one transaction. Simple — because ETH is the native coin of the network it moves on, and the network accepts its own coin as payment for the work.
+
+**Transfer 2 — sending a token.** Now you send 100 units of an ERC-20 token from the same wallet. The token moves happily — but the gas is *still* charged in ETH, not in the token. Your wallet needs a small ETH balance sitting alongside the token, purely to pay for the delivery. The token is cargo; the coin is the fuel, and the truck does not move without fuel no matter how valuable the cargo is.
+
+This single fact explains the most common beginner panic in all of crypto: a wallet proudly showing a valuable token balance and a transfer that refuses to go through, because the ETH balance is zero. The fix is unglamorous — acquire a small amount of the network's native coin first — but until you understand coins versus tokens, the error message looks like your money is trapped. It is not trapped; it is unfuelled.
+
+The same logic repeats on every network you will ever use. On BNB Chain the fuel coin is BNB; on Polygon it is POL; on Solana, SOL pays for token transfers there. Whenever you plan to hold a token somewhere, plan to hold a little of that network's coin beside it. And when a project describes its asset, check which of the two it is issuing — a new coin means a whole new blockchain to secure and maintain, while a token means the project is building on someone else's security from day one.
+
+For the fee side of this story, our explainer on [crypto gas and network fees](https://cryptobeginner.in/blog/what-is-crypto-gas-network-fees-explained/) shows how that fuel bill is calculated, and our beginner's guide to [what a crypto wallet address is](https://cryptobeginner.in/blog/what-is-a-crypto-wallet-address-a-beginner-s-guide/) covers the addresses both kinds of assets travel between.
+
 ## Common Beginner Confusions
 
 **"So is everything with a logo a token?"** No. Bitcoin and Ether are coins — each anchors its own blockchain. Many famous assets, though, are tokens living on Ethereum or other smart-contract platforms.

@@ -79,6 +79,29 @@ Honestly: almost nothing. Reorgs are infrastructure-level events handled automat
 - **Prefer well-established networks** for significant value, since their immense mining/staking power makes deep reorgs practically impossible.
 - **Keep records.** If a transaction behaves oddly around the time of a known network event, save the transaction hash. In India, where every transfer can have 1% TDS implications, being able to show *what actually finalized on-chain* is valuable documentation.
 
+## A Worked Example: A Two-Block Reorg, Minute by Minute
+
+Reorgs sound abstract until you watch one unfold. Here is a realistic miniature, using a fictional payment on a proof-of-work network.
+
+**12:00 — You are paid.** A client sends you 0.05 BTC. The transaction is broadcast and enters the mempool.
+
+**12:09 — First confirmation.** A miner includes your transaction in Block 100, and your wallet shows "1 confirmation." Somewhere else on the network, at almost the same moment, another miner produced a competing Block 100 that does *not* contain your transaction — perhaps it never reached that miner in time. Two versions of history now exist, and different parts of the network have seen different ones.
+
+**12:19 — The fork resolves against you.** The next block, 101, is built on top of the *competing* Block 100. That branch is now longer — two blocks against your branch's one — so every node following the longest-chain rule abandons your branch. The block containing your payment is orphaned, and your transaction drops back into the mempool as if the last twenty minutes never happened. Your wallet's confirmation count falls back to zero.
+
+**12:31 — History rewrites itself, with you in it.** A miner building on the winning branch picks your transaction out of the mempool and includes it in Block 102. Your payment is confirmed again — permanently this time, in practice, because reversing it would now require outpacing the entire honest network.
+
+Notice what did *not* happen: nobody stole anything, no coins were created or destroyed, and your payment was never "reversed" in the sense of being taken back after settlement — it simply had not settled yet. The confirmation count exists precisely to mark the difference between "probably final" and "final for all practical purposes." That is why an exchange might credit a small deposit after 1–2 confirmations but hold a very large one for more: each additional block makes a reorg deep enough to matter exponentially less likely.
+
+| Confirmations | Practical meaning |
+| --- | --- |
+| 0 | Broadcast only — still in the mempool, easily displaced |
+| 1 | In a block, but a shallow reorg can still undo it |
+| 3 | Safe against ordinary network turbulence |
+| 6 | The traditional "settled" standard for large Bitcoin payments |
+
+For the waiting room your transaction returned to mid-story, revisit our guide to [the crypto mempool](https://cryptobeginner.in/blog/what-is-a-crypto-mempool-the-waiting-room-explained/), and for the full machine that produces these blocks, our explainer on [blockchain technology](https://cryptobeginner.in/blog/what-is-blockchain-technology/) ties the whole system together.
+
 ## Reorgs and the Meaning of "Immutable"
 
 So is the blockchain immutable or not? Both, in a precise sense: the deeper a transaction is buried, the closer to absolutely immutable it becomes. The most recent block or two exists in a probabilistic twilight where the network is still finalizing agreement. Confirmations are simply the measure of how far out of that twilight your transaction has traveled.

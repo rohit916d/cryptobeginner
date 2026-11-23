@@ -92,6 +92,22 @@ A common myth is that P2P trades are "off the books." In India, crypto-to-crypto
 
 *Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.*
 
+## A Worked Example: One Complete P2P Trade, Start to Finish
+
+Abstract safety rules stick better when you have watched them operate inside one ordinary trade. Follow Meera, a first-time buyer in Pune, as she purchases ₹5,000 worth of USDT through a P2P marketplace.
+
+**Minute 0 — Choosing the offer.** Meera filters offers by UPI payment, a minimum limit below ₹5,000, and sellers with a high order count and completion rate. She notices the cheapest offer comes from a brand-new account with three completed trades, and deliberately picks a slightly less cheap offer from a seller with thousands of trades and a 99% completion record. That small price difference is the cost of a smoother first experience.
+
+**Minute 2 — Placing the order.** She enters ₹5,000 and the platform locks the seller's USDT in escrow. The chat window opens with the seller's UPI ID and a countdown timer. The crypto is now frozen — the seller cannot run away with it, and Meera cannot claim it until she pays.
+
+**Minute 4 — Paying carefully.** Meera sends exactly ₹5,000 from the same bank account whose name matches her exchange KYC, and writes nothing in the UPI remark — no "crypto," no "USDT," nothing. She screenshots the successful payment with its UTR number visible, uploads it to the trade chat, and taps "Mark as Paid." Until she taps that button, the escrow timer keeps running against her.
+
+**Minutes 5–12 — The wait that tests beginners.** The seller is confirming receipt. Meera's finger hovers over the cancel button, but cancelling after paying is the one thing she must never do: escrow release and refunds become messy once money has moved. She waits. At minute 12 the seller confirms, escrow releases, and the USDT appears in her wallet.
+
+**Afterwards — The unglamorous final step.** Meera saves the order ID, the UTR, and the date in her records file. Her ₹5,000 purchase is part of her tax trail now — purchases themselves are not the taxable event, but the cost basis she will need when she eventually sells is established right here.
+
+Notice how little of this trade involved trusting the stranger. Escrow held the crypto, the platform held the process, and Meera's only real jobs were accuracy and patience. To prepare for the human side of P2P, read our roundup of [common crypto scams targeting Indians](https://cryptobeginner.in/blog/7-common-crypto-scams-targeting-indians/), and if you are new to exchange accounts entirely, our guide to [KYC on crypto exchanges in India](https://cryptobeginner.in/blog/kyc-on-crypto-exchanges-india-guide/) explains the identity layer that sits underneath every P2P trade.
+
 ## The Big Picture
 
 P2P trading is crypto at its most human — real people, real payment apps, real negotiation, with escrow as the referee. Used carefully on reputable platforms, it is a legitimate way to move between INR and crypto. Used carelessly, it is where beginners get burned.

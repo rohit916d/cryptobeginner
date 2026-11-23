@@ -89,6 +89,25 @@ The same ledger idea applies anywhere trustworthy shared records matter:
 - **Cross-border payments:** Settling international transfers in minutes instead of days.
 - **Digital ownership:** NFTs and tokenized assets proving ownership of digital (and sometimes physical) items.
 
+## Blockchain vs. a Regular Database: A Side-by-Side Comparison
+
+Beginners often ask a fair question: if a blockchain is a kind of database, why not just use a normal database? The honest answer is that for most purposes, you should — and seeing the two side by side shows exactly what a blockchain trades away, and what it buys with that trade.
+
+| Question | Regular database | Blockchain |
+| --- | --- | --- |
+| Who owns it? | One company or authority | No single owner; many independent participants |
+| Who can add records? | Whoever the owner authorises | Anyone who follows the network's rules (public chains) |
+| Who can check the records? | Only those given access | Anyone, at any time (public chains) |
+| Can old records be edited? | Yes — admins can update or delete | Practically no — history is locked by cryptography |
+| Speed and cost | Very fast, very cheap | Slower and more expensive by design |
+| What breaks it? | The owner going rogue, being hacked, or shutting down | Requires overpowering thousands of independent participants |
+
+Read the last two rows together and the whole technology clicks into place. A blockchain is deliberately slower and costlier than a database because it is purchasing something a database cannot sell: **records that no single party — not a company, not a government, not the system's own creator — can quietly rewrite afterwards.** For a bank's internal ledger, that purchase is wasteful; the bank is trusted, regulated, and legally accountable, and its database is the right tool. For value that must move between strangers who share no trusted referee — across borders, outside office hours, between people who will never meet — the trade can be worth making.
+
+This is also the sharpest test for evaluating any "blockchain-powered" claim you meet as a beginner. Ask: *who would we have to trust if this used a normal database, and is removing that trust worth the cost?* If the answer is "one company we already trust anyway," the blockchain is decoration. If the answer is "no single party should control this record," you may be looking at the technology used for its one genuine superpower.
+
+From here, the natural next reads are the two engines that keep a blockchain running: our explainer on [crypto mining and proof of work](https://cryptobeginner.in/blog/what-is-crypto-mining-proof-of-work-explained-simply/) shows how new pages get added to the notebook, and our comparison of [a crypto token vs. a coin](https://cryptobeginner.in/blog/what-is-a-crypto-token-vs-a-coin-the-difference-explained/) explains the two kinds of assets that live on top of it.
+
 ## A Necessary Reality Check
 
 Blockchain is not magic, and honest education includes its limits:
