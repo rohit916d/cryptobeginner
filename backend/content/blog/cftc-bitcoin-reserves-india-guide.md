@@ -1,7 +1,7 @@
 ---
 title: "CFTC Lets Exchanges Count Bitcoin as Reserves: India Guide"
 category: "Regulation"
-excerpt: "CFTC Staff Letter 26-31 lets US derivatives exchanges count Bitcoin, Ether and stablecoins toward operating reserves, with a 20% haircut. What it means for India."
+excerpt: "CFTC Staff Letter 26-31 lets derivatives exchanges count Bitcoin, Ether and stablecoins toward operating reserves, with a 20% haircut. What it means for India."
 read_time: 9
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/regulation.jpg"
