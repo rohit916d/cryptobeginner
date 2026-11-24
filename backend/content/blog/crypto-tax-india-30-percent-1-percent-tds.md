@@ -156,6 +156,11 @@ Trading on a properly registered platform makes that record-keeping far easier, 
 
 *This article is for educational purposes only and is not tax or financial advice. Tax laws are complex and change over time — consult a qualified professional for advice specific to your situation.*
 
+## A Tool That Can Help
+
+Working out 30% tax and 1% TDS across dozens of trades by hand is slow and easy to get wrong. Tools like [KoinX](https://app.koinx.com/get-started?r=Ea9cuu) are built for Indian crypto tax rules — they import your exchange trades and calculate your gains, TDS and tax figures, which you can then cross-check against your own records before filing. A calculator does not replace a CA's advice for complicated cases, but it can save hours of spreadsheet work.
+
+*Disclosure: the KoinX link above is an affiliate link — if you sign up through it, Crypto Beginner may earn a reward at no extra cost to you.*
 
 ## Keep Learning
 

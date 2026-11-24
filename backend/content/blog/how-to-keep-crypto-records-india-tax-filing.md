@@ -108,6 +108,11 @@ A transfer between your own wallets is generally not a sale, but you should stil
 
 Keeping crypto tax records in India is a habit, not a project. Record every event with its date, INR value, fees and TDS; download exchange statements each year; document wallet moves yourself; and reconcile monthly so small gaps never grow into filing stress. When filing season arrives, you will work from clear records instead of old screenshots — and that calm is worth the few minutes each entry takes.
 
+## A Tool That Can Help
+
+Once your records are in place, a tax calculator can do the heavy arithmetic for you. Tools like [KoinX](https://app.koinx.com/get-started?r=Ea9cuu) are built for Indian crypto tax rules — they import your exchange trades and calculate your gains, TDS and filing figures, which you can then reconcile against the records you kept. A calculator does not replace good records or a CA's advice for complicated cases, but it can turn a tidy set of records into filing-ready numbers much faster.
+
+*Disclosure: the KoinX link above is an affiliate link — if you sign up through it, Crypto Beginner may earn a reward at no extra cost to you.*
 
 ## Keep Learning
 

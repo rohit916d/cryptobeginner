@@ -140,6 +140,12 @@ Advance tax is not an extra tax. It is the same 30% crypto tax, paid earlier in 
 
 Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.
 
+## A Tool That Can Help
+
+Advance tax instalments depend on knowing your gains so far this year — and that total is hard to track by hand if you trade on more than one exchange. Tools like [KoinX](https://app.koinx.com/get-started?r=Ea9cuu) are built for Indian crypto tax rules — they import your exchange trades and calculate your gains and TDS through the year, so you can estimate each quarterly instalment from real figures instead of guesses. A calculator does not replace a CA's advice for complicated cases, but it can make the quarterly estimate much easier.
+
+*Disclosure: the KoinX link above is an affiliate link — if you sign up through it, Crypto Beginner may earn a reward at no extra cost to you.*
+
 ## Frequently Asked Questions
 
 ### Do I have to pay advance tax on crypto gains in India?

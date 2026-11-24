@@ -112,6 +112,12 @@ Keep these records for several years after filing. A notice can arrive long afte
 
 Schedule VDA is not as scary as it looks. It is simply a per-transfer register: when you bought, when you transferred, what it cost, and what you received. Gather your exchange and wallet records first, enter each transfer honestly, check that TDS credits match your official statements, and remember that losses cannot cancel gains. Do that, and the crypto section of your ITR becomes routine paperwork instead of a last-day panic. If your situation involves foreign exchanges, gifts, mining, or business trading, take this guide as orientation and get advice for your specific facts before filing.
 
+## A Tool That Can Help
+
+If you have many transfers to report, filling in one Schedule VDA row per transfer by hand can take hours. Tools like [KoinX](https://app.koinx.com/get-started?r=Ea9cuu) are built for Indian crypto tax rules — they import your exchange trades and work out the per-transfer figures Schedule VDA asks for, which you can then verify against your own records before filing. A calculator does not replace a CA's advice for complicated cases, but it can make the data-gathering step much faster.
+
+*Disclosure: the KoinX link above is an affiliate link — if you sign up through it, Crypto Beginner may earn a reward at no extra cost to you.*
+
 ## Keep Learning
 
 - [How to Keep Crypto Tax Records for Filing in India](/blog/how-to-keep-crypto-records-india-tax-filing/) — shows you how to keep crypto tax records for filing in india, step by step
