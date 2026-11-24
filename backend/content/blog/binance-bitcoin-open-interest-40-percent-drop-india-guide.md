@@ -1,7 +1,7 @@
 ---
 title: "Bitcoin Open Interest Falls 40% on Binance: India Guide"
 category: "Trading"
-excerpt: "Binance Bitcoin open interest has fallen about 40% in a year — roughly $4.5 billion of leverage gone. What it means for Indian traders."
+excerpt: "Binance Bitcoin open interest has fallen about 40% in a year — roughly $4.5 billion of leverage gone. What it means for Indian traders, and why it matters."
 read_time: 9
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/trading-basics.jpg"
