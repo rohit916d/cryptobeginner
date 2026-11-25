@@ -90,6 +90,14 @@ If you want to verify the current state for yourself, this sequence works for an
 
 **4. Keep a dated note of what you found.** Write down the date, the source, and what the restriction was. In a week, the headlines will have moved on, but your note will still show what actually happened on the day — useful for your own records and for understanding the next incident, because exchanges tend to reuse the same tools.
 
+## Reduce-Only Mode vs Other Exchange Safety Tools
+
+Reduce-only is one tool in a wider kit that exchanges use when markets turn disorderly, and comparing them shows why CoinDCX chose this one. A **full trading halt** stops everything: no opening, no closing, no exits. It is the simplest tool and the harshest, because traders are locked into positions they may desperately want to leave. A **withdrawal pause** is different again — it restricts moving funds off the platform rather than trading on it, and it usually signals a deeper problem with the exchange itself, which is why it alarms users so much more than a trading restriction.
+
+Between those extremes sit finer instruments. **Price bands and circuit limits** cap how far a contract's price can move in a set period, slowing panic without stopping trading. **Liquidation-only or close-only phases** appear on some venues during extreme volatility and resemble reduce-only mode, but are typically triggered by price movement in a single contract rather than by a market-wide liquidity problem. **Maintenance mode** takes a market offline briefly for technical work and is normally announced in advance, unlike the same-day, incident-driven restriction seen here.
+
+Reduce-only mode is the least restrictive of the emergency options, and that is precisely its value. It draws a line between adding risk and removing it: the exchange stops new leveraged exposure from forming on top of unreliable prices, while every existing trader keeps the ability to exit. In the CoinDCX episode, that distinction is what separated a precaution from a crisis — deposits, withdrawals and spot trading continued, positions could be closed, and most of the restriction was lifted within hours. When you read about an exchange restriction in future, the first question to ask is which tool was used. A reduce-only announcement and a withdrawal pause may both trend under the word "frozen," but they describe very different situations, and confusing them leads beginners to either panic unnecessarily or dismiss a genuinely serious event.
+
 ## Frequently Asked Questions
 
 **What does reduce-only mode mean on CoinDCX futures?**

@@ -117,5 +117,6 @@ Ticking all 15 boxes is the preparation — what you do over the following month
 If you found this guide useful, these related guides will help you go deeper:
 
 - [Crypto Leverage Explained: Why Beginners Should Avoid It](https://cryptobeginner.in/blog/crypto-leverage-explained-why-beginners-should-avoid-it)
+- [How to Buy Your First Bitcoin in India: A Step-by-Step Guide for 2026](https://cryptobeginner.in/blog/how-to-buy-your-first-bitcoin-in-india)
 - [What Is a Crypto ETF? What Indian Beginners Must Know](https://cryptobeginner.in/blog/what-is-a-crypto-etf-india-guide)
 - [Why Crypto Prices Swing So Much: Volatility Explained](https://cryptobeginner.in/blog/why-crypto-prices-swing-so-much-volatility-guide)

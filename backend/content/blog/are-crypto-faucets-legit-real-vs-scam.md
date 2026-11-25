@@ -1,7 +1,7 @@
 ---
 title: "Are Crypto Faucets Legit? How Indians Can Tell Real vs Scam"
 category: "Security"
-excerpt: "Crypto faucets promise free tokens — but are they legit? Learn how to tell real faucets from wallet-draining scams, with a 7-point safety checklist for Indians."
+excerpt: "Free crypto for clicking buttons — real or a trap? How legit faucets actually work, the scams draining Indian wallets, and a 7-point test to spot them."
 read_time: 8
 author: Crypto Beginner Editorial Team
 cover_image: /covers/security.jpg
@@ -99,6 +99,24 @@ A useful habit: if you discover a faucet through a forwarded WhatsApp message, a
 | Software | Nothing to install | Pushes extensions, apps, or APKs |
 
 Print this table mentally. If a site looks more like the right column than the left, leave.
+
+## If a Faucet Scam Has Already Caught You: Your First 24 Hours
+
+Prevention is better, but if you have already interacted with a suspicious faucet, speed matters more than blame. Work through these steps in order:
+
+**1. Stop and disconnect.** Close the site, and if you connected a wallet, disconnect it from the site in your wallet app's settings. Do not return to "check" whether the rewards appear — every further approval you sign can authorise another transfer out.
+
+**2. If you entered your seed phrase anywhere, treat that wallet as burned.** A seed phrase typed into a website must be assumed stolen, even if nothing has moved yet — scammers sometimes wait before draining. Create a completely new wallet (ideally on a device you trust), write down its new seed phrase offline, and move any remaining funds from the old wallet to the new one yourself, before the scammer does.
+
+**3. Revoke suspicious approvals.** If you connected a wallet and approved a contract without transferring funds, the approval itself may still let the contract move your tokens later. Wallet apps and widely used token-approval checker tools can show which contracts have permission to spend from your address — revoke any you do not recognise. This costs a small network fee on some chains, but it closes the door the faucet opened.
+
+**4. If you paid money, contact your bank immediately.** For a UPI or bank payment to a "verification fee" or "withdrawal charge," call your bank and report it as fraud at once. Fast reporting gives the bank its best chance of flagging or holding the transfer, and it creates the paper trail you will need for a complaint.
+
+**5. Report it officially.** File a complaint on India's National Cyber Crime Reporting Portal (cybercrime.gov.in) or call the national cyber fraud helpline on 1930. Reporting does two things: it is the only route with any chance of official follow-up, and it helps authorities connect your case to the wider pattern — these scams run at scale, and pooled reports are how they get taken down.
+
+**6. Preserve evidence before it disappears.** Screenshot the site, the wallet prompts, and any chat messages; save the URL, the wallet addresses involved, and the transaction hashes from a block explorer. Scam sites vanish quickly, and your screenshots may be the only record that they existed.
+
+**7. Refuse the second scam.** Victims of faucet fraud are routinely contacted by "recovery agents" who promise to retrieve the lost crypto for an upfront fee. This is the same network fishing twice. No private agent can reverse a blockchain transfer, and anyone guaranteeing recovery for a fee is lying. Accept the hard truth early: crypto transfers are usually irreversible, which is exactly why the checks earlier in this guide matter more than any cure.
 
 ## If You Still Want to Try a Faucet: Do It Safely
 

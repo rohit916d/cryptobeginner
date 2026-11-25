@@ -119,6 +119,8 @@ A few India-specific points:
 - **INR deposits and withdrawals** on derivatives platforms can be slower and more restricted than on spot exchanges, and some platforms only settle in USDT or other stablecoins, adding conversion costs.
 - **Beginner recommendation:** almost every experienced trader advises beginners to avoid futures entirely at the start. If you want exposure to crypto price movements, spot buying with money you can afford to lose is far simpler and far safer.
 
+These restrictions are not theoretical. In October 2026, CoinDCX temporarily placed its futures market into "reduce-only" mode — traders could close positions but not open new ones — after a security incident at a global liquidity provider it relies on. Our guide to the [CoinDCX futures reduce-only episode](/blog/coindcx-futures-reduce-only-india-guide) walks through what happened, what the mode means, and how it differs from a full trading halt.
+
 ## If You Still Want to Learn: A Safe Path
 
 If futures genuinely interest you, treat them like a subject to study — not a way to make money:

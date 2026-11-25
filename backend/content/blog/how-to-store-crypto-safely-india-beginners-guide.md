@@ -179,5 +179,6 @@ Ten minutes, once a month. That small habit is what keeps the careful setup desc
 If you found this guide useful, these related guides will help you go deeper:
 
 - [What Is Self-Custody? Taking Crypto Off Exchanges Safely](https://cryptobeginner.in/blog/what-is-self-custody-india-guide)
+- [How to Buy Your First Bitcoin in India: A Step-by-Step Guide for 2026](https://cryptobeginner.in/blog/how-to-buy-your-first-bitcoin-in-india)
 - [What is a Crypto Seed Phrase? A Beginner's Guide](https://cryptobeginner.in/blog/what-is-a-crypto-seed-phrase-a-beginner-s-guide)
 - [What is a Crypto Wallet Address? A Beginner's Guide](https://cryptobeginner.in/blog/what-is-a-crypto-wallet-address-a-beginner-s-guide)

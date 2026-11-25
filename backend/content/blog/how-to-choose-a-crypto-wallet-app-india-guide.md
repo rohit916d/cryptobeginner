@@ -149,5 +149,6 @@ Start small, test everything, and keep learning. Your next step after choosing a
 ## Keep Learning
 
 - [What is a Crypto Hot Wallet vs Cold Wallet?](/blog/what-is-a-crypto-hot-wallet-vs-cold-wallet/) — explains the difference between crypto hot wallet and cold wallet
+- [How to Buy Your First Bitcoin in India: A Step-by-Step Guide for 2026](/blog/how-to-buy-your-first-bitcoin-in-india) — the step-by-step first purchase this wallet will receive
 - [What Is a Watch-Only Wallet? Track Crypto Without Risk](/blog/what-is-a-watch-only-wallet-india-guide/) — explains what a watch-only wallet is and why it matters
 - [What Is a Multisig Wallet? Shared Security Explained](/blog/what-is-a-multisig-wallet-india-guide/) — explains what a multisig wallet is and why it matters
