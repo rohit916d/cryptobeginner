@@ -1,7 +1,7 @@
 ---
 title: "FinCEN Breach: US Crypto Watchdog Hacked — India Guide"
 category: "Regulation"
-excerpt: "FinCEN, the US bureau that polices crypto money laundering, confirmed unauthorised access to its systems on 24 November. What happened, and what it means for India."
+excerpt: "FinCEN, the bureau policing crypto money laundering, confirmed unauthorised access to its systems on 24 November. What happened, and what it means for India."
 read_time: 10
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/regulation.jpg"
