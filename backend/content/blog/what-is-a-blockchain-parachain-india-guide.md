@@ -1,7 +1,7 @@
 ---
 title: "What Is a Blockchain Parachain? Shared Security Explained"
 category: "Blockchain"
-excerpt: "Parachains are blockchains that borrow security from a shared relay chain. Learn how Polkadot parachains work, what slot auctions are, and the risks beginners should know."
+excerpt: "Parachains are blockchains that borrow security from a shared relay chain. Learn how Polkadot parachains work, what slot auctions are, and the risks to know."
 read_time: 8
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/blockchain.jpg"
