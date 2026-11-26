@@ -1,7 +1,7 @@
 ---
 title: "Bitcoin Hashrate Hijacking: How Miners' Work Gets Stolen"
 category: "Security"
-excerpt: "Braiins warns attackers are hijacking Bitcoin miners' work via unencrypted Stratum V1 and BGP tricks — 1,000+ sites hit in one second. How it works, and the fix."
+excerpt: "Braiins warns attackers are hijacking Bitcoin miners' work via unencrypted Stratum V1 and BGP tricks — 1,000+ sites hit in one second. How it works and the fix."
 read_time: 10
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/bitcoin.jpg"
