@@ -1,7 +1,7 @@
 ---
 title: "Why USDT Costs 6% More in India: The Premium Explained"
 category: "Altcoins"
-excerpt: "Indians pay about ₹100 for one USDT while a dollar costs ₹94.64. Why the 6% premium exists, what drives it up — and what it means for Indian crypto users."
+excerpt: "India's USDT premium hit ~+13% in late Nov 2026 — 1 USDT ≈ ₹105 against a ~₹93 dollar. The 1% TDS, 30% tax and freeze risk behind the gap, explained."
 read_time: 9
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/crypto.jpg"
@@ -18,6 +18,16 @@ faqs:
 A dollar and a dollar-linked token sound as though they should cost roughly the same number of rupees. India's crypto market has spent 2026 demonstrating why that assumption fails. On 5 November 2026, one USDT cost ₹100.18 on Indian exchanges while the dollar reference rate stood at ₹94.64 — a premium of 5.97%. On the morning of 6 November, the gap was still there: about 6.14%, or roughly ₹100.30 per USDT. This is the USDT premium in India, and it is one of the most India-specific features of the country's crypto market. It affects every Indian who buys a stablecoin, yet it is rarely explained in plain language.
 
 > **Educational content only.** This is not financial advice. Crypto markets are volatile — never invest money you can't afford to lose. This guide explains a reported market phenomenon; it does not predict prices and does not recommend any coin, trade or investment.
+
+## The Premium in Late November 2026
+
+Start with the latest reading, because the gap has widened sharply since the figures quoted further down this page. At The Crypto Times' daily India USDT Premium Index fix on 25 November 2026, the premium stood at about +12.85% — one USDT cost roughly ₹104.71 on Indian exchanges, against a dollar reference rate of ₹92.92. Peer-to-peer listings told the same story that week: buy prices on Binance P2P were hovering around ₹105–106 per USDT. In plain terms, an Indian buyer was paying close to ₹105 for a token designed to be worth one dollar, while the dollar itself cost about ₹93 in the currency market.
+
+That is roughly double the ~6% premium recorded at the start of November, and well above the 2.56%–7.19% range the index reported between July and October. Readings like this are a snapshot, not a permanent state: the premium is a live market price that moves every day, sometimes by a full percentage point or more, so treat the numbers above as "how wide it ran in late November 2026", not as today's figure. The section "How to Check the Premium Yourself", further down, shows how to see the current gap before you transact.
+
+Why has the gap stretched this far? The drivers are the same ones explained in detail below, working together. The 1% TDS deducted on crypto transfers makes market makers and regular sellers less willing to supply USDT cheaply, because every sale locks up working capital until the tax is reconciled. The flat 30% tax on gains narrows what sellers can earn after tax. And P2P sellers carry a risk most buyers never see: if money arriving in their bank account is later linked to a fraud, the account can be frozen while police investigate, so sellers price that freeze risk into their quotes. Against that thin and cautious supply sits steady Indian demand for digital dollars — and when demand chases a limited pool, the premium is where the pressure shows.
+
+Tax note: crypto tax rules can change — the 30% rate and 1% TDS described here were current as of September 2026. Verify the latest rules before filing.
 
 ## What the USDT Premium Is
 

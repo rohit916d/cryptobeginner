@@ -139,6 +139,7 @@ Crypto work-from-home scams succeed because they sell exactly what job seekers w
 
 ## Keep Learning
 
+- [7 Common Crypto Scams in India (And How to Avoid Them)](/blog/7-common-crypto-scams-targeting-indians/) — the 7 scam patterns behind most fake job and task offers, with the warning signs of each
 - [Fake Crypto Apps & Telegram Scams: How Indians Stay Safe](/blog/fake-crypto-apps-telegram-scams-india-guide/) — a beginner-friendly guide to fake crypto apps & telegram scams
 - [NFT Scams Explained: Fake Collections and Wash Trading](/blog/nft-scams-fake-collections-wash-trading-india-guide/) — a beginner-friendly guide to nft scams explained
 - [Phishing Emails & Fake Exchange Sites: India Safety Guide](/blog/phishing-emails-fake-exchange-websites-india-guide/) — a beginner-friendly guide to phishing emails & fake exchange sites

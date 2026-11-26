@@ -1,7 +1,7 @@
 ---
 title: "How to Store Crypto Safely: The Complete Safety Playbook for Indians"
 category: "Wallets"
-excerpt: "The safest way to hold crypto in India — for individuals and companies alike: the 3-bucket wallet system, hardware wallets, seed-phrase backups and scam checks."
+excerpt: "Exchange par crypto chhodna safe hai? WazirX's hack taught lakhs of Indians the hard way. The 3-bucket wallet system that keeps your crypto safe."
 read_time: 8
 author: "Crypto Beginner Editorial Team"
 cover_image: "/covers/wallets.jpg"

@@ -143,6 +143,7 @@ If you are new to crypto and want to avoid the next trap before it starts, read 
 
 ## Keep Learning
 
+- [7 Common Crypto Scams in India (And How to Avoid Them)](/blog/7-common-crypto-scams-targeting-indians/) — know the 7 scam patterns and their warning signs, so you can spot fraud before money moves
 - [What is Crypto Impersonation? A Beginner's Security Guide](/blog/what-is-crypto-impersonation-a-beginner-s-security-guide/) — explains what crypto impersonation is and why it matters
 - [What Is a 51% Attack? Blockchain Security Explained](/blog/what-is-a-51-percent-attack-india-guide/) — explains what a 51% attack is and why it matters
 - [What Is Address Poisoning? Lookalike Address Scam Guide](/blog/what-is-address-poisoning-india-guide/) — explains what address poisoning is and why it matters

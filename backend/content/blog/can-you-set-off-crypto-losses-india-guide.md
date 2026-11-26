@@ -1,7 +1,7 @@
 ---
 title: "Can You Set Off Crypto Losses in India? Rules Explained"
 category: "Regulation"
-excerpt: "Can a crypto loss cancel your gains in India? Learn the no set-off and no carry-forward rules, worked rupee examples, and what losses still mean for filing."
+excerpt: "Short answer: No — crypto losses in India can't be set off against gains or carried forward. What the rule means, rupee examples, and what you can do."
 read_time: 7
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/regulation.jpg"

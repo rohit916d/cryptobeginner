@@ -1,7 +1,7 @@
 ---
 title: "Crypto Gift Tax in India: Rules Beginners Must Know"
 category: "Regulation"
-excerpt: "Gifting crypto to family or friends in India sounds simple, but the tax rules surprise beginners. Learn who pays tax, the ₹50,000 limit, and records to keep."
+excerpt: "Who pays tax on gifted crypto — giver or receiver? The ₹50,000 threshold, the relative exemption, TDS rules and records to keep, explained for beginners."
 read_time: 8
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/regulation.jpg"
