@@ -96,5 +96,6 @@ For Indian users, the right posture over the next few days is watchful rather th
 ## Keep Learning
 
 - [Binance Security Incident: What Happened and What Indian Users Should Know](/blog/binance-security-incident-india-guide)
+- [Binance Withdrawals Resume in Phases: What Indian Users Must Know (1 November Update)](/blog/binance-withdrawals-resumed-india-guide)
 - [What Is Proof of Reserves? A Beginner's Guide for India](/blog/what-is-proof-of-reserves-india-guide)
 - [What Is the SAFU Fund? Binance's Safety Net Explained for India](/blog/what-is-safu-fund-binance-safety-net-india-guide)
