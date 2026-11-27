@@ -1,7 +1,7 @@
 ---
 title: "KuCoin to Delist Monero (XMR) on 30 November: India Guide"
 category: "Regulation"
-excerpt: "KuCoin will delist Monero (XMR) on 30 November 2026, ending all four spot pairs. Here are the deadlines and what Indian holders must do before withdrawals close."
+excerpt: "KuCoin will delist Monero (XMR) on 30 November 2026, ending all four spot pairs. Here are the deadlines and what holders must do before withdrawals close."
 read_time: 10
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/regulation.jpg"
