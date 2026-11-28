@@ -1,7 +1,7 @@
 ---
 title: "Cross Margin vs Isolated Margin: Crypto Guide India"
 category: "Trading"
-excerpt: "Cross margin risks your whole account balance; isolated margin limits the loss to one position. Learn how both work and why Indian beginners should avoid margin trading."
+excerpt: "Cross margin risks your whole account balance; isolated margin limits loss to one position. Learn how both work and why Indian beginners should avoid margin."
 read_time: 8
 author: Crypto Beginner Editorial Team
 cover_image: "/covers/trading-basics.jpg"
