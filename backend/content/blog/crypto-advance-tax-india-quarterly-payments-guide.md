@@ -121,6 +121,7 @@ When you file your return, crypto gains go in **Schedule VDA**, and your advance
 - **Paying under the wrong assessment year.** This is the most common online-payment error. Double-check the year before submitting — a payment under the wrong year does not count until it is corrected.
 - **Ignoring small gains.** A few ₹10,000 profits across the year can add up past the ₹10,000 threshold. Track every transfer from the start.
 - **Not keeping records.** Without a transaction log, estimating gains each quarter is guesswork. Keep records from day one — it also makes Schedule VDA filing far easier.
+- **Assuming losses cancel out gains.** They do not — a loss on one trade cannot reduce the tax due on a profitable one, so your advance tax estimate must be built on gains alone. Our guide on whether you can [set off crypto losses in India](/blog/can-you-set-off-crypto-losses-india-guide) explains the rule in full.
 
 ## A Simple Quarterly Routine for Crypto Traders
 

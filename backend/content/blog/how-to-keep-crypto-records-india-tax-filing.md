@@ -122,3 +122,5 @@ If you found this guide useful, these related guides will help you go deeper:
 - [RBI vs Crypto: The Complete History of Regulation in India](https://cryptobeginner.in/blog/rbi-vs-crypto-history-regulation-india)
 - [Crypto Cards in India: RBI Scrutiny Explained for Beginners](https://cryptobeginner.in/blog/crypto-cards-india-rbi-scrutiny-guide)
 - [Crypto Tax in India Explained: 30% Rule, 1% TDS & How to File in 2026](https://cryptobeginner.in/blog/crypto-tax-india-30-percent-1-percent-tds)
+- [Can You Set Off Crypto Losses in India? Rules Explained](https://cryptobeginner.in/blog/can-you-set-off-crypto-losses-india-guide)
+- [Crypto Gift Tax in India: Rules Beginners Must Know](https://cryptobeginner.in/blog/crypto-gift-tax-india-rules-beginners)

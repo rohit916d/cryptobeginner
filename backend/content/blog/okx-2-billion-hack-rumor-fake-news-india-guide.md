@@ -96,6 +96,7 @@ The skill to build is not cynicism — "never believe anything" — and not cred
 - [Binance Security Incident: What Happened and What Indian Users Should Do](/blog/binance-security-incident-india-guide) — the $6.3 billion breach that set the nervous background for this rumour, and what it means for Indian users.
 - [How Stolen Crypto Is Traced: On-Chain Forensics Explained](/blog/how-stolen-crypto-traced-india-guide) — how researchers follow stolen funds across wallets, swaps and bridges, and why a $2 billion theft cannot hide on a public blockchain.
 - [Phishing Emails and Fake Exchange Websites: How to Stay Safe](/blog/phishing-emails-fake-exchange-websites-india-guide) — the fake "security alert" messages that follow hack news, and how to spot them before you click.
+- [7 Common Crypto Scams in India (And How to Avoid Them)](/blog/7-common-crypto-scams-targeting-indians/) — the common crypto scams in India that ride on hack rumours and fear, and the simple checks that stop them.
 
 ## The Bottom Line
 

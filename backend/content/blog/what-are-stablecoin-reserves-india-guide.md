@@ -142,3 +142,4 @@ Use stablecoins for what they are good at — moving value between exchanges, ho
 - [What Is a Stablecoin Depeg? Why Pegs Break Explained](/blog/what-is-a-stablecoin-depeg-india-guide/) — explains what a stablecoin depeg is and why it matters
 - [Algorithmic Stablecoins Explained: Why Pegs Can Fail](/blog/what-is-an-algorithmic-stablecoin-india-guide/) — a beginner-friendly guide to algorithmic stablecoins explained
 - [What Is Proof of Reserves? How Exchanges Prove Funds](/blog/what-is-proof-of-reserves-india-guide/) — explains what proof of reserves is and why it matters
+- [Why USDT Costs 6% More in India: The Premium Explained](/blog/usdt-premium-india-guide/) — explains the USDT premium in India and why P2P prices sit above the global rate

@@ -95,6 +95,8 @@ None of those is a prediction. They are the things to check before drawing concl
 - [What Is a Crypto Custodian? Explained for Beginners](/blog/what-is-a-crypto-custodian-india-guide)
 - [Bithumb Data Breach Widened: 15 Days, Passports Exposed](/blog/bithumb-data-breach-widens-15-days-passports-india-guide)
 - [Gnosis Pay Breach: Card Data and Wallet Addresses Exposed](/blog/gnosis-pay-breach-crypto-card-data-india-guide)
+- [How to Store Crypto Safely: The Complete Safety Playbook for Indians](/blog/how-to-store-crypto-safely-india-beginners-guide/)
+- [7 Common Crypto Scams in India (And How to Avoid Them)](/blog/7-common-crypto-scams-targeting-indians/)
 
 ## Conclusion
 

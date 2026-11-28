@@ -105,6 +105,7 @@ For Indian users, the takeaway is simpler than the debate. The chip inside your 
 - [Trezor Spy Implants: Safe 5 Wallets Tampered in India](/blog/trezor-spy-implants-safe-5-india-guide) — the November 2026 implant incident that frames this debate: what Trezor found, how the implants worked, and what to do if you bought from CryptoBilis.
 - [Cold Wallet Setup Guide: Your First Hardware Wallet](/blog/cold-wallet-setup-guide-first-hardware-wallet) — step-by-step setup for a first hardware wallet, including how to generate and store your recovery phrase safely.
 - [Vitalik Buterin's Devcon 8 Keynote in Mumbai: India Guide](/blog/vitalik-buterin-devcon-8-keynote-india-guide) — the 3 November 2026 keynote where Buterin first warned "not your silicon, not your life", and the open, secure and verifiable technology vision behind it.
+- [How to Store Crypto Safely: The Complete Safety Playbook for Indians](/blog/how-to-store-crypto-safely-india-beginners-guide/) — the full storage playbook behind the chip debate: hot vs cold wallets, seed phrase safety and a simple system for storing crypto safely in India.
 
 ## The Bottom Line
 
